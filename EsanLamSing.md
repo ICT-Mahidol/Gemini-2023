@@ -56,7 +56,8 @@ F.Administrative.
 16. The video data signals must be encoded digitally and transferred by WAN to remote site.
 17. Requests of subsystems for status information must be answered within 5 sec and be possible in maintenance level operation. 
 18. Requirements for response times within the user interfaces are given in the User Interface requirements section.
-19. The link chosen to transfer data should represent as small a bottleneck as possible for data acquisition. 
+19. The link chosen to transfer data should represent as small a bottleneck as possible for data acquisition.
+20. The interfaces between Gemini 8m Telescopes software and external software must be clearly defined and documented.
 
 
 
