@@ -33,6 +33,7 @@ F.Administrative.
 18. The system should be constantly monitoring active subsystems to be sure they are operating correctly before sending command to each subsystem. This monitoring should continue on inactive subsystems.
 19. it must be possible for the system to reconfigure itself in order to continue observing, in a different mode if required, given the failure of a single non-critical subsystem to avoid unnecessary downtime.
 20. The Gemini system must be self-monitoring to invoke safety monitoring to prevent risk to people or damage to equipment.
+21. The system must log all input and output data appropriately to recreate the sequence of events that occurred during the observation.
 
 
 # Non-functional
