@@ -53,5 +53,6 @@ F.Administrative.
 13. Every command must be accepted/rejected within 2 sec and before the corresponding action occurs.
 14. Status display update must be within 4 sec at the local stations (certain functions, such as telescope position, may have tighter constraints).
 15. The system should be designed to require a minimal number of personnel with specific skill levels for effective maintenance, optimizing resource utilization.
+16. The video data signals must be encoded digitally and transferred by WAN to remote site.
 
 
