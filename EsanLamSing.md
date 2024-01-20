@@ -49,5 +49,7 @@ F.Administrative.
 10. For the database package, the access times to the database are to be in the range of 2-3 msec per access.
 11. Identical network access must be supported in hardware constraints aspect
 12. The software must be strictly modular, i.e. the functionality of a subsystem should correspond to that which belongs to that subsystem and only to that.
+13. Every command must be accepted/rejected within 2 sec and before the corresponding action occurs.
+14. Status display update must be within 4 sec at the local stations (certain functions, such as telescope position, may have tighter constraints).
 
 
