@@ -33,3 +33,4 @@ F.Administrative.
 
 # Non-functional
 1. The software should include built-in test facilities to verify system performance, with each software module having corresponding test specifications.
+2. The software should be developed to permit remote operations, with no conceptual difference between on-site and remote software functioning.
