@@ -39,4 +39,5 @@ F.Administrative.
 4. The software must fulfill security and safety criteria, which include actions including protecting the system when detecting potential dangers and fortifying it against external intrusions.
 5. The system should prioritize maintainability and supportability, with a specific focus on maintenance requirements such as specifying the mean and maximum time for repair at each maintenance level and the allocation of preventative maintenance hours annually.
 6. The software should have security to control access to system features, possibly restricting some operations to specific remote sites.
+7. It must be possible to log engineering data at up to 200 Hz rates for short periods of time.
 
