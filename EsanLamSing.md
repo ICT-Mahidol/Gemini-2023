@@ -55,7 +55,8 @@ F.Administrative.
 15. The system should be designed to require a minimal number of personnel with specific skill levels for effective maintenance, optimizing resource utilization.
 16. The video data signals must be encoded digitally and transferred by WAN to remote site.
 17. Requests of subsystems for status information must be answered within 5 sec and be possible in maintenance level operation. 
-18. Requirements for response times within the user interfaces are given in the User Interface requirements section. 
+18. Requirements for response times within the user interfaces are given in the User Interface requirements section.
+19. The link chosen to transfer data should represent as small a bottleneck as possible for data acquisition. 
 
 
 
