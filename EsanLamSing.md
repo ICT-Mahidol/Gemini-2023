@@ -59,6 +59,8 @@ F.Administrative.
 18. The communication software must support the standard ARPA services (telnet, FTP, SMTP, etc) as well as NFS, RPC, IPC, and the Unix socket interface library.
 19. The link chosen to transfer data should represent as small a bottleneck as possible for data acquisition.
 20. The interfaces between Gemini 8m Telescopes software and external software must be clearly defined and documented.
+21. The Gemini software should have no hard restrictions on the number of simultaneous users, but should allow for policy decisions that do restrict the amount of simultaneous access.
+
 
 
 
