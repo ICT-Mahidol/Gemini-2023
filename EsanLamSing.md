@@ -30,6 +30,7 @@ F.Administrative.
 16. All relevant information, including control parameters, must be available to the Gemini 8m Telescopes software.
 17. Users must have access to control parameters, telescope and instrument information for monitoring or other purposes.
 18. The system should monitor the rate of warning messages since an increase might indicate that some tuning or maintenance is appropriate.
+19. The system should be constantly monitoring active subsystems to be sure they are operating correctly before sending command to each subsystem. This monitoring should continue on inactive subsystems.
 
 
 # Non-functional
