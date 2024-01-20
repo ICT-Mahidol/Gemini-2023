@@ -7,10 +7,7 @@
 6. 6488217	Pattaradanai	Kaeodumkoeng
 
 # Functional
-1. The Gemini system, when powered on, exists in one of several disjoint operational levels. Access to the system is restricted according to the current level of operation. The operational levels are: 
-A.Observing level. The observing level is the “normal” operational mode of the system. 
-B.Maintenance level. The maintenance level permits access to all subsystems for routine maintenance and diagnostic work. The telescope is typically at maintenance level during daylight (non-observing) hours. 
-C.Test level. The most primitive operational level, test level operation is used for installation/de-installation of subsystems, including full diagnostics and installation calibration activities.
+1. The system must define operation levels, privilege and protection levels, capacity, performance criteria, and specific procedures.
 2. At any level, but particularly during observing level operation, the software imposes on the Gemini system a series of access modes. These access modes balance ease and convenience of use against flexibility, control, and the security of the system. The access modes provided by the Gemini system are: 
 A.Observing.
 B.Monitoring. 
@@ -30,7 +27,6 @@ F.Administrative.
 12. The system is responsible for effectively controlling, managing, and facilitating the flow of control information, astronomical data, and video information.
 13. The system is designed to meet the specific requirements of various user groups, including astronomers, telescope operators, and developers, ensuring that each group's unique needs are addressed.
 14. The system must handle control information flow, astronomical data flow, and other information flows as part of its data specification and operational requirements.
-15. The system must define operation levels, privilege and protection levels, capacity, performance criteria, and specific procedures.
 16. All relevant information, including control parameters, must be available to the Gemini 8m Telescopes software.
 17. Users must have access to control parameters, telescope and instrument information for monitoring or other purposes.
 
