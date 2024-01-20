@@ -34,7 +34,8 @@ F.Administrative.
 20. The Gemini system must be self-monitoring to invoke safety monitoring to prevent risk to people or damage to equipment.
 21. The system must log all input and output data appropriately to recreate the sequence of events that occurred during the observation.
 22. The software should be able to quickly bring the Gemini system to a safe state upon notification of such danger.
-23. System logging information should include all important events, properly timestamped and indexed
+23. System logging information should include all important events, properly timestamped and indexed.
+24. Star catalogs should be available in Astronomical object catalogs (external software).
 
 
 # Non-functional
