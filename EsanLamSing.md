@@ -31,5 +31,8 @@ F.Administrative.
 13. The system is designed to meet the specific requirements of various user groups, including astronomers, telescope operators, and developers, ensuring that each group's unique needs are addressed.
 14. The system must handle control information flow, astronomical data flow, and other information flows as part of its data specification and operational requirements.
 15. The system must define operation levels, privilege and protection levels, capacity, performance criteria, and specific procedures.
+16. All relevant information, including control parameters, must be available to the Gemini 8m Telescopes software.
+17. Users must have access to control parameters, telescope and instrument information for monitoring or other purposes.
+
 
 # Non-functional
