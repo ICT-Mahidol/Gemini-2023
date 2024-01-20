@@ -56,7 +56,7 @@ F.Administrative.
 15. The system should be designed to require a minimal number of personnel with specific skill levels for effective maintenance, optimizing resource utilization.
 16. The video data signals must be encoded digitally and transferred by WAN to remote site.
 17. Requests of subsystems for status information must be answered within 5 sec and be possible in maintenance level operation. 
-18. Requirements for response times within the user interfaces are given in the User Interface requirements section.
+18. The communication software must support the standard ARPA services (telnet, FTP, SMTP, etc) as well as NFS, RPC, IPC, and the Unix socket interface library.
 19. The link chosen to transfer data should represent as small a bottleneck as possible for data acquisition.
 20. The interfaces between Gemini 8m Telescopes software and external software must be clearly defined and documented.
 
