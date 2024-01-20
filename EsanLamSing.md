@@ -31,7 +31,6 @@ F.Administrative.
 16. Users must have access to control parameters, telescope and instrument information for monitoring or other purposes.
 17. The system should monitor the rate of warning messages since an increase might indicate that some tuning or maintenance is appropriate.
 18. The system should be constantly monitoring active subsystems to be sure they are operating correctly before sending command to each subsystem. This monitoring should continue on inactive subsystems.
-19. it must be possible for the system to reconfigure itself in order to continue observing, in a different mode if required, given the failure of a single non-critical subsystem to avoid unnecessary downtime.
 20. The Gemini system must be self-monitoring to invoke safety monitoring to prevent risk to people or damage to equipment.
 21. The system must log all input and output data appropriately to recreate the sequence of events that occurred during the observation.
 22. The software should be able to quickly bring the Gemini system to a safe state upon notification of such danger.
@@ -45,4 +44,6 @@ F.Administrative.
 5. The system should prioritize maintainability and supportability, with a specific focus on maintenance requirements such as specifying the mean and maximum time for repair at each maintenance level and the allocation of preventative maintenance hours annually.
 6. The software should have security to control access to system features, possibly restricting some operations to specific remote sites.
 7. It must be possible to log engineering data at up to 200 Hz rates for short periods of time.
+8. It must be possible for the system to reconfigure itself in order to continue observing, in a different mode if required, given the failure of a single non-critical subsystem to avoid unnecessary downtime.
+9. The system must aim to minimize downtime resulting from maintenance activities, ensuring that the impact on system availability is kept to a minimum.
 
