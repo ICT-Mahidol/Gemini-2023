@@ -34,3 +34,7 @@ F.Administrative.
 # Non-functional
 1. The software should include built-in test facilities to verify system performance, with each software module having corresponding test specifications.
 2. The software should be developed to permit remote operations, with no conceptual difference between on-site and remote software functioning.
+3. The user interface should be designed to meet a variety of software requirements across different layers, with a focus on accommodating access modes and operating levels.
+4. The software must fulfill security and safety criteria, which include actions including protecting the system when detecting potential dangers and fortifying it against external intrusions.
+5. The system should prioritize maintainability and supportability, with a specific focus on maintenance requirements such as specifying the mean and maximum time for repair at each maintenance level and the allocation of preventative maintenance hours annually.
+
