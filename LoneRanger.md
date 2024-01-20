@@ -1,4 +1,4 @@
-# Team numbers
+# Team members
 #### 1. 6488077 Thanat Sathapornwatthanakul
 #### 2. 6488121 Hao Huang
 #### 3. 6488143 Nichapat Thumrongpowarat
