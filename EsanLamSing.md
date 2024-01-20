@@ -31,6 +31,7 @@ F.Administrative.
 17. Users must have access to control parameters, telescope and instrument information for monitoring or other purposes.
 18. The system should monitor the rate of warning messages since an increase might indicate that some tuning or maintenance is appropriate.
 19. The system should be constantly monitoring active subsystems to be sure they are operating correctly before sending command to each subsystem. This monitoring should continue on inactive subsystems.
+20. it must be possible for the system to reconfigure itself in order to continue observing, in a different mode if required, given the failure of a single non-critical subsystem to avoid unnecessary downtime.
 
 
 # Non-functional
