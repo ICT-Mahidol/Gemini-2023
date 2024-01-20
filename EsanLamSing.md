@@ -54,5 +54,9 @@ F.Administrative.
 14. Status display update must be within 4 sec at the local stations (certain functions, such as telescope position, may have tighter constraints).
 15. The system should be designed to require a minimal number of personnel with specific skill levels for effective maintenance, optimizing resource utilization.
 16. The video data signals must be encoded digitally and transferred by WAN to remote site.
+17. Requests of subsystems for status information must be answered within 5 sec and be possible in maintenance level operation. 
+18. Requirements for response times within the user interfaces are given in the User Interface requirements section. 
+
+
 
 
