@@ -29,6 +29,7 @@ F.Administrative.
 14. The system must handle control information flow, astronomical data flow, and other information flows as part of its data specification and operational requirements.
 16. All relevant information, including control parameters, must be available to the Gemini 8m Telescopes software.
 17. Users must have access to control parameters, telescope and instrument information for monitoring or other purposes.
+18. The system should monitor the rate of warning messages since an increase might indicate that some tuning or maintenance is appropriate.
 
 
 # Non-functional
