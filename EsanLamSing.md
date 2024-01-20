@@ -46,4 +46,5 @@ F.Administrative.
 7. It must be possible to log engineering data at up to 200 Hz rates for short periods of time.
 8. It must be possible for the system to reconfigure itself in order to continue observing, in a different mode if required, given the failure of a single non-critical subsystem to avoid unnecessary downtime.
 9. The system must aim to minimize downtime resulting from maintenance activities, ensuring that the impact on system availability is kept to a minimum.
+10. For the database package, the access times to the database are to be in the range of 2-3 msec per access.
 
