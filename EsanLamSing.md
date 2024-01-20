@@ -32,3 +32,4 @@ F.Administrative.
 
 
 # Non-functional
+1. The software should include built-in test facilities to verify system performance, with each software module having corresponding test specifications.
