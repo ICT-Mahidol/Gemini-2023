@@ -27,11 +27,12 @@ F.Administrative.
 12. The system is responsible for effectively controlling, managing, and facilitating the flow of control information, astronomical data, and video information.
 13. The system is designed to meet the specific requirements of various user groups, including astronomers, telescope operators, and developers, ensuring that each group's unique needs are addressed.
 14. The system must handle control information flow, astronomical data flow, and other information flows as part of its data specification and operational requirements.
-16. All relevant information, including control parameters, must be available to the Gemini 8m Telescopes software.
-17. Users must have access to control parameters, telescope and instrument information for monitoring or other purposes.
-18. The system should monitor the rate of warning messages since an increase might indicate that some tuning or maintenance is appropriate.
-19. The system should be constantly monitoring active subsystems to be sure they are operating correctly before sending command to each subsystem. This monitoring should continue on inactive subsystems.
-20. it must be possible for the system to reconfigure itself in order to continue observing, in a different mode if required, given the failure of a single non-critical subsystem to avoid unnecessary downtime.
+15. All relevant information, including control parameters, must be available to the Gemini 8m Telescopes software.
+16. Users must have access to control parameters, telescope and instrument information for monitoring or other purposes.
+17. The system should monitor the rate of warning messages since an increase might indicate that some tuning or maintenance is appropriate.
+18. The system should be constantly monitoring active subsystems to be sure they are operating correctly before sending command to each subsystem. This monitoring should continue on inactive subsystems.
+19. it must be possible for the system to reconfigure itself in order to continue observing, in a different mode if required, given the failure of a single non-critical subsystem to avoid unnecessary downtime.
+20. The Gemini system must be self-monitoring to invoke safety monitoring to prevent risk to people or damage to equipment.
 
 
 # Non-functional
