@@ -7,7 +7,7 @@
 6. 6488175 Penpitchapa Pantaraksakul
 
 # Functional Requirements
-### 2. General Description
+#### Chapter 2: General Description
   1. The system must enable astronomers to define science plans and observations.
   2. The system must enable astronomers to submit observation schedules.
   3. The system must enable astronomers to control the telescope and instruments remotely.
@@ -30,7 +30,7 @@
   20. The system must implement safeguards to prevent accidental or malicious actions that could harm the system, instruments, or ongoing observations.
   21. The system must securely store and transmit sensitive system data and user credentials.
 
-### 3. General Requirements
+#### Chapter 3: General Requirements
   1. The system must enable the transfer of control information, such as commands and replies, from users to the telescope and instruments.
   2. Replies must contain status information and data related to instruments and telescopes, to be stored with astronomical data.
   3. All subsystems should provide control information upon request without causing delays in control activities.
@@ -68,7 +68,7 @@
   35. All subsystem software is to include modules to aid in the maintenance and testing of the subsystem.
   36. Obtain all necessary safety approvals before the acceptance of devices to safety requirements.
 
-### 4. Specific Requirements
+#### Chapter 4: Specific Requirements
   1. The Gemini system must adhere to the maintenance philosophy outlined in the Software Management Plan (SMP).
   2. Preventative maintenance tasks must be scheduled according to the specifications in the Gemini Design Requirements Specification.
   3. All software development must employ standard modularization and standardization techniques.
@@ -139,7 +139,7 @@
 
 
 # Non-functional
-### 2. General Description
+#### Chapter 2: General Description
   1. Collected data must be accurate, reliable, and meet scientific needs.
   2. The system must have high uptime and minimal downtime for maintenance.
   3. The system must support various observation types and scientific needs.
@@ -151,7 +151,7 @@
   9. The access control system must be adaptable to accommodate future changes in user roles, operational levels, and system functionalities.
   10. The system must gracefully handle potential errors or failures in the access control mechanisms without compromising system security or ongoing observations.
 
-### 3. General Requirements
+#### Chapter 3: General Requirements
   1. Control information must be reliable and commands cannot be lost.
   2. Redundancy should be considered for critical communication links.
   3. The system must support multiple users and subsystems simultaneously.
@@ -173,7 +173,7 @@
   19. Prioritize safety by designing for minimum risk, incorporating safety devices, providing warning devices, and developing procedures and training.
   20. Implement security measures to prevent accidental mix-up of commands and unauthorized intrusion into the system.
 
-### 4. Specific Requirements
+#### Chapter 4: Specific Requirements
   1. The fault rate measurement process during commissioning should be efficient and not cause significant system downtime.
   2. The recovery procedures must be reliable and capable of restoring the system to a stable state after error failures.
   3. Validity and feasibility checks during science planning and operation should not hinder the usability of the telescope for effective and efficient use.
