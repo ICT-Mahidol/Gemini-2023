@@ -6,8 +6,9 @@
 5. 6488123 Kitiphum Mueangthongkham
 6. 6488175 Penpitchapa Pantaraksakul
 
-# Functional
-2. General Description
+# Functional Requirements
+*2. General Description*
+
   1. The system must enable astronomers to define science plans and observations.
   2. The system must enable astronomers to submit observation schedules.
   3. The system must enable astronomers to control the telescope and instruments remotely.
@@ -31,6 +32,7 @@
   21. The system must securely store and transmit sensitive system data and user credentials.
 
 3. General Requirements
+
   1. The system must enable the transfer of control information, such as commands and replies, from users to the telescope and instruments.
   2. Replies must contain status information and data related to instruments and telescopes, to be stored with astronomical data.
   3. All subsystems should provide control information upon request without causing delays in control activities.
@@ -69,6 +71,7 @@
   36. Obtain all necessary safety approvals before the acceptance of devices to safety requirements.
 
 4. Specific Requirements
+
   1. The Gemini system must adhere to the maintenance philosophy outlined in the Software Management Plan (SMP).
   2. Preventative maintenance tasks must be scheduled according to the specifications in the Gemini Design Requirements Specification.
   3. All software development must employ standard modularization and standardization techniques.
@@ -140,6 +143,7 @@
 
 # Non-functional
 2. General Description
+
   1. Collected data must be accurate, reliable, and meet scientific needs.
   2. The system must have high uptime and minimal downtime for maintenance.
   3. The system must support various observation types and scientific needs.
