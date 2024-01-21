@@ -1,8 +1,10 @@
-﻿
+﻿Member
+ 6488096 Peerapong Tantasilp
+ 64885204 Pimmada Chompurat
+
+ 
 Chapter1,2
 Functional Requirements:
-
-
 Access Levels and Modes:
 1. The system shall have distinct access levels, including Planning, Observing, Monitoring, Maintenance, Test, Operation, and Administrative.
 2. Each access level shall provide specific modes such as Planning mode, Observing mode, Monitoring mode, Maintenance mode, Testing mode, Operation mode, and Administrative mode.
