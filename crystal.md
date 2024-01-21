@@ -1,6 +1,9 @@
 ﻿# Member
-6488096 Peerapong Tantasilp
-
+6488041	Khasidech	Jiwyam
+6488096	Peerapong	Tantasilp
+6488127	Kirati	    Ngampis
+6488193	Thanapat	Ritiluechai
+6488204	Pimmada	    Chompurat
 
 # Chapter1,2
 **Functional Requirements:**
