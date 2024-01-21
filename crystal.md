@@ -15,6 +15,7 @@
 **Functional Requirements:**
 
 **Access Modes:**
+
 1. The system shall have distinct access levels, including Planning, Observing, Monitoring, Maintenance, Test, Operation, and Administrative.
     
 2.  Observing mode provides simple and safe access to the system for the collection of science data, selection of instrument parameters, and quick-look data reduction.
@@ -30,6 +31,7 @@
 7.  Administrative mode grants users to access only status and scheduling information
     
 **User-level**
+
 8.  Astronomers can access planning, observing, and monitoring modes.
     
 9.  Observers can access observing, and monitoring modes.
