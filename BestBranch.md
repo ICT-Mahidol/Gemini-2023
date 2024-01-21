@@ -1,11 +1,30 @@
-﻿# Gemini Functional, Non-Functional Requirement
+# Gemini Actors
 
-## **User requirement (p.17 - p.38)**
+| Actors | Operation Level |
+| --- | --- |
+| Astronomer | Astronomers can access observing level for planning, observing, and monitoring modes. |
+| Science Observer | Science Observer can access observing for observing and monitoring mode. |
+| Telescope Operator | Telescope operator can access observing, maintenance, and test level which include observing, monitoring, operation, and testing mode. |
+| Support | Support can access maintenance, and test levels for monitoring, operation, and testing mode.  |
+| Developer | Developer can access maintenance and test levels for monitoring, and testing mode. |
+| Administrator | Administrator can access observing, maintenance, and test levels which include monitoring and administrative modes. |
+ 
+ # Gemini Functional, Non-Functional Requirement
+
+## **User requirement**
 
 ### Functional
 
   
+****2.2 Operational levels****
 
+- The system has 3 operational levels: Observing, Maintenance, and Test level.
+
+****2.3 Access modes****
+
+- The system has 6 access modes: Observing, Monitoring, Operation, Planning, Testing, and Administrative.
+
+  
 ****2.5 User-level requirements****
 
   
@@ -402,7 +421,7 @@
 
 - No subsystem package should make any assumptions about the surrounding environment beyond that provided in the interface specifications.
 
-## **General Requirements (p.39 - 66)**
+## **General Requirements**
 
   
 
@@ -670,7 +689,7 @@
 
 - The release system should exist at the package and module level, which should be checkable online by the operational procedures for consistency.
 
-## **Specific Requirements (p.67 - 90)**
+## **Specific Requirements**
 
   
 
