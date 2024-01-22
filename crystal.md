@@ -210,7 +210,7 @@
 
 13. The system must have the capability to provide a test access mode that allows full control of subsystems without interrupting ongoing observations.
 
-14. No effect on performance of ongoing observation during monitoring, testing, and administrative access.
+14. No effect on the performance of ongoing observation during monitoring, testing, and administrative access.
 
 15. The system must have the capability for system utilization and efficiency inquiry using administrative access without affecting ongoing operations.
 
@@ -221,247 +221,237 @@
 
 **Location of users of the system**
 
-20. The system must be accessible by users at multiple facilities. 
+19. The system must be accessible by users at multiple facilities. 
 
-21. The system must have the capability to distinguish and differentiate between the various facilities, such as the Gemini 8m Telescopes site. 
+20. The system must have the capability to distinguish and differentiate between the various facilities, such as the Gemini 8m Telescopes site. 
 
-22. The system must refer to the collection of facilities such as the Gemini 8m Telescopes site. 
+21. The system must refer to the collection of facilities such as the Gemini 8m Telescopes site. 
 
-23. The Gemini 8m Telescopes enclosure must ensure ease of access for maintenance and engineering activities.
+22. The Gemini 8m Telescopes enclosure must ensure ease of access for maintenance and engineering activities.
 
-24. The Gemini 8m Telescopes control facility must be conveniently located near the enclosure. 
+23. The Gemini 8m Telescopes control facility must be conveniently located near the enclosure. 
 
-26. The requirement for remote access capability of the system from one or more facilities. 
+24. The requirement for remote access capability of the system from one or more facilities. 
 
-27. The ability for facilities and the telescope to securely exchange information and data. 
+25. The ability for facilities and the telescope to securely exchange information and data. 
 
-28. The system must have low latency and high availability for remote operations from super sites. 
+26. The system must have low latency and high availability for remote operations from super sites. 
 
-29. The system must ensure that the remote operations capability is consistent with a predefined level of performance, even if it is lower than super sites. 
+27. The system must ensure that the remote operations capability is consistent with a predefined level of performance, even if it is lower than super sites. 
 
-30. The system must maintain a predefined level of performance of remote operations capability even when link capacity changes. 
+28. The system must maintain a predefined level of performance of remote operations capability even when link capacity changes. 
 
-  
-  
-  
   
 
 **User level requirements**
 
-30. The system must be flexible and customizable to accommodate the diverse requirements of different classes of users.
+29. The system must be flexible and customizable to accommodate the diverse requirements of different classes of users.
 
-33. The system has to guarantee in terms of operations that it must fulfill all possible requirements, but it does not mean that all features will be made available to all users at all locations at all times. 
+30. The system has to guarantee in terms of operations that it must fulfill all possible requirements, but it does not mean that all features will be made available to all users at all locations at all times. 
 
-34. Capabilities will have to be adapted to the operational needs both locally and remotely.The system must be able to provide a level of performance and availability that meets the operational needs of both local and remote users. 
+31. Capabilities will have to be adapted to the operational needs both locally and remotely. The system must be able to provide a level of performance and availability that meets the operational needs of both local and remote users. 
 
-35. The system must be able to provide a level of usability and adaptability that meets the needs of users with a wide range of experience levels, both locally and remotely. 
+32. The system must be able to provide a level of usability and adaptability that meets the needs of users with a wide range of experience levels, both locally and remotely. 
 
-36. The user interface must be simple to learn and use. 
+33. The user interface must be simple to learn and use. 
 
-37. The system must offer a user interface that is simple to learn and secure in its use, which is a usability requirement. 
+34. The system must offer a user interface that is simple to learn and secure in its use, which is a usability requirement. 
 
-38. The system must have a secure access control mechanism that prevents observing astronomers from having direct control of the telescope. 
+35. The system must have a secure access control mechanism that prevents observing astronomers from having direct control of the telescope. 
 
-39. The system must provide a user-friendly interface for observing astronomers to inquire about the status of the telescope or any subsystem at any time with ease and convenience. 
+36. The system must provide a user-friendly interface for observing astronomers to inquire about the status of the telescope or any subsystem at any time with ease and convenience. 
 
-40. Programs have the capability of direct control of the telescope but not the observer. 
+37. Programs have the capability of direct control of the telescope but not the observer. 
 
-41. The system must provide a user interface that allows observers to create an observing program that requests a telescope control function, but prevents them from entering commands to slew the mount. 
+38. The system must provide a user interface that allows observers to create an observing program that requests a telescope control function but prevents them from entering commands to slew the mount. 
 
-42. The system must offer a simple and secure interface for observing astronomers to efficiently acquire astronomical data and assess data quality. 
+39. The system must offer a simple and secure interface for observing astronomers to efficiently acquire astronomical data and assess data quality. 
 
-43. Observing astronomers shall have no direct control of the telescope. 
+40. Observing astronomers shall have no direct control of the telescope. 
 
-44. The system must provide support for operation using an automatic sequencer to meet operational needs, including service observing and flexible scheduling. 
+41. The system must provide support for operation using an automatic sequencer to meet operational needs, including service observing and flexible scheduling. 
 
-45. A certain degree of interaction must be provided, meaning the user will interact with the scheduler program rather than with the control programs directly. 
+42. A certain degree of interaction must be provided, meaning the user will interact with the scheduler program rather than with the control programs directly. 
 
-46. The system must support queued observing commands to be executed through the user interface. 
+43. The system must support queued observing commands to be executed through the user interface. 
 
-47. It must be possible to break and resequencing this queue as a result of the quality assessment of previous data. 
+44. It must be possible to break and resequencing this queue as a result of the quality assessment of previous data. 
 
-48. Direct interactive operation shall not be considered as the normal operation mode. 
+45. Direct interactive operation shall not be considered as the normal operation mode. 
 
-49. The existence of the scheduling queue shall be transparent to the on-site observer during the initial phases of telescope operation. 
+46. The existence of the scheduling queue shall be transparent to the on-site observer during the initial phases of telescope operation. 
 
-50. The system must provide an indirect control mechanism for operations staff through a scheduler program. 
+47. The system must provide an indirect control mechanism for operations staff through a scheduler program. 
 
 
 **Operational context**
 
-50. The Gemini 8m Telescope system shall have the capability for seamless integration with other telescopes on the same site for potential future interferometry applications, with minimal impact on overall performance. 
+48. The Gemini 8m Telescope system shall have the capability for seamless integration with other telescopes on the same site for potential future interferometry applications, with minimal impact on overall performance. 
 
-61. The system to be designed with the potential for multi-telescope context in mind, even though there are currently no plans to support concurrent use of the two telescopes in the Gemini system. 
+49. The system to be designed with the potential for multi-telescope context in mind, even though there are currently no plans to support concurrent use of the two telescopes in the Gemini system. 
 
-62. The Gemini 8m Telescope system must have the capability to efficiently switch between multiple scientific instruments while ensuring optimal performance and responsiveness. 
+50. The Gemini 8m Telescope system must have the capability to efficiently switch between multiple scientific instruments while ensuring optimal performance and responsiveness. 
 
-63. The system can handle the complexity of operating multiple instruments in parallel and the user has the flexibility to switch between them as needed. 
+51. The system can handle the complexity of operating multiple instruments in parallel and the user has the flexibility to switch between them as needed. 
 
+52. The visitor instruments interface must provide smooth and accurate support for coordinate transforms between the visitor instrument and the Gemini system. 
 
+53. The visitor instruments interface must ensure reliable and efficient archiving of visitor instrument data. 
 
-73. Visitor instruments interface must provide smooth and accurate support for coordinate transforms between the visitor instrument and the Gemini system. 
+54. Visitor instruments must have the capability to maintain operation tables, such as filter lists, as part of an observation's permanent record. 
 
-74. "The visitor instruments interface must ensure reliable and efficient archiving of visitor instrument data." 
+55. Due to the nature of visitor instrumentation, it is unlikely that more complicated functionality can be supported. 
 
-75. Visitor instruments must have the capability to maintain operation tables, such as filter lists, as part of an observation's permanent record. 
+56. The Gemini system components with those of the visitor instrument (other than simple raster scans) will not be supported. 
 
-76. Due to the nature of visitor instrumentation, it is unlikely that more complicated functionality can be supported. 
+57. Compatibility with the standardized interfaces for the Gemini instruments. 
 
-77. The Gemini system components with those of the visitor instrument (other than simple raster scans) will not be supported. 
+58. Adaptability for visitor instruments to the internal standard for more complicated functionality, such as coordinated motions. 
 
-78. Compatibility with the standardized interfaces for the Gemini instruments. 
+59. Difficulty in offering external standard services as it can impact external users. 
 
-79. Adaptability for visitor instruments to the internal standard for more complicated functionality, such as coordinated motions. 
+60. Joint effort is required from Gemini and the visitor instrument team for more complicated functionality. 
 
-80. Difficulty in offering external standard services as it can impact external users. 
+61. Visitor instrument interfaces are stable and long-lived, as the time between successive uses of the same visitor instrument can be as long as one or two years. 
 
-81. Joint effort required from Gemini and the visitor instrument team for more complicated functionality. 
+62. The support of visitor instrumentation is made simpler if the visitor equipment adheres to the Gemini standards. 
 
-82. Visitor instrument interfaces are stable and long-lived, as the time between successive uses of the same visitor instrument can be as long as one or two years. 
+63. Adherence to Gemini standards for visitor instrumentation simplifies support but may not be cost-effective for some instruments. 
 
-83. The support of visitor instrumentation is made simpler if the visitor equipment adheres to the Gemini standards. 
+64. Gemini standards will evolve, which may require existing visitor instruments to rewrite or rework large areas of their control system. 
 
-84. Adherence to Gemini standards for visitor instrumentation simplifies support but may not be cost-effective for some instruments. 
+65. The system must accommodate changes in Gemini standards and support the integration of newer visitor instruments that may use alternative or cost-effective technology. 
 
-85. Gemini standards will evolve over time, which may require existing visitor instruments to rewrite or rework large areas of their control system. 
+66. The system must provide a consistent and standardized interface for visitor instruments to access necessary functionality. 
 
-86. The system must accommodate changes in Gemini standards and support the integration of newer visitor instruments that may use alternative or cost-effective technology. 
+67. The system must enable visitor instruments to operate efficiently in a server mode. 
 
-87. The system must provide a consistent and standardized interface for visitor instruments to access necessary functionality. 
+68. The system must provide support for complex functionality, including coordinated motions of the Gemini system components and visitor instrument. 
 
-88. The system must enable visitor instruments to operate efficiently in a server mode. 
+69. The system must accommodate differences in technology and cost constraints for visitor instruments that may not meet Gemini standards. 
 
-89. The system must provide support for complex functionality, including coordinated motions of the Gemini system components and visitor instrument. 
+70. The system must provide reliable and stable interfaces for visitor instruments to access necessary Gemini facilities. 
 
-90. The system must accommodate differences in technology and cost constraints for visitor instruments that may not meet Gemini standards. 
+71. The system must provide a Gemini observatory simulator that enhances the support for both Gemini and visitor instruments. 
 
-91. The system must provide reliable and stable interfaces for visitor instruments to access necessary Gemini facilities. 
+72. The system must provide remote access and control capabilities for users based on their privileges. 
 
-92. The system must provide a Gemini observatory simulator that enhances the support for both Gemini and visitor instruments. 
+73. Multi-point monitoring capability, allowing others to follow the actions of an active user and obtain expert advice remotely. 
 
-93. The system must provide remote access and control capabilities for users based on their privileges. 
+74. The system must provide a centralized display of status information at multiple locations and allow remote access to necessary status information. 
 
-94. Multi-point monitoring capability, allowing others to follow the actions of an active user and obtain expert advice remotely. 
-
-95. The system must provide centralized display of status information at multiple locations and allow remote access to necessary status information. 
-
-96. Monitoring should not affect the performance of ongoing observations. 
+75. Monitoring should not affect the performance of ongoing observations. 
 
 **Observing mode requirements**
 
-78. The Observatory Control System (OCS) must support interactive operation. 
+76. The Observatory Control System (OCS) must support interactive operation. 
 
-98. The OCS must have a visually appealing user interface.
+77. The OCS must have a visually appealing user interface.
 
-99. The capability for multiple stations to participate in the observation must be supported. 
+78. The capability for multiple stations to participate in the observation must be supported. 
 
+79. The software design must support remote operations with robust and secure connectivity. 
 
+80. The observing facilities must be able to function seamlessly in both on-site and off-site environments with reliable connectivity. 
 
-108. The software design must support remote operations with robust and secure connectivity. 
+81. The system must facilitate seamless collaboration and support team observation, allowing multiple observers at different locations to work together effectively. 
 
-109. The observing facilities must be able to function seamlessly in both on-site and off-site environments with reliable connectivity. 
+82. The system must have the capability to enforce access controls and restrict specific operations to authorized remote sites. 
 
-110. The system must facilitate seamless collaboration and support team observing, allowing multiple observers at different locations to work together effectively. 
+83. It is assumed that the hardware involved in remote operations has been specified with sufficient bandwidth to support remote operations. 
 
-111. The system must have the capability to enforce access controls and restrict specific operations to authorized remote sites. 
+84. The system must provide a consistent and uniform user experience, regardless of the location of use (local or remote). 
 
-112. It is assumed that the hardware involved in remote operations has been specified with sufficient bandwidth to support remote operations. 
+85. The system must have a comprehensive security strategy that takes into account different levels of security concerns and operation privileges across different sites. 
 
-113. The system must provide a consistent and uniform user experience, regardless of the location of use (local or remote). 
+86. The software design for the Gemini 8m Telescopes must take into account the requirements for remote operations from the outset. 
 
-114. The system must have a comprehensive security strategy that takes into account different levels of security concerns and operation privileges across different sites. 
+87. The safety measures for the telescope operation must ensure real-time monitoring with audio and video capabilities, and provide immediate access to a physically hard-wired emergency stop button for authorized staff members. 
 
-115. The software design for the Gemini 8m Telescopes must take into account the requirements for remote operations from the outset. 
+88. The system must enforce restrictions on remote control access, limiting it to the designated Gemini 8m Telescopes Enclosure and Gemini 8m Telescopes Control Facility. 
 
-116. The safety measures for the telescope operation must ensure real-time monitoring with audio and video capabilities, and provide immediate access to a physically hard-wired emergency stop button for authorized staff members. 
+89. Transparency in the system design to minimize the impact of link bandwidth on transparency. 
 
-117. The system must enforce restrictions on remote control access, limiting it to the designated Gemini 8m Telescopes Enclosure and Gemini 8m Telescopes Control Facility. 
+90. The system must ensure secure operations with a comprehensive security strategy that takes into account different levels of security concerns and operation privileges across different sites.
 
-118. Transparency in the system design to minimize the impact of link bandwidth on transparency. 
+91. The software design for the system should aim for efficiency and maintain compatibility with remote operations, and consider remote operations requirements from the outset to minimize the need for specialized software. 
 
-119. The system must ensure secure operations with a comprehensive security strategy that takes into account different levels of security concerns and operation privileges across different sites.
+92. The system should prevent the remote monitor's keyboard from affecting the observer's environment. 
 
-120. The software design for the system should aim for efficiency and maintain compatibility with remote operations, and consider remote operations requirements from the outset to minimize the need for specialized software. 
+93. The software should support remote monitoring, also known as "eavesdropping". 
 
+94. The system must have a responsive and smooth interface for multipoint monitoring with the capability for the remote user to customize the display on their screen. 
 
-128. The system should prevent the remote monitor's keyboard from affecting the observer's environment. 
+95. The remote screen does not need to have the exact same appearance as the local screen. 
 
-129. The software should support remote monitoring, also known as "eavesdropping". 
-
-130. The system must have a responsive and smooth interface for multipoint monitoring with the capability for the remote user to customize the display on their screen. 
-
-131. The remote screen does not need to have the exact same appearance as the local screen. 
-
-132. The remote keyboard operation must not interfere or have any unintended impact on the local user's environment. 
+96. The remote keyboard operation must not interfere or have any unintended impact on the local user's environment. 
 
 
 **Observing support**
 
-99. The capability to automatically perform observations following pre-defined sequences.
+97. The capability to automatically perform observations following pre-defined sequences.
 
-145. Competent monitoring at the Gemini 8m Telescopes site or remotely. 
+98. Competent monitoring at the Gemini 8m Telescopes site or remotely. 
 
-146. Allowance for interaction at the desired level (for example, only on error conditions, any time the user is allowed to break a sequence, etc.). 
+99. Allowance for interaction at the desired level (for example, only on error conditions, any time the user is allowed to break a sequence, etc.). 
 
-150. Fast and efficient switching capability of telescope scheduling, allowing for seamless exchange of observing programs. 
+100. Fast and efficient switching capability of telescope scheduling, allowing for seamless exchange of observing programs. 
 
-151. Ease of use and understanding of expert scheduling software through clear and concise presentation of information. 
+101. Ease of use and understanding of expert scheduling software through clear and concise presentation of information. 
 
-152. The ability to switch during the night among telescope modes and instruments (typically 2 times per night).
+102. The ability to switch during the night among telescope modes and instruments (typically 2 times per night).
 
 **General software requirements**
 
-105. System-wide data capacity limited by transfer methods and technology, and archiving capacity on site, capable of retaining 7 days of data produced by the largest instrument with the last 3 days available interactively from hard disk or similar medium. 
+103. System-wide data capacity limited by transfer methods and technology, and archiving capacity on site, capable of retaining 7 days of data produced by the largest instrument with the last 3 days available interactively from hard disk or similar medium. 
 
-167. Fast transmission of rough images every 0.5 sec, possibly assisted by data-loss compression techniques. 
+104. Fast transmission of rough images every 0.5 sec, possibly assisted by data-loss compression techniques. 
 
-168. Time requirement for high-quality image transmission matching the original resolution, with the aid of lossless compression. 
+105. Time requirement for high-quality image transmission matching the original resolution, with the aid of lossless compression. 
 
-169. System of privileges established at each operating level of the system.
+106. System of privileges established at each operating level of the system.
 
-170. Protection against accidental interference through Access Mode Allocation system. 
+107. Protection against accidental interference through Access Mode Allocation system. 
 
-171. Procedures for convenience and system integrity, including telescope start-up and shutdown, self-testing, and instrument start-up and shut-down. 
+108. Procedures for convenience and system integrity, including telescope start-up and shutdown, self-testing, and instrument start-up and shut-down. 
 
-172. Configuration and reconfiguration of the system. 
+109. Configuration and reconfiguration of the system. 
 
-173. The system must allow for dynamic reconfiguration of observing configuration with minimal impact on ongoing operations. 
+110. The system must allow for dynamic reconfiguration of observing configuration with minimal impact on ongoing operations. 
 
-174. The control software must have real-time monitoring capabilities to maintain constant awareness of the status of all installed subsystems. 
+111. The control software must have real-time monitoring capabilities to maintain constant awareness of the status of all installed subsystems. 
 
-  
-  
   
 
 **General performance and reliability requirements**
 
-114. The system should have no hard restrictions on the number of simultaneous users, but should allow for policy decisions that do restrict the amount of simultaneous access. 
+112. The system should have no hard restrictions on the number of simultaneous users, but should allow for policy decisions that do restrict the amount of simultaneous access. 
 
-176. Every command must be accepted/rejected within 2 sec and before the corresponding action occurs. (This is different from the ACK/NAK response of the communications protocol - here, the target system must have examined the command and verified its validity. 
+113. Every command must be accepted/rejected within 2 sec and before the corresponding action occurs. (This is different from the ACK/NAK response of the communications protocol - here, the target system must have examined the command and verified its validity. 
 
-177. Status display update must be within 4 sec at the local stations (certain functions, such as telescope position, may have tighter constraints). Remote station update response is given in the Requirements for Remote Operations section. 
+114. Status display update must be within 4 sec at the local stations (certain functions, such as telescope position, may have tighter constraints). Remote station update response is given in the Requirements for Remote Operations section. 
 
-178. Requests of subsystems for status information must be answered within 5 sec and be possible in maintenance level operation. 
+115. Requests of subsystems for status information must be answered within 5 sec and be possible in maintenance level operation. 
 
-179. Requirements for response times within the user interfaces are given in the User Interface requirements section. 
+116. Requirements for response times within the user interfaces are given in the User Interface requirements section. 
 
-180. Software bugs should be logged and fixed as soon as possible after detection. 
+117. Software bugs should be logged and fixed as soon as possible after detection. 
 
-181. Goal to have restart conditions occur only on hardware failure. 
+118. Goal to have restart conditions occur only on hardware failure. 
 
-182. Use of fault recovery, exception handling, fail-safe checks to improve reliability. 
+119. Use of fault recovery, exception handling, fail-safe checks to improve reliability. 
 
   
 
 **Test and checkout requirements**
 
-122. the telescope and instrument software shall contain built-in test (BIT) facilities to verify Gemini 8m Telescopes system and Gemini 8m Telescopes software performances. 
+120. the telescope and instrument software shall contain built-in test (BIT) facilities to verify Gemini 8m Telescopes system and Gemini 8m Telescopes software performances. 
 
-184. All Gemini 8m Telescopes software modules must have comprehensive test specifications to verify correct functioning of releases, to be used for both acceptance testing and online testing procedures. 
+121. All Gemini 8m Telescopes software modules must have comprehensive test specifications to verify correct functioning of releases, to be used for both acceptance testing and online testing procedures. 
 
-185. The Gemini 8m Telescopes control software shall provide for self-test sequences of the system and subsystems, exercising all present subsystems in a given operational configuration. 
+122. The Gemini 8m Telescopes control software shall provide for self-test sequences of the system and subsystems, exercising all present subsystems in a given operational configuration. 
 
-186. Regression tests should be a part of every Gemini 8m Telescopes software package. 
+123. Regression tests should be a part of every Gemini 8m Telescopes software package. 
 
   
 
@@ -469,29 +459,29 @@
 
   
 
-126. subsystems must notify the user when faults occur. 
+124. subsystems must notify the user when faults occur. 
 
-188. Notification must be specific as to origin and problem. 
+125. Notification must be specific as to origin and problem. 
 
-189. Notification must be capable of being electronically logged.  
+126. Notification must be capable of being electronically logged.  
 
-191. Multiple levels of fault notification (e.g. detailed, verbose, short) to aid in tracking down problems. 
+127. Multiple levels of fault notification (e.g. detailed, verbose, short) to aid in tracking down problems. 
 
-192. Should a subsystem fail (e.g. one detector, one instrument) predefined procedures must exist to redefine the environment in such a way that operation can restart with the remaining equipment.
+128. Should a subsystem fail (e.g. one detector, one instrument) predefined procedures must exist to redefine the environment in such a way that operation can restart with the remaining equipment.
 
-193. In case of computer hardware failure concerning the user station equipment, a simple software reconfiguration procedure should be in place to transfer control from one user station to another. 
+129. In case of computer hardware failure concerning the user station equipment, a simple software reconfiguration procedure should be in place to transfer control from one user station to another. 
 
-194. In the case of IOC failure, no transfer of control to another IOC will be possible, due to the local connections and interfaces to the control electronics. In this case there shall be a procedure to replace faulty cards and/or assemblies. If it is possible to observe with that particular IOC in a failed state then it must be possible to reconfigure the system to do so. 
+130. In the case of IOC failure, no transfer of control to another IOC will be possible, due to the local connections and interfaces to the control electronics. In this case there shall be a procedure to replace faulty cards and/or assemblies. If it is possible to observe with that particular IOC in a failed state then it must be possible to reconfigure the system to do so. 
 
-195. Full redundancy is not a requirement of the Gemini 8m Telescopes and it will be acceptable to have to replace units in case of failure. 
+131. Full redundancy is not a requirement of the Gemini 8m Telescopes and it will be acceptable to have to replace units in case of failure. 
 
-196. Procedures for switching to the backup system will be established for each area where redundancy is decided to be cost effective. 
+132. Procedures for switching to the backup system will be established for each area where redundancy is decided to be cost effective. 
 
-197. There is no requirement for automatic switching to the backup system. 
+133. There is no requirement for automatic switching to the backup system. 
 
-198. All communication shall be based on the use of standard communication protocols with retry procedures applied as part of the protocol. 
+134. All communication shall be based on the use of standard communication protocols with retry procedures applied as part of the protocol. 
 
-199. Certain network concepts may be preferable as they offer intrinsic redundancy (e.g. double loops) and re-routing possibilities in case of node failures (single point failure protection). 
+135. Certain network concepts may be preferable as they offer intrinsic redundancy (e.g. double loops) and re-routing possibilities in case of node failures (single point failure protection). 
 
 **Constraints**
 
@@ -509,7 +499,8 @@
 
 13. The Gemini subsystem must have a minimal interface with the rest of the Gemini system to enhance its self-containment and autonomy. 
 
-14. No subsystem package should make any assumptions about the surrounding environment beyond that provided in the interface specifications. 
+14. No subsystem package should make any assumptions about the surrounding environment beyond that provided in the interface specifications.
+    
 
 ## Chapter 3
 
@@ -547,271 +538,266 @@
 
 **User Privileges:**
 
-User privileges can be further refined based on categories or user station locations.
+10. User privileges can be further refined based on categories or user station locations.
 
 **Protections :**
 
-10. Protections are enforced to ensure users know the operation level and subsystem compatibility.
+11. Protections are enforced to ensure users know the operation level and subsystem compatibility.
 
 **Data Acquisition and Control Node :**
 
-11. The system will include one auxiliary data acquisition and instrument control node.
+12. The system will include one auxiliary data acquisition and instrument control node.
 
-12. Off-site observing modes are supported.
+13. Off-site observing modes are supported.
 
-13. A single off-site data acquisition and instrument control node will be located at the Gemini 8m Telescopes Site Support or Base Facility.
+14. A single off-site data acquisition and instrument control node will be located at the Gemini 8m Telescopes Site Support or Base Facility.
 
-14. One supervisor, along with local and remote monitoring nodes, will monitor the system.
+15. One supervisor, along with local and remote monitoring nodes, will monitor the system.
 
-15. The Gemini 8m Telescopes control software allows simultaneous operation.
+16. The Gemini 8m Telescopes control software allows simultaneous operation.
 
 **Command Acknowledgment :**
 
-16. Acknowledgment of commands is required within specified response times.
+17. Acknowledgment of commands is required within specified response times.
 
 **Startup and Shutdown Procedures :**
 
-17. Automatic procedures for telescope and instrument startup and shutdown are necessary.
+18. Automatic procedures for telescope and instrument startup and shutdown are necessary.
 
-18. Instrument startup and shutdown must be independent of the telescope operation.
+19. Instrument startup and shutdown must be independent of the telescope operation.
 
-19. Reconfiguration procedures are needed to change the observing environment.
+20. Reconfiguration procedures are needed to change the observing environment.
 
-20. Operations staff have privileges to change the observing environment.
+21. Operations staff have privileges to change the observing environment.
 
 **Software Interfaces :**
 
-21. The Gemini 8m Telescopes software covers control, data acquisition, and operational aspects.
+22. The Gemini 8m Telescopes software covers control, data acquisition, and operational aspects.
 
-22. The software interfaces with external software, and the interfaces are integral to the Gemini 8m Telescopes software.
+23. The software interfaces with external software, and the interfaces are integral to the Gemini 8m Telescopes software.
 
-23. Standard reduction procedures, quick-look data processing, near-line processing, and data output formats are defined.
+24. Standard reduction procedures, quick-look data processing, near-line processing, and data output formats are defined.
 
 **Network and Communication :**
 
-24. The LAN is supplemented with Local Time Bus, digital reflective memory bus, and analog event-based bus.
+25. The LAN is supplemented with Local Time Bus, digital reflective memory bus, and analog event-based bus.
 
-25. A hierarchical model supporting logical and physical layers is implemented.
+26. A hierarchical model supporting logical and physical layers is implemented.
 
-25. Essential tasks occur on project-controlled resources.
+27. Essential tasks occur on project-controlled resources.
 
 **User Constraints :**
 
-27. User constraints enable centralized support and coordination of operations.
+28. User constraints enable centralized support and coordination of operations.
 
 **Hardware Support :**
 
-28. Computer hardware supports the Gemini 8m Telescopes software environment.
+29. Computer hardware supports the Gemini 8m Telescopes software environment.
 
-1. Common development and implementation tools are available and supported.
+30. Common development and implementation tools are available and supported.
 
-1. dentical network access is supported.
+31. dentical network access is supported.
 
-2. Sufficient local computing power is required for telescope and instrument control without significant overhead.
+32. Sufficient local computing power is required for telescope and instrument control without significant overhead.
 
-2. The software is designed to handle large amounts of data efficiently with minimal latency.
+33. The software is designed to handle large amounts of data efficiently with minimal latency.
+    
+35. Remote operation includes monitoring from base facilities with diagnostic and test tools.
 
-2. Remote operation includes monitoring from base facilities with diagnostic and test tools.
-
-2. Computers at the Gemini 8m Telescopes site must meet altitude and humidity specifications.
+36. Computers at the Gemini 8m Telescopes site must meet altitude and humidity specifications.
 
 **Software Maintenance and Extensibility :**
 
- 35. Individual instruments can run independently.
+37. Individual instruments can run independently.
 
-28. Telescope software at both telescopes is maintained to be identical in upper layers.
+38. Telescope software at both telescopes is maintained to be identical in upper layers.
 
-28. Software is designed for easy extensibility for adding new instruments.
+39. Software is designed for easy extensibility for adding new instruments.
 
-28. Switching configurations, reconfiguration procedures, and easy procedures for system modification are defined.
+40. Switching configurations, reconfiguration procedures, and easy procedures for system modification are defined.
 
- 28. The number of main software packages is kept to a minimum for easier maintenance.
+41. The number of main software packages is kept to a minimum for easier maintenance.
 
-28. All software not directly controlling hardware is written as machine-independent, portable code.
+42. All software not directly controlling hardware is written as machine-independent, portable code.
 
- 28. Standards are defined for on-line software and development environment.
+43. Standards are defined for on-line software and development environment.
 
- 28. On-line version control and consistency checking are implemented.
+44. On-line version control and consistency checking are implemented.
 
 **System Monitoring and Recovery :**
 
-43.  Retry procedures, reconfiguration after the failure of a single non-critical subsystem, and range checking are included.
+45.  Retry procedures, reconfiguration after the failure of a single non-critical subsystem, and range checking are included.
 
-28. Fault rate measurements, recovery procedures, and constant monitoring of active and inactive subsystems are defined.
+46. Fault rate measurements, recovery procedures, and constant monitoring of active and inactive subsystems are defined.
 
- 28. Maintenance requirements, upgrades, and resource estimates are provided.
+47. Maintenance requirements, upgrades, and resource estimates are provided.
 
 **Safety and Risk Prevention :**
 
- 28. The Gemini system is self-monitoring for safety and risk prevention.
+48. The Gemini system is self-monitoring for safety and risk prevention.
 
- 28. The software can quickly bring the system to a safe state upon notification of danger.
+49. The software can quickly bring the system to a safe state upon notification of danger.
 
-28. Subsystems can detect and report danger appropriately.
+50. Subsystems can detect and report danger appropriately.
 
- 28. Subsystems can move into safe states if the risk persists.
+51. Subsystems can move into safe states if the risk persists.
 
- 29. Safety protection is applied to prevent actions that could endanger people or subsystems.
+52. Safety protection is applied to prevent actions that could endanger people or subsystems.
 
- 30. Unsafe actions are rejected, and the system will halt if necessary.
- 31. The software will allow movement off soft limits but halts on reaching hard limits.
+53. Unsafe actions are rejected, and the system will halt if necessary.
+
+54. The software will allow movement off soft limits but halts on reaching hard limits.
       Watchdog mechanisms are implemented.
 
 **Security:**
 
-35. Security measures are implemented to prevent command mix-ups and intrusion from the wide area network.
+55. Security measures are implemented to prevent command mix-ups and intrusion from the wide area network.
 
-28. The astronomical database is protected from intrusion.
+56. The astronomical database is protected from intrusion.
 
-28. Security prevents unauthorized intrusion or access at unauthorized levels.
+57. Security prevents unauthorized intrusion or access at unauthorized levels.
 
 **System Design and Development :**
 
-38. The software is designed for easy extension and upgrade with modifications to non-changing components.
+58. The software is designed for easy extension and upgrade with modifications to non-changing components.
 
-28. The software, installation process, and documentation are developed with expandability using industry standards.
+59. The software, installation process, and documentation are developed with expandability using industry standards.
 
-28. The software is strictly modular, allowing independent installation and maintenance of different subsystems.
+60. The software is strictly modular, allowing independent installation and maintenance of different subsystems.
 
 **Reliability and Data Redundancy :**
 
-41. Security and safety are guaranteed even in the event of component failure, including higher-level software.
+61. Security and safety are guaranteed even in the event of component failure, including higher-level software.
 
-28. Data redundancy requirements prevent loss of data due to a single failure.
+62. Data redundancy requirements prevent loss of data due to a single failure.
 
-28. Data redundancy minimizes the impact of single-point errors throughout the system.
+63. Data redundancy minimizes the impact of single-point errors throughout the system.
 
 **Parallel Operation :**
 
-44. The Telescope Control System can detect and invoke parallel operation for control of all subsystems.
+64. The Telescope Control System can detect and invoke parallel operation for control of all subsystems.
 
 **Development Environment :**
 
-45. The development environment includes computer hardware and system software optimized for the development model.
+65. The development environment includes computer hardware and system software optimized for the development model.
 
 **System Information:**
 
-46. Each system can provide its current version upon request.
+66. Each system can provide its current version upon request.
+
+
 
 **Non-Functional Requirements:**
 
 **Response Times :**
 
-47. Acknowledgment of commands is required within specified response times.
+1. Acknowledgment of commands is required within specified response times.
 
 **Real-time Requirements :**
 
-48. The standard software must meet real-time requirements and offer drivers for standard electronics.
+2. The standard software must meet real-time requirements and offer drivers for standard electronics.
 
 **Data Specifications :**
 
-49. Links between electronics interfaces and main processors must meet data specifications.
+3. Links between electronics interfaces and main processors must meet data specifications.
 
 **Efficiency and Latency :**
 
-50. The software is designed to handle large amounts of data efficiently with minimal latency.
+4. The software is designed to handle large amounts of data efficiently with minimal latency.
 
 **Hardware Constraints :**
 
-51. Computers at the Gemini 8m Telescopes site must meet altitude and humidity specifications.
+5. Computers at the Gemini 8m Telescopes site must meet altitude and humidity specifications.
 
 **Safety Aspects Analysis :**
 
-52. Safety aspects are analyzed during the functional specification phase.
+6. Safety aspects are analyzed during the functional specification phase.
 
 **Upgrade Effort and Resources :**
 
-53. Areas anticipating upgrades are identified with estimates of effort and resources.
+7. Areas anticipating upgrades are identified with estimates of effort and resources.
 
 **Security Measures :**
 
-54. Security measures are implemented to prevent command mix-ups and intrusion from the wide area network.
+8. Security measures are implemented to prevent command mix-ups and intrusion from the wide area network.
 
-28. The astronomical database is protected from intrusion.
+9. The astronomical database is protected from intrusion.
 
-28. Security prevents unauthorized intrusion or access at unauthorized levels.
+10. Security prevents unauthorized intrusion or access at unauthorized levels.
 
 **Expandability :**
 
-57. The software is designed for easy extension and upgrade with modifications to non-changing components.
+11. The software is designed for easy extension and upgrade with modifications to non-changing components.
 
-28. The software, installation process, and documentation are developed with expandability using industry standards.
+12. The software, installation process, and documentation are developed with expandability using industry standards.
 
 **Modularity :**
 
-59. The software is strictly modular, allowing independent installation and maintenance of different subsystems.
+13. The software is strictly modular, allowing independent installation and maintenance of different subsystems.
 
 **Reliability :**
 
-60. Security and safety are guaranteed even in the event of component failure, including higher-level software.
+14. Security and safety are guaranteed even in the event of component failure, including higher-level software.
 
-28. Data redundancy requirements prevent loss of data due to a single failure.
+15. Data redundancy requirements prevent loss of data due to a single failure.
 
-28. Data redundancy minimizes the impact of single-point errors throughout the system.
+16. Data redundancy minimizes the impact of single-point errors throughout the system.
 
 **Parallel Operation :**
 
-63. The Telescope Control System can detect and invoke parallel operation for control of all subsystems.
+17. The Telescope Control System can detect and invoke parallel operation for control of all subsystems.
 
 **Optimized Development Environment:**
 
-64. The development environment includes computer hardware and system software optimized for the development model.
+18. The development environment includes computer hardware and system software optimized for the development model.
 
 **Documentation :**
 
-65. Each system can provide its current version upon request.
+19. Each system can provide its current version upon request.
+
+    
 
 ## Chapter4
 
 **Functional Requirements**
 
-  
 
 **Development Environment:**
 
 1.  Criteria for the development environment include productivity, portability, vendor independence, and support for state-of-the-art user interfaces.
     
-
 **Operating Systems and Interfaces:**
 
 2.  Specifications for the development of operating systems, GUI systems, and database interfaces.
-    
 
 **Software below IOC Level:**
 
 3.  Guidelines for software interfacing with the IOC and embedded software standards.
-    
-
+   
 **Communication Protocols and Hardware:**
 
 4.  Use of TCP/IP, support for standard ARPA services, and specific protocols for control communication.
-    
-
+   
 **Data Management and Archiving:**
 
 5.  Procedures for offline data reduction, quick-look analysis, archiving, and catalog management.
-    
 
 **Hardware Specifications:**
 
 6.  Requirements for development workstations, peripherals, and IOC CPUs.
-    
-
+   
 **EPICS Toolkit:**
 
 7.  Usage of the EPICS toolkit as the foundation of the control system, encompassing various hardware and software components.
     
-
 **Database Management in EPICS:**
 
 8.  Handling of the IOC database, including access methods and scanning mechanisms.
     
-
 **EPICS Development Tools:**
 
 9.  A range of tools for database configuration, display editing, alarm handling, archiving, and state notation compilation
     
-
 **EPICS System Components:**
 
 10.  Hardware and software components for creating a control system, including the OPI, IOC, and LAN.
@@ -844,16 +830,6 @@ User privileges can be further refined based on categories or user station locat
 
 17.  The involvement of APS Collaborative Access Teams in EPICS development, focusing on client applications and high-level sequencing.
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
 **Non-functional Requirements**
 
@@ -861,56 +837,45 @@ User privileges can be further refined based on categories or user station locat
 
 1.  Measures for fault rates, recovery procedures, and continuous monitoring of active and inactive subsystems.
     
-
 **Database Requirements:**
 
 2.  Includes access times, support for asynchronous writes, and remote and distributed data support.
     
-
 **Remote Operations:**
 
 3.  Full implementation of remote operations with performance considerations due to WAN bandwidth.
-    
 
 **Security:**
 
 4.  Control access to system features, possibly restricting operations to specific remote sites.
     
-
 **Data Types and Storage:**
 
 5.  Descriptions of various data types and their storage in different databases.
     
-
 **System Operation Modes:**
 
 6.  Includes automatic and interactive operation modes, observing, standby, maintenance, and testing modes, and performance metrics.
     
-
 **Start-Up and Shut-Down Procedures:**
 
 7.  Specific procedures and time requirements for different system levels.
-    
 
 **Logging and Error Handling:**
 
 8.  System logging, error logging, and classification of errors into fatal, serious, and warnings.
-    
-
+   
 **Alarms and Recovery:**
 
 9.  Distinction between alarms and errors, and the inclusion of automatic and manual alarm clearances.
-    
 
 **Error-Mode Recovery:**
 
 10.  Subsystem-specific performance of error-mode recovery.
     
-
 **System Design and Development Standards:**
 
-11.  Adherence to the Ward/Mellor approach for real-time systems, including analysis, design, development methods, review procedures, and documentation.
-    
+11.  Adherence to the Ward/Mellor approach for real-time systems, including analysis, design, development methods, review procedures, and documentation. 
 
 **Real-time Support:**
 
@@ -991,11 +956,14 @@ User privileges can be further refined based on categories or user station locat
 **Software Lifecycle and EPICS Toolkit:**
 
 31.  Emphasis on existing software evaluation and the adoption of the EPICS toolkit.
+
+    
 ## Chapter5
 
 **Functional requirements**
 
  **Time Synchronization:**
+ 
 1. The system must support time synchronization among control subsystems using IRIG-B format as UTC. This ensures that time-sensitive operations across the Gemini system are coordinated and accurate.
 
 **Self-Testing:**
@@ -1005,7 +973,6 @@ User privileges can be further refined based on categories or user station locat
 **Logging:**
 
 3. The system must support logging at specified levels. Logging is essential for recording system activities, errors, and important events, providing valuable information for troubleshooting and analysis. 
-
 
 **Asynchronous Communication:**
 
@@ -1019,6 +986,7 @@ User privileges can be further refined based on categories or user station locat
 **Non-functional requirements**
 
 **IOC Commands:**
+
 1. The Gemini system must support various IOC commands, including AwaitItem, SetCallback, ClearCallback, LocateItem, GetValue, PutValue, StartStream, StopStream, SetEvent, and ClearEvent. These commands are essential for interacting with the Input/Output Controller (IOC) subsystems and accessing the local databases within the system.
 
 **Data Communications:**
@@ -1031,7 +999,6 @@ User privileges can be further refined based on categories or user station locat
 **General purpose command:**
 
 3. The system must support a range of general-purpose commands, including GetState, GetID, GetConfiguration, SetStatus, and SetLogging. These commands are crucial for obtaining the internal state of subsystems, retrieving unique identification tags, obtaining detailed configuration information, and setting the status and logging levels of subsystems.
-
 
 **Command Structure**
 
