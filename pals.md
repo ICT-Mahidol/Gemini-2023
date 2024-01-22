@@ -293,3 +293,169 @@ The Gemini 8m Telescopes operation must deal with a complex environment produced
 - All Gemini software shall be version labeled in both source and binary form, with version information retrievable from executing software via control commands.
 - Gemini subsystems shall be as self-contained and autonomous as possible, decreasing the functional width of the interface to the rest of the Gemini system.
 - No subsystem package shall make any assumptions about the surrounding environment beyond that provided in the interface specifications.
+
+## General Requirements
+
+### 1. Data Specifications
+
+#### Fuctional Requirements
+
+- The software shall acquire astronomical data in digital form.
+- Various data, including parameters, control commands, video, and voice data, shall be exchanged between different processing units for telescope and instrument setup and control.
+- Control parameters, telescope and instrument information, and meteorological data shall be available to the Gemini 8m Telescopes software and accessible to all users, subject to defined restrictions.
+- Astronomical data shall be transported between GEMINI and home institutes of visiting astronomers in FITS format, as defined by NOST 100-1.0.
+- TV data related to site monitoring and voice data shall be available at all operations facilities.
+- Information from sky field monitors, autoguider cameras, sky monitoring devices (e.g., cloud and seeing monitors) shall be available.
+- Voice connectivity should be available on a permanent connection.
+
+#### Non-Funtional Requirements
+
+- Delay times for the exchange of control information shall stay within precise time limits.
+- The protocol shall be predictable, with commands unable to get lost and replies required to come back reliably.
+- The link chosen to transfer data shall represent as small a bottleneck as possible for data acquisition.
+
+### 2. Operation
+
+#### Fuctional Requirements
+
+- Normal operational mode shall allows maintenance tables (e.g., instrument parameters) to be updated.
+- The system shall supports off-site observing modes with a dedicated data acquisition and instrument control node, located at either the Gemini 8m Telescopes Site Support or Base Facility.
+- The system shall supports local and remote monitoring nodes for supervisor and user monitoring purposes.
+- The Gemini 8m Telescopes control software shall allows simultaneous operation of up to six active control nodes and up to two monitoring nodes without appreciable degradation of performance.
+- Automatic procedures shall be in place to implement startup and shutdown of the telescope and instruments
+
+#### Non-Funtional Requirements
+
+- Every command shall be acknowledged positively or negatively before the occurrence of the corresponding action within specified response times.
+- Operational software shall know which subsystems are installed and operational at any given time.
+
+### 3. External Interface Requirements
+
+#### Fuctional Requirements
+
+- The user interface shall provide a homogeneous look and feel across different stations and instruments.
+- The user interface shall be network-transparent, callable from various stations without dependency on a specific computer.
+- Standard interfaces to control electronics, including standard bus systems, interface cards, and software skeletons, shall be available.
+- Gemini 8m Telescopes software shall interface with external software, including commercial packages, preexisting software, and software associated with visitor instrumentation.
+- On-line quick-look analysis capabilities shall be provided for monitoring the quality of astronomical data, with standard reduction procedures for basic calibrations.
+- Gemini 8m Telescopes software shall be able to interface with all commercial software packages integrated into the operation.
+- The LAN shall support required data bandwidths and response times for internal communication needs.
+
+#### Non-Funtional Requirements
+
+-  User interface tools shall be based on standards, offering portability across different computer hardware platforms.
+-  The output format of Gemini 8m Telescopes data shall be compatible with the GEMINI archive requirements.
+- Quick-look data processing shall be synchronous and usable within exposure sequences without manual intervention.
+- Off-line pixel processing for full data reduction shall exist at the Gemini 8m Telescopes site, but without direct interface to the Gemini 8m
+- On-line interactive access to the data archiving system shall exist, allowing users to access the database for Gemini 8m Telescopes data.
+- Network redundancy shall be considered to increase reliability and security, especially for control information.
+- LAN and WAN interfaces shall be homogeneous and based on standards allowing migration on different media.
+- Peer-to-peer connectivity and bypassing the hierarchy shall be limited to overcoming demonstrated performance problems and specific data transmission needs.
+
+### 4. General Constraints
+
+#### Fuctional Requirements
+
+- The software must support access to the system from any user station.
+- User stations should be software-configurable and identical in principle.
+- Computers used at the Gemini 8m Telescopes site, especially during the test phase, shall be checked against altitude and humidity specifications.
+- Identical network access must be supported.
+
+#### Non-Funtional Requirements
+
+- Computer hardware must be compatible with the Gemini 8m Telescopes software environment and scalable in performance.
+- Local processing power must be sufficient for telescope and instrument control without significant overhead.
+- Individual instruments must be able to run fully independently.
+- Telescope software at the two telescopes must be maintained to be identical in the upper layers.
+- All software not directly controlling specific hardware must be written as machine-independent, portable code.
+
+### 5. Attributes
+
+#### Fuctional Requirements
+
+- Subsystem software should include modules for self-checking at different levels, such as monitor level, self-test level, and system level.
+
+#### Non-Funtional Requirements
+
+- The software aims to achieve simplicity according to complexity criteria provided by Rick.
+- Fault tolerance and redundancy shall are emphasized.
+- The software must be designed with expandability and modularity in mind, utilizing standard industry practices.
+- Software must be designed with human engineering requirements, considering stress effects, feedback, interfaces, procedures, training, and experience.
+
+
+## Specific Requirements
+
+### 1. Attributes
+
+#### Fuctional Requirements
+
+- The system shall continuously monitor active and inactive subsystems for correct operation.
+- No module can rely upon information outside of its defined interface.
+
+#### Non-Funtional Requirements
+
+- All software is to be developed using typical modularization and standardization techniques.
+-  A measure of fault rates should be done during commissioning to establish baseline rates for system reliability monitoring.
+- Validity and feasibility checks during science planning will be needed to ensure effective and efficient use of the telescope.
+
+### 2. Other Control and Software Requirements
+
+#### Fuctional Requirements
+
+- All telescope and instrument parameters are kept in an online database to permit easy implementation of table-driven applications.
+    -   Telescope, instrument, and detector control information available at any operation level.
+    -   Access times to the database in the range of 2-3 msec per access.
+    -  Support for asynchronous writes, allowing for concurrent operation.
+    -  Time-access critical information available in memory.
+    -  Consistent and logical (name-based) access method.
+    -  Support for both remote access and distributed data.
+- The internal implementation of the database within the IOC shall based on EPICS.
+- Gemini telescope operation supports a full implementation of remote operations, including remote observing, remote control of telescope, enclosure, and instruments, multipoint monitoring, remote monitoring, and remote access for testing, development, diagnostics, and maintenance.
+    -   Video data signals encoded digitally and transferred via the WAN to remote sites.
+    -   Security measures for controlling access to system features, possibly restricting some operations to specific remote sites.
+ - Start-up, shut-down, and logging procedures.
+    -   Start-up and shut-down procedures at various levels.
+    -   Logging of system events, including engineering logging.
+    -   Fault-tolerance and recovery procedures.
+    -   Error logging for fatal, serious, and warning conditions.
+  - Development environment for Gemini software.
+    -   Development operating system is UNIX System V, Release 4.
+    -   Use of X-windows (X11R5 or X11R6) for GUI systems.
+    -   Use of the GNU software tool suite and CVS for version control.
+
+#### Non-Funtional Requirements
+
+- Specifies requirements for development system hardware.
+    -   Workstations conform to specified software standards.
+    -   Workstations are state-of-the-art systems with scalability.
+    -   Support for Ethernet IEEE-802.3 and FDDI interfaces.
+
+### 3. User Requirements for EPICS Developers
+
+#### Fuctional Requirements
+
+- The system must be built on the Experimental Physics and Industrial Control System (EPICS) toolkit, which serves as the foundation of the Gemini control system.
+- The system must include an Operator Interface (OPI) running on a UNIX-based workstation capable of running various EPICS tools.
+- The system must include Input Output Controllers (IOCs), which are VME/VXI based chassis containing a Motorola 68xxx processor, various I/O modules, and VME modules providing access to other I/O buses such as GPIB.
+- A communication network (LAN) must be established to facilitate communication between IOCs and OPIs.
+- EPICS must provide a software component, Channel Access, ensuring network-transparent communication between a Channel Access client and an arbitrary number of Channel Access servers.
+- The system must have a memory resident database with various record types (e.g., ai, ao) and extensible fields.
+- All access to the database, except for record and device support, must be through channel or database access routines.
+- The system must allow for record-specific knowledge removal through record support modules, device support modules, and device drivers.
+- Callback mechanisms for database value changes must be provided, allowing notification without constant polling.
+- The system must provide OPI tools, divided into Channel Access tools (e.g., MEDM, DM, ALH, AR, Sequencer) for real-time monitoring and control of IOCs.
+- Additional OPI tools (e.g., DCT, CAPFAST, GDCT, EDD) must be available for database configuration, display editing, and other purposes.
+- A mechanism must be in place for managing EPICS components, including core software, optional components, and tools.
+- The system must support interoperability with other software systems, such as IDL/PvWave, Mathematica, and WINGZ.
+
+#### Non-Funtional Requirements
+
+- The system must provide real-time performance for monitoring and controlling IOCs.
+- The EPICS toolkit must be scalable to accommodate different sets of record types, device types, and drivers.
+- The EPICS system must be reliable for use in large accelerator control and diagnostics systems.
+- The system should be designed to facilitate maintenance and enhancement of EPICS IOC software.
+- OPI tools must be user-friendly, supporting ease of use for both regular users and one-time users.
+- EPICS must integrate seamlessly with other components of the Gemini control system, including work packages and future developments.
+- The EPICS system must be flexible to accommodate new record types without impacting existing software.
+- Clear and comprehensive documentation must be provided for EPICS developers, differentiating between 'Internals' and 'Applications' work.
+- Training classes must be available to developers, covering the nature of 'Internals' and 'Applications' work within the EPICS community.
