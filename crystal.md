@@ -994,10 +994,9 @@
 **Data Communications:**
 
 2. The system must be capable of transmitting commands and data across the network using different methods:
-   
-2.1 Direct Transmission: The most common means of command transfer from the Observatory Control System to the subsystems.
-2.2 Channel Routing: Commands and data may be routed through a channel, which may involve intelligent channels responsible for data conversion. Channels may have multiple sources, multiple targets, or both, and may use separate physical routes to prevent interference with normal command streams.
-2.3 Broadcast Signals: Some commands and data signals are broadcast across the control system, allowing any subsystem to examine and respond as appropriate. For example, critical system failures might trigger a broadcast ShutDown command.
+   2.1 Direct Transmission: The most common means of command transfer from the Observatory Control System to the subsystems.
+   2.2 Channel Routing: Commands and data may be routed through a channel, which may involve intelligent channels responsible for data conversion. Channels may have multiple sources, multiple targets, or both, and may use separate physical routes to prevent interference with normal command streams.
+   2.3 Broadcast Signals: Some commands and data signals are broadcast across the control system, allowing any subsystem to examine and respond as appropriate. For example, critical system failures might trigger a broadcast ShutDown command.
 
 **General purpose command:**
 
