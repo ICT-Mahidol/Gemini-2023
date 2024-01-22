@@ -123,10 +123,173 @@ The Gemini 8m Telescopes operation must deal with a complex environment produced
 - **Monitoring Activities** shall not adversely affect the performance of ongoing observations or operations.
 - **Automatic Displays** of status information at different locations shall exist to facilitate continuous monitoring without explicit user interaction.
 
-## General Requirements
+## Observing Mode Requirements
 
-The
+### 1. Interactive Observing
 
-## Specific Requirements
+#### Fuctional Requirements
 
-The
+- **Observing** shall be executed with the sequencer by providing a computer executable program.
+- **Interactive Operation** shall be supported through the Observatory Control System (OCS).
+- **User Interface** to the OCS shall allow changes to the viewing program.
+- The **System** shall allow more than one station participate in the observing.
+
+#### Non-Funtional Requirements
+
+- **Telescope Operation** in interactive observing mode shall be supported by the software in a smooth and friendly way.
+- Interaction via an **Automatic Sequencer** shall be a top priority requirement and its implementation precedes other modes.
+- The initial implementation of the **Automatic Sequencer** shall operate in a "pass through" mode with minimal checking and delay.
+
+### 2. Queue-Based
+
+#### Fuctional Requirements
+
+- The **Observing Program** shall be fully automated, requiring minimal human interaction during observation.
+- A full **Telescope Simulator** shall be required for testing observing programs for completeness, errors, and functionality.
+- All **Control Software** shall provide support for simulated use within the virtual telescope.
+- The **Software** shall support flexible scheduling, both manual and via a scheduler, allowing for the interleaving of observing programs.
+- The **System** shall be allowed to queue all possible observing with currently available instruments, including preprogrammed observing sequences.
+
+#### Non-Funtional Requirements
+
+- The programming environment for the **Automated Observing Program** shall be visually-oriented, simple, and easy to use for astronomers.
+- If a **Scheduler is not included** in the initial system design, the design shall allow for its future implementation.
+- **Scheduling** shall allow for the interleaving of observing programs in a manner transparent to individual programs.
+- The **System Design** shall allow for the future implementation of a scheduler.
+
+### 3. Remote Operation
+
+#### Fuctional Requirements
+
+- All **Software** shall be developed to permit remote operations with no conceptual difference between on-site and remote operation.
+- All **Observing Facilities** should function both on-site and off-site, enabling full remote operations.
+- **Team Observing**, involving multiple observers at different sites, shall be supported.
+-  When needed, the **System** shall restrict specific operations to designated remote sites.
+- **Security Measures**, including different operation levels and privileges at different sites, shall be considered.
+- **Remote Users** shall interact with the system through operators at different facilities and via the scheduler program, without direct control over the telescope.
+
+#### Non-Funtional Requirements
+- The **System** shall be transparent to both local and remote use, with functionality unaffected by the location.
+- **Distributed Access** to the Gemini 8m Telescopes software shall allow local and remote access without extra requirements.
+
+### 4. Service
+
+#### Fuctional Requirements
+
+- The **Observing Program** for service observing shall be automated, requiring minimal human interaction during the observation.
+- The **Programming Environment** shall be available concurrently to both the astronomer (for program development) and the observer (for review and adjustment).
+- The **Programming Environment** shall allow for the communication of special notes, instructions, and comments from the astronomer to the observer, potentially using multimedia techniques.
+
+#### Non-Funtional Requirements
+
+- The **Gemini Software** shall include a rich programming environment that is visually-oriented, providing a simple and easy-to-use interface for developing observing programs.
+- **Service Observing** shall required a suitable organization and considerable experience with a smooth running system.
+
+## Observing Support
+
+#### Fuctional Requirements
+
+- Interaction during **Automatic Sequences** shall be allowed at different levels, such as only on error conditions or any time the user is allowed to break a sequence.
+- **Scheduling** shall react to changes in weather and other conditions, allocating the current use of the telescope to the optimal observing program for those conditions.
+
+#### Non-Funtional Requirements
+
+- While achieving efficient service observing, the **System** shall retain the advantages and extra flexibility of ground-based astronomy.
+
+## General Software Requirements
+
+#### Fuctional Requirements
+
+- All subsystems shall respond to a common set of commands to test operational status, inquiries as to version, perform self-tests, etc.
+- Timeouts shall be at approximately 500 msec.
+- Handshaking of commands between IOCs shall occur within 100-200 msec, signaling acceptance of each command.
+- If commands allowing delayed replies, then timeouts for that reply shall be supported.
+- Peak control information within the system shall be 100 TPS, assuming bridging between communication sections to isolate traffic in relevant sections only.
+- The system shall provide multiple, simultaneous access to data, imposing significant transfer requirements on the LAN, supporting a transfer rate of 20-40 Mbits/second.
+- Data from all instruments and detectors shall be stored as compressed data, using a standard format with multiple storage levels within IOCs and on the Gemini system data disk(s).
+- Data shall be transmitted between Gemini and home Institutes using a FITS format, including all header information provided with the data.
+- The system data capacity shall be limited by transfer methods and technology, capable of retaining 7 days of data produced by the largest instrument, with the last 3 days available interactively from hard disk or similar medium.
+
+#### Non-Funtional Requirements
+
+- The syntax of control flow commands shall be consistent across the system, whether accessing workstation software or IOC software.
+- The support structure for communicating commands shall have a uniform ACK/NAK protocol across all systems.
+-  The system shall allow for fast transmission of rough images every 0.5 sec, potentially using data-loss compression techniques.
+- Transmission of images matching the original resolution shall requiring less than 20 sec, possibly assisted with loss-less compression.
+- The LAN shall support a transfer rate of 20-40 Mbits/second for concurrent data access and display.
+
+## Operation Privileges, Protections, and Procedures
+
+#### Fuctional Requirements
+
+- An Access Mode Allocation system shallbe implemented to dynamically identify and assign resources as needed.
+- Critical resources supporting a restricted number of simultaneous uses shall be assigned solely through the allocation system, preventing deadlocks.
+- Procedures shall be implemented for common tasks, including telescope start-up and shutdown, telescope system self-testing, instrument start-up and shut-down (without interfering with telescope operation), and instrument self-testing and self-diagnosis.
+- The control software shall know what subsystems are installed and their status at all times.
+
+#### Non-Funtional Requirements
+
+- The system shall implement privileges, protections, and procedures to preserve its integrity.
+- The Access Mode Allocation system shall be reliable and ensure that the system cannot remain deadlocked concerning critical resource allocation.
+- Instrument start-up, shut-down, self-testing, and self-diagnosis shall not interfere with telescope operation.
+
+## General Performance and Reliability Requirements
+
+#### Fuctional Requirements
+
+- The Gemini software shall allow for policy decisions to manage the number of simultaneous users, although there should be no hard restrictions.
+- Every command shall be accepted or rejected within 2 seconds, and this decision should be made before the corresponding action occurs.
+- Status display updates at local stations shall occur within 4 seconds (with possible tighter constraints for specific functions).
+- Requests for subsystem status information shall be answered within 5 seconds, and this should be possible during maintenance level operation.
+- Response time requirements within the user interfaces shall be provided in the User Interface requirements section.
+
+#### Non-Funtional Requirements
+
+- All software bugs shall be logged and fixed promptly after detection, with the goal of having restart conditions occur only on hardware failure.
+- Fault recovery, exception handling, fail-safe checks, etc., shall be employed to improve reliability.
+
+## Test and Checkout Requirements
+
+#### Fuctional Requirements
+
+- The telescope and instrument software shall incorporate built-in test (BIT) facilities to verify the performance of the Gemini 8m Telescopes system and Gemini 8m Telescopes software.
+- Every Gemini 8m Telescopes software module shall have corresponding test specifications to check normal operation of releases.
+- The Gemini 8m Telescopes control software shall provide for the execution of self-test sequences for the Gemini 8m Telescopes system and subsystems.
+
+#### Non-Funtional Requirements
+
+- Regression tests shall be a part of every Gemini 8m Telescopes software package.
+
+## Contingencies
+
+#### Fuctional Requirements
+
+- When faults occur, the Subsystems shall notify the user, providing specific information about the origin and nature of the problem. The notification shall be capable of electronic logging.
+- Multiple levels of fault notification, such as detailed, verbose, short, etc., shall be available to aid in tracking down problems.
+- Predefined procedures shall exist to redefine the operational environment in the event of subsystem failure, allowing for the restart of operation with the remaining equipment.
+- If there is a computer hardware failure concerning user station equipment, then a simple software reconfiguration procedure shall enable the transfer of control from one user station to another.
+- If there is a IOC failure, then the procedures shall be in place for replacing faulty cards and/or assemblies. If possible to observe with a particular IOC in a failed state, the system shall be reconfigurable accordingly.
+
+#### Non-Funtional Requirements
+
+- Redundancy decisions shall be based on cost-effectiveness, and procedures for switching to backup systems should be established where deemed cost-effective.
+- All communication shall be based on standard communication protocols with retry procedures, serving as a form of software redundancy.
+- Certain network concepts, such as those with intrinsic redundancy (e.g., double loops) and re-routing possibilities in case of node failures, shall be preferable.
+
+## Constrains
+
+#### Fuctional Requirements
+
+- -   Policy decisions, such as permissions and access privileges, shall be the only elements preventing users from accessing any part of the Gemini system from any local or remote station.
+- Similar functionality shall be presented to users through similar user interfaces.
+
+#### Non-Funtional Requirements
+
+- If feasible, Commercial packages, off-the-shelf public domain software, and standards shall be used.
+- Gemini software developers shall maintain accurate change logs showing software modifications as they are applied to the system software.
+- Gemini software shall be developed in an evolutionary fashion, using the CVS version control system.
+- All Gemini subsystem packages shall provide modules for the testing and diagnosis of the subsystem.
+- All instrumentation control software shall provide full access to all instrument functionality.
+- All Gemini software shall be version labeled in both source and binary form, with version information retrievable from executing software via control commands.
+- Gemini subsystems shall be as self-contained and autonomous as possible, decreasing the functional width of the interface to the rest of the Gemini system.
+- No subsystem package shall make any assumptions about the surrounding environment beyond that provided in the interface specifications.
