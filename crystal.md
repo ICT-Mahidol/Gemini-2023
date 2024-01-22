@@ -180,7 +180,7 @@
 
 
 
-**Non-Functional Requirements:**
+### Non-Functional Requirements:
 
 **System Users**
 
@@ -504,9 +504,9 @@
 14. No subsystem package should make any assumptions about the surrounding environment beyond that provided in the interface specifications.
     
 
-## Chapter 3
+# Chapter 3
 
-**Functional Requirements:**
+### Functional Requirements:
 
 **Control Information Flow :**
 
@@ -689,7 +689,7 @@
 
 
 
-**Non-Functional Requirements:**
+### Non-Functional Requirements:
 
 **Response Times :**
 
@@ -759,9 +759,9 @@
 
     
 
-## Chapter4
+# Chapter4
 
-**Functional Requirements**
+### Functional Requirements
 
 
 **Development Environment:**
@@ -833,7 +833,7 @@
 17.  The involvement of APS Collaborative Access Teams in EPICS development, focusing on client applications and high-level sequencing.
   
 
-**Non-functional Requirements**
+### Non-functional Requirements
 
 **Reliability and Availability:**
 
@@ -960,9 +960,9 @@
 31.  Emphasis on existing software evaluation and the adoption of the EPICS toolkit.
 
     
-## Chapter5
+# Chapter5
 
-**Functional requirements**
+### Functional requirements
 
  **Time Synchronization:**
  
@@ -985,7 +985,7 @@
 5. Commands must be represented as ASCII strings, and procedures must be provided for constructing/deconstructing/routing command strings. This requirement ensures that commands are transmitted and processed in a standardized and efficient manner.
 
 
-**Non-functional requirements**
+## Non-functional requirements
 
 **IOC Commands:**
 
