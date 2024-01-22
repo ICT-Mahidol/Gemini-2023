@@ -6,43 +6,132 @@
 5. 6488099	Yotsapat	Tanprathumwong
 6. 6488149	Kongphob	Wutthiumphol
 
-# Functional Requirement
-1. The system is able to receive and keep the astronomical data from the Gemini telescopes. 
-2. The system needs to be able to receive data and figure out what it means by interpreting it. 
-3. The system should have tools for analyzing processed data.
-4. Astronomers have to be able to schedule their observations in advance.
-5. The system must allow real-time monitoring of the telescopes' status. 
-6. The system must send alarms if anomalies are discovered in the data or during telescope operation. 
-7. The system should allow monitoring of the telescopes’ status in real time and can detect and report unsafe conditions or errors. 
-8. The system should allow the developer to have full access to each subsystem in the test. 
-9. The system should allow the support team to have full access to all subsystems in the test and maintenance. 
-10. Configuration, logging, maintenance schedules, and subsystem documentation are to be kept in the commercial relational database.
-11. This requirement states that the system should support asynchronous writes to the database, enabling multiple operations to be performed concurrently without blocking each other.
-12. This requirement indicates that critical information that requires fast access should be stored in memory to ensure quick retrieval and processing.
-13. The system should implement secure user authentication and authorization mechanisms to control access to sensitive astronomical data and system functionalities. 
-14. The system must include robust mechanisms for regular data backups to prevent data loss, and it should provide efficient data recovery options in case of system failures or unexpected events. 
-15. The system should be capable of seamless integration with external systems or data sources, allowing astronomers to incorporate data from other observatories or sources for comprehensive analysis. 
-16. The system must have to be transported between GEMINI and the home institutes of visiting astronomers in FITS format only and contains all header information provided with the data.
-17. The system must be able to support a full implementation of remote operations. This includes remote observing, remote control of telescope, enclosure, and instruments, multipoint monitoring, remote monitoring, remote access for testing, development, diagnostics, and maintenance.
-18. The system must be the capability of providing multiple, simultaneous access to data. Data transfer between the virtual telescope system and attached workstations.
+# Chapter 2
+### Functional Requirement
+1. The system should allow the developer to have full access to each subsystem in the test. 
+2. The system should allow the support team to have full access to all subsystems in the test and maintenance. 
+3. The system interface shall provide simple and safe controls for planning, monitoring, and observation activities.
+4. The system must provide a user interface across all subsystems with different access levels presenting ‘look-and-feels’
+5. The system should allow monitoring of all subsystems and can detect and report unsafe conditions or errors.
+6. The observing program must be fully automated, requiring minimal human interaction during the observation process.
+7. The Gemini software should include a rich programming environment to support automation. It should be visually-oriented, providing a simple and easy-to-use interface for astronomers.
+8. A full telescope simulator is required to enable astronomers to test observing programs for completeness, errors, and functionality.
+9. All control software must support simulated use within the virtual telescope environment.
+10. Software is needed to assist in object selection within an observing program and across multiple observing programs.
+11. Remote monitoring is a necessary level of remote observing, complementing service observing and making the system friendlier for users.
+12. Remote monitoring should be designed to be user-friendly, allowing remote users to pick and choose the information displayed on their screens.
+13. Remote monitoring coincides to a large extent with multipoint monitoring, providing flexibility for users.
+14. Remote users should be able to “pick and choose” the information that is displayed on their remote screens, allowing customization based on their preferences.
+15. There is no requirement that the remote screen be a duplicate of the local screen, emphasizing independence in the remote user's display.
+16. The remote keyboard will have no effect on the local user's environment, ensuring that remote input does not interfere with local operations.
+17. A remote observer might need a real-time video and voice link with the operator in the control room.
+18. The real-time video and voice link may involve the use of a portable video camera that the operator can position as necessary.
+19. Service observing requires the capability to switch among telescope modes and instruments during the night. This might occur a few times (e.g., 2 times) per night when sky conditions change.
+20. The system should ensure smooth transitions between different telescope modes and instruments, minimizing disruptions during the switching process.
 
-# Non-Functional Requirement
-1. The system should handle large amounts of data quickly. 
-2. The system should have excellent availability because astronomical events might happen at any time and data collection should not be disrupted. 
-3. The system should be easy to use, as it can be used by researchers with different levels of technical competence.
-4. The system should be able to handle increased workloads by adding resources. 
-5. The system should keep the data safe from people who shouldn't be able to see it and make sure that the data is correct. 
-6. It should be simple to keep the system running and add additional functions. 
-7. The system should be able to be portable across different platforms and operating systems. 
-8. The system should be capable of a data capacity so great as to store 7 days of the largest instrument’s data load, the last 3 days of which must be available interactively from a hard disk or similar medium.
-9. The system should store data from all instruments and detectors as compressed data, using a standard format. 
-10. The operating environment at the upper levels (User-interface and OCS) is expected to provide sufficient performance for both human interaction and communications. 
-11. Existing software packages and expertise should be reused whenever possible. 
-12. The software should be structured and formally defined to make the development process visible, avoid incomplete specifications, discover errors early, secure structured and maintainable software, guarantee software quality, and improve and ease cooperation. 
-13. All software that does not directly control specific hardware must be written as machine independent, portable code.
-14. The system should support interoperability with other astronomical data systems  and tools, allowing seamless collaboration and data sharing among observatories and research institutions. 
-15. The system's user interfaces and data processing components should provide low-latency response times to ensure that researchers can interact with the system efficiently and obtain results on time. 
-16. The system should maintain comprehensive audit logs, tracking all user interactions, data modifications, and system activities. This ensures traceability, accountability, and the ability to investigate unauthorized or anomalous activities. 
-17. The system should minimize bandwidth impact on the LAN and WAN and to save space on removable media.
-18. The system should be developed using typical modularization and standardization techniques.In each module’s environment is strictly defined by its interface to other components. No module can rely upon information outside of this interface.
- 
+### Non-Functional Requirement
+1. The system must have easy control and quick response to unsafe conditions.
+2. The system should be capable of a data capacity so great as to store 7 days of the largest instrument’s data load, the last 3 days of which must be available interactively from a hard disk or similar medium.
+3. The system should store data from all instruments and detectors as compressed data, using a standard format. 
+4. Every command must be accepted/rejected within seconds and before the corresponding action occurs.
+5. Status display update must be within 4 seconds at local stations, except for certain functions such as telescope positions.
+6. The system should maximize the use of available observing time, allowing queuing of all possible observations with the currently available instruments.
+7. The interleaving of observing programs should be transparent to individual observing programs.
+8. The method used to restrict specific operations to remote sites should be dynamic, allowing for changes as needed.
+9. Remote operations should be reliable and stable, ensuring that users can perform tasks without significant disruptions or differences in performance.
+10. The system should be scalable to accommodate team observing with multiple observers at different remote sites.
+11. Security measures should be in place to ensure that remote operations are conducted securely, especially when restricting specific operations to designated remote sites.
+12. The hardware involved in remote operations should be specified with sufficient bandwidth to support remote operations effectively.
+13. The system should take advantage of commercially available protocols such as ISDN, TCP/IP, and the Internet to facilitate remote operations.
+14. The chosen protocols should ensure interoperability with commonly used network technologies and standards.
+15. The selected protocols should allow for efficient data transfer between the remote locations and the observatory.
+16. The choice of protocols should be commercially available and cost-effective, aligning with budget considerations for the project.
+17. The real-time video and voice link facility is assumed to be provided entirely by hardware and is beyond the scope of the Gemini software.
+18. The real-time video and voice link should be efficient, providing clear and timely communication between the remote observer and the operator in the control room.
+19. The hardware providing the real-time video and voice link should seamlessly integrate with the Gemini software and other components of the system.
+20. The system should ensure efficient use of shared resources, considering the diverse nature of observing programs.
+
+# Chapter 3 
+### Functional Requirement
+1. The system shall transport astronomical data between GEMINI and the home institutes of visiting astronomers in FITS format.
+2. The system shall acquire and store raw data for quick look evaluations.
+3. The system should express capacity in terms of nodes, defined as the number of workstations.
+4. The software shall support access to the system from any user station.
+5. Computers used at the Gemini 8m Telescopes site must meet altitude and humidity specifications.
+6. Allow users to access the Gemini 8m Telescopes system from different stations without impacting functionality. The interface should be network-transparent.
+7. The Telescope Control System should be capable of detecting and invoking parallel operation for control of telescope and enclosure subsystems.
+8. Subsystems should have independent software installation and maintenance.
+9. The system shall be developed according to a structured and formally defined development model, as defined in [SMP] and [SCP].
+10. The environment should provide tools and features for efficient coding and debugging processes, supporting developers in writing robust and error-free code.
+11. The Software Test Plan (STP) shall include well-defined test procedures for various testing phases, such as component and integration testing.
+12. Test plans must be created for all individual software packages and modules within the Gemini 8m Telescopes software.
+
+### Non-Functional Requirement
+1. The system shall log control parameters, telescope and instrument information at quite high rates for short periods (i.e. up to 200 Hz for some information).
+2. The system shall interface and manage bandwidth costs to make TV data concerning site monitoring and voice available at a specific location.
+3. The software should be compatible with different subsystems and be aware of the installed and operational subsystems at any given time.
+4. Gemini 8m Telescopes standards must be defined for on-line software and the development environment.
+5. System status parameters must be maintained to allow restarting the system and regaining the previous state.
+6. The system should be capable of detecting and initiating parallel operations as needed.
+7. The ability to reconfigure software in the event of actuator failure is desirable.
+8. Ensure the interface works smoothly on various network locations.
+9. The system shall adhere to the standards and procedures defined in the [SMP] and [SCP] documents.
+10. The environment should support the portability of software, allowing it to be independent of the target hardware and easily adaptable to different platforms.
+11. The testing procedures outlined in the STP should be traceable to the defined requirements.
+12. Documentation should be kept up-to-date with any changes in the software or testing processes.
+
+# Chapter 4 
+### Functional Requirements
+1. The software must enable control of telescope and instrument parameters.
+2. Implementation of module selection must be logical, minimizing interfaces  between modules.
+3. All telescope, instrument, and detector control information must be available at any operational level.
+4. Time-access critical information should be available in memory.
+5. The database must support both remote access and distributed data.
+6. A measure of fault rates must be conducted during commissioning to establish baseline rates for system reliability monitoring.
+7. The internal implementation of the database within the IOC must be based on EPICS (Experimental Physics and Industrial Control System).
+8. The software should fully support remote operations, including observing, control of telescope, enclosure, and instruments, multipoint monitoring, remote monitoring, and remote access for testing, development, diagnostics, and maintenance.
+9. There must be a security mechanism to control access to system features, potentially restricting certain operations to specific remote sites.
+10. Astronomical data must be automatically stored onto the Archive medium using external software.
+11. Star catalogs should be available in Astronomical object catalogs through external software.
+12. Telescope and instrument parameters should be distributed in databases across the IOCs for those systems.
+13. Monitoring of fault rates during commissioning establishes baseline rates for system reliability.
+14. Reliability and availability of the system should be maintained, considering WAN bandwidth constraints in remote operations.
+15. The interface between software control packages is to be done via interface calls to the on-line database.
+16. All operational capabilities found in on-site operations must be extended to remote operations, with some performance degradation due to WAN bandwidth considerations.
+
+### Non-Functional Requirements
+1. The Gemini software must adhere to the maintenance philosophy described in the Software Management Plan (SMP).
+2. The software should scale well as additional modules are added, maintaining a logical fashion in module selection.
+3. The software should exhibit acceptable performance levels in both on-site and remote operations, with some degradation in the latter due to WAN bandwidth constraints.
+4. Comprehensive documentation must be provided for the Gemini software, including detailed descriptions of internal database implementation and interface protocols.
+5. The Gemini software must be compatible with the EPICS framework for internal database implementation.
+6. Security mechanisms must be robust to ensure the integrity and confidentiality of data, particularly in remote operations.
+7. The software should be user-friendly, facilitating easy implementation of table-driven applications using the on-line databases.
+8. The software must exhibit high reliability, with fault rates measured during commissioning serving as a baseline for ongoing reliability monitoring.
+9. The on-line database must support distributed data, enhancing the software's support for remote access and operations.
+10. All telescope, instrument, and detector control information must be accessible at any operational level, ensuring seamless control and monitoring capabilities.
+
+# Chapter 5 
+### Functional Requirements
+1. The subsystem must be equipped with direct command transfer, channel-based routing, and broadcast functionality for efficient data transmission and examination across the control system.
+2. All commands must follow a specific structure with identification, source, target, opcode, and parameter set fields. And, The identification (Command_ID) must be unique for each instance, with a monotonically increasing portion acting as a timestamp for journaling and tracing.
+3. The system must respond to general-purpose commands such as GetVersion, GetStatus, GetState, GetID, and GetConfiguration to obtain information about the state and configuration of subsystems.
+4. Specific control commands, as described in the Gemini Software Design Description, must be supported to provide specific functionality during observing.
+5. The system must support status queries (e.g., GetStatus) to obtain information about the operational state of subsystems, including readiness, busy states, and other specific status levels.
+6. SetConfiguration must be supported to allow the downloading of configurations from the host to the target subsystem. And also, GetConfiguration must be supported to retrieve detailed configuration information, including internal settings and results of self-tests.
+7. RunTest commands must be supported for subsystems to run self-tests and report the results.
+8. SetLogging must be supported to set logging levels by the indicated subsystem.
+9. Commands like OpenRoute, CloseRoute, ResetRoute, and TestRoute must be supported to establish, close, reset, and test routes for data communication within the system.
+10. Commands like AwaitItem, SetCallback, and ClearCallback must be supported for communication among IOC-based subsystems.
+
+### Non-Functional Requirements
+1. Command transmission mechanisms (Direct, Channel, Broadcast) must be reliable and ensure the correct delivery of commands and data.
+2. The system must be scalable to handle additional subsystems, channels, and routes as the Gemini system evolves.
+3. Commands must be processed efficiently, and communication routes, especially in asynchronous communication, should not introduce significant delays.
+4. Comprehensive documentation must be provided for constructing/deconstructing/routing command strings, and mappings of specific IOC commands between ASCII strings and 5. EPICS channel access calls.
+6. The system must be compatible with ASCII representations of commands within the OCS, ensuring interoperability.
+7. Security measures should be in place to protect the integrity and confidentiality of transmitted commands and data.
+8. Commands must be represented as ASCII strings, and the system should allow nesting using braces, ensuring ease of use and understanding.
+9. Time synchronization commands must be supported to ensure coordination among control subsystems.
+10. The system must have robust error-handling mechanisms to handle unexpected situations and prevent system failures.
+11. The system should be flexible enough to accommodate different types of commands, including those specific to individual subsystems, as outlined in the Work Package Descriptions.
