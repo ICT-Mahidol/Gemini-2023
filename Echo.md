@@ -305,3 +305,5 @@
 2. (2.14.4 B) The Gemini system utilizes a virtual telescope model for independent testing and development of the integrated system. 
 3. (2.14.4 C) The Gemini subsystem shall be as self-contained and autonomous as possible, thereby decreasing the functional width of the interface to the rest of the Gemini system. 
 4. (2.14.4 D) No subsystem package shall make any assumptions about the surrounding environment beyond that provided in the interface specifications.
+
+ITCS431 Software Design and Development (2023)
