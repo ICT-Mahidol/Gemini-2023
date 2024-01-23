@@ -1028,3 +1028,5 @@
 - *_Work Package Descriptions_* should include *_baseline_* command descriptions.
 
 - The system should map the specific IOC command between ASCII strings and EPICS channel.
+
+### ITCS431 Software Design and Development (2023)
