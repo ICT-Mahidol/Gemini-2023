@@ -89,6 +89,7 @@
 2. (2.5.8) The system allows science observers to access only the Observing and Monitoring modes.
 3. (2.5.9.1) The system must allow observers to directly control the telescope.
 4. (2.7.4 B) The system’s observing program should be available to the observer for developing the program.
+5. (2.7.4 B) The system’s observing program should be available to the observer for review and adjustment of the program.
 
 
 ### Telescope Operator
@@ -114,7 +115,6 @@
 ### Developer
 1. (2.5.8) The system allows developers to access only the Maintenance and Test level.
 2. (2.5.8) The system allows developers to access only the Monitoring and Testing modes.
-3. (2.7.4 B) The system’s observing program should be available to the developer for review and adjustment of the program.
 
 
 ### Administrator
