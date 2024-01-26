@@ -229,3 +229,4 @@
 141. Adaptation of the software for different languages and regions.
 142. Ease of diagnosing and resolving issues.
 143. Facilitation of efficient and thorough testing processes.
+ITCS431 Software Design and Development (2023)
