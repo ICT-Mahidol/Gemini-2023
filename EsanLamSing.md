@@ -1,27 +1,22 @@
 # Team Members
-1. 6488051	Purinat	Pattanakeaw
-2. 6488124	Sarttra	Prasongtichol
-3. 6488125	Phutthikanj	Kitivoranondh
-4. 6488133	Sirasit	Puangpathanachai
-5. 6488178	Thanawat	Jarusuthirug
-6. 6488217	Pattaradanai	Kaeodumkoeng
+| Student ID | Student Name              |
+|------------|---------------------------|
+| 6488051    | Purinat Pattanakeaw       |
+| 6488124    | Sarttra Prasongtichol     |
+| 6488125    | Phutthikanj Kitivoranondh |
+| 6488133    | Sirasit Puangpathanachai  |
+| 6488178    | Thanawat Jarusuthirug     |
+| 6488217    | Pattaradanai Kaeodumkoeng |
 # Identifying Actor
-1. Astronomer. This person is using the Gemini system for the collection of science data. The astronomer is the customer for the services provided by the Gemini
-telescope. The astronomer has worked out, with the Gemini system, a science plan for the collection of the data. This science plan may include interactive observation.
-2. Science observer. This is the on-site person responsible for monitoring the data acquisition and validating the data integrity being collected for the astronomer, as well as ensuring that the science plan is functioning to the needs of the astronomer.
-3. Telescope Operator. The on-site controller of the telescope and instruments. This person
-is responsible for ensuring the integrity of the system and for keeping the system functioning accurately during observations. The Telescope Operator works with the Observer and
-the science plan to produce as good data as is possible.
-4. Support. On-site (or near-site) support personnel are responsible for the maintenance of
-the system, hardware and software, as well as the installation of subsystems and configuration changes.
-5. Developer. Developers are responsible for the designing, testing, configuring, and
-upgrading of subsystems
-6. Administrator. Administrators are responsible for high-level functional control of
-the Gemini system as an integrated system. They work with other users to determine
-appropriate observation scheduling changes, maintenance down-time, and system
-modifications. It is possible that a particular individual would fall into several of the
-categories. For example, it is not unusual for the astronomer to also be the science
-observer.   
+| Actor Name | Description |
+|------------|---------------------------|
+| Astronomer | This person is using the Gemini system for the collection of science data. The astronomer is the customer for the services provided by the Gemini telescope. The astronomer has worked out, with the Gemini system, a science plan for the collection of the data. This science plan may include interactive observation.|
+|Science observer | This is the on-site person responsible for monitoring the data acquisition and validating the data integrity being collected for the astronomer, as well as ensuring that the science plan is functioning to the needs of the astronomer. |
+| Telescope Operator | The on-site controller of the telescope and instruments. This person is responsible for ensuring the integrity of the system and for keeping the system functioning accurately during observations. The Telescope Operator works with the Observer and the science plan to produce as good data as is possible. |
+| Support | On-site (or near-site) support personnel are responsible for the maintenance of the system, hardware and software, as well as the installation of subsystems and configuration changes. |
+| Developer | Developers are responsible for the designing, testing, configuring, and upgrading of subsystems |
+| Administrator | Administrators are responsible for high-level functional control of the Gemini system as an integrated system. They work with other users to determine appropriate observation scheduling changes, maintenance down-time, and system modifications. It is possible that a particular individual would fall into several of the categories. For example, it is not unusual for the astronomer to also be the science observer.  |
+
 # Chapter 1
 ## Functional
 1. The software used with the Gemini telescopes can be viewed as falling into the Developed software, Supported software, and External software
