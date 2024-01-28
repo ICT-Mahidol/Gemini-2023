@@ -6,6 +6,7 @@
 5. 6488123 Kitiphum Mueangthongkham
 6. 6488175 Penpitchapa Pantaraksakul
 
-# Use Case Diagram
+# Use Case
+#### A Use Case Diagram
 
-#### Short Description
+#### A Short Description
