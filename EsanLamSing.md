@@ -263,13 +263,13 @@ the primary mirror support actuators).
 2. The system must include an OPI Operator Interface, an IOC Input Output Controller, and a LAN Local area network.
 3. The EPICS system must support Channel Access, Record Support, Device Support, and Device Drivers.
 4. The system must support IOC Database and IOC SNC programs.
-5. he system must support Other OPI CA Clients.
+5. The system must support Other OPI CA Clients.
 6. The system must support Host-based Development Tools.
 7. The system must support new devices such as PMAC, VMIC5578, and BANCOMM.
 8. The system must support files associated with OPI Channel Access Tools.
 9. The EPICS system must provide network transparent communication between a Channel Access client and an arbitrary number of Channel Access servers.
 10. The EPICS system must support four types of database scanning: Periodic, Event, I/O Event, and Passive.
-11.The EPICS system must provide a number of OPI based tools, including MEDM, DM Display Manager, ALH Alarm Handler, AR Archiver, Sequencer, and other OPI CA clients.
+11. The EPICS system must provide a number of OPI based tools, including MEDM, DM Display Manager, ALH Alarm Handler, AR Archiver, Sequencer, and other OPI CA clients.
 12. The EPICS system must support the creation of a run time database for an IOC using tools such as DCT Database Configuration Tool and CAPFAST and GDCT Graphical Database Configuration Tools.
 13. The EPICS system must support the creation of display list files using the EDD Display Editor.
 14. The system must use modularization and standardization techniques
