@@ -42,8 +42,32 @@ observer.
 4. Operating access level shall allow for direct control of the telescopes and instruments.
 5. Planning access level shall not allow for direct control of the telescopes and instruments but will allow for control of the virtual telescope simulator.
 6. Testing access level shall allow full, direct control of any subsystems.
+7. Administrative access level will be used only to retrieve information about system utilization, status, efficiency without direct control of any system.
+8. The system’s observation commands shall be submitted through the User Interface and be queued for execution.
+9. The system shall allow indirect control of the telescopes through a “scheduler program” or directly via commands.
+10. The system shall treat all instruments as servers that respond to commands from the system.
+11. The installed instruments shall operate as a subset of the existing instrument interface rather than being a separate system.
+12. The visitor instrument interface shall support: acquisition of status information of instruments by other systems, input of observing sequences, and ability to offset the telescope position and focus
+13. Monitoring shall exist both in the form of automatic displays of status information at different locations, and in the form of explicit access to the required status information from any point.
+14. In the observation mode, interactive operation is supported through the Observatory Control System through an automatic sequencer.
+15. Monitoring shall exist both in the form of automatic displays of status information at different locations, and in the form of explicit access to the required status information from any point. 
+16. In the observation mode, interactive operation is supported through the Observatory Control System through an automatic sequencer
+17. Queue-based observation mode is the primary mode of the Gemini Telescope which is entirely automated.
+18. The queue-based observation system must support both flexible scheduling and scheduler.
+19. The system shall support off-site remote operations.
+20. It must be possible for a specific operation to be restricted to only specific sites. - FR
+21. The remote monitoring system shall allow users to pick information that shall be displayed on the remote screen. 
+22. The syntax of control commands must be consistent across all systems.
+23. All subsystems must respond to a common set of commands to test operational status, version, self-tests, etc.
+
 ## Non-functional
 1. All requirements and modes of operations are available to all users unless explicitly stated.
+2. The execution queue can be broken and rearranged.
+3. The system shall support visitor instruments only if they are capable of operating as servers in the Gemini system.
+4. The visitor interface shall support: coordinates transformation between the instrument and the Gemini system, archiving instrument data, and maintenance of operation tables e.g. filter lists...
+5. Indepently of the location of users, they shall be able to access (according to their privileges) any part of the whole system with a simple logon and configuration operation. 
+There shall be no differences between software working on-site and off-site.
+The communication must be reliable with a uniform ACK/NAK protocol across all systems with handshaking occurring within 100 to 200 milliseconds
 
 # Chapter 3
 ## Functional
