@@ -13,24 +13,24 @@
 3. Supported software to be used in Gemini Telecope is commercial or “public-domain” software used for telescope control and instrumentation
 4. External software to be used with Gemini Telescope  is any software available to the Gemini system that is not integral to the system.
 5. Software that is embedded into hardware and that presents no software interface to the Gemini system is also considered external software and need not be considered further 
-# Non-functional
+## Non-functional
 1. The Gemini System Software shall be maintained under a version control system.
 2. Software that is embedded into hardware and that presents no software interface to the Gemini system is also considered external software and need not be considered further 
 3. Embedded software that does interface with the Gemini system via software is considered Gemini software and is subject to the requirements presented in this document.
 4. All software will be maintained under a version control system, and must include facilities for easy (nearly automatic) inclusion into the Gemini software environment.   
 # Chapter 2
-# Functional
+## Functional
 1. The Gemini System software shall impose security and control through a series of access levels, which are classified into: Observation, Monitoring, Operating, Planning, Training, and Administrative.
 2. Observing access level shall allow access for the collection of data and selection of parameters without direct control of telescopes and instruments.
 3. Monitoring access level shall be an extension of the Observing access level with read-only restriction on the subsystem it is invoked in.
 4. Operating access level shall allow for direct control of the telescopes and instruments.
 5. Planning access level shall not allow for direct control of the telescopes and instruments but will allow for control of the virtual telescope simulator.
 6. Testing access level shall allow full, direct control of any subsystems.
-# Non-functional
+## Non-functional
 1. All requirements and modes of operations are available to all users unless explicitly stated.
 
 # Chapter 3
-# Functional
+## Functional
 1. The system must be able to transfer control information in the form of commands and replies from users to telescopes and instruments.
 2. All subsystems must provide control information on all controlled variables on request.
 3. The system must be able to synchronize with the Time Reference System at the Gemini 8m Telescopes site.
@@ -130,7 +130,7 @@
 90. Intrusion prevention from the wide area network into the Gemini 8m Telescopes shall be ensured, especially protecting the astronomical database.
 
 
-# Non-functional
+## Non-functional
 1. Operations staff must have the necessary privileges to change the observing environment, enabling them to select suitable combinations of instruments.
 2. The system must be adaptable to new hardware features and cost efficiencies expected to emerge over the next 5 to 10 years.
 3. The project must have a plan in place for transitioning to new hardware standards when the currently chosen standard is no longer available.
@@ -242,11 +242,11 @@ the primary mirror support actuators).
 100. The system shall assess and express the possibility of a mishap in terms of hazard severity and hazard probability.
   
 # Chapter 4
-# Functional
-# Non-functional
+## Functional
+## Non-functional
 
 # Chapter 5
-# Functional
+## Functional
 1. All commands contain the same general structure: Identification: Command_ID ,Source, and Target
 2. The Command_ID will be an identification that is unique to that specific instance of each command.
 3. For Instruction includes Opcode and Parameter set
@@ -299,7 +299,7 @@ WARNING - the subsystem has detected a problem that may prevent it from operator
 33. SetEvent An event is established as a monitor of some database entry. Appropriate changes to that entry are to result in the indicated event being transmitted.
 34. ClearEvent A previously set event is terminated
 35. Remote DB access is accomplished using the same communication and database access commands as given above.
-# Non-functional
+## Non-functional
 1. There are several means of transmitting commands and data across the Gemini system.
 2. A command source may directly specify the target subsystem.
 3. Commands and data may be routed through a channel.
@@ -312,3 +312,4 @@ WARNING - the subsystem has detected a problem that may prevent it from operator
 10. Time synchronization is commonly required among control subsystems - NFR
 11. Fields within the command are labeled and nesting is permitted using braces ({, }).
 12. Within the OCS, all commands are represented as ASCII strings.
+## ITCS431 Software Design and Development (2023)
