@@ -259,7 +259,52 @@ the primary mirror support actuators).
   
 # Chapter 4
 ## Functional
+1. EPICS software components (Hardware) must be used to create the control system.
+2. The system must include an OPI Operator Interface, an IOC Input Output Controller, and a LAN Local area network.
+3. The EPICS system must support Channel Access, Record Support, Device Support, and Device Drivers.
+4. The system must support IOC Database and IOC SNC programs.
+5. he system must support Other OPI CA Clients.
+6. The system must support Host-based Development Tools.
+7. The system must support new devices such as PMAC, VMIC5578, and BANCOMM.
+8. The system must support files associated with OPI Channel Access Tools.
+9. The EPICS system must provide network transparent communication between a Channel Access client and an arbitrary number of Channel Access servers.
+10. The EPICS system must support four types of database scanning: Periodic, Event, I/O Event, and Passive.
+11.The EPICS system must provide a number of OPI based tools, including MEDM, DM Display Manager, ALH Alarm Handler, AR Archiver, Sequencer, and other OPI CA clients.
+12. The EPICS system must support the creation of a run time database for an IOC using tools such as DCT Database Configuration Tool and CAPFAST and GDCT Graphical Database Configuration Tools.
+13. The EPICS system must support the creation of display list files using the EDD Display Editor.
+14. The system must use modularization and standardization techniques
+15. The system must provide real-time support at the IOC (Input/Output Controller) level
+16. The system must operate on a UNIX System V, Release 4 development environment
+17. The system must maintain configuration, logging, maintenance schedules, and subsystem documentation in a commercial relational database
+18. The system must utilize workstations that conform to specified software standards
+19. The system must be developed following the Ward/Mellor approach
+20. The system's GUI must be developed using X-windows (version 11, release 5 or 6) and Tcl/Tk as the principal language
+21. The system must constantly monitor both active and inactive subsystems
+22. The system must support standard ARPA services (telnet, FTP, SMTP, etc.), NFS, RPC, IPC, and the Unix socket interface library in its communication software
+23. The system's installation software must be based on Unix (Solaris 2.3 or above)
+24. The system must use the DARPA TCP/IP communication protocol over LANs and WANs for communication hardware independence
+25. The system must establish baseline rates for system reliability monitoring during commissioning
+
 ## Non-functional
+1. The EPICS developers must have advanced C/C++ programming techniques, UNIX internals, VxWorks internals, real-time programming techniques, Motif application development skills, and networking skills.
+2. The EPICS system must be evaluated in terms of the specifications given to reduce life-cycle costs and maintenance efforts.
+3. The communication hardware must meet the data flow requirements and software protocols defined in the document.
+4. The control LAN must be based on Ethernet IEEE 802.3.
+5. The backbone LAN cannot be Ethernet because of bandwidth requirements. A FDDI system is recommended for the backbone LAN.
+6. Interlock connections must be provided for all critical subsystems.
+7. EPICS developers must have knowledge of VME and other I/O electronics, EPICS Database design techniques, SNC programming, and basic knowledge of UNIX and VxWorks as development environments.
+8. EPICS developers must be able to differentiate between the two classes of EPICS development work: Internals and Applications.
+9. The EPICS system must be flexible and adaptable to changes in technology.
+10. The EPICS system must be evaluated in terms of life cycle constraints discussed in the Gemini Software Management Plan.
+11. EPICS developers must have the ability to interface pre existing software systems to the channel access library.
+12. The EPICS system must be able to efficiently access the database using database access routines
+13. The system should monitor warning message rates to indicate maintenance needs.
+14. The development environment selection is based on productivity, development tools, software and hardware independence, industry standards, and support for distributed environments.
+15. The system includes a maintenance philosophy with scheduled preventative maintenance as per the Gemini Design Requirements Specification.
+16. Development workstations must adhere to specific software standards and support necessary communication interfaces and compatible data formats.
+17. The system requires defined recovery procedures for inoperative subsystems, including automatic command retries for common issues.
+18. Software development should follow a formally defined model, like the Ward/Mellor approach, aligning with system goals and established practices.
+19. Error logging must provide detailed information for tracing issues back to their sources, with tools available for detailed error analysis.
 
 # Chapter 5
 ## Functional
