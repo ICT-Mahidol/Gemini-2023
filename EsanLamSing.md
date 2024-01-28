@@ -7,7 +7,7 @@
 6. 6488217	Pattaradanai	Kaeodumkoeng
    
 # Chapter 1
-# Functional
+## Functional
 1. The software used with the Gemini telescopes can be viewed as falling into the Developed software, Supported software, and External software
 2. Developed software to be used in Gemini telescope is non-commercial software developed for the control of the telescopes and instrumentation
 3. Supported software to be used in Gemini Telecope is commercial or “public-domain” software used for telescope control and instrumentation
