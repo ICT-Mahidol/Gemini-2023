@@ -15,20 +15,20 @@
 | Telescope Operator | The on-site controller of the telescope and instruments. This person is responsible for ensuring the integrity of the system and for keeping the system functioning accurately during observations. The Telescope Operator works with the Observer and the science plan to produce as good data as is possible. |
 | Support | On-site (or near-site) support personnel are responsible for the maintenance of the system, hardware and software, as well as the installation of subsystems and configuration changes. |
 | Developer | Developers are responsible for the designing, testing, configuring, and upgrading of subsystems |
-| Administrator | Administrators are responsible for high-level functional control of the Gemini system as an integrated system. They work with other users to determine appropriate observation scheduling changes, maintenance down-time, and system modifications. It is possible that a particular individual would fall into several of the categories. For example, it is not unusual for the astronomer to also be the science observer.  |
+| Administrator | Administrators are responsible for high-level functional control of the Gemini system as an integrated system. They work with other users to determine appropriate observation scheduling changes, maintenance downtime, and system modifications. It is possible that a particular individual would fall into several of the categories. For example, it is not unusual for the astronomer to also be the science observer.  |
 
 # Chapter 1
 ## Functional
 1. The software used with the Gemini telescopes can be viewed as falling into the Developed software, Supported software, and External software
-2. Developed software to be used in Gemini telescope is non-commercial software developed for the control of the telescopes and instrumentation
-3. Supported software to be used in Gemini Telecope is commercial or “public-domain” software used for telescope control and instrumentation
-4. External software to be used with Gemini Telescope  is any software available to the Gemini system that is not integral to the system.
+2. Developed software to be used in the Gemini telescope is non-commercial software developed for the control of the telescopes and instrumentation
+3. Supported software to be used in Gemini Telescope is commercial or “public-domain” software used for telescope control and instrumentation
+4. External software to be used with the Gemini Telescope  is any software available to the Gemini system that is not integral to the system.
 5. Software that is embedded into hardware and that presents no software interface to the Gemini system is also considered external software and need not be considered further 
 ## Non-functional
 1. The Gemini System Software shall be maintained under a version control system.
 2. Software that is embedded into hardware and that presents no software interface to the Gemini system is also considered external software and need not be considered further 
 3. Embedded software that does interface with the Gemini system via software is considered Gemini software and is subject to the requirements presented in this document.
-4. All software will be maintained under a version control system, and must include facilities for easy (nearly automatic) inclusion into the Gemini software environment.   
+4. All software will be maintained under a version control system and must include facilities for easy (nearly automatic) inclusion into the Gemini software environment.   
 # Chapter 2
 ## Functional
 1. The Gemini System software shall impose security and control through a series of access levels, which are classified into: Observation, Monitoring, Operating, Planning, Training, and Administrative.
