@@ -7,5 +7,4 @@
 6. 6488148	Pattanun	Worakitsitthisatorn
 
 # Use case diagram
-![Alt text](https://m1r.ai/9/1utfy.png)
-
+![Alt text](https://m1r.ai/9/lkteo.png)
