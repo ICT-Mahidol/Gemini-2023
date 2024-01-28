@@ -1,4 +1,12 @@
 # Team Member
+| Student ID | Student Name              |
+|------------|---------------------------|
+| 6488051    | Purinat Pattanakeaw       |
+| 6488124    | Sarttra Prasongtichol     |
+| 6488125    | Phutthikanj Kitivoranondh |
+| 6488133    | Sirasit Puangpathanachai  |
+| 6488178    | Thanawat Jarusuthirug     |
+| 6488217    | Pattaradanai Kaeodumkoeng |
 # Use Case Diagram
 
 ![Use Case Diagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/59379348/bc9fc716-f7db-4fd4-b1c1-5fd92ca1bc59)
