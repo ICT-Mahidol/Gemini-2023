@@ -6,6 +6,6 @@
 #### 5. 6488171 Sui Zhou
 #### 6. 6488180 Sukan Huang
 
-# Gemini Telescope System
+# Gemini Use Case Diagram
 
-# Description
+![usecase](https://github.com/ICT-Mahidol/Gemini-2023/assets/131524340/11d5c61e-19a8-4f96-8777-c33e19195c19)
