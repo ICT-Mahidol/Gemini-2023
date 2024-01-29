@@ -11,6 +11,15 @@
 ![Use Case Diagram1](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/f41d5dcf-a174-4d50-b52a-63b339884383)
 
 ### A Short Description
+#### Actor List
+1. **Astronomer:** For the observation flow, astronomers are an external party. They want to use Gemini for research purposes  i.e. shooting photos of the stars, sky, and galaxy. They create a science plan ⇒ Test a science plan via virtual telescope and interactive observing mode ⇒ Submit a science plan to the system ทำอาราย
+2. **Science Observer:** This is the on-site person responsible for monitoring the data acquisition and validating the data integrity being collected for the astronomer, as well as ensuring that the science plan is functioning to the needs of the astronomer
+3. **Telescope Operator:** A Telescope Operator is a specialized professional responsible for the remote control and management of astronomical telescopes and associated instruments
+4. **Support:** Support personnel are in charge of taking care of the system, including its hardware and software. They also handle tasks like installing subsystems and making configuration changes to ensure everything runs smoothly.
+5. **Developer:** Developers are responsible for the designing, testing, configuring, and upgrading of subsystems.
+6. **Administrator:** The Administrator is responsible for monitoring the system’s overall management and smooth operation. This role is crucial in managing efficiency and strict security, ensuring that the system is both simple to use and safe. This position serves as the central point for many system operations between user roles.
+
+#### Use Case List
 1. **Log Activities:** Users can log their activities, such as initiating observations, accessing data, and controlling instruments, to maintain a comprehensive record for auditing and analysis purposes.
 2. **Communication:** The system enables seamless communication between users involved in telescope operations, allowing them to exchange information, coordinate tasks, and address any issues that may arise during observations.
 3. **Request Interactive Observation:** Astronomers can submit requests for interactive observations, specifying parameters and criteria for the telescope to follow during real-time observations.
