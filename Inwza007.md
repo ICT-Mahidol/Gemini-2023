@@ -302,3 +302,24 @@ Once the data is collected and validated, it must be managed effectively. This i
 
 - **Submit an observing program to the system**  
 Once an observation has been completed, the science observers must submit the program to the telescope’s control system in a format that is executable by the computer systems. The submission process verifies that the program is ready for execution, clearly defining all necessary parameters and instructions.
+
+### Actor: Telescope operator
+The on-site controller of the telescope and instruments. Telescope operators are responsible for ensuring the system’s integrity and functioning. Telescope operators also work with the observer to ensure that the science plan produces the best data.
+- **Maintaining accurate system functioning during observations**
+Telescope operators possess the capacity to periodically oversee the system's general performance, integrity, and safety. 
+ - **Ability to control the telescope**  
+ The Telescope operator has the capability to issue telescope control commands as properly.
+
+### Actor: Developer
+Developers are responsible for designing, testing, configuring, and upgrading the subsystems.
+- **Design, test, configure and upgrade subsystems**  
+Developers are responsible for designing, testing, configuring, and upgrading the subsystems.
+
+### Actor: Administrator
+Administrators are responsible for high-level control of the Gemini system. They work with other users to regulate proper observation scheduling changes, maintenance, and system modifications.
+
+- **Controll integrate system**  
+Administrators possess the authority to iteratively implement system modifications as required.
+- **Determine Appropriate Observation Scheduling Changes**  Administrators possess the authority to iteratively determine and implement suitable changes to the observation scheduling within the system.
+- **Configure Maintenance downtime**  
+Administrators are empowered to repeatedly ascertain and schedule maintenance downtime for the system as required.
