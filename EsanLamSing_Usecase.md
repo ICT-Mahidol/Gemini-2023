@@ -1,4 +1,4 @@
-![EsanLamSing_UsecaseDiagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/126402828/ae143381-fbac-4e52-bd3d-b362572d44c6)# Team Member
+# Team Member
 | Student ID | Student Name              |
 |------------|---------------------------|
 | 6488051    | Purinat Pattanakeaw       |
