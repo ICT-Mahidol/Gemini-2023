@@ -232,7 +232,7 @@
 ITCS431 Software Design and Development (2023)
 
 # Use case diagram
-![Alt text](https://m1r.ai/9/gbrml.png)
+![Alt text](https://m1r.ai/9/9s1as.png)
 
 # Use case diagram description
 ### Actor: Astronomer 
