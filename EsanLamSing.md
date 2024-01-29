@@ -251,12 +251,12 @@ the primary mirror support actuators).
 48. Strict checking should be applied to preserve maintainability and ensure the reconfiguration of the system is done with accuracy and reliability.
 49. The system design should have supportability influence design.
 50. System must be able to provide support at minimum cost
-51. System must be able to maintenance personnel availability and work hour constraints
-52. System must be able to personnel skill level constraints
-53. System must operate and support cost constraints
+51. System must be able to handle personnel availability and work hour constraints
+52. System must be able to handle personnel skill level constraints
+53. System must be able to operate at minimum cost
 54. System can target failures correctable at each maintenance level
-55. System allow downtime at site
-56. System can turnaround time to fix and maintain system
+55. System can reduce allowable downtime at site
+56. System can reduce turnaround time to fix and maintain system
 57. System met standardization requirements
 58. The system shall have a comprehensive maintenance planning process to strategically schedule and manage maintenance activities.
 59. A robust manpower and personnel supply support system shall be established to ensure an adequate workforce for maintenance operations.
