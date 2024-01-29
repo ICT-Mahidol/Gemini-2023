@@ -233,7 +233,7 @@
 ITCS431 Software Design and Development (2023)
 
 # Use case diagram
-![Alt text](https://m1r.ai/9/doybi.jpg)
+![Alt text](https://m1r.ai/9/kay9q.jpg)
 
 # Use case diagram description
 ### Actor: Astronomer 
@@ -308,7 +308,7 @@ Once an observation has been completed, the science observers must submit the pr
 The on-site controller of the telescope and instruments. Telescope operators are responsible for ensuring the system’s integrity and functioning. Telescope operators also work with the observer to ensure that the science plan produces the best data.
 - **Maintain accurate system functioning during observations**  
 Telescope operators possess the capacity to periodically oversee the system's general performance, integrity, and safety. 
- - **Ability to control the telescope**  
+ - **Control the telescope**  
  The Telescope operator has the capability to issue telescope control commands as properly.
 
 ### Actor: Developer
