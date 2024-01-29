@@ -55,7 +55,7 @@ A visitor will propose to install a special device on the Gemini telescope. The 
 
 An on-site person who is responsible for monitoring the data acquisition and validating the data integrity collected from the Gemini telescope in order to forward them to the astronomer afterward, and ensures that the science plan is ongoing according to the plan and adapts them to suit the needs for the astronomer.
 - **Validate a science plan**  
-After the astronomer submits the science plan to the Gemini Telescope system, the science observer will validate the science plan and check to ensure effective and efficient before transforming the plan into an observing program.
+After the astronomer submits the science plan to the Gemini Telescope system, the science observer will validate the science plan and check to ensure its effect and efficiency before transforming the plan into an observing program.
 
 - **Transform a science plan to an observing program**  
 This action involves translating the existing science plan into a pragmatic and automated observing sequence that the Gemini telescope's systems can execute without human interaction. The transformation process includes programming the sequence using software that provides a user-friendly interface. This allows for the efficient use of the telescope's time and resources, ensuring that the transition from plan to program is smooth and effective.
@@ -73,7 +73,7 @@ The science observers are involved in capturing observations from the cosmos usi
 Once the data is collected, it is essential to validate its integrity. This means ensuring that the data is accurate, complete, and uncorrupted. The science observer will need to monitor the performance, integrity, safety, and instruments of the telescope during the data collection phase to detect any anomalies or issues that might compromise data quality.
 
 - **Manage the collected data**  
-Once the data is collected and validated, it must be managed effectively. This involves cataloging, storing securely, and maintaining the data for accessibility and use in future scientific analysis. Data management is crucial for preserving the integrity of the data over time and facilitating its availability for current and future research projects.
+Once the data is collected and validated, it must be managed effectively. This involves cataloging, storing, and maintaining the data for accessibility and use in future scientific analysis. Data management is crucial for preserving the integrity of the data over time and facilitating its availability for current and future research projects.
 
 - **Submit an observing program to the system**  
 Once an observation has been completed, the science observers must submit the program to the telescope’s control system in a format that is executable by the computer systems. The submission process verifies that the program is ready for execution, clearly defining all necessary parameters and instructions.
