@@ -242,3 +242,6 @@
 105. Access times to the database are to be in the range of 2-3 msec per access
 106. Time-access critical information is available in memory.
 107.  The database must support both remote access and distributed data.
+
+
+ # ITCS431 Software Design and Development (2023)
