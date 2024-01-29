@@ -23,7 +23,7 @@ A test science plan is crucial to ensure that the objectives outlined in the pla
 Once an observing program has been successfully developed, it must be submitted to the telescope's control system in a format that is executable by the computer systems. This ensures the program can interactively operate through the Observatory Control System (OCS), allowing for real-time adjustments and flexibility. The submission process verifies that the program is ready for execution, clearly defining all necessary parameters and instructions
 
 
-### Actor: Visitors
+### Actor: Visitor
 The use case for the Visitor pattern arises in software design when there is a need to perform various operations on a complex object structure without modifying the classes representing that structure. By implementing the Visitor pattern, you can define new operations by creating distinct visitor classes, keeping the operations separate from the elements being operated upon. 
 
 - **Propose for installation**  
