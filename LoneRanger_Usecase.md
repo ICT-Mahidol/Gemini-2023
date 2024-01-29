@@ -8,4 +8,4 @@
 
 # Gemini Use Case Diagram
 
-![usecase](https://github.com/ICT-Mahidol/Gemini-2023/assets/131524340/11d5c61e-19a8-4f96-8777-c33e19195c19)
+![usecase (1)](https://github.com/ICT-Mahidol/Gemini-2023/assets/131524340/f1a082da-94fe-485a-98e5-2122ba25622a)
