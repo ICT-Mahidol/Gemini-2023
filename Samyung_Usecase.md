@@ -8,5 +8,6 @@
 
 # Use Case
 #### A Use Case Diagram
+![Use Case Diagram1](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/14c4ddfb-a974-4598-a6c8-44d1ac1d833e)
 
 #### A Short Description
