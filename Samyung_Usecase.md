@@ -7,10 +7,10 @@
 6. 6488175 Penpitchapa Pantaraksakul
 
 # Use Case
-#### A Use Case Diagram
+### A Use Case Diagram
 ![Use Case Diagram1](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/f41d5dcf-a174-4d50-b52a-63b339884383)
 
-#### A Short Description
+### A Short Description
 1. **Log Activities:** Users can log their activities, such as initiating observations, accessing data, and controlling instruments, to maintain a comprehensive record for auditing and analysis purposes.
 2. **Communication:** The system enables seamless communication between users involved in telescope operations, allowing them to exchange information, coordinate tasks, and address any issues that may arise during observations.
 3. **Request Interactive Observation:** Astronomers can submit requests for interactive observations, specifying parameters and criteria for the telescope to follow during real-time observations.
