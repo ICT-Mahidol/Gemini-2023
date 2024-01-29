@@ -57,6 +57,9 @@ An on-site person who is responsible for monitoring the data acquisition and val
 - **Validate a science plan**  
 After the astronomer submits the science plan to the Gemini Telescope system, the science observer will validate the science plan and check to ensure effective and efficient before transforming the plan into an observing program.
 
+- **Transform a science plan to an observing program**  
+This action involves translating the existing science plan into a pragmatic and automated observing sequence that the Gemini telescope's systems can execute without human interaction. The transformation process includes programming the sequence using software that provides a user-friendly interface. This allows for the efficient use of the telescope's time and resources, ensuring that the transition from plan to program is smooth and effective.
+
 - **Execute the approved plan**  
 The approved observing program is put into action. This critical phase involves collecting astronomical data as specified by the plan. The execution must be precise, adhering to the detailed specifications of the observing program to ensure that the scientific objectives are met. It typically requires automation to allow for consistent and accurate observations over extended periods.
 
