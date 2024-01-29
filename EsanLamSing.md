@@ -179,16 +179,14 @@
 78. the software will not allow unsafe actions; the command will be rejected
 79. the software will detect unsafe areas and halt; the software will allow movement off of soft limits.
 80. the software will halt if its watchdog has not been reset
-81. the system will halt if its watchdog has not been reset
-82. switches will remove power from the actuator when beyond soft
-83. limits; the software/electrical systems will allow movement off of hard limits
-84. Hardware interlock will prevent both software and hardware from action - there will be no bypass of these systems
-85. the mechanism cannot move beyond this point due to mechanical limit(s). In general hard stops will use dampers to avoid damage to equipment.
-86. The Gemini 8m Telescopes software shall have the capability to rapidly bring the system to a safe state upon detecting potential danger.
-87. During the functional specification phase, safety aspects shall be comprehensively analyzed.
-88. The system, when operating in Engineering/Maintenance mode, must ignore directives from other systems while still providing status information for external use.
-89. Security measures shall be implemented to prevent accidental command mix-ups from different users and parts of the system.
-90. Intrusion prevention from the wide area network into the Gemini 8m Telescopes shall be ensured, especially protecting the astronomical database.
+81. limits; the software/electrical systems will allow movement off of hard limits
+82. Hardware interlock will prevent both software and hardware from action - there will be no bypass of these systems
+83. the mechanism cannot move beyond this point due to mechanical limit(s). In general hard stops will use dampers to avoid damage to equipment.
+84. The Gemini 8m Telescopes software shall have the capability to rapidly bring the system to a safe state upon detecting potential danger.
+85. During the functional specification phase, safety aspects shall be comprehensively analyzed.
+86. The system, when operating in Engineering/Maintenance mode, must ignore directives from other systems while still providing status information for external use.
+87. Security measures shall be implemented to prevent accidental command mix-ups from different users and parts of the system.
+88. Intrusion prevention from the wide area network into the Gemini 8m Telescopes shall be ensured, especially protecting the astronomical database.
 
 
 ## Non-functional
