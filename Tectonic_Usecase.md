@@ -1,2 +1,3 @@
 ## Use Case Diagram - Tectonic Group
-![Gemini](https://github.com/ICT-Mahidol/Gemini-2023/assets/84704161/f263c136-023d-4ab0-a359-fa51189156d1)
+![Tectonic_UseCase](https://github.com/ICT-Mahidol/Gemini-2023/assets/84704161/e0aa390b-6cc1-4db3-ab3f-6c8366253983)
+
