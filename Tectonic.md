@@ -198,354 +198,77 @@ C.Gemini subsystem should be as self-contained and autonomous as possible, there
 D.No subsystem package should make any assumptions about the surrounding environment beyond that provided in the interface specifications.
 
 # 3. General Requirements
-DATA SPECIFICATION
-CONTROL INFORMATION FLOW
-### FUNCTIONAL REQUIREMENTS
+### FUNCTINAL REQUIREMENTS
+DATA SPECIFICATION (3.1)
 - Control information must be transferred, typically in the form of commands and replies from users, to telescopes and instruments.
-- Replies might contain status information and, in general, data concerning instruments and telescopes, to be stored together with the astronomical data. 
 - Control information on all controlled variables must be provided by all subsystems on request.
-### NON-FUNCTIONAL REQUIREMENTS
-- No request for information shall produce a delay of control activities or locking, even if the corresponding equipment is not available or faulty. 
-- Delay times for the exchange of control information must stay within precise time limits to be defined in 'General Description' in Chapter 2. 
-- One can afford to retransmit commands in case of transmission error or collision.
-- The protocol has to be predictable in that commands cannot get lost and replies have to come back reliably. 
-
-ASTRONOMICAL DATA FLOW
-### FUNCTIONAL REQUIREMENTS
-- System must be at least two copies.
-- The first copy is to secure data as acquired.
-- Raw data will be acquired and stored as such for quick look evaluations.
-- There may be conditions (like infrared detectors) in which quick preprocessing is required.
-- Preprocessed data will be stored instead of raw data as such.
-- Astronomical data will have to be transported between GEMINI and the home institutes of visiting astronomers.
-- Data must be in FITS format
-
-
-### NON-FUNCTIONAL REQUIREMENTS
-- Detector data must be acquired and stored in the most effective way technology will allow; effectiveness should be evaluated in terms of cost, space requirements, longevity, and speed.
-- Operational overheads must be kept as low as possible, to maximize actual observing times.
-- Intermediate storage of raw data in memory on different nodes and in different formats should be kept to a minimum.
-- The link chosen to transfer data should represent as small a bottleneck as possible for data acquisition.
-- The last copy, used for assessment, should preferably be on removable media.
-- Fast preprocessing is needed.
-- Compliance with MOST 100-1.0, which is a standard defined by NASA.
-
-OTHER INFORMATION FLOW
-### FUNCTIONAL REQUIREMENTS
-- TV data concerning site monitoring and voice need to be capable of being available at all operations facilities.
-- Other astronomical information such as that coming from sky field monitors, autoguider cameras, and sky monitoring devices such as cloud and seeing monitors shall also be capable of being available.
-
-### NON-FUNCTIONAL REQUIREMENTS
-- Point-to-point video connectivity between the operations centers of the Gemini 8m Telescopes is not necessary.
-- Voice connectivity, perhaps point to point, be available on a permanent connection.
-
-OPERATION
-OPERATION LEVELS
-### FUNCTIONAL REQUIREMENTS
-- This is the normal operational mode. It allows a certain number of embedded tests, normally at a fairly high level. Monitoring is also done at this level.
-- It is anticipated that all user categories have access to this level.
-### NON-FUNCTIONAL REQUIREMENTS
-- This allows maintenance tables (for example, with instrument parameters) to be updated.
-- It is anticipated that the majority of parameters at this level will be accessed by operations and development staff.
-- This allows the installation and testing of new packages or new releases. Any low level test can be performed in this mode.
-- Access to this level will be extremely limited.
-
-PRIVILEGE AND PROTECTION LEVELS
-### FUNCTIONAL REQUIREMENTS
-- A further subdivision within the levels can be achieved by implementing privileges associated with categories of users or with the location of the user station.
-- The system or software must enforce protections.
-- The operational software must clearly indicate to users the current operation level.
-### NON-FUNCTIONAL REQUIREMENTS
-- The operational software should check compatibility between subsystems when operating in different modes.
-
-CAPACITY
-### FUNCTIONAL REQUIREMENTS
-- When the Gemini 8m Telescopes telescope is used in its normal observing mode, there will be a single operator node for the telescope and two data acquisition and instrument control nodes.
-- Some tests might be run in parallel on instruments that do not have the light beam at that moment, so in principle additional nodes might be working at the same time.
-- The system will provide for one auxiliary data acquisition and instrument control nodes.
-- The system will provide for a single off-site data acquisition and instrument control node - to be located at either the Gemini 8m Telescopes Site Support or Base Facility.
-- One supervisor will monitor the system.
-- Other users might need to monitor the running of observing programs, locally or remotely.
-- The system will provide for a single local monitoring node and a single remote monitoring node.
-- The Gemini 8m Telescopes control software shall allow simultaneous operation of up to six active control nodes and up to two more monitoring nodes (one local and one remote) without appreciable degradation of performance.
-### NON-FUNCTIONAL REQUIREMENTS
+- The meteorological information coming from a weather station should be available centrally.
+- It is explicitly required that all such information is available to the Gemini 8m Tele- scopes software and is capable of being available to all users of the Gemini 8m Tele- scopes, subject only to restrictions with respect to updating.
+- Intermediate storage of raw data must be at least two copies - one to secure data as acquired and one to do assessment of data quality online.
+- Replies might contain status information and, in general, data concerning instruments and telescopes, to be stored together with the astronomical data.
+OPERATION (3.2)
+- A further subdivision within the levels can be achieved by implementing privileges associated with categories of users or with the location of the user station
+- The operational software should indicate clearly to users the current operation level and check the compatibility between subsystems in different modes.
 - Each node will have the capability to run at all operation levels.
-- The system must support off-site observing modes.
-- The Gemini 8m Telescopes computers and software shall be capable of coping with the load of 10 active nodes, should the case arise.
-
-PERFORMANCE CRITERIA
-### NON-FUNCTIONAL REQUIREMENTS
-- Every command must be acknowledged in a positive or negative way before the occurrence of the corresponding action within given response times.
-
-PROCEDURES
-### FUNCTIONAL REQUIREMENTS
-- The system must have automatic procedures to implement startup and shutdown of the telescope and instruments.
-- The startup and shutdown procedures for instruments should be independent of the telescope operation, and their execution should not affect the ongoing operation of the telescope.
-- The system must have procedures in place to reconfigure and change the observing environment.
-- Observing environments and related light paths should be dynamically definable without the need for a complete system restart.
+- Reconfiguration procedures must exist, to change the observing environment.
 - Operations staff have privileges to change the environment, meaning selecting a suitable combination of instruments.
-- The operational software should know which subsystems are installed and operational at any given time.
-
-EXTERNAL INTERFACE REQUIREMENTS
-USER INTERFACES (UIF)
-### FUNCTIONAL REQUIREMENTS
-- It is essential for operational and maintenance reasons that, in spite of the obvious differences of the setups and commands available, the same philosophy is applied throughout.
-- This calls for a homogeneous user interface, which can be achieved only by applying the same user interface tools to the whole project, providing the Gemini 8m Telescopes user interface's ‘look and feel’.
-- The user interface should not be seen as a package linked to a specific computer.
-- Given the requirement to be able to access the Gemini 8m Telescopes from several points, the user interface should rather be seen as a package to be callable from a large number of stations, depending on where a user is.
-### NON-FUNCTIONAL REQUIREMENTS
-- It should also be network transparent so that it does not matter where it is being run.
-- The user interface tools shall be based on standards, defined in Section 4.2.5 on page 4-7, which will be portable across different computer hardware platforms (Portable User Interface Toolkit).
-- The intent of a portability requirement is to facilitate migrating existing and future Gemini systems to different hardware as the need arises.
-- It is the current intent to limit the selection of computer hardware platforms to as few as is practical..
-
-HARDWARE INTERFACES
-### FUNCTIONAL REQUIREMENTS
-- Standard interfaces to the control electronics shall be available, in the form of standard bus systems, a standard set of interface cards to be used on all the subsystems and instruments, a standard software skeleton running on the control electronics
-### NON-FUNCTIONAL REQUIREMENTS
-- The existence of hardware standards is clearly essential for maintenance and repairs.
-- The standard software must be adequate for the real-time requirements.
-- Must offer drivers to the standard electronics to be used on all the Gemini 8m Telescopes software subsystems and instruments.
-
-SOFTWARE INTERFACES
-### FUNCTIONAL REQUIREMENTS
-- The Gemini 8m Telescopes software covers all aspects of control and data acquisition related to the telescope, instruments, and auxiliary instrumentation.
-- It also covers all the operational aspects of the Gemini 8m Telescopes, including online scheduling and rescheduling.
-- There is also software which, although it will be interfaced to the Gemini 8m Telescopes, is referred to as external.
-- The external software must interface with the Gemini 8m Telescopes software.
-- It shall be possible to monitor the quality (image quality, spectral resolution, signal to noise, etc.) of the astronomical data as it comes in.
+EXTERNAL INTERFACE REQUIREMENTS (3.3)
 - Standard reduction procedures should be available for basic on-line calibrations of the observed data.
-- One would like to have fully reduced and calibrated data at the end of the observations.
-- Quick-look data processing should be provided on the Gemini 8m Telescopes, with procedures suitable for fast on-line data preprocessing.
-- Quick-look should be usable within exposure sequences to provide results and feedback parameters to the control software in a programmed way, without the need for manual intervention.
-- Near-line processing should be available for simple data reductions required for data integrity validation.
-- The output format of the Gemini 8m Telescopes data must be compatible with the GEMINI archive requirements.
-- Online interactive access to the data archiving system should exist, so that access to this database is possible for Gemini 8m Telescopes users.
-- The specific types of data available; flat fields, calibrations, science exposures, etc.
 - Computer access to star catalogs is also required, so that an automatic selection of candidate guide and standard stars can be made.
-- The Gemini 8m Telescopes software must be able to interface with all commercial software packages available on the Gemini 8m Telescopes and integrated into the Gemini 8m Telescopes operation.
-### NON-FUNCTIONAL REQUIREMENTS
-- The external software consists of commercial software integrated into the Gemini 8m Telescopes software (e.g. DBMS).
-- Pre Existing software used in the Gemini 8m Telescopes (e.g. image processing systems, star catalogs).
-- The above statements define the goal of quick-look analysis for the Gemini 8m Telescopes.
-- This document does not try to be specific about the requirements for Quick-look other than that it should be synchronous.
-- This data reduction proceeds sequentially through requests but asynchronously from data acquisition.
-- Data acquisition takes precedence over near-line data reduction.
-- Off-line pixel processing for full data reduction should also exist at the Gemini 8m Telescopes site, but does not have any interface to the Gemini 8m Telescopes software.
-- Compatibility with and adaptations to these packages must be sought.
-- The same situation might also occur with other instruments, where specific observer support software has to be foreseen for on-line use.
+GENERAL CONSTRAINTS (3.4)
+- Switching to different configurations must be possible at any time with appropriate procedures.
+- The number of main packages of software must be kept to a minimum to facilitate maintenance, but compatible with the need to have the right degree of modularity.
+- All software which does not directly control specific hardware must be written as machine independent, portable code. 
+ATTRIBUTE (3.5)
+- Monitor level. Each subsystem should have a background task running whenever that subsystem is operational, performing such tasks as checking power supply lev- els, temperatures, performance, and correct responses to commands. The OCS is to be notified of any detected problems.
+- Self-test level. Each subsystem should provide a module for fully exercising all sub- system components, both hardware and software. This module is executed automatically during start-up and on demand through the defined interface. Problems are to be automatically reported to the OCS via the defined interface.
+- System level. There are also software modules for testing the subsystem as an integrated portion of the entire system. This software would be executed on demand during maintenance operation level.
+- The Telescope Control System should be capable of detecting and invoking parallel operation as it is responsible for control of all of the telescope and enclosure subsystems.
 
-COMMUNICATION INTERFACES
-### FUNCTIONAL REQUIREMENTS
-- Local coordination and synchronization needs within a subsystem (for example, coordination of active support system for primary mirror, bi-directional traffic of commands/replies).
-- Global synchronization needs, such as the universal time synchronization requirement.
-- Exchange of control information, in the form of commands and status information.
-- Collection and transfer (for archiving or remote access) of raw astronomical data.
-- Access from Wide Area Network (WAN) for remote diagnostics and monitoring from operations facilities.
 ### NON-FUNCTIONAL REQUIREMENTS
-- This LAN must be capable of dealing both with the data bandwidths required (at peak and on average) and with the required response times and synchronization needs.
-- For maintenance reasons and hardware independence, a clear hierarchical model must be implemented, supporting separation of logical and physical layers, e.g. ISO/OSI model.
-- Network redundancy should also be considered in the design phase as a way to increase reliability and security, in particular for control information.
-- Due to the uncertain future of the Internet, only non-essential tasks may employ it.
-- Violation of the hierarchical nature of the system can lead to testing and maintenance problems.
-
-### GENERAL CONSTRAINTS
-### USER CONSTRAINTS
-### FUNCTIONAL REQUIREMENTS
+DATA SPECIFICATION (3.1)
+- No request for information shall produce a delay of control activities or locking, even if the corresponding equipment is not available or faulty.
+- The link chosen to transfer data should represent as small a bottleneck as possible for data acquisition.
+- Intermediate storage of raw data in memory on different nodes and in different for- mats should be kept to a minimum.
+- Astronomical data will have to be transported between GEMINI and the home institutes of visiting astronomers in FITS format.
+- TV data concerning site monitoring and voice need to be capable of being available at all operations facilities.
+- Other astronomical information such as that coming from sky field monitors, autoguider cameras and sky monitoring devices such as cloud and seeing monitors shall also be capable of being available.
+OPERATION (3.2)
+- Protections must also be enforced among users.
+- The Gemini 8m Telescopes control software shall allow simultaneous operation of up to six active control nodes and up to two more monitoring nodes (one local and one remote) without appreciable degradation of performance.
+- The Gemini 8m Telescopes computers and software shall be capable of coping with the load of 10 active nodes.
+- Every command must be acknowledged in a positive or negative way before the occurrence of the corresponding action within given response times.
+- There must be automatic procedures to implement startup and shutdown of the telescope and instruments.
+- These must allow startup and shutdown of instruments independently of the telescope and without affecting the telescope operation.
+EXTERNAL INTERFACE REQUIREMENTS (3.3)
+- A homogeneously designed interface is a requirement for the entire system.
+- The user interface should not be seen as a package linked to a specific computer.
+- The user interface should rather be seen as a package to be callable from a large number of stations.
+- It should also be network transparent.
+- The image preprocessing system shall be able to monitor the quality (image quality, spectral resolution, signal to noise, etc.) of the astronomical data as it comes in.
+- It will be interfaced to the Gemini 8m Telescopes, and is referred to as external.
+- The output format of the Gemini 8m Telescopes data must be compatible with the GEMINI archive requirements.
+- The system will be established by the Gemini Archiving Requirements.
+- The Gemini 8m Telescopes software must be able to interface with all commercial soft- ware packages available on the Gemini 8m Telescopes and integrated into the Gemini 8m Telescopes operation.
+- Quick-look data processing should be provided on the Gemini 8m Telescopes, with procedures suitable for fast on-line data preprocessing
+- Quick-look should be usable within exposure sequences to provide results and feed- back parameters to the control software in a programmed way, without the need for manual intervention.
+- Near-line processing should be available for simple data reductions required for data integrity validation
+GENERAL CONSTRAINTS (3.4)
 - The software shall support access to the system from any user station.
-- It will then be an operational decision, implying privileges and priorities for the various categories of users, and definition of what a given user can actually do.
-### NON-FUNCTIONAL REQUIREMENTS
-- This will allow centralized support and coordination of their operations, providing both operations support for individual instruments and supervision for all of them."
-- However, even at the Gemini 8m Telescopes site there will be users (e.g. software development and maintenance staff) installing or enhancing other parts of the system, possibly working directly at the telescope.
-- Finally, in the case of remote operations, other users (e.g. support staff) might be on Cerro Tololo or in Hilo.
-- Access from any user station will make user stations in principle identical and software configurable as the user station of this or that subsystem.
-- This should greatly simplify the coordination problem posed by the large number of simultaneous users (as already described in the Capacity requirements, Section 3.2.2).
-
-### HARDWARE CONSTRAINTS
-### FUNCTIONAL REQUIREMENTS
-- Computers used at the Gemini 8m Telescopes site, particularly in the test phase when they are outside the control room and near the subsystem under test, shall be checked against altitude and humidity specifications for the Gemini 8m Telescopes site. 
-- Computer hardware must be able to run the Gemini 8m Telescopes software environment (operating systems, Gemini 8m Telescopes software) and provide compatibility in data format (identical internal data representation).
-- Common development and implementation tools must be both available and supported.
-- Identical network access must be supported.
-- Local processing power must be such that telescope and instrument control does not represent a significant overhead in the whole process of executing an observing program (the overhead, if any, should be limited by the time it takes for physical devices to act).
-### NON-FUNCTIONAL REQUIREMENTS
-- During the next 5 to 10 years, new hardware will be available with features and costs that could benefit the project.
-- The hardware chosen as the standard at this point in time may be no longer available at some point in the future.
-
-### SOFTWARE CONSTRAINTS 
-### FUNCTIONAL REQUIREMENTS
 - Individual instruments must be able to run fully independently.
 - Telescope software at the two telescopes must be maintained to be identical in the upper layers (even if hardware should differ).
-- Switching to different configurations must be possible at any time with appropriate procedures.
-- There must be easy procedures to reconfigure the system when subsystems are modified or removed.
-- To allow for expansion and maintenance, Gemini 8m Telescopes standards must be defined for the on-line software and the development environment.
-- Table-driven software should be used whenever possible, to avoid unnecessary compilations.
-### NON-FUNCTIONAL REQUIREMENTS
 - Additions of new instruments should aim, as a goal, at introducing no modification to already operational parts. Modifications should be confined to the operational procedures and should not affect the bulk of the existing software.
-- The number of main packages of software must be kept to a minimum to facilitate maintenance, but compatible with the need to have the right degree of modularity.
+- There must be easy procedures to reconfigure the system when subsystems are modified or removed.
+- Existing software packages should be reused wherever possible.
 - Commercial and public domain packages should be used whenever possible.
 - Existing software packages should be reused wherever possible.
 - All software which does not directly control specific hardware must be written as machine independent, portable code. Even for microprocessor software, the software should be hardware independent, to allow a later choice of the target microprocessors.
-- Online version control must be implemented. That is, the version control system must be available to recover/restore versions at all times.
-- At boot time, the Gemini 8m Telescopes software shall check the consistency of versions of all the various software components.
-- System constants, such as arcseconds/bit for an encoder, shall not require recompiling but will be updated as part of system startup, and, for some constants, will be modifiable during operation.
-- System status parameters will be maintained to an extent that will allow restarting the system and regaining the previous state. The extent of duplication of the previous state will be dictated by safety and practical considerations.
-- Strict checking should be applied on this to preserve maintainability and reconfiguration of the system.
-
-ATTRIBUTES
-SIMPLICITY
-	—
-
-SUPPORTABILITY 
-### NON-FUNCTIONAL REQUIREMENTS
-- The system should have supportability influence design
-
-RELIABILITY AND AVAILABILITY 
-### FUNCTIONAL REQUIREMENTS
-- The system shall incorporate retry procedures in the software to facilitate recovery on-line in the event of errors or failures (e.g., time-out, hardware failure) to ensure maximum availability of the control system.
-- In case recovery fails, the error or failure has to be reported in a clear form (to identify the cause of the problem)
-- To avoid unnecessary downtime, the system must be capable of reconfiguring itself to continue observing in a different mode if required, given the failure of a single non-critical subsystem.
-- Software robustness shall be enhanced through range checking and validity checking before the execution of any input command. These checks must be possible ahead of time for preparing observing sequences and simulating observations.
-- The system shall implement recovery procedures to restart after error failures.
-- The system shall constantly monitor active subsystems to ensure they are operating correctly before sending commands. This monitoring shall also continue on inactive subsystems.
-### NON-FUNCTIONAL REQUIREMENTS
-- The system shall put itself into a safe state, whenever a safety aspect might be involved.
-- The goal for recovery and/or reconfiguration from the onset of the error condition to observing again shall be 5 minutes.
-
-MAINTAINABILITY 
-### FUNCTIONAL REQUIREMENTS
-- Subsystem software must include modules for maintenance and testing, including a simulator for each subsystem. 
-- Mechanisms should exist for easily replacing a subsystem with its simulation.
-- Each subsystem should have a background task running, checking power supply levels, temperatures, performance, and correct responses to commands. Detected problems should be reported to the OCS (Observatory Control System).
-- Each subsystem should provide a module for fully exercising all subsystem components, automatically executed during start-up and on demand. Problems are to be automatically reported to the OCS.
-- There should be software modules for testing the subsystem as an integrated portion of the entire system.
-### NON-FUNCTIONAL REQUIREMENTS
-- The system must include a detailed plan for maintenance and periodic upgrades throughout its lifetime.
-- The maintenance plan must include considerations for maintenance requirements, along with an estimate of the required resources
-- The plan must outline the method for upgrading the system to add capabilities and performance. It should identify areas where upgrades are anticipated, providing estimates of the required effort and resources.
-- This software would be executed on demand during maintenance operation level.
-
-HUMAN ENGINEERING 
-### NON-FUNCTIONAL REQUIREMENTS
-- All Gemini Software must be designed with human engineering requirements under consideration that including:
-    - provisions for minimizing stress effects and fatigue
-    - feedback on operation on specific tasks
-    - people and machine interfaces
-    - procedures
-    - training and experience
-    - interaction with team members G.management and organizational behavior
-
-SECURITY AND SAFETY
-### FUNCTIONAL REQUIREMENTS
-- The Gemini system must be self-monitoring to invoke safety monitoring and prevent risk to people or damage to equipment.
-- The software should be able to quickly bring the Gemini system to a safe state upon notification of such danger.
-- Subsystems must be able to detect danger and report it appropriately. If the risk persists, subsystems must move into safe states to protect people and equipment.
-- Safety protection must be applied whenever there is a risk that the control software could endanger people or cause damage to any subsystem or cause damage to any Gemini 8m Telescopes sub- system (this protection, where implemented, must be independent of the software.)
-- Specifies the order in which safety systems should work, including software limits, soft limit switches, watch dogs, hard limit switches, hardware interlocks, and hard stops.
-- The software must not allow unsafe actions, and commands violating safety limits will be rejected.
-- The software should detect unsafe areas, halt the system, and allow movement off of soft limits.
-- The software must halt if its watchdog has not been reset.
-- The system will halt if its hardware watchdog has not been reset.
-- Hard limit switches should remove power from the actuator when beyond soft limits; the software/electrical systems will allow movement off of hard limits.
-- Hardware interlocks should prevent both software and hardware from action and there must be no bypass of these systems.
-- The mechanism should not move beyond a certain point due to mechanical limits. Hard stops should use dampers to avoid damage to equipment.
-- The Gemini 8m Telescopes software must be able to bring the system quickly to a safe state upon detection of danger.
-- A system that is operating in Engineering/Maintenance mode must ignore directives from other systems, though status information should still be provided for use by other systems.
-- All systems must be appropriately interlocked, and the interlock system must not depend on any software for reliable operation.
-### NON-FUNCTIONAL REQUIREMENTS
-- The development for the Gemini Control System must comply with applicable engineering practices, laws, regulations, and policies.
-- All necessary safety approvals must be obtained before accepting devices.
-- Security must be provided in order to both prevent accidental mix-up of commands from different users on different parts of the system and to prevent intrusion from the wide area network into the Gemini 8m Telescopes.
-- The system should be security preventing the intrusion into the system by unauthorized users, or users at unauthorized access levels.
-- The interlock must follow this philosophy:
-    - All hazards capable of causing death and/or loss of irreplacable equipment shall be passively interlocked.
-    - All hazards capable of causing injury and/or severe damage to equipment shall be actively interlocked (severe damage implies that repairs are not repairable at the depot level.
-    - All other hazards may be interlocked via software.
-- The system must follow the general safety requirements:
-    - eliminate hazards through design, including material selection 
-    - isolate hazardous substances from people
-    - minimize hazard to people during operation and maintenance from high voltage, electro- magnetic radiation, sharp edges, hot surfaces, chemicals, etc.
-    - minimize risks due to environmental conditions, such as temperature, noise, vibration, etc.
-    - minimize risks created by human error
-    - use interlocks and other protective devices when hazards cannot be eliminated G.provide distinctive markings and warnings to protect people
-
-TESTABILITY
-### FUNCTIONAL REQUIREMENTS
-- A control test plan must address all areas of testing from design, acceptance, commissioning through to hand-over.
-- The capability of mission equipment must have built-in-test capability, providing onboard, automated testing for the detection, diagnosis, or isolation of system failures.
-### NON-FUNCTIONAL REQUIREMENTS
-- The design of the system should incorporate testability as a characteristic, allowing for the confidently determined in a timely fashion.
-- The major objectives of Controls Test Plan should be:
-    - test effectively with minimum effort and cost
-    - reduce maintenance induced problems
-    - reduce the cost of test equipment and programming
-    - reduce cost of documentation
-    - testability requirements
-
-EXPANDABILITY 
-### NON-FUNCTIONAL REQUIREMENTS
-- The software must be designed to be easily extended and upgraded with modifications to non-changing components.
-- The software, its installation process, and its documentation must be developed with expandability in mind, using general industry standards.
-
-MODULARITY
-### FUNCTIONAL REQUIREMENTS
-- The system must have the capability to acquire information about other parts of the system, such as telescope coordinates.
-### NON-FUNCTIONAL REQUIREMENTS
-- All software must be developed using modularization and standardization techniques.
-- Each module's environment must be strictly defined by its interface to other components, and no module can rely on information outside of this interface.
-- Module selection should be done in logical fashion to minimize the size of the interfaces between modules.
-- Online databases are part of the interface, but access is restricted to their defined interfaces.
-- The software must be strictly modular, and the functionality of a subsystem should be isolated, allowing independent installation and maintenance.
-- There should be no undesired interactions between subsystems, and enforcement can occur at the client/server interface or at the message system level.
-
-CONTINGENCIES 
-### FUNCTIONAL REQUIREMENTS
-- The system should have the ability to reconfigure the software if one actuator fails.
-### NON-FUNCTIONAL REQUIREMENTS
-- The security and safety of the system should be guaranteed even in the event of failure of any component, including the higher-level software.
-- Data redundancy must be a requirement to prevent a single failure from causing the loss of collected data and minimize the effects of single-point errors throughout the system.
-
-CONCURRENCY
-### FUNCTIONAL REQUIREMENTS
-- The Telescope Control System must have the capability to detect and initiate parallel operation, given its responsibility for controlling all telescope and enclosure subsystems.
-### NON-FUNCTIONAL REQUIREMENTS
-- The system should maximize the use of parallel operation to enhance efficiency.
-
-LIFE CYCLE ASPECTS
-### NON-FUNCTIONAL REQUIREMENTS
-- The software must be developed following a structured and formally defined development model.						
-    - make the development process visible (for quality and maintenance reasons)
-    - avoid incomplete specifications
-    - discover errors early (via review and audit procedures)
-    - secure structured, maintainable software
-    - guarantee software quality
-    - improve and ease cooperation. 
-and should cover:
-    - Development methods
-    - Formal approval, review and audit procedures
-    - Documentation
-    - Coding and debugging
-    - Simulation
-    - Component and integration-verification and testing
-    - Configuration and version management. 
-
-DEVELOPMENT ENVIRONMENT
-### NON-FUNCTIONAL REQUIREMENTS
-- The development environment for the Gemini 8m Telescopes software must consist of the computer hardware and system software (operating system, languages and tools) chosen optimally to support the development model presented in the previous section on life-cycle aspects.
-- The selection of the development environment must consider specific criteria such as development including
-    - Emphasis on development and productivity requirements, including cross support tools.
-    - Portability of software (target hardware independence) 			
-    - Hardware and vendor independence	
-    - Use of industrial and de facto standards. 
-
-INSTALLATION ASPECTS
-### FUNCTIONAL REQUIREMENTS
-- Every system must be capable of providing its current version upon request.
-### NON-FUNCTIONAL REQUIREMENTS
-- The test procedure methods must be defined in the Software Test Plan (STP)
-- The test plans shall be written for all individual software packages and modules comprising the Gemini 8m Telescopes software.
-- A formal release system should exist at package and module level, which should be checkable online by the operational procedures for consistency. 
-
+- On-line version control must be implemented. That is, the version control system must be available to recover/restore versions at all times.
+ATTRIBUTE (3.5)
+- The system’s retry procedures must be embodied in the software in case of error or failure.
+- All subsystem software is to include modules to aid in the maintenance and testing of the subsystem.
+- All equipment shall support a programmed adjustment and maintenance interval of 30 days or longer.
+- Data redundancy is also a requirement, to prevent a single failure from causing the loss of collected data.
 
 # Chapter 4 -Specific Requirements
 Attributes
@@ -1070,3 +793,5 @@ Remote DB Access
 - The system's handling of ASCII strings should be efficient to avoid delays in command processing.
 - Clear documentation must be provided for the steps involved in generating, decoding, and routing command strings.
 - System architecture Including substituting orders It should be scalable to accommodate increases in complexity or order volume.
+
+## ITCS431 Software Design and Development (2023)
