@@ -18,6 +18,6 @@
 15. Access testing mode: Supporter, Developer and Telescope Operator can access testing mode.
 16. Submit a science plan to the system: Astronomers can submit a science plan to the system. 
 17. Execute approved science plan: Science Observer can execute approved science plan.
-18. Monitor executing process: After executing approved science plan, Supporter, Astonomers, Visitor, Operational staff, Administrator, and Telescope Operator can monitor executing process in the system.
+18. Monitor executing process: After executing approved science plan, Supporter, Astonomers, Operational staff, Administrator, and Telescope Operator can monitor executing process in the system.
 19. Access the observing program: Astronomers, Science Observer and Telescope Operator can access the observing program.
 20. View astronomical data: Astronomers, Science Observer and Visitors can view astronomical data.
