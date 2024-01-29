@@ -7,7 +7,7 @@
 6. 6488148	Pattanun	Worakitsitthisatorn
 
 # Use case diagram
-![Alt text](https://m1r.ai/9/zirrw.png)
+![Alt text](https://m1r.ai/9/gbrml.png)
 
 # Use case diagram description
 ### Actor: Astronomer 
