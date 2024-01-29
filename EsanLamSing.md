@@ -61,6 +61,7 @@
 28. Subsystems must notify the user when faults occur.
 29. If a subsystem fails, the remaining equipment in the environment must still be operable after restarting.
 30. If a user station has a computer hardware failure, it shall be possible to transfer control from one user station to another using a simple software reconfiguration procedure.
+31. The observing program shall allow observation that is automated and requires little human interaction.
 
 ## Non-functional
 1. All requirements and modes of operations are available to all users unless explicitly stated.
@@ -87,6 +88,7 @@
 22. All Gemini subsystem packages shall include modules for testing and diagnosis of the subsystem.
 23. Gemini subsystems should be self-contained and autonomous as much as possible.
 24. No subsystem shall make any assumption about its surrounding environment beyond that provided in the interface specification.
+25. The observing program should be a visually-oriented environment providing a simple, easy-to-use interface to the astronomer.
 
 # Chapter 3
 ## Functional
