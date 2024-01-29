@@ -243,3 +243,5 @@
   67. The design should effectively remove record-specific knowledge from database access.
   68. Database monitors should provide an effective callback mechanism.
   69. Channel access tools should be real-time, effectively used for monitoring and controlling IOCs.
+
+ITCS431 Software Design and Development (2023)
