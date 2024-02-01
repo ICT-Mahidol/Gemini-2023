@@ -814,3 +814,5 @@ a. The simulator should present a functional definition of the observatory, appe
 43. The system must ensure that commands are structured in a way that allows for interoperability across different subsystems and components within the control system.
 44. The command structure and routing should accommodate a potentially large number of subsystems and complex command strings.
 45. The use of ASCII strings for commands implies a standard format for command representation across the system.
+
+ITCS431 Software Design and Development (2023)
