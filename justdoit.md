@@ -244,4 +244,4 @@
 107.  The database must support both remote access and distributed data.
 
 
-
+ # ITCS431 Software Design and Development (2023)
