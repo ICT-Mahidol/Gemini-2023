@@ -1,0 +1,45 @@
+name: Java CI with SonarCloud
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11' # You can change this to the version you want
+
+    - name: Compile Java
+      run: |
+        cd instructors/exercise 
+        javac -d . *.java
+      # Compile java file from directory
+  sonarcloud:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        projectBaseDir: instructors/exercise
+        # sonarPropertiesPath: instructors/exercise
+      
+    
+    # - name: Execute Java
+    #   run: java -cp . MainClass # Replace MainClass with your main class name
