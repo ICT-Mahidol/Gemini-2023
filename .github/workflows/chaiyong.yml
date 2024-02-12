@@ -20,7 +20,7 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd instructors/exercise 
+        cd Chaiyong/HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
   sonarcloud:
@@ -37,7 +37,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
-        projectBaseDir: instructors/exercise
+        projectBaseDir: Chaiyong/HolidayTravelVehicles
         # sonarPropertiesPath: instructors/exercise
       
     
