@@ -1,4 +1,4 @@
-name: Java CI with SonarCloud
+name: Java CI with SonarCloud 
 
 on:
   pull_request:
