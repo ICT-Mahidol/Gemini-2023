@@ -36,4 +36,4 @@ jobs:
     - name: Execute Java (InwZa007)
       run: |
         cd Inwza007/HolidayTravelVehicles 
-        java -cp . HolidayTravelVehicles
+        java -cp . HolidayTravelVehicles.java
