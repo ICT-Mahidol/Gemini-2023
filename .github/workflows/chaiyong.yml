@@ -29,4 +29,6 @@ jobs:
       
     
     - name: Execute Java
-      run: java -cp . HolidayTravelVehicles # Replace MainClass with your main class name
+      run: |
+        cd Chaiyong/HolidayTravelVehicles 
+        java -cp . HolidayTravelVehicles # Replace MainClass with your main class name
