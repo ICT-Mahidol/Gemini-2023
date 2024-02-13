@@ -16,7 +16,7 @@ public class Invoice {
     private Customer customer;
     private ArrayList<DealerInstalled> dealeroptions;
 
-    public Invoice(Customer customer,Salesperson salesperson, int invoiceNumber, Date invoiceDate, double amount, double taxes,
+    public Invoice(Customer customer, Salesperson salesperson, ArrayList<DealerInstalled> dealeroptions, int invoiceNumber, Date invoiceDate, double amount, double taxes,
             double licensefees, String signature) {
         this.invoiceNumber = invoiceNumber;
         this.invoiceDate = invoiceDate;
