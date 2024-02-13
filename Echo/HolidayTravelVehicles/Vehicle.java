@@ -5,6 +5,8 @@ public class Vehicle {
     private int year;
     private String manufacturer;
     private double basePrice;
+    private Arraylist<Salesperson> salespersons;
+    private Invoice invoice;
 
     public Vehicle() {
     }
