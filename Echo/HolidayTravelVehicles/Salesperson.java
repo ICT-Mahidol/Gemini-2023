@@ -8,7 +8,7 @@ public class Salesperson extends Person {
     private ArrayList<Invoice> invoices;
 
     public Salesperson(String name, String address, String phone, int salespersonID, double salary, String position) {
-        super(name, address, phone);
+        super();
         this.salespersonID = salespersonID;
         this.salary = salary;
         this.position = position;

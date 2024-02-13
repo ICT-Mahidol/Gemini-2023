@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Vehicle {
     private int serialNum;
     private String name;
@@ -5,6 +7,8 @@ public class Vehicle {
     private int year;
     private String manufacturer;
     private double basePrice;
+    private Arraylist<Salesperson> salespersons;
+    private Invoice invoice;
 
     public Vehicle() {
     }
