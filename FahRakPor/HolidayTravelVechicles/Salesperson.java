@@ -1,5 +1,7 @@
+package HolidayTravelVechicles;
 import java.util.ArrayList;
 import java.util.List;
+
 
 class Salesperson { 
     private String Fullname;
@@ -7,6 +9,7 @@ class Salesperson {
     private String PhoneNumber;
     private String Email;
     private List<String> saleInvoices;
+    private List<String> vehicleRecords;
 
     Salesperson(){
 
@@ -17,7 +20,8 @@ class Salesperson {
         this.EmployeeID = EmployeeID;
         this.PhoneNumber = PhoneNumber;
         this.Email = Email;
-
+        this.saleInvoices = new ArrayList<>();
+        this.vehicleRecords = new ArrayList<>();
     }
 
     public String getFullname() {
@@ -36,6 +40,10 @@ class Salesperson {
         return Email;
     }
 
+    public List<String> getSaleInvoices() {
+        return this.saleInvoices;
+    }
+
     public void setFullname(String Fullname) {
         this.Fullname = Fullname;
     }
@@ -52,7 +60,12 @@ class Salesperson {
         this.Email = Email;
     }
 
-    public void CreateInvoice(String Invoice) {
-
+    public void CreateInvoice(String saleInvoice) {
+        saleInvoices.add(saleInvoice);
     }
+
+    public void  CreateVehicleRecord(String VehicleRecord) {
+        vehicleRecords.add(VehicleRecord);
+    }
+
 }
