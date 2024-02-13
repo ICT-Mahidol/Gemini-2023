@@ -23,6 +23,6 @@ jobs:
     - name: Compile Java
       run: |
         cd Tectonic/HolidayTravelVehicles 
-        javac -d . Main.java
+        javac -d . *.java
       # Compile java file from directory
       
