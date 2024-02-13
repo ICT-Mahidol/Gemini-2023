@@ -1,6 +1,6 @@
 public class Invoice {
-    private Customer customer;
-    private SalePerson salePerson;
+    public Customer customer;
+    public Salesperson salePerson;
     private int invoiceID;
     private String tradeInVehicleInfo;
     private int tradeInAllowance;
@@ -12,7 +12,7 @@ public class Invoice {
     private boolean includesDealerOptions;
     
 
-    public Invoice(Customer customer, SalePerson salePerson, int invoiceID, String tradeInVehicleInfo, int tradeInAllowance, String purchaseVehicleInfo, double finalNegotiatedPrice, double applicableTaxes, double licensingFees, boolean isCustomerSigned, boolean includesDealerOptions) {
+    public Invoice(Customer customer, Salesperson salePerson, int invoiceID, String tradeInVehicleInfo, int tradeInAllowance, String purchaseVehicleInfo, double finalNegotiatedPrice, double applicableTaxes, double licensingFees, boolean isCustomerSigned, boolean includesDealerOptions) {
         this.customer = customer;
         this.salePerson = salePerson;
         this.invoiceID = invoiceID;

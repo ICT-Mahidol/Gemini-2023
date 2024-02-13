@@ -5,7 +5,7 @@ public class Salesperson{
     private String name;
     private String address;
     private int phoneNumber;
-    public salesperson (int id, String name, String address, int phoneNumber){
+    public Salesperson (int id, String name, String address, int phoneNumber){
         this.id = id;
         this.name = name;
         this.address = address;
