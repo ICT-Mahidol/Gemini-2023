@@ -23,7 +23,7 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd [Your Group Name]/HolidayTravelVehicles 
+        cd Chaiyong/HolidayTravelVehicles 
         javac -d . *.java
 
     - name: Execute Java
