@@ -1,18 +1,23 @@
-public class DealerInstalledOptions {
+
+public class DealerInstalledOptions extends VehicleRecord {
     private String optionCode; 
     private String description; 
     private double price; 
     
-    public DealerInstalledOptions(String optionCode, String description, double price) {
+
+    public DealerInstalledOptions(String vehicleSerialNumber, String name, String model, int year, String manufacture, double baseCost, String optionCode, String description, double price) {
+        super(vehicleSerialNumber, name, model, year, manufacture, baseCost);
         this.optionCode = optionCode;
         this.description = description;
         this.price = price;
     }
     
+
     public String getOptionCode() {
         return optionCode;
     }
     
+
     public void setOptionCode(String optionCode) {
         this.optionCode = optionCode;
     }
