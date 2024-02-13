@@ -1,4 +1,3 @@
-package Echo.HolidayTravelVehicles;
 import java.util.Date;
 import java.util.ArrayList;
 
@@ -16,7 +15,8 @@ public class Invoice {
     private Vehicle vehicle;
     private Vehicle tradeIn;
     private Customer customer;
-    private ArrayList<DealerInstalledOptions> dealeroptions;
+    private ArrayList<DealerInstalled> dealeroptions;
+
 
 public void RequestDealerInstallOption(String request){
     this.request = request;
