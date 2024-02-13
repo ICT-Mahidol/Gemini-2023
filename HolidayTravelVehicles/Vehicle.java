@@ -1,5 +1,3 @@
-package com.company;
-
 public class Vehicle{
 
     private int SerialNumber;
@@ -71,7 +69,7 @@ public class Vehicle{
 
     public String getVehicleInfo(){
         return
-                "Name: " + this.Name + "/nModel: " + this.Model + "/nSerial Number: " + this.SerialNumber.toString()
-                        + "/nPrice: " + this.BaseCost.toString();
+                "Name: " + this.Name + "/nModel: " + this.Model + "/nSerial Number: " + this.SerialNumber
+                        + "/nPrice: " + (this.BaseCost);
     }
 }
