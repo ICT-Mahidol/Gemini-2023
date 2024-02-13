@@ -23,6 +23,6 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd Chaiyong/HolidayTravelVehicles 
+        cd Echo/HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
