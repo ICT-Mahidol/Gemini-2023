@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.Date;
 import java.util.List;
 
-public class invoice {
+public class Invoice {
 
     private String invoiceNum;
     private Date date;
@@ -20,7 +20,7 @@ public class invoice {
     private double licenseFees;
     private String signature;
 
-    public invoice(String invoiceNum, 
+    public Invoice(String invoiceNum, 
                     Date date, 
                     Customer customer, 
                     Salesperson salesperson,
