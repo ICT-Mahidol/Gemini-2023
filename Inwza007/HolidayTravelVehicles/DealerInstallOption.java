@@ -1,7 +1,5 @@
-package Inwza007.HolidayTravelVehicles;
-
 public class DealerInstallOption {
-    private String OptionCode; 
+    private String OptionCode;
     private String Description;
     private String price;
 
