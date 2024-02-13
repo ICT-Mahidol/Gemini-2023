@@ -72,4 +72,8 @@ public class Vehicle {
         return this.serialNumber + " " + this.name + " " + this.model + " " + this.year + " " + this.manufacturer;
     }
 
+    public static void main(String[] args) {
+        Vehicle Vigo = new Vehicle("aaa", "Vigo", "Toyota", 2020, "Thailand", 10000.0);
+    }
+
 }
