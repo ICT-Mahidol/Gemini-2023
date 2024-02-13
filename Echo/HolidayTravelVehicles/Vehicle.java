@@ -43,7 +43,7 @@ public class Vehicle {
         + this.basePrice + " " + this.serialNo;
     }
 
-    public void createNewVehicleRecord(){
+    public void createNewVehicleRecord(int serialNum, String name, String model, int year, String manufacturer, double basePrice){
         Vehicle newVehicle = New Vehicle();
     }
 }
