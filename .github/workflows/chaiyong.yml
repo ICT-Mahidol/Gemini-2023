@@ -23,27 +23,10 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd instructors/exercise 
+        cd Chaiyong/exercise 
         javac -d . *.java
       # Compile java file from directory
-  sonarcloud:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      with:
-        ref: ${{ github.event.pull_request.head.ref }}
-        fetch-depth: ${{ env.PR_FETCH_DEPTH }}
-    - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      with:
-        projectBaseDir: instructors/exercise
-        # sonarPropertiesPath: instructors/exercise
       
     
-    # - name: Execute Java
-    #   run: java -cp . MainClass # Replace MainClass with your main class name
+    - name: Execute Java
+      run: java -cp . Main # Replace MainClass with your main class name
