@@ -1,7 +1,7 @@
 package HolidayTravelVehicles;
 
 public class Vehicle {
-    
+
     private String serialNumber;
     private String name;
     private String model;
@@ -66,6 +66,10 @@ public class Vehicle {
 
     public void setBaseCost(Double newBaseCost) {
         this.baseCost = newBaseCost;
+    }
+
+    public String toString() {
+        return this.serialNumber + " " + this.name + " " + this.model + " " + this.year + " " + this.manufacturer;
     }
 
 }
