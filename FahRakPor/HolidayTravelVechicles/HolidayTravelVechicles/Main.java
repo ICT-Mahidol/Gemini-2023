@@ -10,7 +10,6 @@ public class Main {
 
         // Create a vehicle
         Vehicle vehicle = new Vehicle("123ABC", "Car", "ModelX", 2022, "ManufacturerA");
-
         // Add the vehicle to the customer's list
         customer.purchaseVehicle("123ABC");
 

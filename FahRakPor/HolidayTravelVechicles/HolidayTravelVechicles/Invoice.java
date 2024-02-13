@@ -9,6 +9,7 @@ public class Invoice {
     private double taxesRate = 10.0;
     private double taxesAmount;
     private double licenseFeesAmount;
+    private String evaluateTradeInVehicle;
     private String Signature;
 
     public Invoice(String fullName, String address, String phoneNumber, String email, String customerID) {
@@ -19,20 +20,16 @@ public class Invoice {
         this.tradeV = new TradeInVehicle(vehicleSerialNumber, name, model, year, manufacturer, purchasedVehicle);
     }
 
-    public Invoice(String vehicleSerialNumber,String name, String model, int year, String manufacturer) {
-        this.purchaseV = new Vehicle(vehicleSerialNumber,name, model, year, manufacturer);
+    public Invoice(String vehicleSerialNumber, String name, String model, int year, String manufacturer) {
+        this.purchaseV = new Vehicle(vehicleSerialNumber, name, model, year, manufacturer);
     }
 
     public Invoice(String invoiceID, Customer customer) {
-     this.cus = customer;
- }
-
-public TradeInVehicle getTradeInVehicleInfo() {
-        return tradeV;
+        this.cus = customer;
     }
 
-    public boolean getTradeInAllowance() {
-        return tradeV.EvaluateTradeInVehicle();
+    public TradeInVehicle getTradeInVehicleInfo() {
+        return tradeV;
     }
 
     public Vehicle getPurchasedVehicleInfo() {
@@ -43,14 +40,24 @@ public TradeInVehicle getTradeInVehicleInfo() {
         return purchaseV.getRecoed();
     }
 
+    //setter methods
     public void setTaxesAmount(double taxesAmount) {
         this.taxesAmount = taxesAmount * (taxesRate / 100);
     }
 
     public void setLicenseFeesAmount(double licenseFeesAmount) {
-        this.licenseFeesAmount = licenseFeesAmount + this.purchaseV.getPrice() + this.taxesAmount;
+        this.licenseFeesAmount = licenseFeesAmount;
     }
 
+    public void setTradeInAllowance(String evaluateTradeInVehicle) {
+        this.evaluateTradeInVehicle = evaluateTradeInVehicle;
+    }
+
+    public void setSignature(String sign) {
+        this.Signature = sign;
+    }
+
+    //getter methods
     public double getTaxesAmount() {
         return this.taxesAmount;
     }
@@ -59,21 +66,20 @@ public TradeInVehicle getTradeInVehicleInfo() {
         return this.licenseFeesAmount;
     }
 
-    public void setSignature(String sign){
-          this.Signature = sign;
+    public String getTradeInAllowance() {
+        return this.evaluateTradeInVehicle;
     }
 
-    public String getSignature(){
-     return this.Signature;
-}
+    public String getSignature() {
+        return this.Signature;
+    }
 
-public void createTradeInAllowance(TradeInVehicle tradeInVehicle) {
-     tradeInVehicle.AddAllowanceVehicle();;
-}
+    public void createTradeInAllowance(TradeInVehicle tradeInVehicle) {
+        tradeInVehicle.AddAllowanceVehicle();
+        ;
+    }
 
-public String getCustomerInfo() {
-     return this.cus.CustomerInfo();
-}
-
-
+    public String getCustomerInfo() {
+        return this.cus.CustomerInfo();
+    }
 }
