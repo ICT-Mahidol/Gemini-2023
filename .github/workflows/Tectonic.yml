@@ -22,7 +22,7 @@ jobs:
         java-version: '11' # You can change this to the version you want
     - name: Compile Java
       run: |
-        cd Tectonic/HolidayTravelVehicles 
+        cd Chaiyong/HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
       
