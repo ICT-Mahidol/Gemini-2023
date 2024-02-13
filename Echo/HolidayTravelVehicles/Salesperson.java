@@ -41,8 +41,8 @@ public class Salesperson extends Person {
         this.position = position;
     }
 
-    public ArrayList<Invoice> createInvoices(Customer customer, Vehicle vehicle, Vehicle tradeIn, double amount, Date invoiceDate) {
-        Invoice invoice = new Invoice(customer, vehicle, tradeIn, amount, invoiceDate);
+    public ArrayList<Invoice> createInvoices(Invoice invoice) {
+        Invoice invoice = new Invoice();
         invoices.add(invoice);
         return invoices;
     }
