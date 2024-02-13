@@ -9,20 +9,23 @@ public class Invoice {
     private double licensefees;
     private String signature;
     private String request;
-    private ArrayList<Salesperson> Salesperson;
+    private Salesperson salesperson;
     private ArrayList<Vehicle> vehicles;
     private Vehicle vehicle;
     private Vehicle tradeIn;
     private Customer customer;
     private ArrayList<DealerInstalled> dealeroptions;
 
-    public Invoice(int invoiceNumber, Date invoiceDate, double amount, double taxes,  double licensefees,  String signature) {
+    public Invoice(Customer customer,Salesperson salesperson, int invoiceNumber, Date invoiceDate, double amount, double taxes,
+            double licensefees, String signature) {
         this.invoiceNumber = invoiceNumber;
         this.invoiceDate = invoiceDate;
         this.amount = amount;
         this.taxes = taxes;
         this.licensefees = licensefees;
         this.signature = signature;
+        this.customer = customer;
+        this.salesperson = salesperson;
     }
 
     public void RequestDealerInstallOption(String request) {
