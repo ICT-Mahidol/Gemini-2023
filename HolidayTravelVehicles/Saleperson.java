@@ -1,26 +1,25 @@
-public class Saleperson {
-    private String StaffID;
-    private String StaffName;
+public class Saleperson extends Employee {
+    private String SalepersonID;
+    private ArrayList<Vehicle> vehicles;
 
-    public Saleperson(String newName, String newID){
-        this.StaffName = newName;
-        this.StaffID = newID
+    public Saleperson(String id){
+        super();
+        this.SalepersonID = newID;
     }
 
-    public String getStaffID() {
-        return StaffID;
+    public String getSalepersonID() {
+        return SalepersonID;
     }
 
-    public void setStaffID(String staffID) {
-        StaffID = staffID;
+    public void setSalepersonID(String salepersonID) {
+        SalepersonID = salepersonID;
     }
 
-    public String getStaffName() {
-        return StaffName;
+    public ArrayList<Vehicle> getVehicles() {
+        return vehicles;
     }
 
-    public void setStaffName(String staffName) {
-        StaffName = staffName;
+    public void setVehicles(ArrayList<Vehicle> vehicles) {
+        this.vehicles = vehicles;
     }
-
 }
