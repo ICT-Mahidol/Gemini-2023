@@ -22,6 +22,6 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd Chaiyong/HolidayTravelVehicles 
-        javac -d . *.java
+        cd BestBranch/HolidayTravelVehicles 
+        javac -d . main.java
       # Compile java file from directory
