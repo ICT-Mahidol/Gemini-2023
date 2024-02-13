@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+
 public class Customer extends Person {
     private int customerID;
     private int membershipLevel;
+    private ArrayList<Invoice> invoices;
 
     public Customer() {
     }
