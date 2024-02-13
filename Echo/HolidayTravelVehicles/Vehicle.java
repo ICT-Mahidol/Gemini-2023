@@ -18,8 +18,8 @@ public class Vehicle {
         this.basePrice = basePrice;
     }
 
-    public void setSerialNo(int serialNo) {
-        this.serialNo = serialNo;
+    public void setSerialNo(int serialNum) {
+        this.serialNum = serialNum;
     }
 
     public void setName(String name) {
