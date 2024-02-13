@@ -7,7 +7,7 @@ public class Vehicle {
     private int year;
     private String manufacturer;
     private double basePrice;
-    private Arraylist<Salesperson> salespersons;
+    private ArrayList<Salesperson> salespersons;
     private Invoice invoice;
 
     public Vehicle() {
@@ -47,7 +47,7 @@ public class Vehicle {
         + this.basePrice + " " + this.serialNum;
     }
 
-    public void createNewVehicleRecord(Vehicle newVehicle){
-        Vehicle newVehicle = New Vehicle();
+    public void createNewVehicleRecord(Vehicle vehicle){
+        vehicle = new Vehicle();
     }
 }
