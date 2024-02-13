@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+
 public class DealerInstalled{
     private String optionCode;
     private String description;
     private Double price;
-
+    private ArrayList<Invoice> invoice;
 
 public DealerInstalled() {
 
