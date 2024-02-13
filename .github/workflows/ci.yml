@@ -29,12 +29,11 @@ jobs:
 
     - name: Compile Java (InwZa007)
       run: |
-        cd InwZa007/HolidayTravelVehicles 
+        cd Inwza007/HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
       
-    
     - name: Execute Java (InwZa007)
       run: |
-        cd InwZa007/HolidayTravelVehicles 
+        cd Inwza007/HolidayTravelVehicles 
         java -cp . HolidayTravelVehicles # Replace MainClass with your main class name
