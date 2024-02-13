@@ -1,6 +1,6 @@
 package HolidayTravelVehicles;
 
-import java.util.Date;
+import java.util.Date; 
 import java.util.List;
 import java.util.Objects;
 import java.util.Date;
@@ -20,17 +20,18 @@ public class Invoice {
     private double licenseFees;
     private String signature;
 
-    public Invoice(String invoiceNum,
-            Date date,
-            Customer customer,
-            Salesperson salesperson,
-            Vehicle purchaseVehicle,
-            Vehicle tradeInVehicle,
-            double tradeInAllowance,
-            double totalPrice,
-            double taxes,
-            double licenseFees,
-            String signature) {
+    public Invoice(String invoiceNum, 
+                    Date date, 
+                    Customer customer, 
+                    Salesperson salesperson,
+                    Vehicle purchaseVehicle, 
+                    Vehicle tradeInVehicle, 
+                    double tradeInAllowance ,
+                    double totalPrice ,
+                    double taxes ,
+                    double licenseFees ,
+                    String signature) 
+                   {
         this.invoiceNum = invoiceNum;
         this.date = date;
         this.customer = customer;
