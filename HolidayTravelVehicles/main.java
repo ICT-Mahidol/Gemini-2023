@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class HolidayTravelVehicles {
+public class main {
     public static void main(String[] args) {
         /**
          * Customer
