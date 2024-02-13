@@ -1,8 +1,10 @@
+package Inwza007.HolidayTravelVehicles;
+
 public class TradeInVehicle extends Vehicle{
 
     private String make;//vehicle brand
 
-    public TradeInVehicle(int serialNo, String name, String model, int year, String manufacturer, double basePrice, String make){
+    public TradeInVehicle(String serialNo, String name, String model, int year, String manufacturer, double basePrice, String make){
         super(serialNo, name, model, year, manufacturer, basePrice);
         this.make=make; 
     }

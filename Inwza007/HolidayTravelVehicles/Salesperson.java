@@ -1,3 +1,5 @@
+package Inwza007.HolidayTravelVehicles;
+
 public class Salesperson extends Person {
     private int salespersonID;
     private double salary;

@@ -1,3 +1,5 @@
+package Inwza007.HolidayTravelVehicles;
+
 import java.util.ArrayList;
 
 public class Customer extends Person{

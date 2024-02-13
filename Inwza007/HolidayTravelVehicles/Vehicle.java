@@ -1,3 +1,5 @@
+package Inwza007.HolidayTravelVehicles;
+
 public class Vehicle {
     private String serialNumber;
     private String name;
@@ -15,7 +17,7 @@ public class Vehicle {
         this.basecost = basePrice;
     }
 
-    public int getSerialNumber(){
+    public String getSerialNumber(){
         return serialNumber;
     }
     public String getName(){
@@ -34,9 +36,8 @@ public class Vehicle {
         return basecost;
     }
 
-    public void setserialNumber(int n){
+    public void setserialNumber(String n){
         this.serialNumber=n;
-        return;
     }
     public void setName(String n){
         this.name=n;

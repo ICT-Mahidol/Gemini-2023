@@ -1,3 +1,5 @@
+package Inwza007.HolidayTravelVehicles;
+
 import java.util.Date;
 
 public class Invoice {
