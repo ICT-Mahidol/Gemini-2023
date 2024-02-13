@@ -6,10 +6,6 @@ public class DealerInstalled{
     private Double price;
     private Invoice invoice;
 
-public DealerInstalled() {
-
-}
-
 public DealerInstalled(String option, String description, Double price) {
     this.optionCode = option;
     this.description = description;
