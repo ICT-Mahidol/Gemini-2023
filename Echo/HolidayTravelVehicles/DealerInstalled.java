@@ -4,7 +4,7 @@ public class DealerInstalled{
     private String optionCode;
     private String description;
     private Double price;
-    private ArrayList<Invoice> invoice;
+    private Invoice invoice;
 
 public DealerInstalled() {
 
