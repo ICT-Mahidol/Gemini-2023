@@ -1,39 +1,25 @@
-public class Customer {
-    private String customerID;
-    private String customerName;
-    private String phoneNumber;
+package HolidayTravelVehicles;
 
-    public Customer(String customerID, String customerName, String phoneNumber){
-        this.customerID = customerID;
-        this.customerName = customerName;
-        this.phoneNumber = phoneNumber;
-    }
+public class Customer extends Person {
+    private int customerID;
 
-    public String getCustomerID() {
-        return customerID;
-    }
-
-    public void setCustomerID(String customerID) {
+    public Customer(String name, String address, String phoneNumber, int customerID) {
+        super(name, address, phoneNumber);
         this.customerID = customerID;
     }
 
-    public String getCustomerName() {
-        return customerName;
+    @Override
+    public String toString() {
+        String str = "";
+        str += ("ID: " + this.customerID + '\n');
+        str += ("Name: " + this.getName() + '\n');
+        str += ("Address: " + this.getAddress() + '\n');
+        str += ("Phone Number: " + this.getPhoneNumber() + '\n');
+
+        return str;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getInfo(){
-        return "Customer ID: " + customerID + ", Name: " + customerName + ", Phone Number: " + phoneNumber;
+    public void makePurchase() {
+        System.out.println(this);
     }
 }
