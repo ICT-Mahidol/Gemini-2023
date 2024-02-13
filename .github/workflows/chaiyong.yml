@@ -1,4 +1,4 @@
-name: Java CI with SonarCloud
+name: Java CI
 
 on:
   pull_request:
@@ -29,4 +29,4 @@ jobs:
       
     
     - name: Execute Java
-      run: java -cp . Main # Replace MainClass with your main class name
+      run: java -cp . HolidayTravelVehicles # Replace MainClass with your main class name
