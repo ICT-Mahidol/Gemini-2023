@@ -47,7 +47,7 @@ public class Salesperson extends Person {
     }
 
     public void negotiateVehicle(Vehicle vehicle, double price) {
-        vehicle.setPrice(price);
+        vehicle.setBasePrice(price);
     }
 }
 
