@@ -1,3 +1,4 @@
+package LoneRanger.HolidayTravelVehicles;
 
 public class DealerInstalledOptions extends VehicleRecord {
     private String optionCode; 
