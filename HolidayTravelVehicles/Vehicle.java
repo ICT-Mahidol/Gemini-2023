@@ -1,16 +1,4 @@
-package HolidayTravelVehicles;
-
 public class Vehicle {
-    private int serialNumber;
-    private String name;
-    private String model;
-    private int year;
-    private String manufacturer;
-    private double baseCost;
-
-    public Vehicle() {
-    }
-
     public Vehicle(int serialNumber, String name, String model, int year, String manufacturer, double baseCost) {
         this.serialNumber = serialNumber;
         this.name = name;
@@ -82,5 +70,11 @@ public class Vehicle {
         // return this.serialNumber + "" + this.name + "" + this.model
         // + "" + this.year + "" + this.manufacturer + "" + this.baseCost;
         return data;
+    }
+
+    public String getVehicleInfo(){
+        return
+                "Name: " + this.Name + "/nModel: " + this.Model + "/nSerial Number: " + this.SerialNumber
+                        + "/nPrice: " + (this.BaseCost);
     }
 }
