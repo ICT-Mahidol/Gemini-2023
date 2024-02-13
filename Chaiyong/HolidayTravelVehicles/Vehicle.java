@@ -18,4 +18,29 @@ public class Vehicle {
         this.manufacturer = manufacturer;
         this.basePrice = basePrice;
     }
+
+    public void setSerialNo(int serialNo) {
+        this.serialNo = serialNo;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setBasePrice(double basePrice) {
+        this.basePrice = basePrice;
+    }
+
+    public String toString() {
+        return this.name + " " + this.model + " " + this.year + " " 
+        + this.basePrice + " " + this.serialNo;
+    }
 }
