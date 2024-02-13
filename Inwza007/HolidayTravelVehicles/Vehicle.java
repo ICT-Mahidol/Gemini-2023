@@ -1,12 +1,12 @@
 public class Vehicle {
-    private int serialNumber;
+    private String serialNumber;
     private String name;
     private String model;
     private int year;
     private String manufacturer;
     private double basecost;
     
-    public Vehicle(int serialNo, String name, String model, int year, String manufacturer, double basePrice) {
+    public Vehicle(String serialNo, String name, String model, int year, String manufacturer, double basePrice) {
         this.serialNumber = serialNo;
         this.name = name;
         this.model = model;
