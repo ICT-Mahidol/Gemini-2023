@@ -1,0 +1,7 @@
+package LoneRanger.HolidayTravelVehicles;
+public class TradeinVehicle {
+    private String serialNumber;
+    private String make;
+    private String model;
+    private String year;
+}
