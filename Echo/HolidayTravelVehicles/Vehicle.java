@@ -40,7 +40,7 @@ public class Vehicle {
 
     public String toString() {
         return this.name + " " + this.model + " " + this.year + " " 
-        + this.basePrice + " " + this.serialNo;
+        + this.basePrice + " " + this.serialNum;
     }
 
     public void createNewVehicleRecord(int serialNum, String name, String model, int year, String manufacturer, double basePrice){
