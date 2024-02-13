@@ -1,3 +1,5 @@
+package HolidayTravelVehicles;
+
 public class Option {
     private String optionID;
     private String name;
