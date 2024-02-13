@@ -1,27 +1,41 @@
 package HolidayTravelVehicles;
 
-public class person{
+public class Person {
     
-    protected String name;
-    protected String address;
-    protected String phone_number;
+    private String name;
+    private String address;
+    private String phoneNumber;
 
-    public person(String name, String address, String phone_number){
+    public Person(String name, String address, String phoneNumber){
         this.name = name;
         this.address = address;
-        this.phone_number = phone_number;
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getname(){
+    public Person(){
+        
+    }
+
+    public String getName(){
         return this.name;
     }
 
-    public String getaddress(){
+    public String getAddress(){
         return this.address;
     }
-    public String getnumber(){
-        return this.phone_number;
+    
+    public String getPhoneNumber(){
+        return this.phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + this.name + "\nAddress: " + this.address + "\nPhone Number: " + this.phoneNumber;
+    }
+
+    public static void main(String[] args){
+        Person A = new Person("Esan Man", "NakronPathom", "0123456789");
+        
+        System.out.println(A);
     }
 }
-
-
