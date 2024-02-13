@@ -1,18 +1,18 @@
 package HolidayTravelVehicles;
 
-public class Person {
+public class person {
     
     private String name;
     private String address;
     private String phoneNumber;
 
-    public Person(String name, String address, String phoneNumber){
+    public person(String name, String address, String phoneNumber){
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
     }
 
-    public Person(){
+    public person(){
         
     }
 
@@ -34,7 +34,7 @@ public class Person {
     }
 
     public static void main(String[] args){
-        Person A = new Person("Esan Man", "NakronPathom", "0123456789");
+        person A = new person("Esan Man", "NakronPathom", "0123456789");
         
         System.out.println(A);
     }

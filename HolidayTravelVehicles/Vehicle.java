@@ -1,3 +1,5 @@
+package HolidayTravelVehicles;
+
 public class Vehicle {
     private int serialNumber;
     private String name;
