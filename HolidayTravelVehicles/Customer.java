@@ -1,6 +1,6 @@
 package HolidayTravelVehicles;
 
-public class Customer extends person{
+public class Customer extends Person{
     private int customerID;
 
     public Customer(String name, String address, String phoneNumber, int customerID) {
