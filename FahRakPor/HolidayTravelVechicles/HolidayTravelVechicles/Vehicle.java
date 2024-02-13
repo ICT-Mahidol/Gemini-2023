@@ -15,6 +15,14 @@ public class Vehicle {
         record = new ArrayList<>();
     }
 
+    public Vehicle(String SerialNumber, String name, String model, int year, String manufacturer) {
+        this.VehicleSerialNumber = SerialNumber;
+        this.name = name;
+        this.model = model;
+        this.year = year;
+        this.manufacturer = manufacturer;
+    }
+
     public String getVehicleSerialNumber() {
         return VehicleSerialNumber;
     }
@@ -82,4 +90,7 @@ public class Vehicle {
         record.add(vehicle);
     }
 
+    public ArrayList<Vehicle> getRecoed(){
+        return this.record;
+    }
 }

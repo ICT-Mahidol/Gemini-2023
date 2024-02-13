@@ -1,22 +1,23 @@
 package HolidayTravelVechicles;
 
-    public class  TradeInVehicle extends Vehicle {
+import java.util.List;
+
+public class  TradeInVehicle extends Vehicle {
         private String VehicleSerialNumber;
         private String name;
         private String model;
         private int year;
         private String manufacturer;
         private float price;
+        private List<TradeInVehicle> tredeInAllow;
        
         public TradeInVehicle(String serial, String nam, String mo, int y, String man, float p) {
-            Vehicle vehicle = new Vehicle();
-            vehicle.setVehicleSerialNumber(serial);
-            vehicle.setName(nam);
-            vehicle.setModel(mo);
-            vehicle.setYear(y);
-            vehicle.setManufacturer(man);
-            vehicle.setPrice(p);
-          
+            this.setVehicleSerialNumber(serial);
+            this.setName(nam);
+            this.setModel(mo);
+            this.setYear(y);
+            this.setManufacturer(man);
+            this.setPrice(p);
         }
     
         public String getVehicleSerialNumber() {
@@ -77,6 +78,15 @@ package HolidayTravelVechicles;
     
         public void AddAllowanceVehicle() {
             if(EvaluateTradeInVehicle()==true){
+                TradeInVehicle vehicle = new TradeInVehicle(VehicleSerialNumber, VehicleSerialNumber, VehicleSerialNumber, year, VehicleSerialNumber, price);
+                vehicle.setVehicleSerialNumber(VehicleSerialNumber);
+                vehicle.setName(name);
+                vehicle.setModel(model);
+                vehicle.setYear(year);
+                vehicle.setManufacturer(manufacturer);
+                vehicle.setPrice(price);
+                tredeInAllow.add(vehicle);
+
                 CreateVehicleRecord(VehicleSerialNumber, name, model, year, manufacturer, year);   
             }
         }

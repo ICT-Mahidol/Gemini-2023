@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import HolidayTravelVechicles.Vehicle;
+
 public class Salesperson extends Person {
     private int salespersonID;
     private double salary;
