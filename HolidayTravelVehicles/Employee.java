@@ -15,12 +15,12 @@ public class Employee{
         this.StaffID = StaffID;
     }
 
-    public void setStaffName(int StaffName){
-        this.StaffName = StaffName;
+    public void setStaffName(String staffName){
+        this.StaffName = staffName;
     }
 
     public int getStaffID(){
-        return this.StaffID.toString();
+        return this.StaffID;
     }
 
     public String getStaffName(){

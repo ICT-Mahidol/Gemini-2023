@@ -1,7 +1,6 @@
 public class Invoice {
-    private Customer CustomerInfo;
-    private Vehicle TradeinVehicle;
-
+    private String CustomerInfo;
+    private String TradeinVehicle;
     private boolean TradeinAllowance;
     private int FinalNegotiatePrice;
     private String PurchaseVegicleInfo;
@@ -9,7 +8,7 @@ public class Invoice {
     private int LicenseFees;
     private boolean InstallOption;
 
-    public invoice(Customer customerinfo,Vehicle tradeinVehicle,boolean tradeinAllowance,int finalNegotiatePrice,
+    public Invoice(String customerinfo,String tradeinVehicle,boolean tradeinAllowance,int finalNegotiatePrice,
                    String purchaseVegicleInfo,int taxes,int licenseFees,boolean installOption){
         this.CustomerInfo = customerinfo;
         this.TradeinVehicle = tradeinVehicle;
@@ -20,20 +19,12 @@ public class Invoice {
         this.LicenseFees = licenseFees;
         this.InstallOption = installOption;
     }
-    public Customer getCustomerInfo() {
+    public String getCustomerInfo() {
         return CustomerInfo;
     }
 
-    public void setCustomerInfo(Customer customerInfo) {
-        CustomerInfo = customerInfo;
-    }
-
-    public Vehicle getTradeinVehicle() {
+    public String getTradeinVehicle() {
         return TradeinVehicle;
-    }
-
-    public void setTradeinVehicle(Vehicle tradeinVehicle) {
-        TradeinVehicle = tradeinVehicle;
     }
 
     public boolean isTradeinAllowance() {
