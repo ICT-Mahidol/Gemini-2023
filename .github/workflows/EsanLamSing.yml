@@ -9,24 +9,24 @@ name: Java CI
 on:
   pull_request:
     branches:
-      - master
+      - "EsanLamSing"
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      with:
-        ref: ${{ github.event.pull_request.head.ref }}
-        fetch-depth: ${{ env.PR_FETCH_DEPTH }}
-    - name: Set Up JDK
-      uses: actions/setup-java@v1
-      with:
-        java-version: '11'
-
-    - name: Compile Java
-      run: |
-        cd HolidayTravelVehicles
-        javac -d . *.java
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: ${{ env.PR_FETCH_DEPTH }}
+      - name: Set Up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+  
+      - name: Compile Java
+        run: |
+          cd HolidayTravelVehicles
+          javac -d . *.java
