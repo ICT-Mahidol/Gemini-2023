@@ -27,6 +27,12 @@ jobs:
         javac -d . *.java
       # Compile java file from directory
 
+    - name: Compile Java (InwZa007)
+      run: |
+        cd Chaiyong/HolidayTravelVehicles 
+        javac -d . *.java
+      # Compile java file from directory
+
     - name: Execute Java (InwZa007)
       run: |
         cd Inwza007/HolidayTravelVehicles 
