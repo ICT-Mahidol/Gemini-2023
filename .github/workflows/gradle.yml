@@ -22,6 +22,7 @@ jobs:
         java-version: '11' # You can change this to the version you want
 
     - name: Compile Java
+      run: git checkout FahRakPor
       run: |
         cd FahRakPor/HolidayTravelVechicles/HolidayTravelVechicles
         javac -d . *.java
