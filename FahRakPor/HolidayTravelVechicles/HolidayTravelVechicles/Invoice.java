@@ -1,6 +1,7 @@
 package HolidayTravelVechicles;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Invoice {
     private Customer cus;
@@ -11,33 +12,39 @@ public class Invoice {
     private double licenseFeesAmount;
     private String evaluateTradeInVehicle;
     private String Signature;
+    
+    public Invoice(Customer customer, TradeInVehicle tradeV) {
+        this.cus = customer;
+        this.tradeV = tradeV; // Initialize tradeV
+    }    
 
-    public Invoice(String fullName, String address, String phoneNumber, String email, String customerID) {
-        this.cus = new Customer(fullName, address, phoneNumber, email, customerID);
+    public Invoice(String vehicleSerialNumber, String name, String model, int year, String manufacturer, float p) {
+        this.purchaseV = new Vehicle(vehicleSerialNumber, name, model, year, manufacturer, p);
     }
 
-    public Invoice(String vehicleSerialNumber, String name, String model, int year, String manufacturer, String tradeInVehicle, float purchasedVehicle) {
-        this.tradeV = new TradeInVehicle(vehicleSerialNumber, name, model, year, manufacturer, purchasedVehicle);
-    }
-
-    public Invoice(String vehicleSerialNumber, String name, String model, int year, String manufacturer) {
-        this.purchaseV = new Vehicle(vehicleSerialNumber, name, model, year, manufacturer);
-    }
-
-    public Invoice(String invoiceID, Customer customer) {
+    public Invoice(String invoiceID, Customer customer, TradeInVehicle tradeInVehicle) {
         this.cus = customer;
     }
 
-    public TradeInVehicle getTradeInVehicleInfo() {
-        return tradeV;
+    public String getTradeInVehicleInfo() {
+        return tradeV.getTradeInAllowInfo(); // Assuming this method exists in TradeInVehicle class
     }
-
+    
+    public String getTradeInAllow() {
+        if(!tradeV.getTradeInAllow().isEmpty()){
+            return tradeV.getTradeInAllowInfo();
+        }
+        else{
+            return null;
+        }
+    }
+    
     public Vehicle getPurchasedVehicleInfo() {
         return purchaseV;
-    }
+    }   
 
     public ArrayList<Vehicle> getDealerInstalledOptions() {
-        return purchaseV.getRecoed();
+        return purchaseV.getRecord();
     }
 
     //setter methods
@@ -66,8 +73,8 @@ public class Invoice {
         return this.licenseFeesAmount;
     }
 
-    public String getTradeInAllowance() {
-        return this.evaluateTradeInVehicle;
+    public List<TradeInVehicle> getTradeInAllowance() {
+        return tradeV.getTradeInAllow();
     }
 
     public String getSignature() {
@@ -75,8 +82,7 @@ public class Invoice {
     }
 
     public void createTradeInAllowance(TradeInVehicle tradeInVehicle) {
-        tradeInVehicle.AddAllowanceVehicle();
-        ;
+        tradeInVehicle.addAllowanceVehicle();
     }
 
     public String getCustomerInfo() {
