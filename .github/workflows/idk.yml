@@ -1,9 +1,9 @@
 name: Java CI
 
 on:
-  pull_request:
+  push:
     branches:
-      - master
+      - idk
 
 jobs:
   build:
@@ -23,6 +23,6 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd Chaiyong/HolidayTravelVehicles 
+        cd idk/HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
