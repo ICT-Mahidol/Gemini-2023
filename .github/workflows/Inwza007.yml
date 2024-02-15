@@ -1,9 +1,9 @@
 name: Java CI
 
 on:
-  pull_request:
+  push:
     branches:
-      - master
+      - Inwza007
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
         javac -d . *.java
       # Compile java file from directory
 
-    - name: Compile Java (InwZa007)
+    - name: Compile Java (Inwza007)
       run: |
         cd Inwza007/HolidayTravelVehicles 
         javac -d . HolidayTravelVehicles.java
