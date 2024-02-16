@@ -7,8 +7,6 @@ public class Vehicle {
     private String Manufacturer;
     private double BaseCost;
 
-    public Vehicle() {
-    }
 
     public Vehicle(int SerialNumber, String Name, String Model, int Year, String Manufacturer, int BaseCost) {
         this.SerialNumber = SerialNumber;
