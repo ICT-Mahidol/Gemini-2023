@@ -1,79 +1,74 @@
 public class Vehicle {
- private String serial_number;
- private String name;
- private String model;
- private int year;
- private String manufacturer;
- private int base_cost; 
+
+    private int SerialNumber;
+    private String Name;
+    private String Model;
+    private int Year;
+    private String Manufacturer;
+    private double BaseCost;
 
     public Vehicle() {
     }
 
-    public Vehicle(String serial_number, String name, String model, int year, String manufacturer, int base_cost) {
-        this.serial_number = serial_number;
-        this.name = name;
-        this.model = model;
-        this.year = year;
-        this.manufacturer = manufacturer;
-        this.base_cost = base_cost;
+    public Vehicle(int SerialNumber, String Name, String Model, int Year, String Manufacturer, int BaseCost) {
+        this.SerialNumber = SerialNumber;
+        this.Name = Name;
+        this.Model = Model;
+        this.Year = Year;
+        this.Manufacturer = Manufacturer;
+        this.BaseCost = BaseCost;
     }
 
-    public String getSerial_number() {
-        return this.serial_number;
+    public void setSerialNumber(int serialNumber) {
+        this.SerialNumber = serialNumber;
     }
 
-    public void setSerial_number(String serial_number) {
-        this.serial_number = serial_number;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public String getName() {
-        return this.name;
+    public void setModel(String Model) {
+        this.Model = Model;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setYear(int Year) {
+        this.Year = Year;
     }
 
-    public String getModel() {
-        return this.model;
+    public void setManufacturer(String Manufacturner) {
+        this.Manufacturer = Manufacturner;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public int getYear() {
-        return this.year;
-    }
-
-    public void setYear(int i) {
-        this.year = i;
+    public void setBaseCost(double BaseCost) {
+        this.BaseCost = BaseCost;
     }
 
     public String getManufacturer() {
-        return this.manufacturer;
+        return this.Manufacturer;
     }
 
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
+    public int getYear() {
+        return this.Year;
     }
 
-    public int getBase_cost() {
-        return this.base_cost;
+    public int getSerialNumber() {
+        return SerialNumber;
     }
 
-    public void setBase_cost(int base_cost) {
-        this.base_cost = base_cost;
+    public java.lang.String getName() {
+        return Name;
     }
 
-    public String getvehicle() {
-        return
-            " serial_number='" + getSerial_number() + "'" +
-            "name='" + getName() + "'" +
-            "model='" + getModel() + "'" +
-            "year='" + getYear() + "'" +
-            "manufacturer='" + getManufacturer() + "'" +
-            "base_cost='" + getBase_cost()+ "'" ;
+    public java.lang.String getModel() {
+        return Model;
     }
-    
+
+    public double getBaseCost() {
+        return BaseCost;
+    }
+
+    public String getVehicleInfo() {
+        return "Name: " + this.Name + "\nModel: " + this.Model + "\nSerial Number: " + this.SerialNumber
+                + "\nPrice: " + (this.BaseCost);
+    }
 }
