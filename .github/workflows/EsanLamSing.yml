@@ -17,7 +17,7 @@ jobs:
           fetch-depth: ${{ env.PR_FETCH_DEPTH }}
 
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v2
         with:
           java-version: "11" # You can change this to the version you want
 
