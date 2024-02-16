@@ -1,0 +1,31 @@
+name: Java CI
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+        fetch-depth: ${{ env.PR_FETCH_DEPTH }}
+
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11' # You can change this to the version you want
+
+    - name: Compile Java
+      run: |
+        if [ "${{ github.event_name }}" == "pull_request" ] && [ "${{ github.ref }}" == "refs/heads/Crystal" ]; then
+          cd HolidayTravelVehicles
+          javac -d . *.java
+        else
+          echo "Skipping Java compilation as the event is not a pull request or not from the Crystal branch."
+        fi
