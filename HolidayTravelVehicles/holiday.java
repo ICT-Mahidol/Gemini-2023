@@ -7,6 +7,6 @@ public class holiday {
         v.setYear(2015);
         v.setBase_cost(500000);
         v.setSerial_number("001");
-        System.out.println(v.toString());
+        System.out.println(v.getvehicle());
     }
 }
