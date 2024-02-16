@@ -4,7 +4,7 @@ public class HolidayTravelVehicles {
         v.setName("Hyundai");
         v.setModel("H1");
         v.setYear(2012);
-        v.setBasePrice(12000000);
+        v.setBase_cost(12000000);
         System.out.println(v.toString());
     }
 }
