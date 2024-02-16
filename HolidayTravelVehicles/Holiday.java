@@ -1,5 +1,6 @@
 package HolidayTravelVehicles;
-public class Holiday{
+
+public class Holiday {
     public static void main(String[] args) {
         Vehicle vehicle = new Vehicle();
         vehicle.setSerialNumber(202413231);

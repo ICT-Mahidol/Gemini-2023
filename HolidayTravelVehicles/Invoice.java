@@ -1,3 +1,5 @@
+package HolidayTravelVehicles;
+
 public class Invoice {
     public Customer customer;
     public Salesperson salePerson;
@@ -10,9 +12,10 @@ public class Invoice {
     private double licensingFees;
     private boolean isCustomerSigned;
     private boolean includesDealerOptions;
-    
 
-    public Invoice(Customer customer, Salesperson salePerson, int invoiceID, String tradeInVehicleInfo, int tradeInAllowance, String purchaseVehicleInfo, double finalNegotiatedPrice, double applicableTaxes, double licensingFees, boolean isCustomerSigned, boolean includesDealerOptions) {
+    public Invoice(Customer customer, Salesperson salePerson, int invoiceID, String tradeInVehicleInfo,
+            int tradeInAllowance, String purchaseVehicleInfo, double finalNegotiatedPrice, double applicableTaxes,
+            double licensingFees, boolean isCustomerSigned, boolean includesDealerOptions) {
         this.customer = customer;
         this.salePerson = salePerson;
         this.invoiceID = invoiceID;
@@ -26,12 +29,12 @@ public class Invoice {
         this.includesDealerOptions = includesDealerOptions;
     }
 
-    public void printInvoice(){
+    public void printInvoice() {
         System.out.println("=============================");
         System.out.println("Invoice Info");
         System.out.println("Invoice ID: " + this.invoiceID);
         System.out.println("Customer: " + this.customer.getName());
-        System.out.println("Sale Person: " + this.salePerson.getName());
+        System.out.println("Sale Person: " + this.salePerson.getsalespersonName());
         System.out.println("Trade In Vehicle Info: " + this.tradeInVehicleInfo);
         System.out.println("Trade In Allowance: " + this.tradeInAllowance);
         System.out.println("Purchase Vehicle Info: " + this.purchaseVehicleInfo);
@@ -39,7 +42,7 @@ public class Invoice {
         System.out.println("Applicable Taxes: " + this.applicableTaxes);
         System.out.println("Licensing Fees: " + this.licensingFees);
         System.out.println("Is Customer Signed: " + this.isCustomerSigned);
-        System.out.println("Includes Dealer Options: "+ this.includesDealerOptions);
+        System.out.println("Includes Dealer Options: " + this.includesDealerOptions);
         System.out.println("=============================");
     }
 }

@@ -8,10 +8,10 @@ public class Vehicle {
     private String manufacturer;
     private double baseCost;
 
-
-    public Vehicle(){
+    public Vehicle() {
     }
-    public Vehicle(int serialNumber,String name, String model, int year, String manufacturer, double baseCost){
+
+    public Vehicle(int serialNumber, String name, String model, int year, String manufacturer, double baseCost) {
         this.serialNumber = serialNumber;
         this.name = name;
         this.model = model;
@@ -69,7 +69,7 @@ public class Vehicle {
         this.baseCost = baseCost;
     }
 
-    public String toString(){
+    public String toString() {
         return this.serialNumber + "" + this.name + "" + this.model
                 + "" + this.year + "" + this.manufacturer + "" + this.baseCost;
     }

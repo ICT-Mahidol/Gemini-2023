@@ -1,6 +1,6 @@
 package HolidayTravelVehicles;
 
-public class Customer extends Person{
+public class Customer extends Person {
     private int customerID;
 
     public Customer(String name, String address, String phoneNumber, int customerID) {
@@ -12,14 +12,14 @@ public class Customer extends Person{
     public String toString() {
         String str = "";
         str += ("ID: " + this.customerID + '\n');
-        str += ("Name: " + this.name + '\n');
-        str += ("Address: " + this.address + '\n');
-        str += ("Phone Number: " + this.phoneNumber + '\n');
+        str += ("Name: " + this.getName() + '\n');
+        str += ("Address: " + this.getAddress() + '\n');
+        str += ("Phone Number: " + this.getPhoneNumber() + '\n');
 
         return str;
     }
 
-    public void makePurchase(){
+    public void makePurchase() {
         System.out.println(this);
     }
 }
