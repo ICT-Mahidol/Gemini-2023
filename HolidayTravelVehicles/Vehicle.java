@@ -67,7 +67,7 @@ public class Vehicle {
     }
 
     @Override
-    public String toString() {
+    public String getvehicle() {
         return
             " serial_number='" + getSerial_number() + "'" +
             "name='" + getName() + "'" +
