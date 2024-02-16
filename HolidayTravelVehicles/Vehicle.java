@@ -66,7 +66,6 @@ public class Vehicle {
         this.base_cost = base_cost;
     }
 
-    @Override
     public String getvehicle() {
         return
             " serial_number='" + getSerial_number() + "'" +
