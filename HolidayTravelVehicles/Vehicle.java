@@ -70,7 +70,17 @@ public class Vehicle {
     }
 
     public String toString() {
-        return this.serialNumber + "" + this.name + "" + this.model
-                + "" + this.year + "" + this.manufacturer + "" + this.baseCost;
+        String data = "----------\n";
+        data += "Serial: " + this.getSerialNumber() + '\n';
+        data += "Name: " + this.getName() + '\n';
+        data += "Model: " + this.getModel() + '\n';
+        data += "Year: " + this.getYear() + '\n';
+        data += "Manufacturer: " + this.getManufacturer() + '\n';
+        data += "Base Cost: " + this.getBaseCost() + '\n';
+        data += "----------\n";
+
+        // return this.serialNumber + "" + this.name + "" + this.model
+        // + "" + this.year + "" + this.manufacturer + "" + this.baseCost;
+        return data;
     }
 }
