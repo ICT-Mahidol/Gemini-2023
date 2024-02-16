@@ -27,3 +27,6 @@ jobs:
           cd HolidayTravelVehicles 
           javac -d . *.java
         # Compile java file from directory
+
+      - name: Run executable
+        run: java -XX:+ShowCodeDetailsInExceptionMessages -cp HolidayTravelVehicles.Holiday
