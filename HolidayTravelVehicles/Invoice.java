@@ -5,7 +5,7 @@ public class Invoice {
     private Date invoiceDate;
     private double amount;
     private Customer customer;
-    private Vehicle vehicle;
+    public Vehicle vehicle;
     private Vehicle tradeIn;
 
     public int getInvoiceNo() {
