@@ -24,5 +24,6 @@ jobs:
     - name: Compile Java
       run: |
         cd HolidayTravelVehicles 
-        javac -d . *.java
+        javac -d . Vehicle.java
+        javac -d . holiday.java
         java holiday
