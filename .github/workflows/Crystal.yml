@@ -27,4 +27,4 @@ jobs:
         javac -d . holiday.java
 
     - name: Run Java Program
-      run: java HolidayTravelVehicles.holiday
+      run: java holiday.java
