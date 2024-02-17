@@ -19,10 +19,12 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v1
       with:
-        java-version: '11' # You can change this to the version you want
+        java-version: '11'
 
     - name: Compile Java
       run: |
         cd HolidayTravelVehicles 
         javac -d . holiday.java
-      # Compile java file from directory
+
+    - name: Run Java Program
+      run: java HolidayTravelVehicles.holiday
