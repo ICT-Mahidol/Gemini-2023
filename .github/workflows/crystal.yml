@@ -25,5 +25,5 @@ jobs:
       run: |
         cd Crystal/HolidayTravelVehicles 
         javac -d . *.java
-        java vehicle
+        java Vehicle
         java holiday
