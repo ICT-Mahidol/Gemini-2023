@@ -25,4 +25,6 @@ jobs:
       run: |
         cd HolidayTravelVehicles 
         javac -d . *.java
-        javac *.java
+
+    - name: Run Java Program
+      run: java HolidayTravelVehicles.holiday
