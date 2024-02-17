@@ -23,6 +23,5 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd Crystal/HolidayTravelVehicles 
-        javac -d . *.java
-        java holiday
+        cd HolidayTravelVehicles 
+        javac -d . holiday.java
