@@ -1,5 +1,5 @@
 import java.util.Date;
-
+//2/20
 public class Invoice {
     private float price;
     private float tax;
@@ -11,7 +11,7 @@ public class Invoice {
     public Invoice(){
 
     }
-
+    
     public Invoice(float price, float tax, float license_fees, String full_customer_info, boolean final_Nego_price, String customerSignature){
         this.price = price;
         this.tax = tax;
