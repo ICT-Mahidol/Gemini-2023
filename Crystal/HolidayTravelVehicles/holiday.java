@@ -1,12 +1,9 @@
 
 public class holiday {
     public static void main(String[] args) {
-        Vehicle v = new Vehicle();
-        v.setName("Toyota");
-        v.setModel("Vios");
-        v.setYear(2015);
-        v.setBase_cost(500000);
-        v.setSerial_number("001");
-        System.out.println(v.toString());
+        Vehicle v1 = new Vehicle("NTA-001","Truck");
+        System.out.println(v1.toString());
+        Record r1 = new Record(001, "Tesla","Model-Y",1888,"SpaceX",100000);
+        System.out.println(r1.toString());
     }
 }
