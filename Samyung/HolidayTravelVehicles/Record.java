@@ -1,5 +1,4 @@
-
-public class Vehicle {
+public class Record extends Vehicle {
     private int serialNo;
     private String name;
     private String model;
@@ -7,10 +6,10 @@ public class Vehicle {
     private String manufacturer;
     private double baseCost;
 
-    public Vehicle() {
+    public Record() {
     }
 
-    public Vehicle( int serialNo, String name, String model, int year, String manufacturer, double baseCost) {
+    public Record(int serialNo,String name, String model, int year, String manufacturer, double baseCost) {
         this.serialNo = serialNo;
         this.name = name;
         this.model = model;
@@ -40,7 +39,7 @@ public class Vehicle {
     }
 
     public String toString() {
-        return this.name + " " + this.model + " " + this.year + " "
-                + this.baseCost + " " + this.serialNo;
+        return "Serial NO: "+this.serialNo +"\nName: "+this.name+ "\nModel: " + this.model + "\nYear: " + this.year + " "
+                +"\nCost: "+ this.baseCost + "\nManufacturer: "+this.manufacturer;
     }
 }

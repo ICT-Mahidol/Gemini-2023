@@ -1,42 +1,35 @@
 import java.util.ArrayList;
 
-public class Dealer extends Person {
+public class Dealer {
     private int dealerID;
-    private double salary;
-    private String position;
-    private ArrayList<Vehicle> vehicles;
+    private int orderID;
+    private String orderDetailed;
 
     public Dealer() {
     }
 
-    public Dealer(String name, String address, String phone, int DealerID, double salary, String position) {
-        super();
+    public Dealer(int dealerID, int orderID, String orderDetailed) {
         this.dealerID = dealerID;
-        this.salary = salary;
-        this.position = position;
+        this.orderID = orderID;
+        this.orderDetailed = orderDetailed;
     }
 
     public int getDealerID() {
-        return dealerIID;
+        return this.dealerID;
     }
 
-    public double getSalary() {
-        return salary;
+    public int getorderID() {
+        return this.orderID;
     }
 
-    public String getPosition() {
-        return position;
+    public String getOrderDetailed() {
+        return this.orderDetailed;
     }
 
-    public void setDealerID(int DealerID) {
-        this.dealerID = dealerID;
+    public void setOrderDetailed(String orderDetailed) {
+        this.orderDetailed = orderDetailed;
     }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
+    public String getDealer_Info(){
+        return this.dealerID+" "+this.orderID+" "+this.orderDetailed;
     }
 }
