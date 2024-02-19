@@ -1,14 +1,21 @@
-public class Transcation {
-    private String Customer_Sign;
-    public Transcation(String Customer_Sign) {
-        this.Customer_Sign = Customer_Sign;
+package LoneRanger.HolidayTravelVehicles;
+
+public class Transaction {
+    private String customerSign; // Corrected variable name for clarity
+
+    public Transaction() {
+        // Removed the incorrect private declaration from the no-argument constructor
     }
 
-    public String getCustomer_Sign() {
-        return Customer_Sign;
+    public Transaction(String customerSign) {
+        this.customerSign = customerSign;
     }
 
-    public void setCustomer_Sign(String customer_Sign) {
-        Customer_Sign = customer_Sign;
+    public String getTransaction() { // Corrected method name for clarity
+        return customerSign;
+    }
+
+    public void setTransaction(String customerSign) {
+        this.customerSign = customerSign;
     }
 }
