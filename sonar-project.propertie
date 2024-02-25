@@ -1,0 +1,6 @@
+sonar.projectKey=petetinunt_Gemini-2023-individual
+sonar.organization=petetinunt
+sonar.language=java
+sonar.java.binaries=.
+sonar.exclusions=**/*.java
+sonar.coverage.exclusions=**/*.java
