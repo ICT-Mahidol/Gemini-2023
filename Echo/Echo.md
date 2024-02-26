@@ -335,3 +335,63 @@ ITCS431 Software Design and Development (2023)
 19. **Determine system modifications** = Administrators can determine system modifications of the system multiple times.
 20. **Install special equipment and sub-systems** = Visitors can install special equipment and sub-systems multiple times.
 
+--- 
+
+# 5 Use Cases Analysis
+
+### Class Diagram
+![Gemini use case analysis - Class diagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/9e0c97bc-0a8b-4e43-a432-a9e2751f8cb7)
+
+
+### 1. Login to the system
+#### Use case Description
+<img width="500" alt="Use case Description 1" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/4735d1ab-ad8f-4312-86dd-14f82aefa5b8">
+
+#### Activity Diagram
+<img width="500" alt="Activity Diagram - 1  Login to the system" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/135f0046-9977-49ce-a35e-0a705f07b1f6">
+
+#### Sequence Diagram
+<img width="500" alt="Sequence Diagram - 1  Login to the system" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/0b0659e8-543f-4485-9266-dad45d7e948c">
+
+### 2. Create a science plan
+#### Use case Description
+<img width="500" alt="Use case Description 2" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/79994885-c456-47df-ae17-98c1b22e6fca">
+
+#### Activity Diagram
+<img width="500" alt="Activity Diagram - 2  Create a science plan" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/ed3076a3-ab59-4fbb-9e30-29e9a085264b">
+
+#### Sequence Diagram
+<img width="500" alt="Sequence Diagram - 2  Create a science plan" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/4967d7d6-460c-4209-9bbd-04113db00b8b">
+
+### 3. Validate a science plan
+#### Use case Description
+<img width="500" alt="Use case Description 3" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/64ec2799-918c-4a3f-bb0c-b5ed85c67ae8">
+<img width="500" alt="Use case Description 3" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/e3e4b6e1-b666-433f-a88d-1e7976a73149">
+
+
+#### Activity Diagram
+<img width="500" alt="Activity Diagram - 3  Validate a science plan" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/79f3e601-4d0a-44cc-bad6-bf5bf4fafe59">
+
+#### Sequence Diagram
+<img width="500" alt="Sequence Diagram - 3  Validate a science plan" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/42a8497a-0197-443f-af87-df750755d0af">
+
+### 4. Create an observing program
+#### Use case Description
+<img width="500" alt="Use case Description 4" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/1577a545-299d-4542-b199-affc1047f39b">
+
+#### Activity Diagram
+<img width="500" alt="Activity Diagram - 4  Create an observing program" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/132e6fce-2b7f-4239-8ba0-a0bc0bce5f8d">
+
+#### Sequence Diagram
+<img width="500" alt="Sequence Diagram - 4  Create an observing program" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/073104a1-35dd-4136-b02c-c6891e913d38">
+
+### 5. Access collected astronomical data
+#### Use case Description
+<img width="500" alt="Use case Description 5" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/19bcac24-4387-4c43-b69a-80ca6fc94041">
+
+#### Activity Diagram
+<img width="500" alt="Activity Diagram - 5  Access collected astronomical data" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/41080ce0-133b-4f60-995f-55abb9daa614">
+
+#### Sequence Diagram
+<img width="500" alt="Sequence Diagram - 5  Access collected astronomical data" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/43cbd437-8cc9-4474-98f2-4815c21845fd">
+
