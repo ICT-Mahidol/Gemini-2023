@@ -1031,7 +1031,7 @@
 
 
 ---
-# Project 2 
+# Project 1
 # Class Diagram
 ![Class Diagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/2d269172-0f41-4454-b9d7-a11371dc46a0)
 
