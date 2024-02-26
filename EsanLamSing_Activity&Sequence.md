@@ -8,23 +8,23 @@
 | 6488178    | Thanawat Jarusuthirug     |
 | 6488217    | Pattaradanai Kaeodumkoeng |
 
-Activity & Sequence Diagram
+# Activity & Sequence Diagram
 
-# User -> Perform System Diagnosis
+## User -> Perform System Diagnosis
 
 
-# Astronomer -> Submit Science Plan
+## Astronomer -> Submit Science Plan
 
 ![For_SE_Project - Astronomer _ Submit Science Plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/122808660/28b9a312-b805-496f-8656-6e589a73e37b)
 
-# Science Observer -> Validate Science Plan
+## Science Observer -> Validate Science Plan
 
 ![For_SE_Project - Science Observer _ Validate Science Plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/122808660/79a7d48d-2494-4373-b339-a999ee8e21cd)
 
-# Support -> Install New Configurations
+## Support -> Install New Configurations
 
 ![For_SE_Project - Install new configuration](https://github.com/ICT-Mahidol/Gemini-2023/assets/122808660/d4dfe63e-e57a-4394-a519-e61727b6aa81)
 
-# Support -> Update System To Support Newly Added Components
+## Support -> Update System To Support Newly Added Components
 
 ![For_SE_Project - Update system to support newly added components](https://github.com/ICT-Mahidol/Gemini-2023/assets/122808660/397e4d68-b1a7-4027-9610-93f1c013db23)
