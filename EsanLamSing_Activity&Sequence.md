@@ -11,9 +11,13 @@
 # Activity & Sequence Diagram
 
 ## User -> Perform System Diagnosis
+![For_SE_Project - Perform system diagnosis-activity](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/ed45ab0e-5d01-4946-a0a9-77716f453437)
+
+![For_SE_Project - Perform system diagnosis_sequence](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/d83cb400-00f8-47ef-b50c-3fd6ee464c8e)
 
 
 ## Astronomer -> Submit Science Plan
+![For_SE_Project - Astronomer _ Submit Science Plan_activity](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/8c07cbf8-aa5a-4df5-aa77-75d170bd1853)
 
 ![For_SE_Project - Astronomer _ Submit Science Plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/122808660/28b9a312-b805-496f-8656-6e589a73e37b)
 
