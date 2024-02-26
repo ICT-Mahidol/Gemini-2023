@@ -11,7 +11,8 @@
 # Use Case Description
 
 ## User -> Perform System Diagnosis
-![usecase_1](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/c18bae3b-dba6-4616-9b35-2829158663db)
+![use_case_1](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/53a2a416-7800-4f1e-bd59-00c067ae340e)
+
 
 
 ## Astronomer -> Submit Science Plan
