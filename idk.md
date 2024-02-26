@@ -11,6 +11,7 @@
 - [General Description](https://github.com/ICT-Mahidol/Gemini-2023/blob/idk/idk.md#general-description)
 - [General Requirements](https://github.com/ICT-Mahidol/Gemini-2023/blob/idk/idk.md#general-requirements)
 - [Specific Requirements](https://github.com/ICT-Mahidol/Gemini-2023/blob/idk/idk.md#specific-requirements)
+- [Project 1](https://github.com/ICT-Mahidol/Gemini-2023/blob/idk/idk.md#Project-1)
 
 ## General Description
 
@@ -258,7 +259,7 @@
 
 ## Project 1
 ### Class Diagram
-![Image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/db595905-01d0-4bbb-9e6a-4e67cc02f9ea)
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/19f0dd15-ebd5-4d90-9862-f1f2dc0d1800)
 
 ### Use Case 01 
 ### Science Plan
