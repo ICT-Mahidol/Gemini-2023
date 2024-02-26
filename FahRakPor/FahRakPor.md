@@ -297,4 +297,40 @@ These categories help organize the functional and non-functional requirements ba
 ### System Authentication and Permissions
 57. All users have to log in to the system first to grant user permissions.
 
+# Selected Use case
+1. Login to the system
+2. Create a science plan
+3. Submit a science plan
+4. Test a science plan
+5. Collect astronomical data
+6. Access collected astronomical data
+
+# Class diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/92b73639-93bf-4f46-a85b-662f0c3be970)
+
+## Usse case1: Login to the system 
+<img width="626" alt="Screenshot 2567-02-26 at 4 43 48 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/053fa581-97f6-4d7c-b2c4-5fec11b28af4">
+<img width="832" alt="Screenshot 2567-02-26 at 4 51 05 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/ee6674a4-41ca-4072-8ec6-d37bb3ae6202">
+
+## Usse case2: Create a science plan
+<img width="666" alt="Screenshot 2567-02-26 at 4 46 36 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/fc29a0c3-d9ef-4eb4-88be-9b1134be10cd">
+<img width="990" alt="Screenshot 2567-02-26 at 4 51 49 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/fcf6f881-ec63-409d-ab43-c31b05eab4aa">
+
+## Use case 3: Submit a science plan
+<img width="601" alt="Screenshot 2567-02-26 at 4 52 42 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/c1f9f16f-8f24-4134-8b48-d561a22d2efb">
+<img width="966" alt="Screenshot 2567-02-26 at 4 55 44 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/524275b5-59b7-4267-b853-ab11dd1bf77b">
+
+## Use case 4: Test a science plan
+<img width="681" alt="Screenshot 2567-02-26 at 4 59 25 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/14916ceb-f818-48fe-8153-481c2d371aa2">
+<img width="1061" alt="Screenshot 2567-02-26 at 5 01 00 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/f826d644-1b66-4fc9-aa91-2f95542c67d9">
+
+## Use case 5: Collect astronomical data
+<img width="603" alt="Screenshot 2567-02-26 at 5 02 07 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/555a4b66-b7ce-4cd0-bc0c-63a941add975">
+<img width="1387" alt="Screenshot 2567-02-26 at 5 03 18 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/23a2732b-e298-4c3b-8d0a-4a66b43321ac">
+
+## Use case 6: Access collected astronomical data
+<img width="557" alt="Screenshot 2567-02-26 at 5 03 58 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/acf9f231-4c29-4fa5-a3ad-95b0faa9fb75">
+<img width="901" alt="Screenshot 2567-02-26 at 5 05 01 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/951eea49-0c5f-4207-8d69-d4ec558c0a15">
+
+
 
