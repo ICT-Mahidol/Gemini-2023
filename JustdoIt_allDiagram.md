@@ -4,6 +4,8 @@
 3. 6488058	Rawiporn 	Lertjanphen
 4. 6488071	Isariya	Rassameererkset
 5. 6488087	Thanatchaya	Suajrit
+# Class Diagram
+![Class Diagram1](https://github.com/ICT-Mahidol/Gemini-2023/assets/144013287/412cd36b-3d80-48aa-b62c-4c36da48d2ab)
 
 # use case descriptions 
 ## use case 01 : Insert new configuration 
