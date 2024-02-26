@@ -12,9 +12,7 @@
 
 ## User -> Perform System Diagnosis
 
-
-![For_SE_Project - Perform system diagnosis_sequence](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/d83cb400-00f8-47ef-b50c-3fd6ee464c8e)
-
+![For_SE_Project - Perform system diagnosis_act_seq](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/48e587f7-b5d2-4862-922d-346bc040ab7b)
 
 ## Astronomer -> Submit Science Plan
 
