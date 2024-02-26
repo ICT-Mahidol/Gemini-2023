@@ -233,7 +233,7 @@
 ITCS431 Software Design and Development (2023)
 
 # Use case diagram
-![Alt text](https://m1r.ai/9/kay9q.jpg)
+![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/8cb16fb5-4fa4-434d-8682-4d5d87a74556)
 
 # Use case diagram description
 ### Actor: Astronomer 
