@@ -340,4 +340,47 @@ Administrators are responsible for high-level control of the Gemini system. They
 - **Configure Maintenance downtime**  
   Administrators are empowered to repeatedly ascertain and schedule maintenance downtime for the system as required.
 
-# Use case diagram description
+# Analysis of 5 selected use cases
+
+## Use Case Description
+
+- **U001: Create a science plan**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/675dbff5-2796-45a7-a3e7-71428c316f0e)
+- **U002: Operate the Interac9ve Observing (Virtual Telescope)**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/72451e26-1ebf-45fd-a314-20b4f0a383d9)
+- **U003: Validate an Observing Program**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/afcf363d-cdd0-4eb3-a64e-6fdc1718344f)
+- **U004: Monitor the Progress of a Science Plan Execution**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/3a1871ea-f4d3-41d5-bb9b-6b37189b3798)
+- **U005: Manage Astronomical Data**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/cdbf7c3e-a7ae-4fa8-9d8e-67441abdf3a1)
+
+## Activity Diagram
+
+- **U001: Create a science plan**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/8cb9af1c-ca42-4497-ba6c-af9c31dac0f6)
+- **U002: Operate the Interac9ve Observing (Virtual Telescope)**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/08e2abea-e098-46e8-989a-a1dfd5e2e497)
+- **U003: Validate an Observing Program**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/1677fe6a-8409-4ce1-928f-72fdbbae20ff)
+- **U004: Monitor the Progress of a Science Plan Execution**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/62ed2fd7-25a8-42db-ab99-3d52ea28ab29)
+- **U005: Manage Astronomical Data**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/41f7a4f1-a271-4527-8409-93b0e6ac6226)
+
+## Class Diagram
+
+![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/c164d92d-45f4-456e-b5d7-baf4c93fdd8f)
+
+## Sequence Diagram
+
+- **U001: Create a science plan**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/d9e85853-010c-4314-9bd9-a9ed718b720a)
+- **U002: Operate the Interac9ve Observing (Virtual Telescope)**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/64a0baa3-1cc5-454f-9ba5-4beca29afc19)
+- **U003: Validate an Observing Program**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/d23ec211-deb4-47ec-b849-cf5978960b9e)
+- **U004: Monitor the Progress of a Science Plan Execution**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/c6f36c8b-2fb5-4fb2-bc35-811af0721c7a)
+- **U005: Manage Astronomical Data**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/90792eea-9d16-484d-ad7b-d53942085281)
