@@ -8,7 +8,7 @@
 # Use case diagram
 ![Justdoit](https://github.com/ICT-Mahidol/Gemini-2023/assets/144013287/923f5667-a216-465c-b1c9-4fc41083505b)
 
-# Use case diagram description
+# Use case description
 1. There is 6 actor in this diagram - Operator
                                     - Support
                                     - Science Observer
