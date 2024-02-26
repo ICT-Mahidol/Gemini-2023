@@ -345,7 +345,7 @@ Administrators are responsible for high-level control of the Gemini system. They
 
 - **U001: Create a science plan**  
   ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/675dbff5-2796-45a7-a3e7-71428c316f0e)
-- **U002: Operate the Interac9ve Observing (Virtual Telescope)**  
+- **U002: Operate the Interactive Observing (Virtual Telescope)**  
   ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/72451e26-1ebf-45fd-a314-20b4f0a383d9)
 - **U003: Validate an Observing Program**  
   ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/afcf363d-cdd0-4eb3-a64e-6fdc1718344f)
@@ -358,7 +358,7 @@ Administrators are responsible for high-level control of the Gemini system. They
 
 - **U001: Create a science plan**  
   ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/8cb9af1c-ca42-4497-ba6c-af9c31dac0f6)
-- **U002: Operate the Interac9ve Observing (Virtual Telescope)**  
+- **U002: Operate the Interactive Observing (Virtual Telescope)**  
   ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/08e2abea-e098-46e8-989a-a1dfd5e2e497)
 - **U003: Validate an Observing Program**  
   ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/1677fe6a-8409-4ce1-928f-72fdbbae20ff)
@@ -375,7 +375,7 @@ Administrators are responsible for high-level control of the Gemini system. They
 
 - **U001: Create a science plan**  
   ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/d9e85853-010c-4314-9bd9-a9ed718b720a)
-- **U002: Operate the Interac9ve Observing (Virtual Telescope)**  
+- **U002: Operate the Interactive Observing (Virtual Telescope)**  
   ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/64a0baa3-1cc5-454f-9ba5-4beca29afc19)
 - **U003: Validate an Observing Program**  
   ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/d23ec211-deb4-47ec-b849-cf5978960b9e)
