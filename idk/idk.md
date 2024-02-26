@@ -259,7 +259,7 @@
 
 ## Project 1
 ### Class Diagram
-![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/19f0dd15-ebd5-4d90-9862-f1f2dc0d1800)
+![Image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/db595905-01d0-4bbb-9e6a-4e67cc02f9ea)
 
 ### Use Case 01 
 ### Science Plan
