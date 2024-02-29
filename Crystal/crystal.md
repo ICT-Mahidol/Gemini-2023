@@ -1024,9 +1024,10 @@
 # Use Case2 Create Observing Program
 # Use Case3 Validate an Observing Program
 # Use Case4 Submit a Science Plan 
-![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/25e3d605-a394-4215-803e-09c83ff5698c)
-![image2](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/46259f82-7e9d-41be-9641-f7a33e0d547d)
-![User and system Sequence diagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/e51d1161-c370-4b55-97ad-fe3b34bb9de7)
+![41](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/25e3d605-a394-4215-803e-09c83ff5698c)
+<br>
+![42](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/46259f82-7e9d-41be-9641-f7a33e0d547d)
+![43](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/9dc5965f-3340-4a84-8d67-0c38a0225a0b)
 # Use Case5 Update system to support newly added components
 ITCS431 Software Design and Development (2023)
 
