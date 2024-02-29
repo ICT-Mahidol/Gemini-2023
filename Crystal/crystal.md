@@ -1015,6 +1015,7 @@
 ![crystalusecaseeee](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/43b62835-3121-47f4-961e-68b02a4f5980)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Class Diagram
 ![classdiagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/24c2fb46-4212-4801-9afa-5adb976fe05d)
 # Use Case1  Create Science Plan
@@ -1042,6 +1043,12 @@
 ![53](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/20749e53-e82f-47ad-bbff-71548ade5e66)
 =======
 >>>>>>> 75f25a8 (Update crystal.md)
+=======
+# Class Diagram
+![classdiagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/24c2fb46-4212-4801-9afa-5adb976fe05d)
+
+
+>>>>>>> 9fc71c9 (Update crystal.md)
 ITCS431 Software Design and Development (2023)
 
 
