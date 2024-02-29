@@ -1009,6 +1009,11 @@
 
 4. All commands must adhere to a specific structure, including unique identification, source, target, opcode, and parameter set. This structured approach ensures consistency and traceability in command execution.
 
+
+# Use case diagram
+
+![crystalusecaseeee](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/43b62835-3121-47f4-961e-68b02a4f5980)
+
 ITCS431 Software Design and Development (2023)
 
 
