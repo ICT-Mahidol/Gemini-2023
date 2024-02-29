@@ -1027,6 +1027,7 @@
 ![23](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/10e82bb7-7c38-4023-86e0-90bf791c1afd)
 # Use Case3 Validate an Observing Program
 ![31](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/2131c468-b12a-4570-8516-841d5756a404)
+<br>
 ![32](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/354efc99-826b-4f14-926e-28173f5acb71)
 ![33](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/e0468bb9-8574-459e-8111-f458b804d6ff)
 # Use Case4 Submit a Science Plan 
