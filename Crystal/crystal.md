@@ -1014,8 +1014,6 @@
 
 ![crystalusecaseeee](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/43b62835-3121-47f4-961e-68b02a4f5980)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Class Diagram
 ![classdiagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/24c2fb46-4212-4801-9afa-5adb976fe05d)
 # Use Case1  Create Science Plan
@@ -1041,9 +1039,7 @@
 ![51](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/7398db4b-c5fb-4221-967f-a28eba02c8d9)
 ![52](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/b96efea3-5ac1-49f8-b451-0e005cfdc1dd)
 ![53](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/20749e53-e82f-47ad-bbff-71548ade5e66)
-=======
->>>>>>> 75f25a8 (Update crystal.md)
-=======
+
 # Class Diagram
 ![classdiagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/24c2fb46-4212-4801-9afa-5adb976fe05d)
 # Use Case1  Create Science Plan
@@ -1051,15 +1047,13 @@
 ![12](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/f617b6f4-1e88-455f-8c1f-c7d6df514b12)
 ![13](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/9a21b0c4-b424-416a-9dff-84e5b9f7ea1e)
 
-<<<<<<< HEAD
-
->>>>>>> 9fc71c9 (Update crystal.md)
-=======
-# Use Case2
-# Use Case3
-# Use Case4
-# Use Case5
->>>>>>> 8397774 (Update crystal.md)
+# Use Case2 Create Observing Program
+# Use Case3 Validate an Observing Program
+# Use Case4 Submit a Science Plan 
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/25e3d605-a394-4215-803e-09c83ff5698c)
+![image2](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/46259f82-7e9d-41be-9641-f7a33e0d547d)
+![User and system Sequence diagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/e51d1161-c370-4b55-97ad-fe3b34bb9de7)
+# Use Case5 Update system to support newly added components
 ITCS431 Software Design and Development (2023)
 
 
