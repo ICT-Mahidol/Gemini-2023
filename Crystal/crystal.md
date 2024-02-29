@@ -1026,13 +1026,18 @@
 ![22](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/360ae766-719c-4e58-a769-5a4db1182d11)
 ![23](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/10e82bb7-7c38-4023-86e0-90bf791c1afd)
 # Use Case3 Validate an Observing Program
-
+![31](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/2131c468-b12a-4570-8516-841d5756a404)
+![32](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/354efc99-826b-4f14-926e-28173f5acb71)
+![33](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/e0468bb9-8574-459e-8111-f458b804d6ff)
 # Use Case4 Submit a Science Plan 
 ![41](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/25e3d605-a394-4215-803e-09c83ff5698c)
 <br>
 ![42](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/46259f82-7e9d-41be-9641-f7a33e0d547d)
 ![43](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/9dc5965f-3340-4a84-8d67-0c38a0225a0b)
 # Use Case5 Update system to support newly added components
+![51](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/7398db4b-c5fb-4221-967f-a28eba02c8d9)
+![52](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/b96efea3-5ac1-49f8-b451-0e005cfdc1dd)
+![53](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/20749e53-e82f-47ad-bbff-71548ade5e66)
 ITCS431 Software Design and Development (2023)
 
 
