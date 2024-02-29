@@ -1017,7 +1017,7 @@
 # Class Diagram
 ![classdiagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/24c2fb46-4212-4801-9afa-5adb976fe05d)
 # Use Case1  Create Science Plan
-![11](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/70f60a9c-edfe-4ef1-9d90-bccf7716cd04)
+![11](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/55e0eaae-b9d1-4f88-a6c7-dec860d5ad35)
 ![12](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/f617b6f4-1e88-455f-8c1f-c7d6df514b12)
 ![13](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/9a21b0c4-b424-416a-9dff-84e5b9f7ea1e)
 
