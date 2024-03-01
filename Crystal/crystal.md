@@ -1009,6 +1009,36 @@
 
 4. All commands must adhere to a specific structure, including unique identification, source, target, opcode, and parameter set. This structured approach ensures consistency and traceability in command execution.
 
+
+# Use case diagram
+
+![crystalusecaseeee](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/43b62835-3121-47f4-961e-68b02a4f5980)
+
+# Class Diagram
+![classdiagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/24c2fb46-4212-4801-9afa-5adb976fe05d)
+# Use Case1  Create Science Plan
+![11](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/55e0eaae-b9d1-4f88-a6c7-dec860d5ad35)
+![12](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/f617b6f4-1e88-455f-8c1f-c7d6df514b12)
+![13](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/9a21b0c4-b424-416a-9dff-84e5b9f7ea1e)
+
+# Use Case2 Create Observing Program
+![21](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/ec915c54-8528-42c3-a3d4-e7224aceed48)
+![22](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/360ae766-719c-4e58-a769-5a4db1182d11)
+![23](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/10e82bb7-7c38-4023-86e0-90bf791c1afd)
+# Use Case3 Validate an Observing Program
+![31](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/2131c468-b12a-4570-8516-841d5756a404)
+<br>
+![32](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/354efc99-826b-4f14-926e-28173f5acb71)
+![33](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/e0468bb9-8574-459e-8111-f458b804d6ff)
+# Use Case4 Submit a Science Plan 
+![41](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/25e3d605-a394-4215-803e-09c83ff5698c)
+<br>
+![42](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/46259f82-7e9d-41be-9641-f7a33e0d547d)
+![43](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/9dc5965f-3340-4a84-8d67-0c38a0225a0b)
+# Use Case5 Update system to support newly added components
+![51](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/7398db4b-c5fb-4221-967f-a28eba02c8d9)
+![52](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/b96efea3-5ac1-49f8-b451-0e005cfdc1dd)
+![53](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/20749e53-e82f-47ad-bbff-71548ade5e66)
 ITCS431 Software Design and Development (2023)
 
 
