@@ -6,7 +6,8 @@
 5. 6488123 Kitiphum Mueangthongkham
 6. 6488175 Penpitchapa Pantaraksakul
 
-# Functional Requirements
+# Requirements
+## 1. Functional Requirements
 #### Chapter 2: General Description
   1. The system must enable astronomers to define science plans and observations.
   2. The system must enable astronomers to submit observation schedules.
@@ -138,7 +139,7 @@
   67. Callback mechanism for database value changes.
 
 
-# Non-functional
+## 2. Non-functional Requirements
 #### Chapter 2: General Description
   1. Collected data must be accurate, reliable, and meet scientific needs.
   2. The system must have high uptime and minimal downtime for maintenance.
@@ -243,5 +244,81 @@
   67. The design should effectively remove record-specific knowledge from database access.
   68. Database monitors should provide an effective callback mechanism.
   69. Channel access tools should be real-time, effectively used for monitoring and controlling IOCs.
+
+# Project 1: Analysis of 5 selected use cases
+## Class diagram
+
+![S__9478168](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/cd559647-b706-4cf3-a20b-91056ad55a15)
+
+
+## 1. Validate a science plan
+- **Use case description**
+
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/3e518a0b-0143-4e1f-b148-6185e3b17e18)
+
+- **Activity diagram**
+
+![messageImage_1710762479732](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/518feb6b-29e5-47cf-ad7b-26b5a7f8ab3f)
+
+- **Sequence diagram**
+
+![S__9478172](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/2bbe83f0-170f-4677-ab65-e5cacea97f3b)
+
+
+## 2. Create an observing program
+- **Use case description**
+
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/c72d1c03-1f33-41ff-865e-2c35d0ab7b40)
+
+- **Activity diagram**
+
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/0f55c2a5-4549-4b89-8d01-c3b4f5e19328)
+
+- **Sequence diagram**
+
+![S__9478173](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/9e47cc2b-7268-489d-ab22-8d8d4cd63ec8)
+
+
+## 3. Control high-level function
+- **Use case description**
+
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/379ed359-2259-4d51-8598-69f67c5ab84a)
+
+- **Activity diagram**
+
+![messageImage_1710762518677](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/474903a5-af65-4237-9cac-e60131be9ec2)
+
+- **Sequence diagram**
+
+![S__9478174](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/01a73f0f-518e-4b11-9954-1184d92ba37a)
+
+
+## 4. Create a science plan
+- **Use case description**
+
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/c1486fee-6ae7-4206-8d95-80908b45ac51)
+
+- **Activity diagram**
+
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/9946d0a0-1f23-475b-b2fb-df2f8f830d33)
+
+- **Sequence diagram**
+
+![S__9478175](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/1214dee6-eae2-4b1a-af9c-6b84818d9768)
+
+
+## 5. Validate an observing program
+- **Use case description**
+
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/549808e7-bed1-45bf-be88-8aa893db95cb)
+
+- **Activity diagram**
+
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/18930771-1f15-4407-b9c1-84b20bcff2e0)
+
+- **Sequence diagram**
+
+![S__9478176](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/adb22aa5-82e1-4c65-ad21-43550b5afbed)
+
 
 ITCS431 Software Design and Development (2023)
