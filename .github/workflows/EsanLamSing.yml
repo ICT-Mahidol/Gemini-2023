@@ -1,0 +1,32 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - EsanLamSing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: ${{ env.PR_FETCH_DEPTH }}
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: "11" # You can change this to the version you want
+          distribution: "temurin"
+
+      - name: Compile Java
+        run: |
+          cd HolidayTravelVehicles 
+          javac -d . *.java
+        # Compile java file from directory
+
+      - name: Run executable
+        run: cd HolidayTravelVehicles && java HolidayTravelVehicles.Holiday

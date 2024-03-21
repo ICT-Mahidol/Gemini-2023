@@ -1,0 +1,47 @@
+package LoneRanger.HolidayTravelVehicles;
+
+public class TradeInVehicle { // Corrected class name to match file name
+    private String serialNumber;
+    private String make;
+    private String model;
+    private String year;
+
+    public TradeInVehicle(String serialNumber, String make, String model, String year) {
+        this.serialNumber = serialNumber;
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    public String getSerialNumber() { // Corrected method name to follow Java naming conventions
+        return serialNumber;
+    }
+
+    public void setSerialNumber(String serialNumber){
+        this.serialNumber = serialNumber;
+    }
+
+    public String getMake() { // Corrected method name to follow Java naming conventions
+        return make;
+    }
+
+    public void setMake(String make){ // Corrected method name and fixed typo in variable name
+        this.make = make;
+    }
+
+    public String getModel() { // Corrected method name to follow Java naming conventions
+        return model;
+    }
+
+    public void setModel(String model){
+        this.model = model;
+    }
+
+    public String getYear() { // Corrected method name to follow Java naming conventions
+        return year;
+    }
+
+    public void setYear(String year){
+        this.year = year;
+    }
+}
