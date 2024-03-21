@@ -11,6 +11,7 @@
 - [General Description](https://github.com/ICT-Mahidol/Gemini-2023/blob/idk/idk.md#general-description)
 - [General Requirements](https://github.com/ICT-Mahidol/Gemini-2023/blob/idk/idk.md#general-requirements)
 - [Specific Requirements](https://github.com/ICT-Mahidol/Gemini-2023/blob/idk/idk.md#specific-requirements)
+- [Project 1](https://github.com/ICT-Mahidol/Gemini-2023/blob/idk/idk.md#Project-1)
 
 ## General Description
 
@@ -255,6 +256,65 @@
 - Enhances versatility by allowing integration with various pre existing software systems.
 - Contribute to ease of use and efficiency in configuring runtime databases and creating database components.
 - Contributes to effective management of EPICS through a structured Source/Release mechanism.
+
+## Project 1
+### Class Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/19f0dd15-ebd5-4d90-9862-f1f2dc0d1800)
+
+### Use Case 01 
+### Science Plan
+#### Usecase Description
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/0fa02475-f703-4275-a975-66f84457c21b)
+
+#### Activity Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/27bd5b9c-5908-429e-bdba-d010aadb089e)
+
+#### Sequence Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/8950bac7-3f85-428c-97e3-94943c432512)
+
+### Use Case 02
+### Test the Science Plan
+#### Usecase Description
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/24c01420-ae54-4f7f-9cab-4ed787829b99)
+
+#### Activity Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/845ad1f7-de0e-412b-96e4-5c421330f11a)
+
+#### Sequence Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/2031c9fc-7d29-4636-9619-0a1e39512843)
+
+### Use Case 03
+### Executed the plan
+#### Usecase Description
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/7a292657-ce42-48fc-99c1-7662aa0b387b)
+
+#### Activity Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/d2bc293e-eb96-447a-b70d-b473d4ec1071)
+
+#### Sequence Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/74d20186-6783-4463-9029-cdc502d3f219)
+
+### Use Case 04
+### Installing special equipments and subsystems
+#### Usecase Description
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/dbd0c193-dfb3-4130-adff-04b9125d45b9)
+
+#### Activity Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/8c736631-3457-4623-809a-2c59bacfdf8a)
+
+#### Sequence Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/d50ba263-b8fa-4268-9185-53c2f8e8f83f)
+
+### Use Case 05 
+### Define system shutdown time
+#### Usecase Description
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/f8c01c80-7b86-4ecf-94c9-fac9278b1768)
+
+#### Activity Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/c649cc51-72a2-443a-b811-6a17fdc05e9b)
+
+#### Sequence Diagram
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/86225189/29eb040c-9f57-4986-a0cf-396264d03669)
 
 ### ITCS431 Sofware Design and Development (2023)
 
