@@ -1,48 +1,90 @@
 package HolidayTravelVehicles;
 
 public class Invoice {
-    public Customer customer;
-    public Salesperson salePerson;
-    private int invoiceID;
-    private String tradeInVehicleInfo;
-    private int tradeInAllowance;
-    private String purchaseVehicleInfo;
-    private double finalNegotiatedPrice;
-    private double applicableTaxes;
-    private double licensingFees;
-    private boolean isCustomerSigned;
-    private boolean includesDealerOptions;
+    private String CustomerInfo;
+    private String TradeinVehicle;
+    private boolean TradeinAllowance;
+    private int FinalNegotiatePrice;
+    private String PurchaseVegicleInfo;
+    private int Taxes;
+    private int LicenseFees;
+    private boolean InstallOption;
 
-    public Invoice(Customer customer, Salesperson salePerson, int invoiceID, String tradeInVehicleInfo,
-            int tradeInAllowance, String purchaseVehicleInfo, double finalNegotiatedPrice, double applicableTaxes,
-            double licensingFees, boolean isCustomerSigned, boolean includesDealerOptions) {
-        this.customer = customer;
-        this.salePerson = salePerson;
-        this.invoiceID = invoiceID;
-        this.tradeInVehicleInfo = tradeInVehicleInfo;
-        this.tradeInAllowance = tradeInAllowance;
-        this.purchaseVehicleInfo = purchaseVehicleInfo;
-        this.finalNegotiatedPrice = finalNegotiatedPrice;
-        this.applicableTaxes = applicableTaxes;
-        this.licensingFees = licensingFees;
-        this.isCustomerSigned = isCustomerSigned;
-        this.includesDealerOptions = includesDealerOptions;
+    public Invoice(String customerinfo,String tradeinVehicle,boolean tradeinAllowance,int finalNegotiatePrice,
+                   String purchaseVegicleInfo,int taxes,int licenseFees,boolean installOption){
+        this.CustomerInfo = customerinfo;
+        this.TradeinVehicle = tradeinVehicle;
+        this.TradeinAllowance = tradeinAllowance;
+        this.FinalNegotiatePrice = finalNegotiatePrice;
+        this.PurchaseVegicleInfo = purchaseVegicleInfo;
+        this.Taxes = taxes;
+        this.LicenseFees = licenseFees;
+        this.InstallOption = installOption;
+    }
+    public String getCustomerInfo() {
+        return CustomerInfo;
     }
 
-    public void printInvoice() {
-        System.out.println("=============================");
-        System.out.println("Invoice Info");
-        System.out.println("Invoice ID: " + this.invoiceID);
-        System.out.println("Customer: " + this.customer.getName());
-        System.out.println("Sale Person: " + this.salePerson.getsalespersonName());
-        System.out.println("Trade In Vehicle Info: " + this.tradeInVehicleInfo);
-        System.out.println("Trade In Allowance: " + this.tradeInAllowance);
-        System.out.println("Purchase Vehicle Info: " + this.purchaseVehicleInfo);
-        System.out.println("Final Negotiated Price: " + this.finalNegotiatedPrice);
-        System.out.println("Applicable Taxes: " + this.applicableTaxes);
-        System.out.println("Licensing Fees: " + this.licensingFees);
-        System.out.println("Is Customer Signed: " + this.isCustomerSigned);
-        System.out.println("Includes Dealer Options: " + this.includesDealerOptions);
-        System.out.println("=============================");
+    public String getTradeinVehicle() {
+        return TradeinVehicle;
+    }
+
+    public boolean isTradeinAllowance() {
+        return TradeinAllowance;
+    }
+
+    public void setTradeinAllowance(boolean tradeinAllowance) {
+        TradeinAllowance = tradeinAllowance;
+    }
+
+    public int getFinalNegotiatePrice() {
+        return FinalNegotiatePrice;
+    }
+
+    public void setFinalNegotiatePrice(int finalNegotiatePrice) {
+        FinalNegotiatePrice = finalNegotiatePrice;
+    }
+
+    public String getPurchaseVegicleInfo() {
+        return PurchaseVegicleInfo;
+    }
+
+    public void setPurchaseVegicleInfo(String purchaseVegicleInfo) {
+        PurchaseVegicleInfo = purchaseVegicleInfo;
+    }
+
+    public int getTaxes() {
+        return Taxes;
+    }
+
+    public void setTaxes(int taxes) {
+        Taxes = taxes;
+    }
+
+    public int getLicenseFees() {
+        return LicenseFees;
+    }
+
+    public void setLicenseFees(int licenseFees) {
+        LicenseFees = licenseFees;
+    }
+
+    public boolean isInstallOption() {
+        return InstallOption;
+    }
+
+    public void setInstallOption(boolean installOption) {
+        InstallOption = installOption;
+    }
+    public String getInvoiceInfo(){
+        String str = String.valueOf(this.CustomerInfo) +
+                this.TradeinVehicle +
+                this.TradeinAllowance +
+                this.FinalNegotiatePrice +
+                this.PurchaseVegicleInfo +
+                this.Taxes +
+                this.LicenseFees +
+                this.InstallOption;
+        return str;
     }
 }
