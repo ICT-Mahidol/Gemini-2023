@@ -1,9 +1,9 @@
 name: Java CI
 
 on:
-  pull_request:
+  push:
     branches:
-      - tectonic
+      - Inwza007
 
 jobs:
   build:
@@ -21,8 +21,14 @@ jobs:
       with:
         java-version: '11' # You can change this to the version you want
 
-    - name: Compile Java
+    - name: Compile Java (Aj.)
       run: |
-        cd Tectonic/HolidayTravelVehicles 
-        javac -d . Main.java
+        cd Chaiyong/HolidayTravelVehicles 
+        javac -d . *.java
+      # Compile java file from directory
+
+    - name: Compile Java (Inwza007)
+      run: |
+        cd Inwza007/HolidayTravelVehicles 
+        javac -d . HolidayTravelVehicles.java
       # Compile java file from directory

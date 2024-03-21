@@ -1,12 +1,14 @@
 # Team members
-1. 6488003	Kasidis	Aiamsamarng
-2. 6488040	Alongkorn	Janpensri
-3. 6488083	Kanyanut	Sompong
-4. 6488091	Tulagarn	Sornprasit
-5. 6488103	Panyaporn	Wattanapong
-6. 6488148	Pattanun	Worakitsitthisatorn
+
+1. 6488003 Kasidis Aiamsamarng
+2. 6488040 Alongkorn Janpensri
+3. 6488083 Kanyanut Sompong
+4. 6488091 Tulagarn Sornprasit
+5. 6488103 Panyaporn Wattanapong
+6. 6488148 Pattanun Worakitsitthisatorn
 
 # Functional
+
 1. The system must have an observing mode. This mode provides simple and safe access to the system for collecting science data, selecting instrument parameters, and quick-look data reduction. Access to the system is through the sequencer, with no direct control of the telescope and instruments
 2. The system must have a monitoring mode. This is a special, read-only case of the observing mode that can be invoked on a subsystem basis. Under no circumstances should monitoring affect the performance of an ongoing observation.
 3. The system must have operation mode. This access is used for direct control of the telescope and instruments, typically during observation-level operation. It is usually available only to the Telescope Operator and the science program sequencer at the operation level.
@@ -77,7 +79,7 @@
 68. Ability to dynamically allocate computational resources based on the current processing needs of the system.
 69. Real-time monitoring of telescope hardware status with diagnostic tools for troubleshooting.
 70. Integration with meteorological systems for real-time weather data, impacting observation planning.
-71.  An automated system for regular backups of both operational data and configuration settings.
+71. An automated system for regular backups of both operational data and configuration settings.
 72. Enable full remote operation capabilities, including telescope positioning and data collection.
 73. Implement AI algorithms for advanced data analysis, including pattern recognition and anomaly detection.
 74. A system for users to submit feedback or report issues directly within the software interface.
@@ -86,6 +88,7 @@
 77. Establish connections with academic and research databases for data sharing and collaboration.
 
 # Non-functional
+
 1. The system needs to be usable for science data collection.
 2. The system needs to be able to be observed.
 3. The system needs to be able to ensure integrity and keep the system functioning accurately during operator observations.
@@ -133,13 +136,13 @@
 45. High availability is crucial to maximize telescope utility, especially during peak observation times.
 46. The system's network should support high data transfer rates and reliable communication between components.
 47. Implement comprehensive data backup and recovery mechanisms to protect against data loss.
-48.  The system must operate highly efficiently and reliably, particularly during critical observation periods. This includes maintaining system integrity, accuracy in data collection and processing, and robust performance under various operational scenarios and environmental conditions
+48. The system must operate highly efficiently and reliably, particularly during critical observation periods. This includes maintaining system integrity, accuracy in data collection and processing, and robust performance under various operational scenarios and environmental conditions
 49. Adherence to relevant international and industry design, data management, and operations standards.
 50. Delay times for the exchanges of control information must stay within specific time limits.
 51. Commands can reply containing status information and data regarding instruments and telescopes.
 52. Data in the form of video and voice data can be transferred to different processing units.
 53. Access to control parameters, telescopes, or other uses significantly contributes to the control flow and may be logged at high rates for short periods(up to 200Hz).
-54. Voice connectivity must be consistently available. 
+54. Voice connectivity must be consistently available.
 55. Replies might contain status information and data concerning instruments and telescopes
 56. Control information can be retransmitted.
 57. The retransmission protocol has to be predictable.
@@ -171,7 +174,7 @@
 83. Standard reduction procedures should be available for primary on-line calibrations of the observed data.
 84. Quick-look data processing should be provided on the Gemini 8m Telescopes, with procedures suitable for fast online data preprocessing.
 85. Acquired data is made available as directly as possible in a common format, and additional data related to exposure and logging information are made available online simultaneously.
-86. Quick-look should be usable within exposure sequences to provide results and feedback parameters to the control software in a programmed way without manual intervention. 
+86. Quick-look should be usable within exposure sequences to provide results and feedback parameters to the control software in a programmed way without manual intervention.
 87. Near-line processing should be available for simple data reductions required for data integrity validation.
 88. The LAN shall support most of the Gemini 8m Telescope system's internal communication needs.
 89. Individual instruments must be able to run fully independently.
@@ -185,17 +188,17 @@
 97. At boot time, the Gemini 8m Telescopes software shall check the consistency of versions of all the various software components.
 98. Table-driven software should be used whenever possible.
 99. Changing system constants, such as arcseconds/bit for an encoder, shall not require recompiling but will be updated as part of system startup or modified during operation.
-100. A maximum of 15 minutes per night or one night per month of downtime is allowed. 
+100. A maximum of 15 minutes per night or one night per month of downtime is allowed.
 101. retry procedures must be embodied in the software in case of error or failure
 102. The error or failure has to be reported in a clear form, and the system shall put itself into a safe state whenever a safety aspect might be involved.
 103. The system should be able to reconfigure itself in a different mode.
 104. Range checking and validity checking shall be supported before the execution of any input command.
-105. On-line pre-checking of the operational status of equipment should be done prior to sending critical or time-consuming commands. 
+105. On-line pre-checking of the operational status of equipment should be done prior to sending critical or time-consuming commands.
 106. It must be possible to apply continuous monitoring to all subsystems on request, both when in operation and when idle, to check their operational status.
 107. The system should be constantly monitoring active subsystems to be sure they are operating correctly before sending commands to each subsystem. This monitoring should continue on inactive subsystems.
 108. The goal for recovery and/or reconfiguration is 5 minutes from the onset of the error condition to observing again.
 109. All subsystem software is to include modules to aid in the maintenance and testing of the subsystem.
-110. Simple mechanisms should exist for replacing a subsystem with its simulation. 
+110. Simple mechanisms should exist for replacing a subsystem with its simulation.
 111. The Gemini system must be self-monitoring to invoke safety monitoring to prevent risk to people or damage to equipment. The software should be able to quickly bring the Gemini system to a safe state upon notification of such danger.
 112. In the event that the risk persists, subsystems must be able to move themselves into safe states to protect people and equipment.
 113. Safety protection must be applied whenever there is the risk that the actions of the control software could endanger people or cause damage to any Gemini 8m Telescopes subsystem
@@ -236,94 +239,147 @@ ITCS431 Software Design and Development (2023)
 ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/8cb16fb5-4fa4-434d-8682-4d5d87a74556)
 
 # Use case diagram description
-### Actor: Astronomer 
+
+### Actor: Astronomer
+
 The use case for an astronomer includes drafting a science plan, a crucial document that outlines the objectives and methods for celestial observation. Once the plan is in place, the astronomer proceeds to observe the skies, collecting meticulously managed and organized data. A critical review of the science plan ensures it is robust and feasible. Subsequently, the plan is translated into an actionable observing program submitted to the observatory's system for execution. Throughout this process, the astronomer monitors the program's progress, making necessary adjustments to stay aligned with the scientific goals, ensuring the integrity and success of the astronomical project.
 
 - **Drafting a science plan**  
-Astronomers will need to draft a science plan that involves the astronomer’s mission to craft a comprehensive strategy for gathering scientific data with the help of the Gemini telescope system. The plan should be designed to facilitate the data acquisition of astronomical observations that are important to the astronomer’s research.
+  Astronomers will need to draft a science plan that involves the astronomer’s mission to craft a comprehensive strategy for gathering scientific data with the help of the Gemini telescope system. The plan should be designed to facilitate the data acquisition of astronomical observations that are important to the astronomer’s research.
 
 - **Test science plan**  
-A test science plan is crucial to ensure that the objectives outlined in the plan can be realistically achieved with the available resources and within the constraints of the observatory's capabilities. The testing phase may involve simulations or preliminary data analysis to confirm that the expected outcomes are attainable and that the methodologies proposed are sound. This process helps to identify any potential issues or adjustments needed before the plan is officially submitted for execution.
+  A test science plan is crucial to ensure that the objectives outlined in the plan can be realistically achieved with the available resources and within the constraints of the observatory's capabilities. The testing phase may involve simulations or preliminary data analysis to confirm that the expected outcomes are attainable and that the methodologies proposed are sound. This process helps to identify any potential issues or adjustments needed before the plan is officially submitted for execution.
 
 - **Submit an observing program to the system**  
-Once an observing program has been successfully developed, it must be submitted to the telescope's control system in a format that is executable by the computer systems. This ensures the program can interactively operate through the Observatory Control System (OCS), allowing for real-time adjustments and flexibility. The submission process verifies that the program is ready for execution, clearly defining all necessary parameters and instructions
-
+  Once an observing program has been successfully developed, it must be submitted to the telescope's control system in a format that is executable by the computer systems. This ensures the program can interactively operate through the Observatory Control System (OCS), allowing for real-time adjustments and flexibility. The submission process verifies that the program is ready for execution, clearly defining all necessary parameters and instructions
 
 ### Actor: Visitor
-The use case for the Visitor pattern arises in software design when there is a need to perform various operations on a complex object structure without modifying the classes representing that structure. By implementing the Visitor pattern, you can define new operations by creating distinct visitor classes, keeping the operations separate from the elements being operated upon. 
+
+The use case for the Visitor pattern arises in software design when there is a need to perform various operations on a complex object structure without modifying the classes representing that structure. By implementing the Visitor pattern, you can define new operations by creating distinct visitor classes, keeping the operations separate from the elements being operated upon.
 
 - **Propose for installation**  
-A visitor proposes an installation for the Gemini telescope.
-
+  A visitor proposes an installation for the Gemini telescope.
 
 ### Actor: Supporter
-In a supporter use case, the process involves validating the device and its configuration, installing new configurations, and subsequently handing over the device to the installation operation staff. 
+
+In a supporter use case, the process involves validating the device and its configuration, installing new configurations, and subsequently handing over the device to the installation operation staff.
 
 - **Validate Device and configuration**  
-When visitors suggest installing a specific device on Gemini, supporters take charge by first validating and configuring the device When visitors propose the installation of a specific device on Gemini, supporters take on the responsibility of validating the device and configuring it. This initial step is critical to confirm that the device is compatible with the observatory's existing infrastructure and that its configuration aligns with the observatory's requirements.
+  When visitors suggest installing a specific device on Gemini, supporters take charge by first validating and configuring the device When visitors propose the installation of a specific device on Gemini, supporters take on the responsibility of validating the device and configuring it. This initial step is critical to confirm that the device is compatible with the observatory's existing infrastructure and that its configuration aligns with the observatory's requirements.
 
 - **Install new configurations**  
-Following successful validation, supporters proceed to implement any necessary new configurations. This may involve updating software, adjusting hardware settings, or making other modifications to ensure optimal performance. These configurations are tailored to ensure the device functions seamlessly within the observatory's environment.
+  Following successful validation, supporters proceed to implement any necessary new configurations. This may involve updating software, adjusting hardware settings, or making other modifications to ensure optimal performance. These configurations are tailored to ensure the device functions seamlessly within the observatory's environment.
 
 - **Pass the device for installation**  
-Once the device has been meticulously configured and tested, supporters pass it on to the operational staff. The operational staff takes charge of the physical installation phase, ensuring that the device is securely and effectively integrated into the observatory's systems. This handover marks the transition from the supporter's role to the operational phase.
+  Once the device has been meticulously configured and tested, supporters pass it on to the operational staff. The operational staff takes charge of the physical installation phase, ensuring that the device is securely and effectively integrated into the observatory's systems. This handover marks the transition from the supporter's role to the operational phase.
 
 ### Actor: Operation staff
+
 The on-site controller of the telescope and instruments. This person is responsible for ensuring the system's integrity and for keeping the system functioning accurately during observations. The Telescope Operator works with the Observer and the science plan to produce as good data as possible.
 
 - **Validate the observing program**  
-After an observing program is created, the operation staff are to validate the observing program before it can acquire a greenlight.
+  After an observing program is created, the operation staff are to validate the observing program before it can acquire a greenlight.
 
 - **Install device**  
-A visitor will propose to install a special device on the Gemini telescope. The device will be validated by the supporter. After the device is greenlit, the operation staff will proceed to install the device onto the telescope.
+  A visitor will propose to install a special device on the Gemini telescope. The device will be validated by the supporter. After the device is greenlit, the operation staff will proceed to install the device onto the telescope.
 
 ### Actor: Science Observer
 
 An on-site person who is responsible for monitoring the data acquisition and validating the data integrity collected from the Gemini telescope in order to forward them to the astronomer afterward, and ensures that the science plan is ongoing according to the plan and adapts them to suit the needs for the astronomer.
+
 - **Validate a science plan**  
-After the astronomer submits the science plan to the Gemini Telescope system, the science observer will validate the science plan and check to ensure its effect and efficiency before transforming the plan into an observing program.
+  After the astronomer submits the science plan to the Gemini Telescope system, the science observer will validate the science plan and check to ensure its effect and efficiency before transforming the plan into an observing program.
 
 - **Transform a science plan to an observing program**  
-This action involves translating the existing science plan into a pragmatic and automated observing sequence that the Gemini telescope's systems can execute without human interaction. The transformation process includes programming the sequence using software that provides a user-friendly interface. This allows for the efficient use of the telescope's time and resources, ensuring that the transition from plan to program is smooth and effective.
+  This action involves translating the existing science plan into a pragmatic and automated observing sequence that the Gemini telescope's systems can execute without human interaction. The transformation process includes programming the sequence using software that provides a user-friendly interface. This allows for the efficient use of the telescope's time and resources, ensuring that the transition from plan to program is smooth and effective.
 
 - **Execute the approved plan**  
-The approved observing program is put into action. This critical phase involves collecting astronomical data as specified by the plan. The execution must be precise, adhering to the detailed specifications of the observing program to ensure that the scientific objectives are met. It typically requires automation to allow for consistent and accurate observations over extended periods.
+  The approved observing program is put into action. This critical phase involves collecting astronomical data as specified by the plan. The execution must be precise, adhering to the detailed specifications of the observing program to ensure that the scientific objectives are met. It typically requires automation to allow for consistent and accurate observations over extended periods.
 
 - **Monitor the progress of science plan execution**  
-Science Observer will need to monitor the progress of the plan continuously. Monitoring is essential to ensure that the execution of the science plan is on track, such as overseeing the commands issued to various subsystems, managing the responses and status updates, and ensuring the integrity of data flows to and from online databases. 
+  Science Observer will need to monitor the progress of the plan continuously. Monitoring is essential to ensure that the execution of the science plan is on track, such as overseeing the commands issued to various subsystems, managing the responses and status updates, and ensuring the integrity of data flows to and from online databases.
 
 - **Collect astronomical data**  
-The science observers are involved in capturing observations from the cosmos using the Gemini telescope's array of instruments in this action. The data collected is crucial for the astronomer's research, enabling the exploration and understanding of astronomical phenomena.
+  The science observers are involved in capturing observations from the cosmos using the Gemini telescope's array of instruments in this action. The data collected is crucial for the astronomer's research, enabling the exploration and understanding of astronomical phenomena.
 
 - **Validate the integrity of collected data**  
-Once the data is collected, it is essential to validate its integrity. This means ensuring that the data is accurate, complete, and uncorrupted. The science observer will need to monitor the performance, integrity, safety, and instruments of the telescope during the data collection phase to detect any anomalies or issues that might compromise data quality.
+  Once the data is collected, it is essential to validate its integrity. This means ensuring that the data is accurate, complete, and uncorrupted. The science observer will need to monitor the performance, integrity, safety, and instruments of the telescope during the data collection phase to detect any anomalies or issues that might compromise data quality.
 
 - **Manage the collected data**  
-Once the data is collected and validated, it must be managed effectively. This involves cataloging, storing, and maintaining the data for accessibility and use in future scientific analysis. Data management is crucial for preserving the integrity of the data over time and facilitating its availability for current and future research projects.
+  Once the data is collected and validated, it must be managed effectively. This involves cataloging, storing, and maintaining the data for accessibility and use in future scientific analysis. Data management is crucial for preserving the integrity of the data over time and facilitating its availability for current and future research projects.
 
 - **Submit an observing program to the system**  
-Once an observation has been completed, the science observers must submit the program to the telescope’s control system in a format that is executable by the computer systems. The submission process verifies that the program is ready for execution, clearly defining all necessary parameters and instructions.
+  Once an observation has been completed, the science observers must submit the program to the telescope’s control system in a format that is executable by the computer systems. The submission process verifies that the program is ready for execution, clearly defining all necessary parameters and instructions.
 
 ### Actor: Telescope operator
-The on-site controller of the telescope and instruments. Telescope operators are responsible for ensuring the system’s integrity and functioning. Telescope operators also work with the observer to ensure that the science plan produces the best data.
-- **Maintain accurate system functioning during observations**  
-Telescope operators possess the capacity to periodically oversee the system's general performance, integrity, and safety. 
 
- - **Control the telescope**  
- The Telescope operator has the capability to issue telescope control commands as properly.
+The on-site controller of the telescope and instruments. Telescope operators are responsible for ensuring the system’s integrity and functioning. Telescope operators also work with the observer to ensure that the science plan produces the best data.
+
+- **Maintain accurate system functioning during observations**  
+  Telescope operators possess the capacity to periodically oversee the system's general performance, integrity, and safety.
+
+- **Control the telescope**  
+  The Telescope operator has the capability to issue telescope control commands as properly.
 
 ### Actor: Developer
-Developers are responsible for designing, testing, configuring, and upgrading the subsystems.
-- **Design, test, configure and upgrade subsystems**  
+
 Developers are responsible for designing, testing, configuring, and upgrading the subsystems.
 
+- **Design, test, configure and upgrade subsystems**  
+  Developers are responsible for designing, testing, configuring, and upgrading the subsystems.
+
 ### Actor: Administrator
+
 Administrators are responsible for high-level control of the Gemini system. They work with other users to regulate proper observation scheduling changes, maintenance, and system modifications.
 
 - **Controll integrate system**  
-Administrators possess the authority to iteratively implement system modifications as required.
-- **Determine Appropriate Observation Scheduling Changes**  Administrators possess the authority to iteratively determine and implement suitable changes to the observation scheduling within the system.
+  Administrators possess the authority to iteratively implement system modifications as required.
+- **Determine Appropriate Observation Scheduling Changes** Administrators possess the authority to iteratively determine and implement suitable changes to the observation scheduling within the system.
 
 - **Configure Maintenance downtime**  
-Administrators are empowered to repeatedly ascertain and schedule maintenance downtime for the system as required.
+  Administrators are empowered to repeatedly ascertain and schedule maintenance downtime for the system as required.
 
+# Analysis of 5 selected use cases
+
+## Use Case Description
+
+- **U001: Create a science plan**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/675dbff5-2796-45a7-a3e7-71428c316f0e)
+- **U002: Operate the Interactive Observing (Virtual Telescope)**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/72451e26-1ebf-45fd-a314-20b4f0a383d9)
+- **U003: Validate an Observing Program**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/afcf363d-cdd0-4eb3-a64e-6fdc1718344f)
+- **U004: Monitor the Progress of a Science Plan Execution**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/3a1871ea-f4d3-41d5-bb9b-6b37189b3798)
+- **U005: Manage Astronomical Data**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/cdbf7c3e-a7ae-4fa8-9d8e-67441abdf3a1)
+
+## Activity Diagram
+
+- **U001: Create a science plan**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/8cb9af1c-ca42-4497-ba6c-af9c31dac0f6)
+- **U002: Operate the Interactive Observing (Virtual Telescope)**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/08e2abea-e098-46e8-989a-a1dfd5e2e497)
+- **U003: Validate an Observing Program**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/1677fe6a-8409-4ce1-928f-72fdbbae20ff)
+- **U004: Monitor the Progress of a Science Plan Execution**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/62ed2fd7-25a8-42db-ab99-3d52ea28ab29)
+- **U005: Manage Astronomical Data**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/41f7a4f1-a271-4527-8409-93b0e6ac6226)
+
+## Class Diagram
+
+![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/c164d92d-45f4-456e-b5d7-baf4c93fdd8f)
+
+## Sequence Diagram
+
+- **U001: Create a science plan**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/d9e85853-010c-4314-9bd9-a9ed718b720a)
+- **U002: Operate the Interactive Observing (Virtual Telescope)**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/64a0baa3-1cc5-454f-9ba5-4beca29afc19)
+- **U003: Validate an Observing Program**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/d23ec211-deb4-47ec-b849-cf5978960b9e)
+- **U004: Monitor the Progress of a Science Plan Execution**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/c6f36c8b-2fb5-4fb2-bc35-811af0721c7a)
+- **U005: Manage Astronomical Data**  
+  ![Alt text](https://github.com/ICT-Mahidol/Gemini-2023/assets/90185254/90792eea-9d16-484d-ad7b-d53942085281)
