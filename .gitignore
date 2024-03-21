@@ -1,1 +1,11 @@
+*.class
+.idea/Gemini-2023.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+Crystal/Crystal.iml
+Inwza007/Inwza007.iml
+Samyung/Samyung.iml
+FahRakPor/.project
+*/.DS_Store
 /HolidayTravelVehicles/*.class
