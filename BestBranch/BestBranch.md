@@ -1029,4 +1029,68 @@
 
 - The system should map the specific IOC command between ASCII strings and EPICS channel.
 
+
+---
+# Project 1
+# Class Diagram
+![Class Diagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/2d269172-0f41-4454-b9d7-a11371dc46a0)
+
+## Use Case 01 
+### Create Science Plan
+
+#### Use Case Description
+![01_crate a sci plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/5fde82bc-f0e2-4888-8a09-dff21401eab7)
+
+#### Activity Diagram
+![Create Science Plan(Activity))](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/fd48aa4e-9e82-4dbf-9e24-32427bee7014)
+
+#### Sequence Flow Diagram
+![Create Science plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/c8520dd1-bbd5-4de7-b9cb-e2b535512f0a)
+
+## Use Case 02
+### Test a Science Plan
+
+#### Use Case Description
+![02_Test a sci plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/87f6825f-0b3a-47c0-b535-729277e57029)
+
+#### Activity Diagram
+![Activity Diagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/11e9ae66-2777-4ebd-911c-9e8d221987b5)
+
+#### Sequence Flow Diagram
+![Sequence_Diagram_Test a science plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/304c1979-45ae-4d88-a5cf-9c6ffe675e66)
+
+## Use Case 03
+### Submit a Science Plan
+![03_submit sci plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/7f721e56-c3c8-4930-8009-c2e469d894dc)
+
+#### Activity Diagram
+<img width="533" alt="Submit_activity" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/6c3a5225-f786-40c4-8183-33be050e9757">
+
+#### Sequence Flow Diagram
+<img width="658" alt="Submit_seq" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/20c53b73-91f5-4c98-a424-894853e48b83">
+
+## Use Case 04
+### Create an observation program
+
+#### Use Case Description
+![04_Crate a obervation](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/213530c0-99d5-41d0-aeba-575675e44d5d)
+
+#### Activity Diagram
+![create_observation_program](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/d33d5c9d-71a3-4e44-b832-4598226c6dea)
+
+#### Sequence Flow Diagram
+![create_observing_sequence](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/472ae602-0b1b-4192-a1a3-271cf5d1e50f)
+
+## Use Case 05
+### Collect Astronomical Data
+
+#### Use Case Description
+![05_Collect](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/80ccf37b-1881-4b80-81c7-f08c606720ab)
+
+#### Activity Diagram
+<img width="708" alt="Collect Ast_activity" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/e27606fd-117c-414b-b3ba-da7ea716ebbc">
+
+#### Sequence Flow Diagram
+<img width="883" alt="Collect_seq" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/2409cc77-901c-4152-93e4-3f4ec248174d">
+
 ### ITCS431 Software Design and Development (2023)
