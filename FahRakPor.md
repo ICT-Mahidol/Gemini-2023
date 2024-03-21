@@ -331,6 +331,3 @@ These categories help organize the functional and non-functional requirements ba
 ## Use case 6: Access collected astronomical data
 <img width="557" alt="Screenshot 2567-02-26 at 5 03 58 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/acf9f231-4c29-4fa5-a3ad-95b0faa9fb75">
 <img width="901" alt="Screenshot 2567-02-26 at 5 05 01 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/951eea49-0c5f-4207-8d69-d4ec558c0a15">
-
-
-

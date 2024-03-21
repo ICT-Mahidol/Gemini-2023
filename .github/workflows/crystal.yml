@@ -25,3 +25,4 @@ jobs:
       run: |
         cd HolidayTravelVehicles 
         javac -d . holiday.java
+        java holiday
