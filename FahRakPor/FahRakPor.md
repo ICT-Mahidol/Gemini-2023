@@ -338,11 +338,24 @@ These categories help organize the functional and non-functional requirements ba
 
 # Class Diagram
 #### Before
-![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/92b73639-93bf-4f46-a85b-662f0c3be970)
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/0dffd6b4-ca02-4102-9f7e-dcb5eb9e2e57)
 
 #### After
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/7b2c8b40-7092-4208-af21-f623f8231d12)
 
 We have updated the class diagram. the 'Data Required' class now needs to be a part of 'Astronomical Data' instead of 'Science Plan'. 
+
+# Use case
+
+## Usse case1: Login to the system 
+<img width="626" alt="Screenshot 2567-02-26 at 4 43 48 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/053fa581-97f6-4d7c-b2c4-5fec11b28af4">
+<img width="832" alt="Screenshot 2567-02-26 at 4 51 05 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/ee6674a4-41ca-4072-8ec6-d37bb3ae6202">
+
+## Usse case2: Create a science plan
+<img width="666" alt="Screenshot 2567-02-26 at 4 46 36 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/fc29a0c3-d9ef-4eb4-88be-9b1134be10cd">
+<img width="990" alt="Screenshot 2567-02-26 at 4 51 49 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/fcf6f881-ec63-409d-ab43-c31b05eab4aa">
+
+## Usse case3: Submit a science plan
+<img width="990" alt="Screenshot 2567-02-26 at 4 51 49 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/fcf6f881-ec63-409d-ab43-c31b05eab4aa">
 
 
