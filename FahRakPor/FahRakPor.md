@@ -332,7 +332,15 @@ These categories help organize the functional and non-functional requirements ba
 <img width="557" alt="Screenshot 2567-02-26 at 5 03 58 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/acf9f231-4c29-4fa5-a3ad-95b0faa9fb75">
 <img width="901" alt="Screenshot 2567-02-26 at 5 05 01 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/951eea49-0c5f-4207-8d69-d4ec558c0a15">
 
-#Phase 2 Revision
+
+# Phase 2 Revision
 4 Use cases include login: 1. Login 2.Create Science Plan 3. Submit Science Plan 4. Test Science Plan
+
+# Class Diagram
+## Before
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/92b73639-93bf-4f46-a85b-662f0c3be970)
+## After
+![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/7b2c8b40-7092-4208-af21-f623f8231d12)
+
 
 
