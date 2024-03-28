@@ -333,6 +333,7 @@ These categories help organize the functional and non-functional requirements ba
 <img width="901" alt="Screenshot 2567-02-26 at 5 05 01 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/951eea49-0c5f-4207-8d69-d4ec558c0a15">
 
 
+
 # Phase 2 Revision
 4 Use cases include login: 1. Login 2.Create Science Plan 3. Submit Science Plan 4. Test Science Plan
 
