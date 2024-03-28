@@ -347,23 +347,31 @@ We have updated the class diagram. the 'Data Required' class now needs to be a p
 
 # Use case
 
-## Usse case1: Login to the system 
-<img width="626" alt="Screenshot 2567-02-26 at 4 43 48 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/053fa581-97f6-4d7c-b2c4-5fec11b28af4">
+## Use case1: Login to the system 
 <img width="832" alt="Screenshot 2567-02-26 at 4 51 05 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/ee6674a4-41ca-4072-8ec6-d37bb3ae6202">
 
-## Usse case2: Create a science plan
-<img width="666" alt="Screenshot 2567-02-26 at 4 46 36 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/fc29a0c3-d9ef-4eb4-88be-9b1134be10cd">
+## Use case2: Create a science plan
 <img width="990" alt="Screenshot 2567-02-26 at 4 51 49 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/fcf6f881-ec63-409d-ab43-c31b05eab4aa">
 
-## Usse case3: Submit a science plan
-<img width="666" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/ed3cc93a-6a54-441d-9bbd-797ae6aaa4da">
-#### Before
+## Use case3: Submit a science plan
 
+#### Before
 <img width="966" alt="Screenshot 2567-02-26 at 4 55 44 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/524275b5-59b7-4267-b853-ab11dd1bf77b">
 
 #### After
 <img width="966" alt="Screenshot 2567-02-26 at 4 55 44 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/bebe65bd-17cf-4c83-b59b-061cf85f0136">
 
-The before revision of submit science plan system have to “wait for approved submission” first.  So we modify by removing “wait for approve submission” cause  when we submit it doesn’t have to wait to approve. 
+On Activity diagram: Before the revision of submit the science plan system has to “wait for approved submission” first.  So we modify by removing “wait for approve submission” cause  when we submit it doesn’t have to wait to approve. 
+
+## Use case 4: Test a science plan
+
+#### Before
+<img width="1061" alt="Screenshot 2567-02-26 at 5 01 00 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/f826d644-1b66-4fc9-aa91-2f95542c67d9">
+
+#### After
+<img width="966" alt="Screenshot 2567-02-26 at 4 55 44 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/7f2969c9-3afe-4a2c-b69d-97e96c467e0c">
+
+On Activity diagram: The Before version didn’t send “System displays the error message” and “System displays “your selected science plan doesn’t exist” anywhere. So we modify to send that particular message back to the beginning of the process. 
+
 
 
