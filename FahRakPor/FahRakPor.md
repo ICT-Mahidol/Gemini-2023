@@ -356,6 +356,7 @@ We have updated the class diagram. the 'Data Required' class now needs to be a p
 <img width="990" alt="Screenshot 2567-02-26 at 4 51 49 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/fcf6f881-ec63-409d-ab43-c31b05eab4aa">
 
 ## Usse case3: Submit a science plan
+<img width="666" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/ed3cc93a-6a54-441d-9bbd-797ae6aaa4da">
 <img width="990" alt="Screenshot 2567-02-26 at 4 51 49 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/fcf6f881-ec63-409d-ab43-c31b05eab4aa">
 
 
