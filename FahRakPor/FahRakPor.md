@@ -357,6 +357,11 @@ We have updated the class diagram. the 'Data Required' class now needs to be a p
 
 ## Usse case3: Submit a science plan
 <img width="666" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/ed3cc93a-6a54-441d-9bbd-797ae6aaa4da">
-<img width="990" alt="Screenshot 2567-02-26 at 4 51 49 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/fcf6f881-ec63-409d-ab43-c31b05eab4aa">
+### Before
+<img width="966" alt="Screenshot 2567-02-26 at 4 55 44 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/524275b5-59b7-4267-b853-ab11dd1bf77b">
+### After
+<img width="966" alt="Screenshot 2567-02-26 at 4 55 44 PM" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/bebe65bd-17cf-4c83-b59b-061cf85f0136">
+
+The before revision of submit science plan system have to “wait for approved submission” first.  So we modify by removing “wait for approve submission” cause  when we submit it doesn’t have to wait to approve. 
 
 
