@@ -337,9 +337,9 @@ These categories help organize the functional and non-functional requirements ba
 4 Use cases include login: 1. Login 2.Create Science Plan 3. Submit Science Plan 4. Test Science Plan
 
 # Class Diagram
-## Before
+Before:
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/92b73639-93bf-4f46-a85b-662f0c3be970)
-## After
+After:
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/7b2c8b40-7092-4208-af21-f623f8231d12)
 
 
