@@ -338,9 +338,13 @@ These categories help organize the functional and non-functional requirements ba
 
 # Class Diagram
 Before
+
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/142656246/92b73639-93bf-4f46-a85b-662f0c3be970)
+
 After
+
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/88934262/7b2c8b40-7092-4208-af21-f623f8231d12)
+
 We have updated the class diagram. the 'Data Required' class now needs to be a part of 'Astronomical Data' instead of 'Science Plan'. 
 
 
