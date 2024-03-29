@@ -17,7 +17,8 @@
 
 ## Science Observer -> Validate Science Plan
 
-![For_SE_Project - Science Observer _ Validate Science Plan_final](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/cf54dd3d-4d27-4540-9955-a193f65c0f66)
+![For_SE_Project - Science Observer _ Validate Science Plan_final](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/92bb13d4-eff2-4635-8018-fac0d19b12d1)
+
 
 
 ## Support -> Install New Configurations
