@@ -12,12 +12,15 @@
 
 ## Astronomer -> Submit Science Plan
 
-![For_SE_Project - Astronomer _ Submit Science Plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/122808660/28b9a312-b805-496f-8656-6e589a73e37b)
+![For_SE_Project - Astronomer _ Submit Science Plan_final](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/5253598a-268a-4be9-a641-247480c006dc)
+
 
 ## Science Observer -> Validate Science Plan
 
-![For_SE_Project - Science Observer _ Validate Science Plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/122808660/79a7d48d-2494-4373-b339-a999ee8e21cd)
+![For_SE_Project - Science Observer _ Validate Science Plan_final](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/cf54dd3d-4d27-4540-9955-a193f65c0f66)
+
 
 ## Support -> Install New Configurations
 
-![For_SE_Project - Install new configuration](https://github.com/ICT-Mahidol/Gemini-2023/assets/122808660/d4dfe63e-e57a-4394-a519-e61727b6aa81)
+![For_SE_Project - Install new configuration_final](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/3cffa61a-22e2-408c-9ee6-a1325180d87b)
+
