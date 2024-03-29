@@ -10,11 +10,6 @@
 
 # Use Case Description
 
-## User -> Perform System Diagnosis
-![use_case_1](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/53a2a416-7800-4f1e-bd59-00c067ae340e)
-
-
-
 ## Astronomer -> Submit Science Plan
 ![use_case_2](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/1dc532bb-001c-46bf-80e8-f737819b9ed3)
 
@@ -26,7 +21,3 @@
 ## Support -> Install New Configurations
 ![use_case_4](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/3de51917-0383-4dfa-ae3e-25d57c6af1a8)
 
-
-## Support -> Update System To Support Newly Added Components
-
-![use_case_5](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/58ce0a3f-ceae-4b6c-b7f6-93f0556fb8ca)
