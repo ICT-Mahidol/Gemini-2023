@@ -32,5 +32,6 @@
 ![43](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/9dc5965f-3340-4a84-8d67-0c38a0225a0b)
 # log in
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/779b6685-cb8f-4d5f-b9ea-62dd0755b891)
+![IMG_1265](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/625e2e82-e619-4cee-a812-fc37eca4d2c3)
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/5f2f29f3-0dcf-4a7d-943a-1dc87e92c396)
-![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/143877039/756dfb2f-a4dc-4c91-933c-1a72183d83ee)
+
