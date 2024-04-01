@@ -8,7 +8,7 @@
 
 # Project Phrase 2
 ## Class Diagram Revision
-
+![UML_class_page-0001](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/7130f3c0-e4b4-4fde-9733-99ffd2fe8a93)
 
 ## 3 Selected Diagram Revision
 ### 1. Create a Science Plan
