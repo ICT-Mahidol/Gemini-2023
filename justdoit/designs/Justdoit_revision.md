@@ -11,7 +11,7 @@
 ## activity diagrams
 ![7 1 1](https://github.com/ICT-Mahidol/Gemini-2023/assets/144013287/9efdb2fa-3277-4933-a007-8a62405989b5)
 ## sequence diagrams
-![7 4 2 2](https://github.com/ICT-Mahidol/Gemini-2023/assets/144013287/f6d64d7f-d7c1-4f1b-b7fb-733d7be8d779)
+![7 1 12 1](https://github.com/ICT-Mahidol/Gemini-2023/assets/144013287/da261199-6cc7-4477-bd72-e85517306807)
 
 ## use case 02 : Login
 ![7 2](https://github.com/ICT-Mahidol/Gemini-2023/assets/144013287/d2c2fd20-2260-4209-ab9d-6a57ad1c3960)
