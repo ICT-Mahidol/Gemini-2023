@@ -7,7 +7,7 @@
 
 # use case descriptions 
 ## use case 01 : Create science plan
-
-# activity diagrams
-
-# sequence diagrams
+![7 1](https://github.com/ICT-Mahidol/Gemini-2023/assets/144013287/89d4623e-6a65-47cd-af14-621038d07c8f)
+## activity diagrams
+![7 1 1](https://github.com/ICT-Mahidol/Gemini-2023/assets/144013287/9efdb2fa-3277-4933-a007-8a62405989b5)
+## sequence diagrams
