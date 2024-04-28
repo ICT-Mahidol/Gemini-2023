@@ -48,9 +48,12 @@ To run the application, download the implementations folder and execute the Java
 <p align="center">
   <img width="700" alt="Observer Hompage" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/a48d3c09-3739-43de-815e-f2d59081d6d1">
 </p>
-2. The science observers can read science plan information and click the button `Validated` or `Invalidated` to change the science plan status.
+2. The science observers can read science plan information on the table or click the button `Validated` or `Invalidated` to read the full details and click the button again to change the science plan status.
 <p align="center">
-  <img width="700" alt="Validate Science Plan Page" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/7202d11b-cd51-4575-b5cc-abf825ba8ef4">
+  <img width="700" alt="Validate Science Plan Page 1" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/28fe846e-307b-4f7e-8a5a-3ec0e4d36458">
+</p>
+<p align="center">
+  <img width="700" alt="Validate Science Plan Page 2" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/9487e8ba-7eb6-4979-943c-f6f5a4c4b5f3">
 </p>
 
 ## How to execute *Create an observing program by science observers* use case
@@ -62,3 +65,6 @@ To run the application, download the implementations folder and execute the Java
 <p align="center">
  <img width="700" alt="Create Observing Program Page" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/128398519/87334b97-a69c-4694-baa3-cc8d8cb7f78d">
 </p>
+
+
+
