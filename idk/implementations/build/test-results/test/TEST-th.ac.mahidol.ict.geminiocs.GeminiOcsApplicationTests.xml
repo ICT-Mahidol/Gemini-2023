@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="th.ac.mahidol.ict.geminiocs.GeminiOcsApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-29T07:56:50" hostname="HADES" time="1.25">
+  <properties/>
+  <testcase name="contextLoads()" classname="th.ac.mahidol.ict.geminiocs.GeminiOcsApplicationTests" time="1.25"/>
+  <system-out><![CDATA[14:56:47.794 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [th.ac.mahidol.ict.geminiocs.GeminiOcsApplicationTests]: GeminiOcsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:56:48.019 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration th.ac.mahidol.ict.geminiocs.GeminiOcsApplication for test class th.ac.mahidol.ict.geminiocs.GeminiOcsApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2024-04-29T14:56:48.726+07:00  INFO 22904 --- [gemini-ocs] [    Test worker] t.a.m.i.g.GeminiOcsApplicationTests      : Starting GeminiOcsApplicationTests using Java 17.0.1 with PID 22904 (started by NigfriD in D:\Code\Project\Gemini-OCS)
+2024-04-29T14:56:48.731+07:00  INFO 22904 --- [gemini-ocs] [    Test worker] t.a.m.i.g.GeminiOcsApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T14:56:50.930+07:00  INFO 22904 --- [gemini-ocs] [    Test worker] t.a.m.i.g.GeminiOcsApplicationTests      : Started GeminiOcsApplicationTests in 2.637 seconds (process running for 4.66)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
