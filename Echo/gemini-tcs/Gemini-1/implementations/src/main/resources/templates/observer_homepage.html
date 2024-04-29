@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observer homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
+    <link rel="stylesheet" href="../static/css/all.min.css" th:href="@{/css/all.min.css}" />
+    <link rel="stylesheet" href="../static/css/homeastronomer.css" th:href="@{/css/homeastronomer.css}" />
+
+<!--    <link rel="stylesheet" href="../static/styles/css/homeastronomer.css">-->
+    <!--    References: https://www.free-css.com/free-css-templates/page293/vertex-->
+</head>
+<body>
+<script src="/js/observingprogram.js" defer></script>
+<!-- Page Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+
+<!-- Site logo -->
+<!--<h1 class="tm-brand">-->
+<!--    <i class="fas fa-mountain fa-2x tm-brand-icon"></i>-->
+<!--    <span class="tm-brand-text">Vertex</span>-->
+<!--</h1>-->
+
+<!-- Nav -->
+<nav class="tm-nav">
+    <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul id="tm-main-nav">
+        <li class="nav-item">
+            <a href="#Create" class="nav-link">
+                WELCOME TO GEMINI SYSTEM
+            </a>
+        </li>
+
+    </ul>
+</nav>
+
+<!-- Content -->
+<main>
+
+    <div id="intro" class="tm-section">
+        <!-- Intro left -->
+        <div class="tm-section-col tm-content">
+
+            <div class="tm-media">
+                <div class="tm-media-body">
+                    <h2><a class="tm-text-primary">Create an observing program</a></h2>
+                    <p class="tm-mb-20 tm-text-small">
+                        "Start Creating Your Observing Program" guides you through the process
+                        of setting up a new observing program, enabling you to define target
+                        objects, specify observation parameters, and schedule observations.
+                        This feature assists in planning and organizing your astronomical
+                        observations, whether for research, education, or personal interest.
+                    </p>
+                    <span class="tm-text-secondary tm-media-span tm-text-small">
+                         <a href="http://localhost:8080/observingprogram"> Start create an observing program </a>
+                    </span>
+                    <hr class="tm-hr tm-mr">
+                </div>
+            </div>
+            <div class="tm-media">
+                <div class="tm-media-body">
+                    <h2><a class="tm-text-primary">Validate science plan</a></h2>
+                    <p class="tm-mb-20 tm-text-small">
+                        Validate your science plan to ensure it is well-structured and scientifically sound. Verify that it addresses all key aspects of your research.
+                    </p>
+                    <span class="tm-text-secondary tm-media-span tm-text-small">
+                         <a href="http://localhost:8080/validatescienceplan"> Start validate a science plan </a>
+                    </span>
+                    <hr class="tm-hr tm-mr">
+                </div>
+            </div>
+        </div>
+
+        <!-- Intro right -->
+<!--        <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="https://cosmicpursuits.com/wp-content/uploads/2018/06/Southern-Cross-Bergeron.jpg"></div>-->
+        <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="https://cosmicpursuits.com/wp-content/uploads/2018/06/Southern-Cross-Bergeron.jpg"></div>
+    </div> <!-- #intro -->
+
+    <div  class="tm-section">
+        <div class="tm-section-col tm-content" >
+            <div class="tm-media" >
+                <div class="tm-media-body" >
+                    <h2><a class="tm-text-primary">Observing programs</a></h2>
+                    <p class="tm-mb-20 tm-text-small">
+                        These programs outline the specific objects or phenomena to be observed, the instruments and techniques to be used, the duration and timing of observations, and the scientific goals or questions the observations aim to address.
+                    </p>
+                    <div id="ObservingprogramList" class="tm-mb-20 tm-text-small" ></div>
+                    <hr class="tm-hr tm-mr" id="line">
+                </div>
+            </div>
+        </div>
+        <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="https://images.unsplash.com/photo-1594683734152-0eccf2501041?q=80&w=1893&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
+    </div>
+
+
+    <div id="about" class="tm-section">
+        <!-- About left -->
+        <div class="tm-section-col tm-content tm-content-small">
+            <h2 class="tm-text-primary">About Us</h2>
+            <p>
+                6488021 Russarin Eaimrittikrai <br>
+                6488045 Supithcha Jongphoemwatthanaphon <br>
+                6488052 Sasasuang Pattanakitjaroenchai <br>
+                6488061 Chaninan Phetpangun <br>
+                6488184 Runchida Ananartyasit<br>
+                6488203 Phacharaphan Chalitchaiya <br>
+            </p>
+            <hr class="tm-hr tm-mb-50">
+            <p class="tm-mb-50">
+                This project is part of ITCS431 Software Design and Development
+            </p>
+        </div>
+        <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="https://media.sciencephoto.com/image/r5500238/800wm"></div>
+    </div> <!-- #about -->
+
+
+</main>
+<!--<script src="../static/styles/plugins.js"></script>-->
+<script src="/js/plugins.js"></script>
+<script>
+    $(window).on("load", function() {
+        $('body').addClass('loaded');
+    });
+
+    $(function(){
+
+        /*************** Navigation *****************/
+
+        const tmMainNav = $("#tm-main-nav");
+
+        tmMainNav.singlePageNav({
+            filter: ':not(.external)'
+        });
+
+        $('.navbar-toggler').click(function(e) {
+            e.stopPropagation();
+            tmMainNav.toggleClass('show');
+        });
+
+        $("html").click(function(e) {
+            $("#tm-main-nav").removeClass("show");
+        });
+
+        /****************** Smooth Scrolling *****************/
+
+        $(".tm-btn-next").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 100, function(){
+                    // window.location.hash = hash;
+                });
+            }
+        });
+
+        $('.tm-brand-icon').on('click', function(event) {
+            $('html, body').animate({
+                scrollTop: $('#intro').offset().top
+            }, 800);
+        });
+
+
+    });
+</script>
+<script src="/static/js/astronomer.js"></script>
+<script src="/static/js/astronomer_homepage.js"></script>
+</script>
+</body>
+</html>

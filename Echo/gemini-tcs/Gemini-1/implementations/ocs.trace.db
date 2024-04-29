@@ -1,0 +1,63 @@
+2024-04-28 00:31:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(3,1,'https://www.gemini.edu/files/styles/large/public/gallery/20832/20120511sh2-71.jpg'); [42102-192]
+2024-04-28 02:09:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(4,1,'https://www.gemini.edu/files/styles/large/public/gallery/21013/20161229ggd27final.jpg'); [42102-192]
+2024-04-28 02:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(5,1,'https://www.gemini.edu/files/styles/large/public/gallery/20973/ic5332final.jpg'); [42102-192]
+2024-04-28 02:28:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(6,1,'https://www.gemini.edu/files/styles/large/public/gallery/20960/20130109oriongemsfinal.png'); [42102-192]
+2024-04-28 02:32:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(7,1,'https://www.gemini.edu/files/styles/large/public/gallery/20991/stellarincubatorhandout.jpg'); [42102-192]
+2024-04-28 13:08:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(8,1,'https://www.gemini.edu/files/styles/large/public/gallery/21013/20161229ggd27final.jpg'); [42102-192]
+2567-04-28 13:46:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(9,1,'https://www.gemini.edu/files/styles/large/public/gallery/21008/n159legacy.jpg'); [42102-192]
+2567-04-28 13:49:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(10,1,'https://www.gemini.edu/files/styles/large/public/gallery/21014/20130808m17f2final.jpg'); [42102-192]
+2567-04-28 13:55:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(1,1,'https://www.gemini.edu/files/styles/large/public/gallery/20994/03spgalaxydiversityhandout.jpg'); [42102-192]
+2024-04-28 14:12:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(2,1,'https://www.gemini.edu/files/styles/large/public/gallery/20497/ngc1532_31_fr.jpg'); [42102-192]
+2024-04-28 14:13:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(1,1,'https://www.gemini.edu/files/styles/large/public/gallery/20743/20110623quazarulas.jpg'); [42102-192]
+2567-04-28 14:55:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(1,1,'https://www.gemini.edu/files/styles/large/public/gallery/20973/ic5332final.jpg'); [42102-192]
+2567-04-28 15:05:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(2,1,'http://www.gemini.edu/images/pio/News/2020/pr2020_02/oir2006a.jpg'); [42102-192]
+2024-04-28 15:48:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(1,1,'https://www.gemini.edu/files/styles/large/public/gallery/20988/ngc6520handout.jpg'); [42102-192]
+2024-04-28 16:03:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(2,1,'https://www.gemini.edu/files/styles/large/public/gallery/20973/ic5332final.jpg'); [42102-192]
+2024-04-28 16:20:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(1,1,'http://www.gemini.edu/images/pio/News/2020/pr2020_02/oir2006a.jpg'); [42102-192]
+2024-04-28 16:23:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(2,1,'https://www.gemini.edu/files/styles/large/public/gallery/20991/stellarincubatorhandout.jpg'); [42102-192]
+2024-04-28 16:26:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(3,1,'https://www.gemini.edu/files/styles/large/public/gallery/20849/20121016_ngc660.jpg'); [42102-192]
+2024-04-28 16:30:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(4,1,'https://www.gemini.edu/files/styles/large/public/gallery/20849/20121016_ngc660.jpg'); [42102-192]
+2024-04-28 17:29:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(1,1,'http://www.gemini.edu/images/pio/News/2020/pr2020_01/oir2002b.jpg'); [42102-192]
+2024-04-28 21:16:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(5,1,'http://www.gemini.edu/images/pio/News/2020/pr2020_01/oir2002b.jpg'); [42102-192]

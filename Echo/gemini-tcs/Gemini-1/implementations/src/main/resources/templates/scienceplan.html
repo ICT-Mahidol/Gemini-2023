@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Science Plan</title>
+    <link rel="stylesheet" href="../static/css/scienceplan.css" th:href="@{/css/scienceplan.css}" />
+
+</head>
+<body>
+<script src="/js/scienceplan.js" defer></script>
+<div class="overlay overlay-slide-left" id="overlay">
+    <!-- MENU ITEMS -->
+    <nav>
+        <ul>
+            <li id="nav-1" class="slide-out-1 center">
+                <a href="http://localhost:8080/astronomer" class="center">Home</a>
+            </li>
+            <li id="nav-2" class="slide-out-2 center">
+                <a href="http://localhost:8080/scienceplan" class="center">Create a science plan</a>
+            </li>
+            <li id="nav-3" class="slide-out-3 center">
+                <a href="http://localhost:8080/" class="center">Log out</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- HAMBURGER MENU -->
+<div class="hamburger-menu" id="hamburger-menu">
+    <div class="menu-bar1"></div>
+    <div class="menu-bar2"></div>
+    <div class="menu-bar3"></div>
+</div>
+<!-- SECTIONS -->
+<section id="home" class="center">
+    <p class="logo">Echo Group</p>
+</section>
+
+<script>
+    const hamburgerMenu = document.querySelector("#hamburger-menu");
+    const overlay = document.querySelector("#overlay");
+    const nav1 = document.querySelector("#nav-1");
+    const nav2 = document.querySelector("#nav-2");
+    const nav3 = document.querySelector("#nav-3");
+    const nav4 = document.querySelector("#nav-4");
+    const nav5 = document.querySelector("#nav-5");
+    const navItems = [nav1, nav2, nav3, nav4, nav5];
+
+    // Control Navigation Animation
+    function navAnimation(val1, val2) {
+        navItems.forEach((nav, i) => {
+            nav.classList.replace(`slide-${val1}-${i + 1}`, `slide-${val2}-${i + 1}`);
+        });
+    }
+
+    function toggleNav() {
+        // Toggle: Hamburger Open/Close
+        hamburgerMenu.classList.toggle("active");
+
+        //   Toggle: Menu Active
+        overlay.classList.toggle("overlay-active");
+
+        if (overlay.classList.contains("overlay-active")) {
+            // Animate In - Overlay
+            overlay.classList.replace("overlay-slide-left", "overlay-slide-right");
+
+            // Animate In - Nav Items
+            navAnimation("out", "in");
+        } else {
+            // Animate Out - Overlay
+            overlay.classList.replace("overlay-slide-right", "overlay-slide-left");
+
+            // Animate Out - Nav Items
+            navAnimation("in", "out");
+        }
+    }
+
+    // Events Listeners
+    hamburgerMenu.addEventListener("click", toggleNav);
+    navItems.forEach((nav) => {
+        nav.addEventListener("click", toggleNav);
+    });
+
+</script>
+
+<div class="head">
+    <h2> Create a Science Plan </h2>
+
+</div>
+
+<div id="showSciplan">
+    <table class="table table-responsive table-dark" >
+        <thead>
+        <th colspan="10" class="headtable">Your created science plans</th>
+        <tr>
+            <th>Plan Number</th>
+            <th>Creator</th>
+            <th>Submitter</th>
+            <th>Funding (USD)</th>
+            <th>Star System</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Telescope Location</th>
+            <th>Status</th>
+            <th>Submit</th>
+
+        </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+</div>
+
+<div class="showTable">
+    <table>
+        <thead>
+        <th colspan="9" class="headtable">All science plans</th>
+        <tr>
+            <th>Plan Number</th>
+            <th>Creator</th>
+            <th>Submitter</th>
+            <th>Funding (USD)</th>
+            <th>Star System</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Telescope Location</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody id="sciencePlanTableBody">
+        <!-- Rows will be dynamically added here -->
+        </tbody>
+    </table>
+</div>
+
+
+<form id="sciencePlanForm">
+    <label for="creator">Creator:</label>
+    <input type="text" id="creator" name="creator" disabled>
+
+    <label for="submitter">Submitter:</label>
+    <select id="submitter" name="submitter" required>
+        <option value="">Select Submitter</option>
+    </select>
+
+    <script>
+        // Function to fetch astronomers data
+        // async function fetchAstronomers() {
+        //     try {
+        //         const response = await fetch('/astronomers');
+        //         const data = await response.json();
+        //         return data;
+        //     } catch (error) {
+        //         console.error('Error fetching astronomers data:', error);
+        //         return [];
+        //     }
+        // }
+        //
+        // async function populateSubmitters() {
+        //     const submitterSelect = document.getElementById('submitter');
+        //     const astronomers = await fetchAstronomers();
+        //
+        //     submitterSelect.innerHTML = '<option value="">Select Submitter</option>';
+        //
+        //     astronomers.forEach(astronomer => {
+        //         if (astronomer.role === 'Astronomer') {
+        //             const option = document.createElement('option');
+        //             option.value = astronomer.username;
+        //             option.textContent = astronomer.username;
+        //             submitterSelect.appendChild(option);
+        //         }
+        //     });
+        // }
+        //
+        // // Call the function to populate the submitter select element
+        // populateSubmitters();
+        async function fetchAstronomers() {
+            try {
+                const response = await fetch('/astronomers');
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching astronomers data:', error);
+                return {};
+            }
+        }
+
+        async function populateSubmitters() {
+            const submitterSelect = document.getElementById('submitter');
+            const astronomers = await fetchAstronomers();
+
+            submitterSelect.innerHTML = '<option value="">Select Submitter</option>';
+
+            for (const [id, username] of Object.entries(astronomers)) {
+                const option = document.createElement('option');
+                option.value = id;
+                option.textContent = username;
+                submitterSelect.appendChild(option);
+            }
+        }
+        populateSubmitters();
+
+    </script>
+
+
+<!--    <label for="funding">Funding (in USD):</label>-->
+<!--    <input type="text" id="funding" name="funding" required>-->
+
+    <!--    <label for="submitter">Submitter:</label>-->
+    <!--    <input type="text" id="submitter" name="submitter" disabled>-->
+
+    <label for="funding">Funding (in USD):</label>
+    <input type="text" id="funding" name="funding" required>
+
+    <label for="objectives">Objectives:</label>
+    <textarea id="objectives" name="objectives" required></textarea>
+
+    <label for="starSystem">Constellations Star System:</label>
+    <select id="starSystem" name="StarSystem" required>
+        <option value="Andromeda">Andromeda</option>
+        <option value="Antlia">Antlia</option>
+        <option value="Apus">Apus</option>
+        <option value="Aquarius">Aquarius</option>
+        <option value="Aquila">Aquila</option>
+        <option value="Ara">Ara</option>
+        <option value="Aries">Aries</option>
+        <option value="Auriga">Auriga</option>
+        <option value="Boötes">Boötes</option>
+        <option value="Caelum">Caelum</option>
+        <option value="Camelopardalis">Camelopardalis</option>
+        <option value="Cancer">Cancer</option>
+        <option value="CanesVenatici">Canes Venatici</option>
+        <option value="CanisMajor">Canis Major</option>
+        <option value="CanisMinor">Canis Minor</option>
+        <option value="Capricornus">Capricornus</option>
+        <option value="Carina">Carina</option>
+        <option value="Cassiopeia">Cassiopeia</option>
+        <option value="Centaurus">Centaurus</option>
+        <option value="Cepheus">Cepheus</option>
+        <option value="Cetus">Cetus</option>
+        <option value="Chamaeleon">Chamaeleon</option>
+        <option value="Circinus">Circinus</option>
+        <option value="Columba">Columba</option>
+        <option value="ComaBerenices">Coma Berenices</option>
+        <option value="CoronaAustralis">Corona Australis</option>
+        <option value="CoronaBorealis">Corona Borealis</option>
+        <option value="Corvus">Corvus</option>
+        <option value="Crater">Crater</option>
+        <option value="Crux">Crux</option>
+        <option value="Cygnus">Cygnus</option>
+        <option value="Delphinus">Delphinus</option>
+        <option value="Dorado">Dorado</option>
+        <option value="Draco">Draco</option>
+        <option value="Equuleus">Equuleus</option>
+        <option value="Eridanus">Eridanus</option>
+        <option value="Fornax">Fornax</option>
+        <option value="Gemini">Gemini</option>
+        <option value="Grus">Grus</option>
+        <option value="Hercules">Hercules</option>
+        <option value="Horologium">Horologium</option>
+        <option value="Hydra">Hydra</option>
+        <option value="Hydrus">Hydrus</option>
+        <option value="Indus">Indus</option>
+        <option value="Lacerta">Lacerta</option>
+        <option value="Leo">Leo</option>
+        <option value="LeoMinor">Leo Minor</option>
+        <option value="Lepus">Lepus</option>
+        <option value="Libra">Libra</option>
+        <option value="Lupus">Lupus</option>
+        <option value="Lynx">Lynx</option>
+        <option value="Lyra">Lyra</option>
+        <option value="Mensa">Mensa</option>
+        <option value="Microscopium">Microscopium</option>
+        <option value="Monoceros">Monoceros</option>
+        <option value="Musca">Musca</option>
+        <option value="Norma">Norma</option>
+        <option value="Octans">Octans</option>
+        <option value="Ophiuchus">Ophiuchus</option>
+        <option value="Orion">Orion</option>
+        <option value="Pavo">Pavo</option>
+        <option value="Pegasus">Pegasus</option>
+        <option value="Perseus">Perseus</option>
+        <option value="Phoenix">Phoenix</option>
+        <option value="Pictor">Pictor</option>
+        <option value="Pisces">Pisces</option>
+        <option value="PiscisAustrinus">Piscis Austrinus</option>
+        <option value="Puppis">Puppis</option>
+        <option value="Pyxis">Pyxis</option>
+        <option value="Reticulum">Reticulum</option>
+        <option value="Sagitta">Sagitta</option>
+        <option value="Sagittarius">Sagittarius</option>
+        <option value="Scorpius">Scorpius</option>
+        <option value="Sculptor">Sculptor</option>
+        <option value="Scutum">Scutum</option>
+        <option value="Serpens">Serpens</option>
+        <option value="Sextans">Sextans</option>
+        <option value="Taurus">Taurus</option>
+        <option value="Telescopium">Telescopium</option>
+        <option value="Triangulum">Triangulum</option>
+        <option value="TriangulumAustrale">Triangulum Australe</option>
+        <option value="Tucana">Tucana</option>
+        <option value="UrsaMajor">Ursa Major</option>
+        <option value="UrsaMinor">Ursa Minor</option>
+        <option value="Vela">Vela</option>
+        <option value="Virgo">Virgo</option>
+        <option value="Volans">Volans</option>
+        <option value="Vulpecula">Vulpecula</option>
+    </select>
+
+    <label for="startDate">Start Date and Time:</label>
+    <input type="datetime-local" id="startDate" name="startDate" required>
+    <br><br>
+    <label for="endDate">End Date and Time:</label>
+    <input type="datetime-local" id="endDate" name="endDate" required>
+    <br><br>
+
+    <label for="telescopeLocation">Telescope Location:</label>
+    <select id="telescopeLocation" name="telescopeLocation" required>
+        <option value="HAWAII">HAWAII</option>
+        <option value="CHILE">CHILE</option>
+    </select>
+
+
+    <label for="dataProcRequirementsEcho">Data Processing Requirements:</label><br><br>
+    <div id="dataProcRequirementsContainer">
+        <label for="fileType">File Type:</label>
+        <select id="fileTypeInput" name="fileQuality">
+            <option value="PNG">PNG</option>
+            <option value="JPEG">JPEG</option>
+            <option value="RAW">RAW</option>
+        </select>
+
+        <label for="fileQuality">File Quality:</label>
+        <select id="fileQualityInput" name="fileQuality">
+            <option value="Low">Low</option>
+            <option value="Fine">Fine</option>
+        </select>
+
+        <label for="colorType">Color Type:</label>
+        <select id="colorTypeInput" name="colorType" onchange="toggleFields()">
+            <option value="">Select Color Type</option>
+            <option value="Color mode">Color mode</option>
+            <option value="B&W mode">B&W mode</option>
+        </select>
+
+        <label for="contrast">Contrast:</label>
+        <input type="text" id="contrastInput" name="contrast">
+
+        <label for="brightness" id="brightnessLabel" style="display: none;">Brightness:</label>
+        <input type="text" id="brightnessInput" name="brightness" style="display: none;">
+
+        <label for="saturation" id="saturationLabel" style="display: none;">Saturation:</label>
+        <input type="text" id="saturationInput" name="saturation" style="display: none;">
+
+        <label for="highlights" id="highlightsLabel" style="display: none;">Highlights:</label>
+        <input type="text" id="highlightsInput" name="highlights" style="display: none;">
+
+        <label for="exposure" id="exposureLabel">Exposure:</label>
+        <input type="text" id="exposureInput" name="exposure">
+
+        <label for="shadows" id="shadowsLabel">Shadows:</label>
+        <input type="text" id="shadowsInput" name="shadows">
+
+        <label for="whites" id="whitesLabel" style="display: none;">Whites:</label>
+        <input type="text" id="whitesInput" name="whites" style="display: none;">
+
+        <label for="blacks" id="blacksLabel" style="display: none;">Blacks:</label>
+        <input type="text" id="blacksInput" name="blacks" style="display: none;">
+
+        <label for="luminance" id="luminanceLabel" style="display: none;">Luminance:</label>
+        <input type="text" id="luminanceInput" name="luminance" style="display: none;">
+
+        <label for="hue" id="hueLabel" style="display: none;">Hue:</label>
+        <input type="text" id="hueInput" name="hue" style="display: none;">
+    </div>
+
+    <script>
+        function toggleFields() {
+            var colorType = document.getElementById('colorTypeInput').value;
+            var brightnessLabel = document.getElementById('brightnessLabel');
+            var brightnessInput = document.getElementById('brightnessInput');
+            var saturationLabel = document.getElementById('saturationLabel');
+            var saturationInput = document.getElementById('saturationInput');
+            var highlightsLabel = document.getElementById('highlightsLabel');
+            var highlightsInput = document.getElementById('highlightsInput');
+            var shadowsLabel = document.getElementById('shadowsLabel');
+            var shadowsInput = document.getElementById('shadowsInput');
+            var whitesLabel = document.getElementById('whitesLabel');
+            var whitesInput = document.getElementById('whitesInput');
+            var blacksLabel = document.getElementById('blacksLabel');
+            var blacksInput = document.getElementById('blacksInput');
+            var luminanceLabel = document.getElementById('luminanceLabel');
+            var luminanceInput = document.getElementById('luminanceInput');
+            var hueLabel = document.getElementById('hueLabel');
+            var hueInput = document.getElementById('hueInput');
+
+            if (colorType === 'Color mode') {
+                brightnessLabel.style.display = 'block';
+                brightnessInput.style.display = 'block';
+                saturationLabel.style.display = 'block';
+                saturationInput.style.display = 'block';
+                highlightsLabel.style.display = 'none';
+                highlightsInput.style.display = 'none';
+                shadowsLabel.style.display = 'none';
+                shadowsInput.style.display = 'none';
+                whitesLabel.style.display = 'none';
+                whitesInput.style.display = 'none';
+                blacksLabel.style.display = 'none';
+                blacksInput.style.display = 'none';
+                luminanceLabel.style.display = 'block';
+                luminanceInput.style.display = 'block';
+                hueLabel.style.display = 'block';
+                hueInput.style.display = 'block';
+            } else {
+                brightnessLabel.style.display = 'none';
+                brightnessInput.style.display = 'none';
+                saturationLabel.style.display = 'none';
+                saturationInput.style.display = 'none';
+                highlightsLabel.style.display = 'block';
+                highlightsInput.style.display = 'block';
+                shadowsLabel.style.display = 'block';
+                shadowsInput.style.display = 'block';
+                whitesLabel.style.display = 'block';
+                whitesInput.style.display = 'block';
+                blacksLabel.style.display = 'block';
+                blacksInput.style.display = 'block';
+                luminanceLabel.style.display = 'none';
+                luminanceInput.style.display = 'none';
+                hueLabel.style.display = 'none';
+                hueInput.style.display = 'none';
+            }
+        }
+
+        // Call toggleFields() once on page load to set the initial state
+        window.onload = toggleFields;
+    </script>
+
+<!--    <label for="status">Status:</label>-->
+<!--    <input type="text" id="status" name="status" required>-->
+    <div class="container">
+        <button type="submit" class="button-71" id="savescp" onclick="saveSciencePlan()">Save Science Plan</button>
+        <!--  <button type="submit" class="button-71" id="submitscp">Submit Science Plan</button>-->
+
+    </div>
+</form>
+
+<footer>
+    <div class="footer">
+        <div class="row"></div>
+
+        <div class="row">
+            <ul>
+                <li><a href="#">6488021 Russarin</a></li>
+                <li><a href="#">6488045 Supithcha</a></li>
+                <li><a href="#">6488052 Sasasuang</a></li>
+                <li><a href="#">6488061 Chaninan</a></li>
+                <li><a href="#">6488184 Runchida</a></li>
+                <li><a href="#">6488203 Phacharaphan</a></li>
+            </ul>
+        </div>
+        <div class="row" id="copyRigght">
+            Copyright © 2024 || Designed By: ECHO Group
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
