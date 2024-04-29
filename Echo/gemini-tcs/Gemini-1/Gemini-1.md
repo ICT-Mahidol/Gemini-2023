@@ -27,7 +27,20 @@ The Echo-Gemini project is designed around the MVC (Model-View-Controller) patte
 
 
 ## How to run the Application
-To run the application, download the implementations folder and execute the Java file named "BackendApplication.java".
+
+**Original Way**:  
+1. Prerequisite: Your preferred IDE with Java Version 17
+2. Download the implementations folder
+3. Navigate to the folder src/main/java and execute the file "BackendApplication.java".
+4. Access Application: Open a web browser and navigate to http://localhost:8080 to access the application.
+
+**Docker**:  
+1. Prerequisite: Docker (with Docker Engine installed)
+2. Download the implementations folder
+3. Build Docker Image: Navigate to the root directory of the project and build the Docker image using the provided Dockerfile. Example of the command: `docker build -t gemini .`
+4. Run Docker Container: Run the Docker container, mapping port 8080 on your host machine to port 8080 within the container. Example of the command: `docker run -p 8080:8080 gemini`
+5. Access Application: Open a web browser and navigate to http://localhost:8080 to access the application.
+
 
 ## How to execute *Login and register to the system* use case
 1. Access URL http://localhost:8080/ to access the login page.
