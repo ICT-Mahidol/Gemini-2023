@@ -17,6 +17,8 @@
 
 4.Use your browser such as Chrome and typing URL: http://localhost:8080/
 
+<img width="738" alt="Screenshot 2567-04-29 at 23 36 17" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/84704161/1fbafbae-ec63-4162-b70c-7e19ef56426c">
+
 ## Selected Use Case
 - Login
 - Create a science plan.
@@ -35,6 +37,9 @@ b.    Optionally, you can specify data processing requirements by clicking the "
  
 c.    Click the "Submit" button to create the science plan
 
+<img width="736" alt="Screenshot 2567-04-29 at 23 37 25" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/84704161/dc5e4095-ef8a-4e22-be77-f30e9d4a8d01">
+
+
 **2. Observing Program**
 
 a.    Select a science plan from the list by checking the corresponding checkbox 
@@ -47,6 +52,12 @@ d.    If the observing program is valid, it will be saved to the OCS, and a succ
 
 e.    If the observing program is invalid, an error message will be displayed
 
+<img width="1465" alt="Screenshot 2567-04-29 at 23 38 06" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/84704161/7b93a789-0ff1-41f6-b446-8a56b2a90496">
+
+
 **3. Astronomical Data**
 
 a.    Access the page to see the stars’ images
+
+<img width="1429" alt="Screenshot 2567-04-29 at 23 38 39" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/84704161/ff86022a-11f4-4277-8fe6-d4725cef0aca">
+
