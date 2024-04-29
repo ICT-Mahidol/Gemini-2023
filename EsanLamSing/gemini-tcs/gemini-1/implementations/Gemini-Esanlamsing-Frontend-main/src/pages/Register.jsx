@@ -23,8 +23,8 @@ export default function Register() {
         });
     };
     autoCreateUser("test@gmail.com", "password", "Astronomer");
-    autoCreateUser("test2@gmail.com", "password", "Science Observer");
-    autoCreateUser("test3@gmail.com", "password", "Visitor");
+    autoCreateUser("test1@gmail.com", "password", "Science Observer");
+    autoCreateUser("test2@gmail.com", "password", "Visitor");
   }, []);
 
   return (
