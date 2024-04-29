@@ -17,7 +17,6 @@ public class UserController {
 
     @CrossOrigin
     @PostMapping("/createUser")
-    @ResponseBody
     public ResponseEntity<String> createUser(@RequestBody User user) {
         
         if (userRepository.findByUsername(user.getUsername()) != null) {
@@ -32,7 +31,6 @@ public class UserController {
 
     @CrossOrigin
     @PostMapping("/login")
-    @ResponseBody
     public ResponseEntity<String> login(@RequestBody User user) {
 
         User user1 = userRepository.findByUsername(user.getUsername());
@@ -54,7 +52,6 @@ public class UserController {
 
     @CrossOrigin
     @GetMapping("/getAllUsers")
-    @ResponseBody
     public ResponseEntity<Iterable<User>> getAllUsers() {
         return ResponseEntity.ok(userRepository.findAll());
     }
