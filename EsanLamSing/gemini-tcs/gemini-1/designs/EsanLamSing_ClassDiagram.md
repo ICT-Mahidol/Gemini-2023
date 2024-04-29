@@ -9,6 +9,7 @@
 | 6488217    | Pattaradanai Kaeodumkoeng |
 
 # Class Diagram
-![For_SE_Project - Class Diagram_Final](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/501d527a-c915-4334-97a3-1224b83da7b9)
+![EsanLamSing - Revised Class Diagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/e37a66fd-f17e-4685-85d9-28da96ec9ccc)
+
 
 
