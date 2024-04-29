@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Plan Gemini</title>
+    <link rel="icon" type="image/x-icon" th:src="@{images/Logo.ico}">
+    <link rel="stylesheet" th:href="@{assets/css/CreateSciPlan.css}">
+    <!-- <link rel="stylesheet" href="..\resources\assets\css\SciplanDetail.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+<!-- Container for greeting message and menu -->
+<div class="container">
+    <div class="close-icon-container">
+        <!-- <a th:href="@{/dashboard}"><i class="fas fa-times"></i></a> -->
+        <a href="javascript:history.back()"><i class="fas fa-times"></i></a>
+    </div>    
+    <!-- Greeting message -->
+    <div class="greeting-message">
+        <h1>Science Plan: <span th:text="${plan.planNo}"></span></h1> <!-- Sci Plan Name or any prime key -->
+    </div>
+    <!-- Menu -->
+    <div class="menu">
+        <div class="logo-container">
+            <img th:src="@{images/Logo_circle.png}" alt="Logo" class="logo">
+            <span class="menu-text">SciPlan</span>
+            <span class="menu-version">V0.1</span>
+        </div>
+        <ul>
+            <li><a th:href="@{/dashboard}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Dashboard</a></li>
+            <li><a th:href="@{/CreateSciPlan}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Create Plan</a></li>
+            <li><a th:href="@{/submission}"><img th:src="@{images/user-square%201.png}" alt="Logo" class="logo-menu">Submission</a></li>
+            <li><a th:href="@{/testing}"><img th:src="@{images/wallet-money%202.png}" alt="Logo" class="logo-menu">Testing</a></li>
+        </ul>
+        <div class="profile">
+            <a th:href="@{/login}" class="logout-link">
+                <img th:src="@{/images/user.png}" alt="Logo" class="logo-menu">
+                <span>Log out</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Plan list -->
+    <div class="plan-list">
+        <div class="plan-list-header">
+            <div class="description-plan">
+                <h2>Science Plan Detail</h2>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan ID</th>
+                    <th>Creator</th>
+                    <th>Submitter</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:each="plan : ${plans}">
+                <td th:text="${plan.planNo}"></td>
+                <td th:text="${plan.creator}"></td>
+                <td th:text="${plan.submitter}"></td>
+                <td th:text="${plan.startDate}"></td>
+                <td th:text="${plan.endDate}"></td>
+            </tr>
+            </tbody>
+        </table>
+        <table>
+
+            <thead>
+                <tr>
+                    <th>$ Funding</th>
+                    <th>starSystem</th>
+                    <th>telescopeLocation</th>
+                    <th>Objective</th>
+                </tr>
+            </thead>
+                <!-- <tbody> -->
+                <tbody>
+                <tr th:each="plan : ${plans}">
+                    <td th:text="${plan.fundingInUSD}"></td>
+                    <td th:text="${plan.starSystem}"></td>
+                    <td th:text="${plan.telescopeLocation}"></td>
+                    <td th:text="${plan.objectives}"></td>
+                </tr>
+                </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Processing Requirements</th>
+                </tr>
+            </thead>
+                <!-- <tbody> -->
+                <tbody>
+                <tr th:each="plan : ${plans}">
+                    <td th:text="${plan.dataProcRequirements}"></td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

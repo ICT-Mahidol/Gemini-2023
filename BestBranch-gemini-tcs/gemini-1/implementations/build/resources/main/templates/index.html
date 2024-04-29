@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Gemini</title>
+    <link rel="icon" type="image/x-icon" th:href="@{/images/Logo.ico}">
+    <link rel="stylesheet" th:href="@{/assets/css/accountManagement.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+     <div class="logo-container">
+        <img th:src="@{/images/Logo_circle.png}" alt="Logo" class="logo">
+     </div>
+        <div class="left-column">
+            <h1>The stars don't look bigger, but they do look brighter</h1>
+        </div>
+        <div class="right-column">
+            <div class="register-container">
+                <h2 style="color: #8b8b8b; text-align: left;">Login</h2><br>
+
+                <!-- The action should be a server-side URL which will be mapped by Spring MVC -->
+                <form class="register-form" th:action="@{/login}" method="post">
+                    <div class="input-container">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                    </div><br>
+
+                    <div class="input-container">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                    </div><br>
+
+                    <div class="form-footer">
+                        <button type="submit" id="loginButton">Login</button>
+                        <a th:href="@{/register}" class="signin-link">Create an Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
