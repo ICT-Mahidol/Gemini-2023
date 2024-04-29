@@ -72,20 +72,6 @@ public class SciencePlanEcho {
 //    @JoinColumn(name = "observing_id")
 //    private ObservingProgramEcho observingProgramEcho;
 
-//    public SciencePlanEcho(Integer planNo, String creator, String submitter, Double fundingInUSD, String objectives, Constellation starSystem, Date startDate, Date endDate, TELESCOPELOC TELESCOPELOC, DataProcRequirementEcho dataProcRequirementsEcho, Status status) {
-//        this.planNo = planNo;
-//        this.creator = creator;
-//        this.submitter = submitter;
-//        this.fundingInUSD = fundingInUSD;
-//        this.objectives = objectives;
-//        this.starSystem = starSystem;
-//        this.startDate = startDate;
-//        this.endDate = endDate;
-//        this.TELESCOPELOC = TELESCOPELOC;
-//      this.dataProcRequirementsEcho = dataProcRequirementsEcho;
-//        this.status = status;
-//    }
-
 public SciencePlanEcho(String creator, String submitter, Double fundingInUSD, String objectives, StarSystem.CONSTELLATIONS starSystem, Date startDate, Date endDate, SciencePlan.TELESCOPELOC TELESCOPELOC, DataProcRequirementEcho dataProcRequirementsEcho, Status status) {
     this.creator = creator;
     this.submitter = submitter;
@@ -213,13 +199,6 @@ public SciencePlanEcho(String creator, String submitter, Double fundingInUSD, St
         this.planNo = planNo;
     }
 
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
 
     public Status getStatus() {
         return status;
@@ -239,34 +218,6 @@ public SciencePlanEcho(String creator, String submitter, Double fundingInUSD, St
     public void setId(int sciencePlanId) {
     this.planNo = sciencePlanId;
     }
-
-//    public AstronomicalData retrieveAstroData(ArrayList<String> imgURL) throws IOException {
-//        return this.astroData.getAstronomicalData(imgURL);
-//    }
-//
-//    public boolean equals(Object o) {
-//        if (this == o) {
-//            return true;
-//        } else if (o != null && this.getClass() == o.getClass()) {
-//            SciencePlan that = (SciencePlan)o;
-//            return this.planNo == that.planNo && Double.compare(that.fundingInUSD, this.fundingInUSD) == 0 && this.creator.equals(that.creator) && this.submitter.equals(that.submitter) && this.objectives.equals(that.objectives) && this.starSystem == that.starSystem && this.startDate.equals(that.startDate) && this.endDate.equals(that.endDate) && this.TELESCOPELOC == that.TELESCOPELOC && Objects.equals(this.dataProcRequirements, that.dataProcRequirements) && Objects.equals(this.astroData, that.astroData) && this.status == that.status;
-//        } else {
-//            return false;
-//        }
-//    }
-//
-//    public int hashCode() {
-//        return Objects.hash(new Object[]{this.planNo, this.creator, this.submitter, this.fundingInUSD, this.objectives, this.starSystem, this.startDate, this.endDate, this.TELESCOPELOC, this.dataProcRequirements, this.astroData, this.status});
-//    }
-//
-//    public String toString() {
-//        if (this.creator != null && this.submitter != null && this.objectives != null && this.starSystem != null && this.startDate != null && this.endDate != null && this.TELESCOPELOC != null && this.dataProcRequirements != null && this.status != null) {
-//            int var10000 = this.planNo;
-//            return "{planNo=" + var10000 + ", creator='" + this.creator + "', submitter='" + this.submitter + "', fundingInUSD=" + this.fundingInUSD + ", objectives='" + this.objectives + "', starSystem=" + String.valueOf(this.starSystem) + ", startDate=" + (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(this.startDate) + ", endDate=" + (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(this.endDate) + ", TELESCOPELOC='" + String.valueOf(this.TELESCOPELOC) + "', status='" + String.valueOf(this.status) + "', " + String.valueOf(this.dataProcRequirements) + "}\n";
-//        } else {
-//            return "ERROR: Cannot print the science plan. Some of the attributes are null.";
-//        }
-//    }
 
     public static enum TELESCOPELOC {
         HAWAII,
