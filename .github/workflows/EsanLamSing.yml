@@ -24,7 +24,7 @@ jobs:
 
       - name: Compile Java
         run: |
-          cd HolidayTravelVehicles 
+          cd EsanLamSing/HolidayTravelVehicles 
           javac -d . *.java
         # Compile java file from directory
 
