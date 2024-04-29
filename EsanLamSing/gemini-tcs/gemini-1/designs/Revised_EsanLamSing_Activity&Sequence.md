@@ -22,7 +22,7 @@
 
 
 
-## Support -> Install New Configurations
+## Visitor -> Install New Configurations
 ![EsanLamSing - Install new configuration](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/1e6fdba7-0de2-4667-bcc0-0834982b31eb)
 
 
