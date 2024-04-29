@@ -3,27 +3,28 @@
 
 # 1. Create Science Plan
 ### Sequence diagram
-![Science plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/39530dd2-3da4-46d2-a7a8-9d501e14fad1)
+![Create Science plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/88db9b43-1f60-4b8f-a20f-9b8a0d309564)
 ### Activity diagram
-![Science plan Ac](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/ef42af7a-5001-417f-8f8b-a641b78e001b)
+![Create Science Plan(1)](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/e501570a-6f2e-4a22-9a03-9958b48a0da1)
 ### Use Case Description
-![Use Case Create Science plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/e8f6a55f-e47a-4835-8639-85c3a09fa973)
+![Use Case Create Science plan2](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/982e0279-ffe4-4321-8299-789ff24d635f)
 
 # 2. Test a Science Plan
 ### Sequence diagram
-![Sequence_Diagram_Test a science plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/d33e6799-0238-40cd-af4d-6c2ba21cbf2c)
+![Test a science plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/ff185756-e05d-40d7-9d31-cb17456091fb)
 ### Activity diagram
-![Activity_Diagram_Test a science plan png](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/d8394284-29f8-4105-b6e6-13407427eefe)
+![Activity_Diagram_Test a science plan png](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/8b94a954-c9fb-4c82-9e52-7e41c75405d1)
 ### Use Case Description
-![Use Case Description](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/e57d7043-c6ba-4e8e-83cb-0b862b1d0f43)
+![Use Case Description_Page_222](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/465c3da5-46d1-4769-b380-ad38291b63f0)
 
 
 # 3. Submit science plan
 ### Sequence diagram
-![Sequence Diagram_Submit_Science_Plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/44c2b951-bf7a-4cd4-84d8-f3b6b037a512)
+![submit](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/35050ba4-4913-41dd-a08d-f12fce10d50d)
 ### Activity diagram
-![Submit_activity](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/b242fd92-3b56-4dd3-9f49-53219e5c80b8)
+![Submit_activity](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/43149492-0467-4512-a7f3-b46cdf264637)
 ### Use Case Description
-![Use Case Decription](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/d12c385e-3fc4-4e69-8eaa-c685773cb0b7)
+![Submit_](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/2386cac5-22dd-49b4-83f0-255fdf0dd8ae)
+
 
 
