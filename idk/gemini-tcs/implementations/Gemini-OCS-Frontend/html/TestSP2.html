@@ -1,0 +1,206 @@
+<link rel="stylesheet" href="../styles/css/TestSP2.css">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Science Plan Result</title>
+    <link rel="stylesheet" href="TestSP2.css">
+    <script src="../api.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Test Science Plan Result</h2>
+        <div class="test-result">
+            <p>Science Plan ID: <span id="sciencePlanId"></span></p>
+            <p>Objective: <span id="objective"></span></p>
+            <p>Test Result: <span id="testResult"></span></p>
+        </div>
+        <div class="buttons">
+            <button onclick="testPlan()">Test Science Plan</button>
+            <button onclick="location.href='TestSP.html'">Back</button>
+            <button onclick="saveTestResult()">Save</button>
+        </div>
+    </div>
+
+    <script>
+        function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, '\\$&');
+                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return parseInt(decodeURIComponent(results[2].replace(/\+/g, ' ')));
+        }
+
+        const testResult = []
+
+        async function displaySciencePlan() {
+            // Retrieve planId from URL
+            const planId = getParameterByName('planId');
+            console.log(planId)
+            // Find the selected plan based on planId
+            const spData = await getSciencePlans()
+            const selectedPlan = spData.find(plan => plan.planNo === planId);
+
+            // Display the selected plan
+            document.getElementById('sciencePlanId').textContent = selectedPlan.planNo;
+            document.getElementById('objective').textContent = selectedPlan.objectives;
+            document.getElementById('testResult').textContent = testResult.find(result => result.planId === planId)?.result || 'Not Tested';
+        }
+
+        // Basically, a function for removing "TEST RESULTS:" from the test result 
+        function parseTestResults(text) {
+            const prefix = "TEST RESULTS:";
+            const cleanedText = text.trim().startsWith(prefix)
+                ? text.slice(prefix.length).trim()
+                : text.trim();
+
+            // Split the cleaned text into lines
+            const lines = cleanedText.split('\n');
+
+            // Initialize an empty object to store test results
+            const testResults = {};
+
+            // Loop through each line of the text
+            lines.forEach(line => {
+                // Ignore empty lines
+                if (line.trim() === '') {
+                    return;
+                }
+
+                // Split each line into key and value using the first occurrence of ':'
+                const index = line.indexOf(':');
+                if (index !== -1) {
+                    const key = line.slice(0, index).trim();
+                    const value = line.slice(index + 1).trim();
+                    testResults[key] = value;
+                }
+            });
+
+            return testResults;
+        }
+
+
+        // Function to replace test result span with a table containing parsed results
+        function replaceTestResultWithTable(text) {
+            const resultsObject = parseTestResults(text); // Assuming parseTestResults function is defined
+
+            // Create a new table element
+            const table = document.createElement('table');
+            table.border = '1'; // Add border for table (optional)
+
+            // Create table headers
+            const headerRow = table.insertRow();
+            const headerCellKey = headerRow.insertCell();
+            const headerCellValue = headerRow.insertCell();
+            headerCellKey.textContent = "Test Name";
+            headerCellValue.textContent = "Result";
+
+            // Populate table with test results
+            for (const key in resultsObject) {
+                const row = table.insertRow();
+                const cellKey = row.insertCell();
+                const cellValue = row.insertCell();
+                cellKey.textContent = key;
+                cellValue.textContent = resultsObject[key];
+            }
+
+            // Get the test result span element to replace
+            const testResultSpan = document.getElementById("testResult");
+            const parentDiv = testResultSpan.parentElement;
+
+            // Replace the span with the created table
+            parentDiv.removeChild(testResultSpan); // Remove the existing span
+            parentDiv.appendChild(table); // Append the new table
+        }
+
+        async function testPlan() {
+            alert('Test process will be started after clicking the button. Please wait...')
+            try {
+                const res = await testSciencePlan(getParameterByName('planId'))
+                if (res.ok) {
+                    alert("Test process finished. Please check the result.")
+                    const textResult = await res.text()
+                    replaceTestResultWithTable(textResult)
+                    saveTestResultsToStorage(parseTestResults(textResult))
+                    
+                } else {
+                    throw new Error('Failed to test Science Plan');
+                }
+            } catch (err) {
+                alert(err.message)
+            }
+            
+        }
+
+        function saveTestResultsToStorage(results) {
+            // Convert the results object to a JSON string
+            const resultsJSON = JSON.stringify(results);
+            console.log(resultsJSON)
+            // Save the JSON string to localStorage
+            localStorage.setItem(`testResults${getParameterByName('planId')}`, resultsJSON);
+        }
+
+    function retrieveTestResultsFromStorage() {
+        // Retrieve the saved JSON string from localStorage
+        const resultsJSON = localStorage.getItem(`testResults${getParameterByName('planId')}`);
+
+        // Parse the JSON string back into an object
+        const resultsObject = JSON.parse(resultsJSON);
+
+        return resultsObject || {}; // Return an empty object if no results are found
+    }
+
+    // Function to populate the test results table
+    function populateTestResultsTable(results) {
+        // Create a new table element
+        const table = document.createElement('table');
+        table.border = '1'; // Add border for table 
+
+        // Create table headers
+        const headerRow = table.insertRow();
+        const headerCellKey = headerRow.insertCell();
+        const headerCellValue = headerRow.insertCell();
+        headerCellKey.textContent = "Test Name";
+        headerCellValue.textContent = "Result";
+        const testResultSpan = document.getElementById("testResult");
+
+        if (results && Object.keys(results).length > 0) {
+            // Populate table with test results
+            for (const key in results) {
+                const row = table.insertRow();
+                const cellKey = row.insertCell();
+                const cellValue = row.insertCell();
+                cellKey.textContent = key;
+                cellValue.textContent = results[key];
+            }
+    
+            const parentDiv = testResultSpan.parentElement;
+    
+            // Replace the span with the created table
+            parentDiv.removeChild(testResultSpan); // Remove the existing span
+            parentDiv.appendChild(table); // Append the new table
+        } else {
+            testResultSpan.textContent = "NOT TESTED";
+        }
+    }
+
+    // Retrieve test results from localStorage when the page loads
+    window.onload = function() {
+        // Retrieve saved test results from localStorage
+        const savedResults = retrieveTestResultsFromStorage();
+        
+        displaySciencePlan()
+        // Populate the test results table with the retrieved results
+        populateTestResultsTable(savedResults);
+    };
+
+    </script>
+</body>
+
+</html>

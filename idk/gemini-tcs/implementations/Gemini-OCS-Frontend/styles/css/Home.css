@@ -1,0 +1,49 @@
+/* Home.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.button-group {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.btn:hover {
+    background-color: darkorange;
+}
+
+.Log-out {
+    text-align: center;
+}
+
+/* Adjust button width for Log-out button */
+.Log-out .btn {
+    width: 100px;
+}
