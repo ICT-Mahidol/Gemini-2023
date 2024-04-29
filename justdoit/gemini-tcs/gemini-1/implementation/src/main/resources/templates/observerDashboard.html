@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Gemini System</title>
+    <style>
+        body, html {
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+            padding: 10px 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 32px; /* Increased font size */
+            color: #333;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .nav-item {
+            font-size: 16px; /* Reduced font size */
+            color: #333;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: color 0.3s ease; /* Transition for hover effect */
+        }
+
+        .nav-item:hover {
+            color: #667eea; /* Color change on hover */
+        }
+
+        .logout-button {
+            padding: 10px 15px;
+            background-color: #A0A0A0; /* Grey background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease; /* Transition for hover effect */
+        }
+
+        .logout-button:hover {
+            background-color: #888888; /* Darker grey on hover */
+        }
+
+        .content {
+            padding-top: 80px;
+            height: calc(100% - 80px);
+            background-image: url('/assets/dashbg2.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .overlay-text {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            width: 80%;
+            margin: 20px;
+        }
+
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="navbar-nav">
+        <a href="#" class="navbar-brand">Gemini System</a>
+        <a href="/submitscienceplan" class="nav-item">submit Science Plan</a>
+    </div>
+    <button onclick="logout()" class="logout-button">Logout</button>
+</div>
+
+<div class="content">
+    <div class="overlay-text">
+        <h1>Welcome to the Gemini System</h1>
+        <p>Explore the beauty of the cosmos.</p>
+    </div>
+</div>
+
+<script src="/jsc/observerDashboard.js"></script>
+
+</body>
+</html>

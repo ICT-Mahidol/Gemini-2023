@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Science Plan - Gemini System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    .form__field {
+      margin-bottom: 20px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-buttons {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    }
+    .navbar-brand, .nav-item {
+      text-decoration: none;
+      color: #007bff;
+      margin-right: 15px;
+    }
+    .logout-button {
+      background: none;
+      border: none;
+      color: #007bff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <a href="#" class="navbar-brand">Gemini System</a>
+  <div>
+    <a href="/createplan" class="nav-item">Create Science Plan</a>
+    <a href="/testplan" class="nav-item">Test Science Plan</a>
+    <button onclick="logout()" class="logout-button">Logout</button>
+  </div>
+</div>
+<div class="container">
+  <h1>Create Science Plan</h1>
+  <form id="progress-form" action="https://httpbin.org/post" method="POST" novalidate>
+    <!-- General Information -->
+    <div class="form__field">
+      <label for="creatorname">Creator Name</label>
+      <input class="form-control" id="creatorname" type="text" name="creatorname" >
+    </div>
+    <div class="form__field">
+      <label for="submittername">Submitter Name</label>
+      <input class="form-control" id="submittername" type="text" name="submittername" >
+    </div>
+    <div class="form__field">
+      <label for="funding">Funding (USD)</label>
+      <input class="form-control" id="funding" type="number" name="funding" required>
+    </div>
+    <div class="form__field">
+      <label for="objectives">Objectives</label>
+      <textarea class="form-control" id="objectives" name="objectives"></textarea>
+    </div>
+
+    <!-- Data Processing Requirements -->
+    <div class="form__field">
+      <label for="fileType">File Type</label>
+      <select class="form-control" id="fileType" name="fileType" required>
+        <option value="" disabled selected>Please select</option>
+        <option value="JPEG">JPEG (.jpg, .jpeg)</option>
+        <option value="PNG">PNG (.png)</option>
+        <option value="RAW">RAW (.raw)</option>
+      </select>
+    </div>
+    <div class="form__field">
+      <label for="fileQuality">File Quality</label>
+      <select class="form-control" id="fileQuality" name="fileQuality" required>
+        <option value="" disabled selected>Please select</option>
+        <option value="Low">Low</option>
+        <option value="Fine">Fine</option>
+      </select>
+    </div>
+
+    <!-- Added Fields for Step 2 -->
+    <div class="form__field">
+      <label for="colorType">Color Type</label>
+      <select class="form-control" id="colorType" name="colorType" required>
+        <option value="" disabled selected>Please select</option>
+        <option value="B&W mode">B&W mode</option>
+        <option value="Color mode">Color mode</option>
+      </select>
+    </div>
+    <div class="form__field">
+      <label for="brightness">Brightness</label>
+      <input class="form-control" id="brightness" type="number" name="brightness" inputmode="numeric" required>
+    </div>
+    <div class="form__field">
+      <label for="contrast">Contrast</label>
+      <input class="form-control" id="contrast" type="number" name="contrast" inputmode="numeric" required>
+    </div>
+    <div class="form__field">
+      <label for="saturation">Saturation</label>
+      <input class="form-control" id="saturation" type="number" name="saturation" inputmode="numeric" required>
+    </div>
+    <div class="form__field">
+      <label for="highlights">Highlights</label>
+      <input class="form-control" id="highlights" type="number" name="highlights" inputmode="numeric" required>
+    </div>
+    <div class="form__field">
+      <label for="exposure">Exposure</label>
+      <input class="form-control" id="exposure" type="number" name="exposure" inputmode="numeric" required>
+    </div>
+    <div class="form__field">
+      <label for="shadows">Shadows</label>
+      <input class="form-control" id="shadow" type="number" name="shadows" inputmode="numeric" required>
+    </div>
+    <div class="form__field">
+      <label for="whites">Whites</label>
+      <input class="form-control" id="whites" type="number" name="whites" inputmode="numeric" required>
+    </div>
+    <div class="form__field">
+      <label for="hue">Hue</label>
+      <input class="form-control" id="hue" type="number" name="hue" inputmode="numeric" required>
+    </div>
+    <div class="form__field">
+      <label for="blacks">Blacks</label>
+      <input class="form-control" id="blacks" type="number" name="blacks" inputmode="numeric" required>
+    </div>
+    <div class="form__field">
+      <label for="luminance">Luminance</label>
+      <input class="form-control" id="luminance" type="number" name="luminance" inputmode="numeric" required>
+    </div>
+
+    <!-- Step 3 - Star Systems -->
+    <div class="form__field">
+      <label for="starsystem">Stars System</label>
+      <select class="form-control" id="starsystem" name="starsystem" required>
+        <option value="" disabled selected>Please select</option>
+      </select>
+    </div>
+    <div class="form__field">
+      <label for="telescopelocation">Telescope Location</label>
+      <select class="form-control" id="telescopelocation" name="telescopelocation" required>
+        <option value="" disabled selected>Please select</option>
+      </select>
+    </div>
+    <div class="form__field">
+      <label for="startdate">Start Date</label>
+      <input class="form-control" type="date" id="startdate" name="startdate">
+    </div>
+    <div class="form__field">
+      <label for="starttime">Time</label>
+      <input class="form-control" id="starttime" type="time" name="starttime" placeholder="HH:MM:SS">
+    </div>
+    <div class="form__field">
+      <label for="enddate">End Date</label>
+      <input class="form-control" id="enddate" type="date" name="enddate" placeholder="DD / MM / YYYY">
+    </div>
+    <div class="form__field">
+      <label for="endtime">Time</label>
+      <input class="form-control" id="endtime" type="time" name="endtime" placeholder="HH:MM:SS">
+    </div>
+
+    <div class="form-buttons">
+      <button type="submit" class="btn btn-primary">Submit All</button>
+    </div>
+  </form>
+</div>
+<script src="/jsc/create.js"></script>
+</body>
+</html>
