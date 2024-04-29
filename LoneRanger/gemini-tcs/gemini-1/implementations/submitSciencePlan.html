@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Science Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type=text],
+        input[type=date],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f73;
+        }
+    </style>
+</head>
+<body>
+<form id="sciencePlanForm" action="/science-plans/submit" method="post">
+    <h2>Submit Science Plan</h2>
+
+    <label for="planTitle">Plan Title:</label>
+    <input type="text" id="planTitle" name="title" required> <!-- 注意：name属性应与SciencePlan类的字段名称匹配 -->
+
+    <label for="hypothesis">Hypothesis:</label>
+    <textarea id="hypothesis" name="hypothesis" required></textarea>
+
+    <label for="observationStart">Observation Start Date:</label>
+    <input type="date" id="observationStart" name="observationStartDate" required> <!-- 注意：name属性应与SciencePlan类的字段名称匹配 -->
+
+    <label for="observationEnd">Observation End Date:</label>
+    <input type="date" id="observationEnd" name="observationEndDate" required> <!-- 注意：name属性应与SciencePlan类的字段名称匹配 -->
+
+    <button type="submit">Submit Plan</button>
+</form>
+</body>
+</html>
