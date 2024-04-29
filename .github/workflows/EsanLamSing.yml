@@ -29,4 +29,4 @@ jobs:
         # Compile java file from directory
 
       - name: Run executable
-        run: cd HolidayTravelVehicles && java HolidayTravelVehicles.Holiday
+        run: cd EsanLamSing/HolidayTravelVehicles && java HolidayTravelVehicles.Holiday
