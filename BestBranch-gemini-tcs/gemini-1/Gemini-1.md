@@ -1,8 +1,10 @@
 # Step how to execute our project
 
+0. Run ./gradlew build
+
 1. Run docker build -t best_branch/best_branch . command
 
-2. docker run -d -p 8080:8080 --name bestGenimi best_branch/best_branch:latest
+2. Run docker run -d -p 8080:8080 --name bestGenimi best_branch/best_branch:latest
 ## Login Usecase
 
 1. Open http://localhost:8080/ in the browser which Spring boots to initiate DemoApplication and redirects to the login page
