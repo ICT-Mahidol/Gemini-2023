@@ -1,111 +1,113 @@
-.main-container{
-    background-image: url(/images/bg2.jpg);
-    background-position: left;
-    background-size: contain;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.main-container .box{
-    width: 50%;
-}
-
-.main-container .right{
-    background-color: rgb(255, 255, 255);
+body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    text-align: center;
     align-items: center;
+    min-height: 100vh;
+   
 }
 
-.main-container .loginform{
-    display: flex;
-    flex-direction: column  ;
-    box-shadow: 7px 7px 25px -7px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 7px 7px 25px -7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 7px 7px 25px -7px rgba(0,0,0,0.75);
+
+.login-container {
+    width: 400px;
+    background-color: #ffffff;
     padding: 20px;
-    width: 75%;
-    padding-bottom: 30px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-}
-.main-container .loginform form{
-    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
 }
 
-.main-container .loginform input{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: 0px;
-  border-bottom: solid 1px black;
-  width: 80%;
-  height: 40px;
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.form-select{
-margin-top: 5px;
-  margin-bottom: 5px;
-  border: 0px;
-  border-bottom: solid 1px black;
-  width: 80%;
-  height: 40px;
+.input-group {
+    margin-bottom: 15px;
 }
-textarea:focus, input:focus{
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
     outline: none;
 }
-h2{
-    padding: 30px 0px 30px 0px;
-}
-h3{
-    padding: 30px 0px 10px 0px;
-    font-weight: 400;
+
+input:focus {
+    border-color: #56CCF2;
 }
 
-.main-container button{
-    margin-top: 30px;
-    background-color: black;
-    color: white;
-    height: 45px;
+button {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border: 0;
-    border-radius: 10px;
-    margin-bottom: 30px;
-}
-.input-group{
-    align-items: center;
-}
-.input-group-text{
-    background-color: white;
-    border: 0;
-}
-.form-control{
-    border-radius: 0;
-}
-h4{
-    font-weight: 300;
-    font-size: 1.2em;
-    padding-bottom: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #56CCF2;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-@media (max-width: 900px) {
-    .main-container{
-        flex-direction: column;
-    }
-    .main-container .box{
-        width: auto;
-        height: 100vh;
-    }
-    .main-container .box.left{
-        width: 0;
-        height: 0;
-    }
+button:hover {
+    background-color: #2D9CDB;
 }
-#loginalert{
-    display: none;
+.bigbox{
+   
+    display: flex;
+
 }
+
+.divbox{
+    /* background-image: url("https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg");
+    width: 800px;
+    height: 800px; */
+   
+}
+.wall{
+    width: 1200px;
+    height: 800px; 
+    /* height: fit-content;
+    width: fit-content; */
+}
+
+.regis{
+    margin-top: 15px;
+    background-color: #2D9CDB;
+    display: flex;
+    justify-content: center;
+    color: rgb(247, 250, 252);
+    text-align: center;
+    padding-top: 3px;
+}
+a{
+    font-size: 16px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    font-family: Karantina, 'Source Sans Pro';
+    font-weight: 800;
+    color: rgb(247, 250, 252);
+   
+}
+
+.pic1{
+    margin-top: 20px;
+    width: 360px;
+    height: 360px;
+}
+
+
+
+
+
+

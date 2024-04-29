@@ -1,75 +1,73 @@
 <!DOCTYPE html>
-<html>
-
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Gemini System</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/login.css">
-  <script src="https://kit.fontawesome.com/100c767ee6.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+<body class="big" style="background-image: url('https://w0.peakpx.com/wallpaper/379/181/HD-wallpaper-among-the-stars-among-m-a-visuals-alone-astronaut-astronomy-blue-cosmos-earth-is-nasa-planet-space-stars-sun-universe.jpg'); background-size: cover;">
+    <div class="pagebox">
+                <div class="register-container">
+                    <h2>Sign-Up</h2>
+                    <form id="regisForm" action="#" th:action="@{/register}" method="post" th:object="${regisData}">
+                        <div class="input-group">
+                            <input type="text" name="name" id="name" placeholder="Full Name" required th:field="*{name}">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="username" id="username" placeholder="Username" required th:field="*{username}">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" name="password" id="password" placeholder="Password" required th:field="*{password}">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="input-group">
+                            <select class="form-select" name="role" id="role" required th:field="*{role}">
+                                <option value="">Select a role</option>
+                                <option value="Astronomer">Astronomer</option>
+                                <option value="ScrienceObserver">Scrience Observer</option>
+                            </select>
+                        </div>
+                                           
+                        <button type="button" onclick="validateForm()">Sign-Up</button>
+            
+                       <div class = "bot-but">
+                             <button type="button" class="btn btn-outline-light">
+                                 <a href="/login" style=" text-decoration: none;">Sign-In</a>
+                            </button>
+                        </div>
+                        <!-- <a href="/login">login</a> -->
+                    </form>
+                    <div class="alert alert-danger" role="alert" th:text="${error}" th:if="${error}"></div>
+                    
+            </div>
 
-<body>
-  <div class="main-container">
-    <div class="box left"></div>
-    <div class="box right">
-      <h2>Welcome to Gemini System</h2>
-      <div class="loginform">
-        <h3>Create a new account</h3>
-        <h4>Already have an account <a href="../">Sign In</a></h4>
-        <form>
-          <div class="form-group">
-            <label for="Username">Username</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i>
-                </span>
-              </div>
-              <input type="text" class="form-control" id="username" placeholder="Enter your Username" required>
+            <!-- <div class="smallbox">
+                <img class="pic1" src="https://w0.peakpx.com/wallpaper/379/181/HD-wallpaper-among-the-stars-among-m-a-visuals-alone-astronaut-astronomy-blue-cosmos-earth-is-nasa-planet-space-stars-sun-universe.jpg" alt="alternatetext">
+            </div> -->
+
             </div>
-          </div>
-          <div class="form-group">
-            <label for="Password">Password</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fa fa-lock"></i></span>
-              </div>
-              <input type="password" class="form-control" id="password" placeholder="Enter your Password" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="accountname">Full Name</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fa fa-signature"></i></span>
-              </div>
-              <input type="text" class="form-control" id="accountname" placeholder="Enter your Full Name" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="accountname">Permission</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fa-solid fa-eye"></i></span>
-              </div>
-              <select class="form-select" aria-label="Default select example" name="userPermission" id="permission" required>
-                <option value="">Select Permission</option>
-                <option value="Astronomer">Astronomer</option>
-                <option value="Observer">Observer</option>
-              </select>
-            </div>
-          </div>
-          <button onclick="register()" class="btn btn-primary">Register</button>
-        </form>
-        <div class="alert alert-danger" role="alert" id="loginalert"></div>
-      </div>
-    </div>
-  </div>
-  <script src="/js/login.js">
+           
+
+        
    
-  </script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const form = document.getElementById('regisForm');
 
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                exit();
+            }else{
+                form.submit();
+            }
+        }
+    </script>
+</body>
 </html>

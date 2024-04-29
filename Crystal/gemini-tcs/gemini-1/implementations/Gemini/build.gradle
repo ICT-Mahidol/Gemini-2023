@@ -1,15 +1,12 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.2.5'
-	id 'io.spring.dependency-management' version '1.1.4'
+	id 'org.springframework.boot' version '3.0.6'
+	id 'io.spring.dependency-management' version '1.1.0'
 }
 
 group = 'th.ac.mahidol.ict'
 version = '0.0.1-SNAPSHOT'
-
-java {
-	sourceCompatibility = '17'
-}
+sourceCompatibility = '17'
 
 repositories {
 	mavenCentral()
@@ -17,14 +14,25 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'com.h2database:h2'
+	testImplementation 'com.h2database:h2:2.0.204'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation files("lib/OCS.jar")
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+// Configure main class for Spring Boot plugin
+springBoot {
+	mainClass = 'th.ac.mahidol.ict.crystal.GeminiApplication'
+}
+
+// Define bootJar task
+bootJar {
+	enabled = true // Enable the bootJar task
+	archiveFileName = 'crystal-gemini.jar' // Specify the name of the JAR file to be created
 }

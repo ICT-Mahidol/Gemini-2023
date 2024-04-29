@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="/css/navigation.css">
+     <link rel="stylesheet" href="/css/footer.css">
+     <link rel="stylesheet" href="/css/scienceplan.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+     
+     <div th:replace="~{fragments/navigation :: navigation}"></div>
+     <div class="main-content" >
+          <div class="container my-5">
+               
+               <div class="card mb-3" th:each="p : ${sciencePlans}">
+                    <div class="card-header bg-transparent ">
+                         <h5 th:text="${'Plan No. ' + p.getPlanNo()}"></h5>
+                    </div>
+                    <div class="card-body ">
+                         <h5 class="card-title">
+                              <span class="me-2" th:text="${'Creator : '+p.getCreator()}"></span>
+                              <span class="ms-2" th:if="${p.getSubmitter() != null}" th:text="${'Submitter : '+p.getSubmitter()}"></span>
+                              <span class="ms-2" th:if="${p.getSubmitter() == 'null'}" th:text="${'Submitter : '}"></span>
+                         </h5>
+                         <p class="card-text" th:text="${'FundingInUSD : ' +p.getFundingInUSD()}"></p>
+                         <p class="card-text" th:text="${'Objectives : '+p.getObjectives()}"></p>
+                         <p class="card-text" th:text="${'StarSystem : '+p.getStarSystem()}"></p>
+                         <p>
+                              <span class="me-2" th:text="${'StartDate : '+p.getStartDate()}"></span>
+                              <span class="ms-2" th:text="${'EndDate : '+p.getEndDate()}"></span>
+                         </p>
+                         <p th:text="${'TelescopeLocation : '+p.getTelescopeLocation()}"></p>
+                         <div class="accordion accordion-flush" id="accordion">
+                              <div class="accordion-item mb-3">
+                                   <h2 class="accordion-header" th:id="'heading'+${p.getPlanNo()}">
+                                        <button class="accordion-button collapsed p-0 mb-3" type="button"
+                                             data-bs-toggle="collapse"
+                                             th:attr="data-bs-target='#collapse'+${p.getPlanNo()},aria-controls='#collapse'+${p.getPlanNo()}"
+                                             aria-expanded="true">
+                                             DataProcRequirements :
+                                        </button>
+                                   </h2>
+                                   <div th:id="'collapse'+${p.getPlanNo()}" class="accordion-collapse collapse collapse"
+                                        th:attr="aria-labelledby='heading'+${p.getPlanNo()}"
+                                        data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                             <ul th:each="data : ${p.getDataProcRequirements()}">
+                                                  <li th:text="${'FileType - '+data.fileType}"></li>
+                                                  <li th:text="${'FileQuality - '+data.fileQuality}"></li>
+                                                  <li th:text="${'ColorType - '+data.colorType}"></li>
+                                                  <li th:text="${'Contrast - '+data.contrast}"></li>
+                                                  <li th:text="${'Brightness - '+data.brightness}"></li>
+                                                  <li th:text="${'Saturation - '+data.saturation}"></li>
+                                                  <li th:text="${'Highlights - '+data.highlights}"></li>
+                                                  <li th:text="${'Exposure - '+data.exposure}"></li>
+                                                  <li th:text="${'Shadows - '+data.shadows}"></li>
+                                                  <li th:text="${'Whites - '+data.whites}"></li>
+                                                  <li th:text="${'Blacks - '+data.blacks}"></li>
+                                                  <li th:text="${'Luminance - '+data.luminance}"></li>
+                                                  <li th:text="${'Hue - '+data.hue}"></li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="card-footer p-0 pt-3 bg-transparent">
+                              <div class="d-flex justify-content-between">
+                                   <h5 class="m-0 pt-2">
+                                        <span th:if="${p.getStatus().toString() == 'SAVED'}" class="text-primary"
+                                             th:text="${'Status : '+p.getStatus()}"></span>
+                                        <span th:if="${p.getStatus().toString() == 'TESTED'}" class="text-warning"
+                                             th:text="${'Status : '+p.getStatus()}"></span>
+                                        <span th:if="${p.getStatus().toString() == 'SUBMITTED'}" class="text-success"
+                                             th:text="${'Status : '+p.getStatus()}"></span>
+                                        <span th:if="${p.getStatus().toString() == 'CANCELLED'}" class="text-danger"
+                                             th:text="${'Status : '+p.getStatus()}"></span>
+                                   </h5>
+                                   <div th:if="${role}">
+                                        <a th:if="${p.getStatus().toString() == 'SAVED'}"
+                                             th:href="'/testSciPlan/'+${p.getPlanNo()}"
+                                             class="btn btn-warning btn-lg">Test</a>
+                                        <a th:if="${p.getStatus().toString() == 'TESTED'}"
+                                             th:href="'/submitSciPlan/'+${p.getPlanNo()}"
+                                             class="btn btn-success btn-lg">Submit</a>
+                                        <a th:if="${p.getStatus().toString() == 'SUBMITTED'}"
+                                             th:href="'/cancelSciPlan/'+${p.getPlanNo()}"
+                                             class="btn btn-danger btn-lg">Cancel</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="alert alert-primary my-2" role="alert" th:text="${msg}" th:if="${id} == ${p.getPlanNo()}"></div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div th:replace="~{fragments/footer :: footer}"></div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>
