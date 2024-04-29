@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body class="big" style="background-image: url('https://w0.peakpx.com/wallpaper/379/181/HD-wallpaper-among-the-stars-among-m-a-visuals-alone-astronaut-astronomy-blue-cosmos-earth-is-nasa-planet-space-stars-sun-universe.jpg'); background-size: cover;">
+    <div class="pagebox">
+                <div class="register-container">
+                    <h2>Sign-Up</h2>
+                    <form id="regisForm" action="#" th:action="@{/register}" method="post" th:object="${regisData}">
+                        <div class="input-group">
+                            <input type="text" name="name" id="name" placeholder="Full Name" required th:field="*{name}">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="username" id="username" placeholder="Username" required th:field="*{username}">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" name="password" id="password" placeholder="Password" required th:field="*{password}">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="input-group">
+                            <select class="form-select" name="role" id="role" required th:field="*{role}">
+                                <option value="">Select a role</option>
+                                <option value="Astronomer">Astronomer</option>
+                                <option value="ScrienceObserver">Scrience Observer</option>
+                            </select>
+                        </div>
+                                           
+                        <button type="button" onclick="validateForm()">Sign-Up</button>
+            
+                       <div class = "bot-but">
+                             <button type="button" class="btn btn-outline-light">
+                                 <a href="/login" style=" text-decoration: none;">Sign-In</a>
+                            </button>
+                        </div>
+                        <!-- <a href="/login">login</a> -->
+                    </form>
+                    <div class="alert alert-danger" role="alert" th:text="${error}" th:if="${error}"></div>
+                    
+            </div>
+
+            <!-- <div class="smallbox">
+                <img class="pic1" src="https://w0.peakpx.com/wallpaper/379/181/HD-wallpaper-among-the-stars-among-m-a-visuals-alone-astronaut-astronomy-blue-cosmos-earth-is-nasa-planet-space-stars-sun-universe.jpg" alt="alternatetext">
+            </div> -->
+
+            </div>
+           
+
+        
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const form = document.getElementById('regisForm');
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                exit();
+            }else{
+                form.submit();
+            }
+        }
+    </script>
+</body>
+</html>
