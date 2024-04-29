@@ -35,3 +35,8 @@ Model-View-Controller (MVC) pattern
 - Model: MySciencePlan, MySpecialEquipment, User
 - View: React
 - Controller: MySciencePlanController, MySpecialEquipmentController, UserController
+  
+### Why we used this Design Pattern
+- It's seperates the components: Model, View, and Controller so it help managing complexity by dividing the responsibilities of the application.
+- Better Code Organization easy to read.
+- Reusable we can reuse the function easily.
