@@ -1,0 +1,3 @@
+2024-04-29 15:45:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "MASASTRONOMICALDATA" not found; SQL statement:
+INSERT INTO masAstronomicalData VALUES(3,1,'http://www.gemini.edu/images/pio/News/2020/pr2020_03/minimoon-TARcropcln-CC.jpg'); [42102-192]
