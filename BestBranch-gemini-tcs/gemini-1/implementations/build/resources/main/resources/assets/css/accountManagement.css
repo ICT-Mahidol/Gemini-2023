@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This ensures padding does not affect the total width */
+  }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Tingting_Uni.jpg'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 10; /* Ensure the logo stays on top of other elements */
+}
+
+.logo {
+    width: 100px; /* Adjust as needed */
+    height: auto; /* Keep the aspect ratio */
+}
+
+.left-column {
+    color: white;
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.right-column {
+    background-color: white;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.input-container i {
+    color: #1E0342;
+}
+
+.register-container {
+    width: 80%;
+    margin: auto;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form label, 
+.register-form input,
+.register-form select{
+    margin-bottom: 10px;
+    padding: 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 80%;
+    color: #757575;
+}
+
+.register-form button {
+    background-color: #FFB21E;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    width: 45%;
+}
+
+.register-form button:hover {
+    background-color: #eb9900;
+}
+
+a {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #585858;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.form-footer button,
+.form-footer .signin-link {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+
+    .left-column {
+        order: 2; /* Register form appears first on small screens */
+    }
+
+    .right-column {
+        order: 1;
+    }
+
+    .register-container {
+        width: 90%;
+    }
+}

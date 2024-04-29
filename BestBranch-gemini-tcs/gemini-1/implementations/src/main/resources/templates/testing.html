@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Gemini</title>
+    <link rel="icon" type="image/x-icon" th:src="@{images/Logo.ico}">
+    <link rel="stylesheet" th:href="@{assets/css/testing.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+<body>
+
+</head>
+<div class="container">
+    <!-- Greeting message -->
+    <div class="greeting-message">
+        <h1>Testing A Science Plan
+        </h1>
+    </div>
+    <!-- Menu -->
+    <div class="menu">
+        <div class="logo-container">
+            <img th:src="@{images/Logo_circle.png}" alt="Logo" class="logo">
+            <span class="menu-text">Gemini</span>
+            <span class="menu-version">V0.1</span>
+        </div>
+        <ul>
+            <li><a th:href="@{/dashboard}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Dashboard</a></li>
+            <li><a th:href="@{/CreateSciPlan}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Create Plan</a></li>
+            <li><a th:href="@{/submission}"><img th:src="@{images/user-square%201.png}" alt="Logo" class="logo-menu">Submission</a></li>
+            <li><a th:href="@{/testing}"><img th:src="@{images/wallet-money%202.png}" alt="Logo" class="logo-menu">Testing</a></li>
+        </ul>
+        <div class="profile">
+            <a th:href="@{/login}" class="logout-link">
+                <img th:src="@{/images/user.png}" alt="Logo" class="logo-menu">
+                <span>Log out</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- submit -->
+<div class="container">
+    <!-- Plan list -->
+    <div class="plan-list">
+        <div class="plan-list-header">
+            <div class="description-plan">
+                <h2>Plan Waiting for Testing</h2>
+            </div>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>Plan ID</th>
+                <th>Star System</th>
+                <th>Creator</th>
+                <th>Submitter</th>
+                <th>Objectives</th>
+                <th>Funding</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Test Button</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="plan : ${plans}" th:if="${hasPlans}">
+                <td th:text="${plan.planNo}"></td>
+                <td th:text="${plan.starSystem}"></td>
+                <td th:text="${plan.creator.getName()}"></td>
+                <td th:text="${plan.submitter.getName()}"></td>
+                <td th:text="${plan.objectives}"></td>
+                <td th:text="${plan.fundingInUSD}"></td>
+                <td th:text="${plan.startDate}"></td>
+                <td th:text="${plan.endDate}"></td>
+                <td th:text="${plan.telescopeLocation}"></td>
+                <td th:text="${plan.status}"></td>
+                <td class="submit-cell">
+                    <form th:action="@{/testing}" method="post">
+                        <button type="submit" th:value="${plan.planNo}" th:text="${plan.planNo}"  id="planId" name="planId" class="submit-btn">Test</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <tr th:if="${!hasPlans}" th:text="${plans}">
+        </tr>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Testing Gemini</title>-->
+<!--    <link rel="icon" type="image/x-icon" th:src="@{images/Logo.ico}">-->
+<!--    <link rel="stylesheet" th:href="@{assets/css/testing.css}">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">-->
+
+<!--    <script>-->
+<!--    function updateSciPlanDetails() {-->
+<!--        var planId = document.getElementById("planId").value;-->
+<!--        var detailsContainer = document.getElementById("sciPlanDetails");-->
+<!--            if (planId) {-->
+<!--            fetch(`/api/plan-details/${planId}`)-->
+<!--                .then(response => response.json())-->
+<!--                .then(plan => {-->
+<!--                    document.getElementById("planIdCell").innerText = plan.planId;-->
+<!--                    document.getElementById("startDateCell").innerText = plan.startDate;-->
+<!--                    document.getElementById("endDateCell").innerText = plan.endDate;-->
+<!--                    document.getElementById("fundingCell").innerText = plan.funding;-->
+<!--                    document.getElementById("starSystemCell").innerText = plan.starSystem;-->
+<!--                    document.getElementById("objectiveCell").innerText = plan.objective;-->
+<!--                    document.getElementById("locationCell").innerText = plan.location;-->
+<!--                    detailsContainer.style.display = 'block';-->
+<!--                });-->
+<!--        } else {-->
+<!--            detailsContainer.style.display = 'none';-->
+<!--        }-->
+<!--    }-->
+<!--    </script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<aside class="sidebar">-->
+<!--    &lt;!&ndash; Sidebar content here &ndash;&gt;-->
+<!--    <div class="menu">-->
+<!--        <div class="logo-container">-->
+<!--            <img th:src="@{images/Logo_circle.png}" alt="Logo" class="logo">-->
+<!--            <span class="menu-text">Gemini</span>-->
+<!--            <span class="menu-version">V0.1</span>-->
+<!--        </div>-->
+<!--        <ul>-->
+<!--            <li><a th:href="@{/dashboard}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Dashboard</a></li>-->
+<!--            <li><a th:href="@{/CreateSciPlan}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Create Plan</a></li>-->
+<!--            <li><a th:href="@{/submission}"><img th:src="@{images/user-square%201.png}" alt="Logo" class="logo-menu">Submission</a></li>-->
+<!--            <li><a th:href="@{/testing}"><img th:src="@{images/wallet-money%202.png}" alt="Logo" class="logo-menu">Testing</a></li>-->
+<!--        </ul>-->
+<!--        <div class="profile">-->
+<!--            <a href="/login">-->
+<!--                <img th:src="@{images/user.png}" alt="Logo" class="logo-menu">-->
+<!--                <span>Log out</span>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</aside>-->
+<!--&lt;!&ndash; submit &ndash;&gt;-->
+<!--<div class="testing-container">-->
+<!--    <div class="greeting-message">-->
+<!--        <h1>Testing</h1>-->
+<!--    </div>-->
+<!--    <main class="testing-content">-->
+<!--        <div class="testing-form">-->
+<!--            <form id="testingForm" th:action="@{/testing}" method="post">-->
+<!--                <div class="form-group">-->
+<!--                    <label for="planId">Choose Plan ID</label>-->
+<!--                    <select id="planId" name="planId" onchange="updateSciPlanDetails()">-->
+<!--                        <option value="">Select...</option>-->
+<!--                        <th:block th:each="plan : ${plans}">-->
+<!--                            <option th:value="${plan.getPlanNo()}" th:text="${plan.planNo}" ></option>-->
+<!--                        </th:block>-->
+<!--                        &lt;!&ndash; Option values go here &ndash;&gt;-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                <div id="sciPlanDetails" class="sci-plan-details" style="display:none;">-->
+<!--                    <table class="plan-details-table">-->
+<!--                        <tr>-->
+<!--                            <th>Plan ID</th>-->
+<!--                            <td id="planIdCell"></td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <th>Start Date</th>-->
+<!--                            <td id="startDateCell"></td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <th>End Date</th>-->
+<!--                            <td id="endDateCell"></td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <th>Funding</th>-->
+<!--                            <td id="fundingCell"></td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <th>Star System</th>-->
+<!--                            <td id="starSystemCell"></td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <th>Objective</th>-->
+<!--                            <td id="objectiveCell"></td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <th>Location</th>-->
+<!--                            <td id="locationCell"></td>-->
+<!--                        </tr>-->
+<!--                    </table>-->
+<!--                </div>-->
+<!--                <div class="form-actions">-->
+<!--                    <div class="form-actions">-->
+<!--                        <a th:href="@{/dashboard}" button type="cancel" class="cancel-btn">Cancel</button></a></button>-->
+<!--                        <a th:href="@{/dashboard}" button type="submit" class="submit-btn">Test</a></button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </main>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
