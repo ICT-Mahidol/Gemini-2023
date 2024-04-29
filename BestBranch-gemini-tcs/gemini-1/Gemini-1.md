@@ -1,19 +1,20 @@
 # Step how to execute our project
 
-## Login Usecase
-1. Start by initiating demoApplication Spring bean in ..\main\java\Demo\DemoApplication.java
-![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/131664453/501cf777-08d5-42b9-afc3-6f589e167339)
+1. Run docker build -t best_branch/best_branch . command
 
-2. Open http://localhost:8080/ in the browser which Spring boots to initiate DemoApplication and redirects to the login page
+2. docker run -d -p 8080:8080 --name bestGenimi best_branch/best_branch:latest
+## Login Usecase
+
+1. Open http://localhost:8080/ in the browser which Spring boots to initiate DemoApplication and redirects to the login page
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/131664453/efaefe23-c0a6-469a-8a31-a76deb1cc23b)
 
-3. If the User did not have an account, the user is required to register to the system first
+2. If the User did not have an account, the user is required to register to the system first
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/131664453/9ccbb756-fa18-4f4a-9202-2a52cd60bc1e)
 
-4. Once the user has an account, the next step is to log in to the system
+3. Once the user has an account, the next step is to log in to the system
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/131664453/18ac6235-8025-48ce-bedd-07282a3fd52f)
 
-5. After authentication, the controller will redirect the user to the dashboard of the system to see the current ongoing plan that happening in the system
+4. After authentication, the controller will redirect the user to the dashboard of the system to see the current ongoing plan that happening in the system
 ![image](https://github.com/ICT-Mahidol/Gemini-2023/assets/131664453/3ad8fd2b-0f12-4f9f-8577-4c4d3044db79)
 
 ## Manu bar
