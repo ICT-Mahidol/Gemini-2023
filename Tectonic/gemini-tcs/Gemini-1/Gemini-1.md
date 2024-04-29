@@ -10,8 +10,11 @@
 
 ## How to run
 1.git clone https://github.com/ICT-Mahidol/Gemini-2023.git
+
 2.Open your compiler such as VSCode or IntelliJ
+
 3.Run DemoApplication.java
+
 4.Use your browser such as Chrome and typing URL: http://localhost:8080/
 
 ## Selected Use Case
