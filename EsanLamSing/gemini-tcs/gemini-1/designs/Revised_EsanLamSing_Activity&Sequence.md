@@ -11,17 +11,19 @@
 # Activity & Sequence Diagram
 
 ## Astronomer -> Submit Science Plan
+![EsanLamSing - Astronomer _ Submit Science Plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/78d3a9ac-5f90-48e0-97f1-e6d39f611c52)
 
-![For_SE_Project - Astronomer _ Submit Science Plan_final](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/5253598a-268a-4be9-a641-247480c006dc)
 
 
 ## Science Observer -> Validate Science Plan
+![EsanLamSing- Science Observer _ Validate Science Plan](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/4525035a-2964-4793-8e4e-51162eaf08fd)
 
-![For_SE_Project - Science Observer _ Validate Science Plan_final](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/92bb13d4-eff2-4635-8018-fac0d19b12d1)
+
 
 
 
 ## Support -> Install New Configurations
+![EsanLamSing - Install new configuration](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/d30e8e33-6a2e-48e8-869a-fd5a056e187c)
 
-![For_SE_Project - Install new configuration_final](https://github.com/ICT-Mahidol/Gemini-2023/assets/141797438/3cffa61a-22e2-408c-9ee6-a1325180d87b)
+
 
