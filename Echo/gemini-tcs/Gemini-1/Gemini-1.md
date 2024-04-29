@@ -18,6 +18,13 @@ There are 4 use cases:
 3. Validate a science plan by science observers.
 4. Create an observing program by science observers.
 
+## Design Pattern
+The Echo-Gemini project is designed around the MVC (Model-View-Controller) pattern, which separates the application into three interconnected components:
+
+- **Model**: The project defines several classes (e.g., ObservingProgramEcho, SciencePlanEcho, and User) responsible for managing the application's data. These classes handle operations related to observing programs, science plans, and users.
+- **View**: HTML templates are used to present the application's data to users. These templates, including those for displaying created science plans, creating observing programs, and creating/validating science plans, are responsible for rendering the user interface in a readable format.
+- **Controller**: Java classes serve as controllers, managing HTTP requests and acting as intermediaries between the model and view. Controllers process user inputs, update the model based on these inputs, and select the appropriate view to render the response to the user.
+
 
 ## How to run the Application
 To run the application, download the implementations folder and execute the Java file named "BackendApplication.java".
