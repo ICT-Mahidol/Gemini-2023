@@ -27,7 +27,7 @@ Login use case:
 - Submit Science Plan
 - Validate a Science Plan
 - Install new configuration
-Our project website: http://localhost:8080/
+First, you will need to create science plan by using auto-generated function via: http://localhost:3030/autosp/{email}. For example, http://localhost:3030/autosp/test1@gmail.com to generate science plan that created by the owner of email: test1@gmail.com.
 
 ## Design Pattern
 Model-View-Controller (MVC) pattern
