@@ -21,8 +21,7 @@
                     <th>Objective</th>
                     <th>Status</th>
                     <th>View</th>
-                    <th>Update</th>
-                    <th>Delete</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -59,8 +58,7 @@
                         <td>${plan.objective}</td>
                         <td>${plan.status}</td>
                         <td><a href="ViewSP2.html?planId=${plan.planId}">view</a></td>
-                        <td><a href="UpdateSP.html?planId=${plan.planId2}">update</a></td>
-                    </tr>
+                        
                 `;
                 tableBody.innerHTML += row;
             });

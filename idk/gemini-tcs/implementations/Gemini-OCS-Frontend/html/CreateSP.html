@@ -16,20 +16,25 @@
         <h2>Set Data Proc Requirements</h3>
             <div class="form-group">
                 <label for="fileType">File Type:</label>
-                <input type="text" id="fileType" name="fileType" required>
+                <select id="fileType" name="fileType" required>
+                    <option value="PNG">PNG</option>
+                    <option value="JPEG">JPEG</option>
+                    <option value="RAW" >RAW</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="fileQuality">File Quality:</label>
                 <select id="fileQuality" name="fileQuality" required>
-                    <option value="High">High</option>
-                    <option value="Medium">Medium</option>
+                    <option value="Fine">Fine</option>
                     <option value="Low">Low</option>
-                    <option value="none" selected>-</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="colorType">Color Type:</label>
-                <input type="text" id="colorType" name="colorType" required>
+                <select id="colorType" name="colorType" required>
+                    <option value="B&W mode">B&W mode</option>
+                    <option value="Color mode">Color mode</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="contrast">Contrast:</label>
@@ -88,8 +93,8 @@
                 <input type="number" id="fundingInUSD" name="fundingInUSD" step="1000" required>
             </div>
             <div class="form-group">
-                <label for="objective">Objective:</label>
-                <textarea id="objective" name="objective" required></textarea>
+                <label for="objectives">Objective:</label>
+                <textarea id="objectives" name="objectives" required></textarea>
             </div>
             <div class="form-group">
                 <label for="starSystem">Star System:</label>
@@ -118,13 +123,13 @@
                     <option value="CHILE">Chile (South)</option>
                 </select>
             </div>
-            
-            <button onclick="location.href='Home.html'" class="btn">Cancle</button>
+
+            <button onclick="location.href='Home.html'" class="btn">Back</button>
 
             <!-- ปุ่ม Save -->
             <form id=" ## " action="../api.js" method="post">
                 <!-- Input fields here -->
-            
+
                 <!-- Save button -->
                 <button type="submit" class="btn">Save</button>
 
@@ -133,8 +138,8 @@
         </form>
     </div>
     <script>
-        
-        document.getElementById('createSPForm').addEventListener('submit', async function(event) {
+
+        document.getElementById('createSPForm').addEventListener('submit', async function (event) {
             event.preventDefault() // Prevent default form submission behavior
 
             // Function to convert date format from mm/dd/yyyy to dd/mm/yyyy for StartDate
@@ -178,15 +183,11 @@
             const startDateValue = convertDateFormatStart(document.getElementById('startDate').value)
             const endDateValue = convertDateFormatEnd(document.getElementById('endDate').value)
 
-            console.log(document.getElementById('objective').value)
-            console.log(document.getElementById('fundingInUSD').value)
-            console.log(document.getElementById('fundingInUSD').value)
-
             const sp = {
                 creator: document.getElementById('creatorName').value,
                 submitter: document.getElementById('submitter').value,
                 fundingInUSD: parseFloat(document.getElementById('fundingInUSD').value),
-                objectives: document.getElementById('objective').value,
+                objectives: document.getElementById('objectives').value,
                 starSystem: document.getElementById('starSystem').value,
                 startDate: startDateValue,
                 endDate: endDateValue,
@@ -208,27 +209,21 @@
                 }
             };
 
-            console.log(JSON.stringify(sp))
-            
-        
+
             try {
-                const res = await createSciencePlan(sp) // Call your API function
-                const message = await res.text()
-                if (!res.ok) {
-
-                    console.error('Error:', message)
-                    alert(message)
-                    return
+                const response = await createSciencePlan(sp); // Call your API function
+                console.log(response.body);
+                if (response.ok) {
+                    alert('Science plan created successfully!');
+                    // Optionally, redirect to another page after successful creation
+                } else {
+                    alert('Failed to create science plan.');
                 }
-
-                console.log(message)
-                alert(message)
-                
             } catch (error) {
-                console.error('Error creating science plan:', error)
-                alert('An error occurred while creating the science plan.')
+                console.error('Error creating science plan:', error);
+                alert('An error occurred while creating the science plan.');
             }
-        })
+        });
     </script>
 </body>
 

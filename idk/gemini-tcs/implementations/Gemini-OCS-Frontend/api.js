@@ -28,3 +28,14 @@ async function submitSciencePlan(sp_id) {
     })
 }
 
+async function authenticate(user) {
+    return await fetch(`${API_URL}/login`, {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+        },
+        body: JSON.stringify(user)
+    })
+}
+
+
