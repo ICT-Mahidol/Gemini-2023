@@ -28,16 +28,25 @@
 
 ## Usage
 **1. Login**
+
 a.    On the "Create Science Plan" page, fill in the required fields such as creator, funding, objectives, star system, start and end dates, and telescope location
+
 b.    Optionally, you can specify data processing requirements by clicking the "Show/Hide" button and filling in the desired settings
+ 
 c.    Click the "Submit" button to create the science plan
 
 **2. Observing Program**
+
 a.    Select a science plan from the list by checking the corresponding checkbox 
+
 b.    Input the required observing program parameters
+
 c.    Click the "Create Observing Program" button
+
 d.    If the observing program is valid, it will be saved to the OCS, and a success message will be displayed
+
 e.    If the observing program is invalid, an error message will be displayed
 
 **3. Astronomical Data**
+
 a.    Access the page to see the stars’ images
