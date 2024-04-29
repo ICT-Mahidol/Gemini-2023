@@ -15,6 +15,7 @@ This project is part of ITCS431 Software Design and Development.
 ## How to run this project
 We seperate Frontend (React.js) and Backend (SpringBoot with Postgresql)
 This project requires to run Frontend and Backend seperately with docker command:
+For the backend please use `gradlew build` before run docker
 - Start server by using `docker-compose up`
 - Stop server by using `docker-compose down`
 
