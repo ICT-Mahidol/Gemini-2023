@@ -1,5 +1,5 @@
 # 0. Class diagram
-![SD Model Class Diagram](https://github.com/ICT-Mahidol/Gemini-2023/assets/128472969/4c0d3b03-7958-41eb-8ad9-68299d7bcad4)
+![SD Model Class Diagram03](https://github.com/ICT-Mahidol/Gemini-2023/assets/102424570/a8660c6e-2788-465a-92d5-3649815d2c2f)
 
 # 1. Create Science Plan
 ### Sequence diagram
