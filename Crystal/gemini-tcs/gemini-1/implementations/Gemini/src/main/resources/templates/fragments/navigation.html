@@ -1,0 +1,16 @@
+<body>
+    <header class="header" th:fragment="navigation">
+        <h1 class="logo">Crystal</h1>
+        <div> <a th:if="${userData != null}" th:text="${userData.getName()} "></a>
+            <a th:if="${userData != null}" th:text="${userData.getRole()} "></a>
+        </div>
+        <nav class="navigation">
+            <!-- <a href="/scienceplan">Science Plan</a> -->
+            <a class="btn" href="/createsciplan" style="margin: 0;">
+                         + Add Science Plans
+                    </a>
+            <a th:if="${!loginStatus}" href="/login">Login</a>
+            <a th:if="${loginStatus}" href="/logout">Logout</a>
+        </nav>
+    </header>
+</body>
