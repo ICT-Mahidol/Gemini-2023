@@ -71,7 +71,6 @@ populateObservingprograms();
 
 
 async function createObservingprogram(ObservingData) {
-    var submitter = document.getElementById("submitter").value;
     try {
         console.log(ObservingData);
         const res = await fetch(`http://localhost:8080/create-observingprogram`, {
