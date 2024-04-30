@@ -31,9 +31,11 @@ tasks.named('test') {
 }
 
 jar {
+	from {
+		configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+	include 'lib/OCS.jar'
 	manifest {
-		attributes(
-				'Main-Class': 'Demo.DemoApplication'
-		)
+		attributes 'Main-Class': 'Demo.DemoApplication'
 	}
 }
