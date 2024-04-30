@@ -50,4 +50,6 @@
 
 - **Sequence diagram**
 
-![Sequence diagram 1-2 - Page 1 (1)](https://github.com/ICT-Mahidol/Gemini-2023/assets/94012979/f225ff02-4346-4205-993f-b9f37809ed40)
+<img width="394" alt="Screenshot 2567-04-30 at 15 52 50" src="https://github.com/ICT-Mahidol/Gemini-2023/assets/126260418/7d52e832-57eb-4a4e-8479-b6d26e4f2b7b">
+
+
