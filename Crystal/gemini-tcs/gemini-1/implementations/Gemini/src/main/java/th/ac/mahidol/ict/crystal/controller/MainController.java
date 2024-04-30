@@ -41,7 +41,9 @@ public class MainController {
             model.addAttribute("role" , false);
         }
         // Retrieve all science plans from the OCS service and add attribute to model.
-        ArrayList<SciencePlan> sciencePlans = ocs.getAllSciencePlans();
+        
+        ArrayList<SciencePlan> sciencePlans = SciencePlanRepository.getAllSciencePlans();
+        System.out.println("Number of plans: " + SciencePlanRepository.getAllSciencePlans().size());
         model.addAttribute("sciencePlans" , sciencePlans);
         return "scienceplan";
      }

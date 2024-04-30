@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -141,6 +142,7 @@ public class UserController {
           return "createsciplan";
      }
      // Handle POST request for creating a new science plan
+     ArrayList<SciencePlan> sciencePlans = ocs.getAllSciencePlans();
      @PostMapping("/createNewSicPlan")
      public String createNewSciPlan(String startDate, String endDate, SciencePlan sciencePlan,
                DataProcRequirement dProcRequirement, BindingResult result, RedirectAttributes attributes) {
@@ -154,7 +156,8 @@ public class UserController {
                     sciencePlan.setCreator(serviceData.getUser().getName());
                     sciencePlan.setDataProcRequirements(dProcRequirement);
                     // Create the science plan using OCS object
-                    ocs.createSciencePlan(sciencePlan);
+                    SciencePlanRepository.createSciencePlan(sciencePlan);
+                    // ocs.createSciencePlan(sciencePlan);
                     // Redirect to science plan page
                     return "redirect:/scienceplan";
                } catch (Exception e) {
@@ -178,7 +181,7 @@ public class UserController {
                return "redirect:/scienceplan";
           }
           // Get science plan with given ID using OCS object
-          SciencePlan sciencePlan = ocs.getSciencePlanByNo(id);
+          SciencePlan sciencePlan = SciencePlanRepository.getSciencePlanByNo(id);
           // Add ID and test result message to flash attributes
           attributes.addFlashAttribute("id", id);
           attributes.addFlashAttribute("msg", ocs.testSciencePlan(sciencePlan));
@@ -198,7 +201,7 @@ public class UserController {
                return "redirect:/scienceplan";
           }
           // Get science plan with given ID using OCS object
-          SciencePlan sciencePlan = ocs.getSciencePlanByNo(id);
+          SciencePlan sciencePlan = SciencePlanRepository.getSciencePlanByNo(id);
           // Get submitter name
           String submitter = serviceData.getUser().getName();
           if(updateSubmitter(id, submitter)){

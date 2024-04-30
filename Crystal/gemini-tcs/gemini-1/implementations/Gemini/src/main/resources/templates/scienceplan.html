@@ -26,8 +26,8 @@
                     <div class="card-body ">
                          <h5 class="card-title">
                               <span class="me-2" th:text="${'Creator : '+p.getCreator()}"></span>
-                              <span class="ms-2" th:if="${p.getSubmitter().toString() != 'null'}" th:text="${'Submitter : '+p.getSubmitter()}"></span>
-                              <span class="ms-2" th:if="${p.getSubmitter().toString() == 'null'}" th:text="${'Submitter : '}"></span>
+                              <span class="ms-2" th:if="${p.getSubmitter() != null}" th:text="${'Submitter : '+p.getSubmitter()}"></span>
+                              <span class="ms-2" th:if="${p.getSubmitter() == 'null'}" th:text="${'Submitter : '}"></span>
                          </h5>
                          <p class="card-text" th:text="${'FundingInUSD : ' +p.getFundingInUSD()}"></p>
                          <p class="card-text" th:text="${'Objectives : '+p.getObjectives()}"></p>
