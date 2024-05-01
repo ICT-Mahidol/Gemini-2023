@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observing Program Input Form</title>
+</head>
+<body>
+<h1>Science Plan Input Form</h1>
+<form id="inputForm">
+    <label for="creator">Creator:</label>
+    <input type="text" id="creator" name="creator"><br><br>
+
+    <label for="submitter">Submitter:</label>
+    <input type="text" id="submitter" name="submitter"><br><br>
+
+    <label for="fundingInUSD">Funding in USD:</label>
+    <input type="number" id="fundingInUSD" name="fundingInUSD" step="0.01"><br><br>
+
+    <label for="objectives">Objectives:</label><br>
+    <textarea id="objectives" name="objectives" rows="4" cols="50"></textarea><br><br>
+
+    <label for="starSystem">Star System:</label>
+    <select id="starSystem" name="starSystem">
+        <!-- Options for star system will be dynamically populated using JavaScript -->
+    </select><br><br>
+
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate"><br><br>
+
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate"><br><br>
+
+    <label for="telescopeLocation">Telescope Location:</label>
+    <select id="telescopeLocation" name="telescopeLocation">
+        <option value="HAWAII">Hawaii</option>
+        <option value="CHILE">Chile</option>
+    </select><br><br>
+
+    <label for="fileType">File Type:</label>
+    <input type="text" id="fileType" name="fileType"><br><br>
+
+    <label for="fileQuality">File Quality:</label>
+    <input type="text" id="fileQuality" name="fileQuality"><br><br>
+
+    <label for="colorType">Color Type:</label>
+    <input type="text" id="colorType" name="colorType"><br><br>
+
+    <!-- Add more fields for Data Processing Requirements as needed -->
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
