@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error in Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        div#success-message, div#error-message {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            max-width: 700px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: #4CAF50; /* Green color for success */
+        }
+
+        div#error-message h1 {
+            color: #f44336; /* Red color for error */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #5cb85c; /* Bootstrap 'success' green */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #4cae4c; /* A darker green */
+        }
+
+        div#error-message a {
+            background-color: #d9534f; /* Bootstrap 'danger' red */
+        }
+
+        div#error-message a:hover {
+            background-color: #c9302c; /* A darker red */
+        }
+
+    </style>
+</head>
+<body>
+<div id="error-message">
+    <h1>Submission Failed</h1>
+    <p>th:text="${error}">There was an error submitting your science plan. Please try again.</></p>
+    <a href="/submitSciencePlan">Return to submission form</a>
+</div>
+</body>
+</html>
