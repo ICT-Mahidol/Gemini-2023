@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini System</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+<body class="bg-cover bg-world-bg">
+<nav class="p-[5%] flex justify-end items-end space-x-[4%]">
+    <a href="/signin">
+        <button class="py-2 px-4">
+            <span class="text-white font-bold">Sign in</span>
+        </button>
+    </a>
+    <a href="/signup">
+        <button class="bg-white rounded-3xl py-2 px-4">
+            <span class="text-black font-bold">Sign up</span>
+        </button>
+    </a>
+</nav>
+<div class="pt-[10%] font-bold pb-10 text-white text-6xl flex justify-center items-center">
+    Gemini System
+</div>
+<div>
+    <a href="/signin" th:href="@{/signin}">Sign in</a>
+    <a href="/signup" th:href="@{/signup}">Sign up</a>
+</div>
+</body>
+</html>

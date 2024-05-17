@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Science Plan</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+<div class="container mx-auto py-6">
+    <h1 class="text-3xl font-semibold mb-6">Create Science Plan</h1>
+    <form action="/sciencePlan/add" method="post" class="max-w-md mx-auto">
+        <div class="mb-4">
+            <label for="creator" class="block text-sm font-medium text-gray-700">Creator:</label>
+            <input type="text" id="creator" name="creator" required
+                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+
+        <div class="mb-4">
+            <label for="submitter" class="block text-sm font-medium text-gray-700">Submitter:</label>
+            <input type="text" id="submitter" name="submitter"
+                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+
+        <div class="mb-4">
+            <label for="fundingInUSD" class="block text-sm font-medium text-gray-700">Funding (USD):</label>
+            <input type="number" id="fundingInUSD" name="fundingInUSD" required
+                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                   step="0.1" th:value="0">
+        </div>
+
+        <div class="mb-4">
+            <label for="objectives" class="block text-sm font-medium text-gray-700">Objectives:</label>
+            <textarea id="objectives" name="objectives" required
+                      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+        </div>
+
+        <div class="mb-4">
+            <label for="starSystem" class="block text-sm font-medium text-gray-700">Star System:</label>
+            <select id="starSystem" name="starSystem" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <option th:each="constellation : ${T(edu.gemini.app.ocs.model.StarSystem.CONSTELLATIONS).values()}"
+                        th:value="${constellation}" th:text="${constellation}">
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="startDate" class="block text-sm font-medium text-gray-700">Start Date:</label>
+            <input type="datetime-local" id="startDate" name="startDate" required
+                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+
+        <div class="mb-4">
+            <label for="endDate" class="block text-sm font-medium text-gray-700">End Date:</label>
+            <input type="datetime-local" id="endDate" name="endDate" required
+                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+
+        <div class="mb-4">
+            <label for="telescopeLocation" class="block text-sm font-medium text-gray-700">Telescope Location:</label>
+            <select id="telescopeLocation" name="telescopeLocation" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <option th:each="location : ${T(edu.gemini.app.ocs.model.SciencePlan.TELESCOPELOC).values()}"
+                        th:value="${location}" th:text="${location}">
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <div class="flex justify-between items-center">
+                <label class="block text-sm font-medium text-gray-700">Data Processing Requirement:</label>
+                <button type="button" id="toggleRqmnts" class="text-sm text-blue-600">Show/Hide</button>
+            </div>
+
+            <div id="rqmntsSection" class="hidden mt-2">
+                <!-- File Type Selection -->
+                <div class="mb-4">
+                    <label for="fileType" class="block text-sm font-medium text-gray-700">File Type:</label>
+                    <select id="fileType" name="fileType" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option value="PNG">PNG</option>
+                        <option value="JPEG">JPEG</option>
+                        <option value="RAW">RAW</option>
+                    </select>
+                </div>
+
+                <!-- File Quality Selection -->
+                <div class="mb-4">
+                    <label for="fileQuality" class="block text-sm font-medium text-gray-700">File Quality:</label>
+                    <select id="fileQuality" name="fileQuality" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option value="LOW">LOW</option>
+                        <option value="FINE">FINE</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="colorType" class="block text-sm font-medium text-gray-700">Color Type:</label>
+                    <select id="colorType" name="colorType" required
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option value="Color mode" selected>Color mode</option>
+                        <option value="B&W mode">B&W mode</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="contrast" class="block text-sm font-medium text-gray-700">Contrast:</label>
+                    <input type="number" id="contrast" name="contrast"
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                           step="0.1">
+                </div>
+
+                <div class="mb-4">
+                    <label for="brightness" class="block text-sm font-medium text-gray-700">Brightness:</label>
+                    <input type="number" id="brightness" name="brightness"
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                           step="0.1">
+                </div>
+
+                <div class="mb-4">
+                    <label for="saturation" class="block text-sm font-medium text-gray-700">Saturation:</label>
+                    <input type="number" id="saturation" name="saturation"
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                           step="0.1">
+                </div>
+
+                <div class="mb-4">
+                    <label for="exposure" class="block text-sm font-medium text-gray-700">Exposure:</label>
+                    <input type="number" id="exposure" name="exposure"
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                           step="0.1">
+                </div>
+
+                <div class="mb-4">
+                    <label for="luminance" class="block text-sm font-medium text-gray-700">Luminance:</label>
+                    <input type="number" id="luminance" name="luminance"
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                           step="0.1">
+                </div>
+
+                <div class="mb-4">
+                    <label for="hue" class="block text-sm font-medium text-gray-700">Hue:</label>
+                    <input type="number" id="hue" name="hue"
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                           step="0.1">
+                </div>
+
+                <div class="mb-4">
+                    <label for="highlights" class="block text-sm font-medium text-gray-700">Highlights:</label>
+                    <input type="number" id="highlights" name="highlights" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                           step="0.1">
+                </div>
+
+                <div class="mb-4">
+                    <label for="shadows" class="block text-sm font-medium text-gray-700">Shadows:</label>
+                    <input type="number" id="shadows" name="shadows"
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                           step="0.1">
+                </div>
+
+                <div class="mb-4">
+                    <label for="whites" class="block text-sm font-medium text-gray-700">Whites:</label>
+                    <input type="number" id="whites" name="whites"
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                           step="0.1">
+                </div>
+
+                <div class="mb-4">
+                    <label for="blacks" class="block text-sm font-medium text-gray-700">Blacks:</label>
+                    <input type="number" id="blacks" name="blacks"
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                           step="0.1">
+                </div>
+            </div>
+
+            <button type="submit"
+                    class="mt-4 w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
+
+<script>
+
+    document.getElementById("toggleRqmnts").addEventListener("click", function () {
+        const rqmntsSection = document.getElementById("rqmntsSection");
+        rqmntsSection.classList.toggle("hidden");
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const colorTypeSelect = document.getElementById("colorType");
+        const colorTypeFields = {
+            "Color mode": ["brightness", "saturation", "luminance", "hue"],
+            "B&W mode": ["highlights", "shadows", "whites", "blacks"]
+        };
+
+        function updateFieldVisibility() {
+            const selectedColorType = colorTypeSelect.value;
+
+            // Reset all input fields to their default values
+            const allInputFields = Array.from(document.querySelectorAll("#rqmntsSection input[type='number']"));
+            allInputFields.forEach(input => {
+                input.value = 0; // Set the default value to 0
+                input.disabled = false;
+                input.style.backgroundColor = ""; // Reset the background color
+            });
+
+            for (const field in colorTypeFields) {
+                const fieldElements = colorTypeFields[field].map(id => document.getElementById(id));
+                if (field === selectedColorType) {
+                    fieldElements.forEach(element => {
+                        element.disabled = false;
+                    });
+                } else {
+                    fieldElements.forEach(element => {
+                        element.disabled = true;
+                        element.style.backgroundColor = "#D3D3D3"; // Set the background color to gray
+                        element.value = 0; // Set the value of disabled fields to 0
+                    });
+                }
+            }
+        }
+
+        colorTypeSelect.addEventListener("change", updateFieldVisibility);
+        updateFieldVisibility(); // Initial visibility setup based on the default colorType value
+    });
+
+</script>
+
+</body>
+</html>
