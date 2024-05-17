@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Plan Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f7ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #cfe2f3;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1a5299;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="date"] {
+            width: calc(100% - 18px);
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        button[type="submit"] {
+            background-color: #1a5299;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #0f3f73;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Science Plan Form</h1>
+    <form>
+        <section>
+            <h2>Details of the Plan</h2>
+            <div>
+                <label for="funding">Funding (In USD):</label>
+                <input type="number" id="funding" name="funding">
+            </div>
+            <div>
+                <label for="objectives">Objectives:</label>
+                <textarea id="objectives" name="objectives" rows="4"></textarea>
+            </div>
+            <div>
+                <label for="starSystem">Star System:</label>
+                <select id="starSystem" name="starSystem">
+                    <!-- Populate dropdown options dynamically -->
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Add more options up to 88 -->
+                </select>
+            </div>
+            <div>
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate">
+            </div>
+            <div>
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate">
+            </div>
+            <br>
+            <div>
+                <label for="location">Location:</label>
+                <select id="location" name="location">
+                    <option value="Location1">Location 1</option>
+                    <option value="Location2">Location 2</option>
+                </select>
+            </div>
+        </section>
+
+        <section>
+            <h2>Data Process Requirements</h2>
+            <div>
+                <label>Type:</label>
+                <input type="radio" id="jpeg" name="type" value="JPEG">
+                <label for="jpeg">JPEG</label>
+                <input type="radio" id="png" name="type" value="PNG">
+                <label for="png">PNG</label>
+                <input type="radio" id="raw" name="type" value="RAW">
+                <label for="raw">RAW</label>
+            </div>
+            <br>
+            <div>
+                <label>Quality:</label>
+                <input type="radio" id="low" name="quality" value="Low">
+                <label for="low">Low</label>
+                <input type="radio" id="fine" name="quality" value="Fine">
+                <label for="fine">Fine</label>
+            </div>
+            <br>
+            <div>
+                <label>Color Type:</label>
+                <input type="radio" id="color" name="colorType" value="Color">
+                <label for="color">Color</label>
+                <input type="radio" id="bw" name="colorType" value="B&W">
+                <label for="bw">B&W</label>
+            </div>
+            <br>
+            <div>
+                <label for="bri">Bri:</label>
+                <input type="number" id="bri" name="bri">
+            </div>
+            <div>
+                <label for="sat">Sat:</label>
+                <input type="number" id="sat" name="sat">
+            </div>
+            <div>
+                <label for="hi">Hi:</label>
+                <input type="number" id="hi" name="hi">
+            </div>
+            <div>
+                <label for="ex">Ex:</label>
+                <input type="number" id="ex" name="ex">
+            </div>
+            <div>
+                <label for="sha">Sha:</label>
+                <input type="number" id="sha" name="sha">
+            </div>
+            <div>
+                <label for="w">W:</label>
+                <input type="number" id="w" name="w">
+            </div>
+            <div>
+                <label for="b">B:</label>
+                <input type="number" id="b" name="b">
+            </div>
+            <div>
+                <label for="lu">Lu:</label>
+                <input type="number" id="lu" name="lu">
+            </div>
+            <div>
+                <label for="hu">Hu:</label>
+                <input type="number" id="hu" name="hu">
+            </div>
+        </section>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
