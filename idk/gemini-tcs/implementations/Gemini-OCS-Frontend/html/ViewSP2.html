@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="../styles/css/TestSP2.css">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Science Plan Result</title>
+    <link rel="stylesheet" href="TestSP2.css">
+    <script src="../api.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Science Plan Details</h2>
+        <div class="test-result">
+            <p>Science Plan ID: <span id="sciencePlanId"></span></p>
+            <p>Objective: <span id="objectives"></span></p>
+            <p>Starsystem: <span id="starSystem"></span></p>
+            <p>StartDate: <span id="startDate"></span></p>
+            <p>EndDate: <span id="endDate"></span></p>
+            
+        </div>
+        <div class="buttons">
+            <button onclick="location.href='ViewSP.html'">Back</button>
+        </div>
+    </div>
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return parseInt(decodeURIComponent(results[2].replace(/\+/g, ' ')));
+        }
+
+        async function displaySciencePlan() {
+            // Retrieve planId from URL
+            const planId = getParameterByName('planId');
+            console.log(planId)
+            // Find the selected plan based on planId
+            const spData = await getSciencePlans()
+            const selectedPlan = spData.find(plan => plan.planNo === planId);
+
+            // Display the selected plan
+            document.getElementById('sciencePlanId').textContent = selectedPlan.planNo;
+            document.getElementById('objectives').textContent = selectedPlan.objectives;
+            document.getElementById('starSystem').textContent = selectedPlan.starSystem;
+            document.getElementById('startDate').textContent = selectedPlan.startDate;
+            document.getElementById('endDate').textContent = selectedPlan.endDate;
+            document.getElementById('endDate').textContent = selectedPlan.endDate;
+
+        }
+
+        window.onload = function () {
+            displaySciencePlan()
+        };
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+    <title>Gemini System</title>
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+        <div class="logo">
+            <h1><a href="/home">Gemini System</a></h1>
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="/home">Home</a></li>
+                <li><a class="nav-link scrollto" href="/create">Create</a></li>
+                <li><a class="nav-link scrollto" id="logout" href="#">Logout</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+</header>
+<section id="pic" class="d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                <h1>Welcome, <span id="welcome-message"></span></h1>
+                <h1>Science Plan</h1>
+                <h2>Collect a scientific data </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+    <section id="plan" class="plan-result">
+        <div class="plan-content" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Science Plans</h2>
+            </div>
+            <div class="row content">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table-custom">
+                                <thead>
+                                <tr>
+                                    <th>Select</th>
+                                    <th>Creator</th>
+                                    <th>Submitter</th>
+                                    <th>Funding (USD)</th>
+                                    <th>Star System</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Telescope Location</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody id="science-plans-table">
+
+                                </tbody>
+                            </table>
+                            <div class="button-area">
+                                <button id="create-testing"><a href="/create">Create Science Plan</a></button>
+                                <div class="other-buttons">
+                                    <button id="start-test">Start Test</button>
+                                    <button id="submit">Submit</button>
+                                </div>
+                            </div>
+                            <div id="testLoadingMessage" style="display: none">Testing...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            const welcomeElement = document.querySelector('h1 span');
+            if (welcomeElement) {
+                welcomeElement.textContent = user.fullName;
+            }
+        }
+        fetch('/api/science-plans')
+            .then(response => response.json())
+            .then(data => {
+                const plansContainer = document.getElementById('science-plans-table');
+                plansContainer.innerHTML = '';
+                data.forEach(plan => {
+                    const row = `<tr>
+                <td><input type="radio" class="plan-select" name="selectedPlan" value="${plan.planNo}"></td>
+                <td>${plan.creator}</td>
+                <td>${plan.submitter}</td>
+                <td>${plan.fundingInUSD}</td>
+                <td>${plan.starSystem}</td>
+                <td>${plan.startDate}</td>
+                <td>${plan.endDate}</td>
+                <td>${plan.telescopeLocation}</td>
+                <td>${plan.status}</td>
+            </tr>`;
+                    plansContainer.innerHTML += row;
+                });
+            })
+            .catch(error => console.error('Error fetching science plans:', error));
+    });
+</script>
+<script src="/js/home.js"></script>
+<script src="/js/logout.js"></script>
+</body>
+</html>

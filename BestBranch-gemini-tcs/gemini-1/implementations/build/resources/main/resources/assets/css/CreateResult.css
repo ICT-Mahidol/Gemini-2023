@@ -1,0 +1,159 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Existing styles remain unchanged */
+.container {
+    display: flex;
+}
+
+.menu {
+    height: 100vh; /* Set height to 100% of viewport height */
+    width: 250px;
+    background-color: white;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 50px rgba(0, 0, 150, 0.1); /* Adding drop shadow */
+    position: fixed; /* Change to fixed positioning */
+    top: 0; /* Align with the top of the viewport */
+    left: 0; /* Align with the left of the viewport */
+    z-index: 1000; /* Ensure it's on top of other content */
+    overflow-y: auto; /* Add scrollbar if content exceeds viewport height */
+}
+
+.menu-text {
+    color: #000; /* Text color */
+    margin-left: 10px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.26px;
+    word-wrap: break-word
+}
+
+.menu-version{
+    color: #838383;
+    font-size: 10px;
+    font-weight: 500;
+    word-wrap: break-word;
+    margin-top: 10px;
+}
+
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    color: #9197B3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    word-wrap: break-word;
+    display: block;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.menu ul li a img {
+    vertical-align: middle; /* Align the logo vertically */
+    margin-right: 15px; /* Add some space between the logo and text */
+    width: 24px; /* Set the width of the image */
+    height: 24px; /* Set the height of the image */
+}
+
+.menu ul li a:hover img {
+    filter: brightness(0) invert(1); /* Invert the colors and set brightness to 0 */
+}
+
+.menu ul li a:hover {
+    background-color: #5932EA;
+    color: white;
+}
+
+.profile {
+    width: 250px;
+    position: absolute; /* Position the profile section absolutely */
+    bottom: 50px; /* Align the profile section to the bottom */
+    left: 10px; /* Adjust as needed */
+    display: block;
+    align-items: center; /* Center items vertically */
+    border-radius: 5px;
+}
+
+.profile a {
+    text-decoration: none;
+    color: #9197B3;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.profile a:hover {
+    background-color: #5932EA;
+    color: white;
+}
+
+.profile a:hover img {
+    filter: brightness(0) invert(1); /* Invert the colors and set brightness to 0 */
+}
+
+.profile img {
+    vertical-align: middle; /* Align the logo vertically */
+    margin-right: 15px; /* Add some space between the logo and text */
+    width: 24px; /* Set the width of the image */
+    height: 24px; /* Set the height of the image */
+}
+
+.logo-container {
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 10; /* Ensure the logo stays on top of other elements */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Add some space between logo/text and menu items */
+}
+
+.logo {
+    width: 70px; /* Adjust as needed */
+    height: auto; /* Keep the aspect ratio */
+}
+
+.greeting-message {
+    top: 3%;
+    margin-left: 20%;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+    word-wrap: break-word
+}
+
+.back-button {
+    height: 50px;
+    background-color: orange;
+    border: none; /* Remove default border */
+    border-radius: 10px;
+    font-weight: bold;
+    padding-top:30px;
+    text-align: center;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+    margin-right: 30%;
+    margin-top: 10%;
+    justify-content: center;
+}

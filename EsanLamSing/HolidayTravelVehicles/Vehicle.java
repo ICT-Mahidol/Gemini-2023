@@ -1,86 +1,75 @@
 package HolidayTravelVehicles;
 
 public class Vehicle {
-    private int serialNumber;
+
+    private String serialNumber;
     private String name;
     private String model;
     private int year;
     private String manufacturer;
-    private double baseCost;
+    private Double baseCost;
 
-    public Vehicle() {
-    }
+    public Vehicle() {}
 
-    public Vehicle(int serialNumber, String name, String model, int year, String manufacturer, double baseCost) {
+    Vehicle(String serialNumber, String name, String model, int year, String manufacturer, Double baseCost) {
         this.serialNumber = serialNumber;
         this.name = name;
         this.model = model;
         this.year = year;
         this.manufacturer = manufacturer;
         this.baseCost = baseCost;
-
     }
 
-    public int getSerialNumber() {
-        return serialNumber;
+    public String getSerialNumber() {
+        return this.serialNumber;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getModel() {
-        return model;
+        return this.model;
     }
 
     public int getYear() {
-        return year;
+        return this.year;
     }
 
     public String getManufacturer() {
-        return manufacturer;
+        return this.manufacturer;
     }
 
-    public double getBaseCost() {
-        return baseCost;
+    public Double getBaseCost() {
+        return this.baseCost;
     }
 
-    public void setSerialNumber(int serialNumber) {
-        this.serialNumber = serialNumber;
+    public void setSerialNumber(String newSerialNumber) {
+        this.serialNumber = newSerialNumber;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String newName) {
+        this.name = newName;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setModel(String newModel) {
+        this.model = newModel;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setYear(int newYear) {
+        this.year = newYear;
     }
 
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
+    public void setManufacturer(String newManufacturer) {
+        this.manufacturer = newManufacturer;
     }
 
-    public void setBaseCost(double baseCost) {
-        this.baseCost = baseCost;
+    public void setBaseCost(Double newBaseCost) {
+        this.baseCost = newBaseCost;
     }
 
     public String toString() {
-        String data = "----------\n";
-        data += "Serial: " + this.getSerialNumber() + '\n';
-        data += "Name: " + this.getName() + '\n';
-        data += "Model: " + this.getModel() + '\n';
-        data += "Year: " + this.getYear() + '\n';
-        data += "Manufacturer: " + this.getManufacturer() + '\n';
-        data += "Base Cost: " + this.getBaseCost() + '\n';
-        data += "----------\n";
-
-        // return this.serialNumber + "" + this.name + "" + this.model
-        // + "" + this.year + "" + this.manufacturer + "" + this.baseCost;
-        return data;
+        return this.serialNumber + " " + this.name + " " + this.model + " " + this.year + " " + this.manufacturer;
     }
+
 }

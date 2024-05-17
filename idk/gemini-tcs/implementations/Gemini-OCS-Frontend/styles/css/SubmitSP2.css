@@ -1,0 +1,67 @@
+/* CreateSP.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+textarea {
+    height: 100px;
+}
+
+select {
+    height: 34px;
+}
+
+.btn {
+    width: 49%;
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: darkorange;
+}
+
+/* Adjust button width for Cancel button */
+.btn-cancel {
+    width: 100%;
+}

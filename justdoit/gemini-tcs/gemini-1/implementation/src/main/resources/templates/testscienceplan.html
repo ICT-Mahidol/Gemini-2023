@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Plans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .plan-result {
+            padding: 50px 0;
+        }
+
+        .plan-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .button-area {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-area button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button-area button a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .other-buttons {
+            margin-top: 10px;
+        }
+
+        #testLoadingMessage {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Test science plan<span></span></h1>
+</header>
+<main>
+    <section id="plan" class="plan-result">
+        <div class="plan-content" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Science Plans</h2>
+            </div>
+            <div class="row content">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table-custom">
+                                <thead>
+                                <tr>
+                                    <th>Select</th>
+                                    <th>Creator</th>
+                                    <th>Submitter</th>
+                                    <th>Funding (USD)</th>
+                                    <th>Star System</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Telescope Location</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-science-plan">
+
+                                </tbody>
+                            </table>
+                            <div class="button-area">
+                                <div class="other-buttons">
+                                    <button id="start-test">Start Test</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="/jsc/testPlan.js"> </script>
+</body>
+</html>

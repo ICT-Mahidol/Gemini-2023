@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="../styles/css/TestSP.css">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Science Plan</title>
+    <link rel="stylesheet" href="TestSP.css">
+    <script src="../api.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Test Science Plan</h2>
+        <table id="sciencePlanTable">
+            <thead>
+                <tr>
+                    <th>Plan ID</th>
+                    <th>Objective</th>
+                    <th>Status</th>
+                    <th>Select for testing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically generated here -->
+            </tbody>
+        </table>
+        <button onclick="location.href='Home.html'" class="btn">Back</button>
+    </div>
+
+    <script>
+        
+        // Function to populate the table with data
+        async function populateTable() {
+            const spData = await getSciencePlans()
+            // Science plan data
+            const spStatus = spData.map(plan => {
+                return {
+                    planId: plan.planNo,
+                    objective: plan.objectives,
+                    status: plan.status
+                }
+            })
+
+            const tableBody = document.querySelector('#sciencePlanTable tbody');
+            tableBody.innerHTML = '';
+
+            // Filter sample data to show only plans with status 'SUBMITTED'
+            const savedPlans = spStatus.filter(plan => plan.status.trim() === 'SAVED');
+
+            savedPlans.forEach(plan => {
+                const row = `
+                    <tr>
+                        <td>${plan.planId}</td>
+                        <td>${plan.objective}</td>
+                        <td>${plan.status}</td>
+                        <td><a href="TestSP2.html?planId=${plan.planId}">Select </a></td>
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+
+        }
+        // Call the function to populate the table when the page loads
+        window.onload = populateTable;
+    </script>
+
+</body>
+
+</html>

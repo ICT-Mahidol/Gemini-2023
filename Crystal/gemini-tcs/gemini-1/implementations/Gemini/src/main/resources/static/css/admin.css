@@ -1,0 +1,25 @@
+.container{
+    min-height: 100vmin;
+    margin: auto;
+    padding: 8vmin 15vmin;
+
+}
+.mytable{
+    padding: 5vmin;
+    border: 1px solid gray;
+    overflow: scroll;
+}
+h2{
+    font-weight: 300;
+    margin: 0vmin 0 2vmin 0;
+}
+#setbtn {
+    display: block;
+    margin: 5vmin auto 5vmin auto;
+}
+.navbtn{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 5vmin 0;
+}
