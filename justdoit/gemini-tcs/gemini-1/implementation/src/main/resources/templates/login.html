@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Gemini System</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link crossorigin="anonymous">
+  <style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url(/assets/loginbg4.jpeg);
+    background-size: contain;
+    }
+
+    .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    }
+
+    .login-form {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    width: 340px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control, .btn-primary {
+    width: 100%; /* This will make them expand to the full width of their parent container */
+    box-sizing: border-box; /* This ensures padding and borders are included in the total width and height */
+    margin-bottom: 20px; /* Space between elements */
+    padding: 10px 15px; /* Padding inside the elements */
+    border-radius: 25px; /* Rounded corners */
+    }
+
+     .form-control {
+       background: none;
+       border: 2px solid rgba(255, 255, 255, 0.7);
+     color: white;
+    }
+
+    .form-control:focus {
+    border-color: #aaa;
+    box-shadow: none;
+    outline: 0;
+    }
+
+    .btn-primary {
+    border-radius: 25px;
+    border: none;
+    padding: 10px 0;
+    margin-top: 10px;
+    background: white;
+    color: #667eea;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    text-align: center;
+    }
+
+    .btn-primary:hover {
+    background: #e7e7e7;
+    }
+
+    .btn-primary:focus {
+    box-shadow: none;
+    }
+
+    .login-title {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+
+    .checkbox label, .login-help {
+    color: white;
+    text-align: center;
+    }
+
+    .login-help a {
+    color: #e7e7e7;
+    text-decoration: none;
+    }
+
+    .login-help a:hover {
+    text-decoration: underline;
+    }
+
+    .forgot-password, .register {
+    display: block;
+    margin-top: 10px;
+    }
+
+  </style>
+  <script crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="login-container">
+  <div class="login-form">
+    <h1 class="login-title">Gemini systems</h1>
+    <h2 class="login-title">Login</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="username" id="username">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+      </div>
+      <button type="button" onclick="login(document.getElementById('username').value, document.getElementById('password').value)" class="btn btn-primary">Login</button>
+    </form>
+    <div class="login-help">
+      <p>Don't have an account? <a href="/register">Register</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="/jsc/login.js">
+
+</script>
+
+</body>
+</html>
