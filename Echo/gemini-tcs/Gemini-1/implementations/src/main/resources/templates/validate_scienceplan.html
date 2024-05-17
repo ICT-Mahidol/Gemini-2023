@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate</title>
+    <link rel="stylesheet" href="../static/css/validate.css" th:href="@{/css/validate.css}" />
+
+</head>
+<body>
+<!--<script src="scienceplan.js" defer></script>-->
+<script src="/js/validate.js" defer></script>
+
+<div class="overlay overlay-slide-left" id="overlay">
+    <!-- MENU ITEMS -->
+    <nav>
+        <ul>
+            <li id="nav-1" class="slide-out-1 center">
+                <a href="http://localhost:8080/observer" class="center">Home</a>
+            </li>
+            <li id="nav-2" class="slide-out-2 center">
+                <a href="http://localhost:8080/observingprogram" class="center">Create an observing program</a>
+            </li>
+            <li id="nav-3" class="slide-out-3 center">
+                <a href="http://localhost:8080/scienceplan" class="center">Validate science plan</a>
+            </li>
+            <li id="nav-4" class="slide-out-4 center">
+                <a href="http://localhost:8080/" class="center">Log out</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="hamburger-menu" id="hamburger-menu">
+    <div class="menu-bar1"></div>
+    <div class="menu-bar2"></div>
+    <div class="menu-bar3"></div>
+</div>
+<!-- SECTIONS -->
+<section id="home" class="center">
+    <p class="logo">Echo Group</p>
+</section>
+<script>
+    const hamburgerMenu = document.querySelector("#hamburger-menu");
+    const overlay = document.querySelector("#overlay");
+    const nav1 = document.querySelector("#nav-1");
+    const nav2 = document.querySelector("#nav-2");
+    const nav3 = document.querySelector("#nav-3");
+    const nav4 = document.querySelector("#nav-4");
+    const nav5 = document.querySelector("#nav-5");
+    const navItems = [nav1, nav2, nav3, nav4, nav5];
+
+    // Control Navigation Animation
+    function navAnimation(val1, val2) {
+        navItems.forEach((nav, i) => {
+            nav.classList.replace(`slide-${val1}-${i + 1}`, `slide-${val2}-${i + 1}`);
+        });
+    }
+
+    function toggleNav() {
+        // Toggle: Hamburger Open/Close
+        hamburgerMenu.classList.toggle("active");
+
+        //   Toggle: Menu Active
+        overlay.classList.toggle("overlay-active");
+
+        if (overlay.classList.contains("overlay-active")) {
+            // Animate In - Overlay
+            overlay.classList.replace("overlay-slide-left", "overlay-slide-right");
+
+            // Animate In - Nav Items
+            navAnimation("out", "in");
+        } else {
+            // Animate Out - Overlay
+            overlay.classList.replace("overlay-slide-right", "overlay-slide-left");
+
+            // Animate Out - Nav Items
+            navAnimation("in", "out");
+        }
+    }
+
+    // Events Listeners
+    hamburgerMenu.addEventListener("click", toggleNav);
+    navItems.forEach((nav) => {
+        nav.addEventListener("click", toggleNav);
+    });
+
+</script>
+<div class="head">
+    <h2> Validate a Science Plan </h2>
+</div>
+<div class="showTable">
+    <table>
+        <thead>
+        <tr>
+            <th>Select</th>
+            <th>Plan Number</th>
+            <th>Creator</th>
+            <th>Submitter</th>
+            <th>Funding (USD)</th>
+            <th>Objectives</th>
+            <th>Star System</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Telescope Location</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody id="sciencePlanTableBody">
+        <!-- Rows will be dynamically added here -->
+        </tbody>
+    </table>
+</div>
+<!--<div class="container">-->
+<!--    <button class="button-71" type="button" onclick="findSciencePlan()">Find Science Plan</button>-->
+<!--</div>-->
+
+<footer>
+    <div class="footer">
+        <div class="row"></div>
+
+        <div class="row">
+            <ul>
+                <li><a href="#">6488021 Russarin</a></li>
+                <li><a href="#">6488045 Supithcha</a></li>
+                <li><a href="#">6488052 Sasasuang</a></li>
+                <li><a href="#">6488061 Chaninan</a></li>
+                <li><a href="#">6488184 Runchida</a></li>
+                <li><a href="#">6488203 Phacharaphan</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            Copyright © 2024 || Designed By: ECHO Group
+        </div>
+    </div>
+</footer>
+</body>
+</html>

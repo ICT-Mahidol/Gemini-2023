@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomer homepage</title>
+    <link rel="stylesheet" href="../static/css/all.min.css" th:href="@{/css/all.min.css}" />
+    <link rel="stylesheet" href="../static/css/homeastronomer.css" th:href="@{/css/homeastronomer.css}" />
+    <!--    References: https://www.free-css.com/free-css-templates/page293/vertex-->
+
+</head>
+<body>
+<script src="/js/astronomer_homepage.js"></script>
+<script src="/js/plugins.js"></script>
+<!-- Page Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+
+<!-- Site logo -->
+<!--<h1 class="tm-brand">-->
+<!--    <i class="fas fa-mountain fa-2x tm-brand-icon"></i>-->
+<!--    <span class="tm-brand-text">Vertex</span>-->
+<!--</h1>-->
+
+<!-- Nav -->
+<nav class="tm-nav">
+    <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul id="tm-main-nav">
+        <li class="nav-item">
+            <a href="#Create" class="nav-link">
+                WELCOME TO GEMINI SYSTEM
+            </a>
+        </li>
+
+    </ul>
+</nav>
+
+<!-- Content -->
+<main>
+
+    <div id="intro" class="tm-section">
+        <!-- Intro left -->
+        <div class="tm-section-col tm-content">
+
+            <div class="tm-media">
+                <div class="tm-media-body">
+                    <h2><a class="tm-text-primary">Create science plan</a></h2>
+                    <p class="tm-mb-20 tm-text-small">
+                        Initiate your scientific endeavors by creating a comprehensive science plan.
+                        Define your objectives, methods, and expected outcomes. </p>
+                    <span class="tm-text-secondary tm-media-span tm-text-small"  >
+                           <a href="http://localhost:8080/scienceplan"> Start create a science plan </a>
+                    </span>
+                    <hr class="tm-hr tm-mr">
+                </div>
+            </div>
+        </div>
+        <!-- Intro right -->
+        <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="https://www.betterteam.com/images/astronomer-job-description-2700x2700-2020121.jpeg?crop=1:1,smart&width=1200&dpr=2&format=pjpg&auto=webp&quality=85"></div>
+    </div> <!-- #intro -->
+
+
+    <div id="about" class="tm-section">
+        <!-- About left -->
+        <div class="tm-section-col tm-content tm-content-small">
+            <h2 class="tm-text-primary">About Us</h2>
+            <p>
+                6488021 Russarin Eaimrittikrai <br>
+                6488045 Supithcha Jongphoemwatthanaphon <br>
+                6488052 Sasasuang Pattanakitjaroenchai <br>
+                6488061 Chaninan Phetpangun <br>
+                6488184 Runchida Ananartyasit<br>
+                6488203 Phacharaphan Chalitchaiya <br>
+            </p>
+            <hr class="tm-hr tm-mb-50">
+            <p class="tm-mb-50">
+                This project is part of ITCS431 Software Design and Development
+            </p>
+        </div>
+        <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="https://media.wired.com/photos/59266745af95806129f4f572/master/w_2560%2Cc_limit/HETStarTrailsTA.jpg"></div>
+    </div> <!-- #about -->
+
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+
+            /*************** Navigation *****************/
+
+            const tmMainNav = $("#tm-main-nav");
+
+            tmMainNav.singlePageNav({
+                filter: ':not(.external)'
+            });
+
+            $('.navbar-toggler').click(function(e) {
+                e.stopPropagation();
+                tmMainNav.toggleClass('show');
+            });
+
+            $("html").click(function(e) {
+                $("#tm-main-nav").removeClass("show");
+            });
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                    scrollTop: $('#intro').offset().top
+                }, 800);
+            });
+
+
+        });
+    </script>
+
+    </script>
+</main>
+</body>
+</html>

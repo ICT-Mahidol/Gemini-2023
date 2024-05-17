@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+
+    <title>Create Observing Program</title>
+    <link rel="stylesheet" href="../static/css/observingprogram.css" th:href="@{/css/observingprogram.css}" />
+
+</head>
+<body>
+<script src="/js/observingprogram.js" defer></script>
+<div class="overlay overlay-slide-left" id="overlay">
+    <!-- MENU ITEMS -->
+    <nav>
+        <ul>
+            <li id="nav-1" class="slide-out-1 center">
+                <a href="http://localhost:8080/observer" class="center">Home</a>
+            </li>
+            <li id="nav-2" class="slide-out-2 center">
+                <a href="http://localhost:8080/observingprogram" class="center">Create an observing program</a>
+            </li>
+            <li id="nav-3" class="slide-out-3 center">
+                <a href="http://localhost:8080/scienceplan" class="center">Validate science plan</a>
+            </li>
+            <li id="nav-4" class="slide-out-4 center">
+                <a href="http://localhost:8080/" class="center">Log out</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- HAMBURGER MENU -->
+<div class="hamburger-menu" id="hamburger-menu">
+    <div class="menu-bar1"></div>
+    <div class="menu-bar2"></div>
+    <div class="menu-bar3"></div>
+</div>
+<!-- SECTIONS -->
+<section id="home" class="center">
+    <p class="logo">Echo Group</p>
+</section>
+
+<script>
+    const hamburgerMenu = document.querySelector("#hamburger-menu");
+    const overlay = document.querySelector("#overlay");
+    const nav1 = document.querySelector("#nav-1");
+    const nav2 = document.querySelector("#nav-2");
+    const nav3 = document.querySelector("#nav-3");
+    const nav4 = document.querySelector("#nav-4");
+    const nav5 = document.querySelector("#nav-5");
+    const navItems = [nav1, nav2, nav3, nav4, nav5];
+
+    // Control Navigation Animation
+    function navAnimation(val1, val2) {
+        navItems.forEach((nav, i) => {
+            nav.classList.replace(`slide-${val1}-${i + 1}`, `slide-${val2}-${i + 1}`);
+        });
+    }
+
+    function toggleNav() {
+        // Toggle: Hamburger Open/Close
+        hamburgerMenu.classList.toggle("active");
+
+        //   Toggle: Menu Active
+        overlay.classList.toggle("overlay-active");
+
+        if (overlay.classList.contains("overlay-active")) {
+            // Animate In - Overlay
+            overlay.classList.replace("overlay-slide-left", "overlay-slide-right");
+
+            // Animate In - Nav Items
+            navAnimation("out", "in");
+        } else {
+            // Animate Out - Overlay
+            overlay.classList.replace("overlay-slide-right", "overlay-slide-left");
+
+            // Animate Out - Nav Items
+            navAnimation("in", "out");
+        }
+    }
+
+    // Events Listeners
+    hamburgerMenu.addEventListener("click", toggleNav);
+    navItems.forEach((nav) => {
+        nav.addEventListener("click", toggleNav);
+    });
+
+</script>
+
+<!--<div class="head">-->
+<div class="head">
+    <h2> Create Observing Program </h2>
+    <div> Please choose a VALIDATED science plan from the list that you would like to create an observing program. </div>
+</div>
+<div>
+
+</div>
+
+<div class="showTable">
+    <table>
+        <thead>
+        <tr>
+            <th>Select</th>
+            <th>Plan Number</th>
+            <th>Creator</th>
+            <th>Funding (USD)</th>
+            <th>Star System</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Telescope Location</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody id="sciencePlanTableBody">
+        <!-- Rows will be dynamically added here -->
+        </tbody>
+    </table>
+</div>
+
+<form id="observingprogramform">
+
+<!--    <label for="SciencePlanEcho">List of validated science plans:</label>-->
+<!--    <select id="SciencePlanEcho" name="SciencePlanEcho" required>-->
+<!--        <option value="">Select Validated Science Plan</option>-->
+<!--    </select>-->
+
+    <label for="opticsPrimary">Optics Primary:</label>
+    <select id="opticsPrimary" name="opticsPrimary" required>
+        <option value="GNZ">GN Zemax Model</option>
+        <option value="GSZ">GS Zemax Model</option>
+    </select>
+
+    <label for="fStop">F-Stop:</label>
+    <input type="text" id="fStop" name="fStop" required placeholder="Enter F-Stop (e.g., 1.8-8.1 for GNZ, 2.9-18 for GSZ)"/>
+
+    <label for="opticsSecondaryRMS">Optics Secondary RMS:</label>
+<!--    <select id="opticsSecondaryRMS" name="opticsSecondaryRMS" required onchange="validateFStopRMS()">-->
+    <select id="opticsSecondaryRMS" name="opticsSecondaryRMS" required >
+        <option value="South">South telescope (Cerro Pachón, Chile)</option>
+        <option value="North">North telescope (Mauna Kea, Hawaii)</option>
+    </select>
+    <input type="text" id="RMS" name="RMS" required placeholder="Enter Optics Secondary RMS (nm) (e.g., 5-13 for South, 5-17 for North)"/>
+
+    <label>science Fold Mirror Degree:</label>
+    <input type="text" id="scienceFoldMirrorDegree" name="scienceFoldMirrorDegree" required placeholder="Enter Science Fold Mirror Degree (30-45)"/> <br/>
+
+    <script>
+        function validateobservingprogram() {
+            var opticsPrimary = document.getElementById("opticsPrimary").value;
+            var fStopInput = parseFloat(document.getElementById("fStop").value);
+            var opticsSecondaryRMS = document.getElementById("opticsSecondaryRMS").value;
+            var RMSInput = parseFloat(document.getElementById("RMS").value);
+            var scienceFoldMirrorDegree = parseFloat(document.getElementById("scienceFoldMirrorDegree").value);
+
+            if (opticsPrimary === "GNZ") {
+                if (fStopInput < 1.8 || fStopInput > 8.1 || isNaN(fStopInput)) {
+                    alert("Value range of f-stop for GNZ is 1.8-8.1. Please enter a valid value for F-Stop.");
+                    return false;
+                }
+            } else if (opticsPrimary === "GSZ") {
+                if (fStopInput < 2.9 || fStopInput > 18 || isNaN(fStopInput)) {
+                    alert("Value range of f-stop for GSZ is 2.9-18. Please enter a valid value for F-Stop.");
+                    return false;
+                }
+            }
+
+            if (opticsSecondaryRMS === "South") {
+                if (RMSInput < 5 || RMSInput > 13 || isNaN(RMSInput)) {
+                    alert("Value range for South telescope RMS is 5-13 nm. Please enter a valid value for Optics Secondary RMS.");
+                    return false;
+                }
+            } else if (opticsSecondaryRMS === "North") {
+                if (RMSInput < 5 || RMSInput > 17 || isNaN(RMSInput)) {
+                    alert("Value range for North telescope RMS is 5-17 nm. Please enter a valid value for Optics Secondary RMS.");
+                    return false;
+                }
+            }
+
+            if (scienceFoldMirrorDegree < 30 || scienceFoldMirrorDegree > 45 || isNaN(scienceFoldMirrorDegree)) {
+                alert("Value range for science fold mirror degree is 30-45. Please enter a valid value.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+    <label for="scienceFoldMirrorType">Science Fold Mirror Type:</label>
+    <select id="scienceFoldMirrorType" name="scienceFoldMirrorType" required>
+        <option value="REFLECTIVE_CONVERGING_BEAM">Reflective converging beam</option>
+        <option value="CASSEGRAIN_FOCUS">Cassegrain focus</option>
+    </select>
+
+    <label for="moduleContent">Module Content:</label>
+    <select id="moduleContent" name="moduleContent" required>
+        <option value="1">Module 1: Acquisition camera/high resolution wavefront sensor</option>
+        <option value="2">Module 2: Science fold</option>
+        <option value="3">Module 3: Second peripheral wavefront sensor</option>
+        <option value="4">Module 4: First peripheral wavefront sensor (closest to the sky)</option>
+    </select>
+
+    <label for="calibrationUnit">Calibration Unit:</label>
+    <select id="calibrationUnit" name="calibrationUnit" required>
+        <option value="Argon">Argon</option>
+        <option value="Xenon">Xenon</option>
+        <option value="ThAr">ThAr</option>
+        <option value="CuAr">CuAr</option>
+    </select>
+
+    <label for="lightType">Light Type:</label>
+    <select id="lightType" name="lightType" required>
+        <option value="MaunaKeaSkyEmission">Mauna Kea Sky Emission</option>
+        <option value="CerroPachonSkyEmission">Cerro Pachon Sky Emission</option>
+    </select>
+
+    <label>Telescope Position Pair:</label> <br>
+    <input type="text" id="Tele_direction" name="Tele_direction" required placeholder="Enter Telescope position pair direction">
+    <input type="text" id="Tele_degree" name="Tele_degree" required placeholder="Enter Telescope position pair degree">
+
+    <!--    <label for="telescopeLocation">Tele Position Pair:</label>-->
+    <!--    <select id="telescopeLocation" name="telescopeLocation" required>-->
+    <!--        <option value="HAWAII">HAWAII</option>-->
+    <!--        <option value="CHILE">CHILE</option>-->
+    <!--    </select>-->
+
+    <button type="submit" class="button-71" id="createobservingprogram" onclick="return validateobservingprogram()">Create Observing Program</button>
+</form>
+
+<footer>
+    <div class="footer">
+        <div class="row"></div>
+
+        <div class="row">
+            <ul>
+                <li><a href="#">6488021 Russarin</a></li>
+                <li><a href="#">6488045 Supithcha</a></li>
+                <li><a href="#">6488052 Sasasuang</a></li>
+                <li><a href="#">6488061 Chaninan</a></li>
+                <li><a href="#">6488184 Runchida</a></li>
+                <li><a href="#">6488203 Phacharaphan</a></li>
+            </ul>
+        </div>
+        <div class="row" id="copyRigght">
+            Copyright © 2024 || Designed By: ECHO Group
+        </div>
+    </div>
+</footer>
+</body>
+</html>

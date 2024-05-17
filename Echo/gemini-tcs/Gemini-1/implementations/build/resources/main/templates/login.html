@@ -1,0 +1,140 @@
+<!-- resource: https://enlear.academy/31-example-login-form-for-website-42abc6f6d525-->
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/login.css" th:href="@{/css/login.css}" />
+</head>
+
+<body>
+<div class="materialContainer">
+    <!--    <form action="/login" method="post">-->
+    <div class="box">
+
+        <div class="login-form">LOGIN</div>
+
+        <div class="input">
+            <label for="name">Username</label>
+            <input type="text" name="name" id="name" required>
+            <span class="spin"></span>
+        </div>
+
+        <div class="input">
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" required>
+            <span class="spin"></span>
+        </div>
+
+        <div class="button login">
+            <button onclick="login(document.getElementById('name').value, document.getElementById('pass').value)"><span>Login</span>
+                <i class="fa fa-check"></i></button>
+        </div>
+
+        <a href="" class="pass-forgot">Forgot your password?</a>
+
+    </div>
+    <!--    </form>-->
+
+    <div class="overbox">
+        <div class="material-button alt-2"><span class="shape"></span></div>
+        <!--Register-->
+
+        <div class="title">REGISTER</div>
+
+        <div class="input">
+            <label for="regname" style="font-size: 0.8em;">Username</label>
+            <input type="text" name="regname" id="regname" required >
+<!--            <span class="spin"></span>-->
+        </div>
+
+        <div class="input">
+            <p style="font-size: 0.8em; font-weight: 300;">Role</p>
+            <select name="regrole" id="regrole" onchange="toggleFields()" required style=" color:#1A5276 ; background-color: floralwhite;  padding: 9px; border-radius: 5px; font-size: 19px;">
+                <option value="Astronomer" selected>Astronomer</option>
+                <option value="ScienceObserver">Science Observer</option>
+            </select>
+
+        </div>
+
+        <div class="input">
+            <label for="firstname" style="font-size: 0.8em;">Firstname</label>
+            <input type="text" name="firstname" id="firstname" required>
+            <span class="spin"></span>
+        </div>
+
+        <div class="input">
+            <label for="lastname" style="font-size: 0.8em;">Lastname</label>
+            <input type="text" name="lastname" id="lastname" required>
+            <span class="spin"></span>
+        </div>
+
+        <div class="input">
+            <label for="regpass" style="font-size: 0.8em;">Password</label>
+            <input type="password" name="regpass" id="regpass" required>
+            <span class="spin"></span>
+        </div>
+        <div class="input">
+            <label for="regacademicDegree" style="font-size: 0.8em;">Academic Degree</label>
+            <input type="text" name="regacademicDegree" id="regacademicDegree" required>
+            <span class="spin"></span>
+        </div>
+
+        <div id="astronomerFields">
+
+            <div class="input">
+                <label for="reginstitution" style="font-size: 0.8em;">Institution</label>
+                <input type="text" name="reginstitution" id="reginstitution" required>
+                <span class="spin"></span>
+            </div>
+        </div>
+
+        <div id="scienceObserverFields" style="display: none;">
+            <div class="input">
+                <label for="regemploymentDate" style="font-size: 0.8em;">Employment Date</label>
+                <input placeholder="" name="regemploymentDate" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="regemploymentDate" required/>
+                <span class="spin"></span>
+            </div>
+
+            <div class="input">
+                <label for="regsalary" style="font-size: 0.8em;">Salary</label>
+                <input type="text" name="regsalary" id="regsalary" required>
+<!--                <span class="spin"></span>-->
+            </div>
+        </div>
+        <div class="button">
+            <button onclick="register()">
+                <span>Register</span></button>
+        </div>
+
+    </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/js/apiLoginRegis.js"></script>
+<script src="/js/login.js"></script>
+
+<script>
+    function toggleFields() {
+        var selectedRole = document.getElementById("regrole").value;
+        var astronomerFields = document.getElementById("astronomerFields");
+        var scienceObserverFields = document.getElementById("scienceObserverFields");
+
+        if (selectedRole === "Astronomer") {
+            astronomerFields.style.display = "block";
+            scienceObserverFields.style.display = "none";
+        } else if (selectedRole === "ScienceObserver") {
+            astronomerFields.style.display = "none";
+            scienceObserverFields.style.display = "block";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        toggleFields();
+    });
+</script>
+</body>
+</html>
+
+
+
