@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .left-side {
+            flex: 1;
+            background-image: url('https://wallpapercave.com/dwp2x/wp4222745.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .right-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            margin-left: 45px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 108%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #2264e8;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #07395b;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="left-side"></div>
+
+    <div class="right-side">
+        <form action="/register" method="POST">
+            <h1>Gemini System</h1>
+            <div>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            </div>
+            <div>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            </div>
+            <div>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div>
+                <select id="role" name="role" required style="font-size: 16px; width: 100%; height: 50px;">
+                    <option value="" disabled selected>Select role</option>
+                    <option value="astronomer">Astronomer</option>
+                </select>
+            </div>
+            <div id="astronomerFields" style="display:none;">
+                <div>
+                    <input type="text" id="institution" name="institution" placeholder="Institution" required>
+                </div>
+                <div>
+                    <input type="text" id="academicDegree" name="academicDegree" placeholder="Academic Degree" required>
+                </div>
+            </div>
+            <button type="submit">Register</button>
+            <button type="button" id="backToLogin" style="margin-top: 10px;">Back to Login</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('role').addEventListener('change', function() {
+            if (this.value === 'astronomer') {
+                document.getElementById('astronomerFields').style.display = 'block';
+            } else {
+                document.getElementById('astronomerFields').style.display = 'none';
+            }
+        });
+        document.getElementById('backToLogin').addEventListener('click', function() {
+            window.location.href = '/';
+        });
+    </script>
+</div>
+</body>
+
+</html>
