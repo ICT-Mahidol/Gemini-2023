@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left-side {
+            flex: 1;
+            background-image: url('https://c02.purpledshub.com/uploads/sites/48/2020/04/Extreme-deep-field-1cc325a-e1661413961493.jpg?webp=1&w=1200');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .right-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            margin-left: 45px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 110%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #2264e8;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #07395b;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="left-side"></div>
+
+    <div class="right-side">
+        <form id="login-form">
+            <h1>Gemini System</h1>
+            <div>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+            <button type="button" onclick="window.location.href='/register'">Register</button>
+        </form>
+    </div>
+</div>
+<script src="/js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Result</title>
+    <link rel="icon" type="image/x-icon" th:src="@{images/Logo.ico}">
+    <link rel="stylesheet" th:href="@{assets/css/testingResult.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+<!-- Container for greeting message and menu -->
+<div class="container">
+    <!-- Greeting message -->
+    <div class="greeting-message">
+        <h1>Testing Result</h1>
+    </div>
+    <!-- Menu -->
+    <div class="menu">
+        <div class="logo-container">
+            <img th:src="@{images/Logo_circle.png}" alt="Logo" class="logo">
+            <span class="menu-text">Testing</span>
+            <span class="menu-version">V0.1</span>
+        </div>
+        <ul>
+            <li><a th:href="@{/dashboard}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Dashboard</a></li>
+            <li><a th:href="@{/CreateSciPlan}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Create Plan</a></li>
+            <li><a th:href="@{/submission}"><img th:src="@{images/user-square%201.png}" alt="Logo" class="logo-menu">Submission</a></li>
+            <li><a th:href="@{/testing}"><img th:src="@{images/wallet-money%202.png}" alt="Logo" class="logo-menu">Testing</a></li>
+        </ul>
+        <div class="profile">
+            <a href="/login" class="logout-link">
+                <img th:src="@{images/user.png}" alt="Logo" class="logo-menu">
+                <span>Log out</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="result-container">
+    <!-- Add your result content here -->
+    <p th:text="${testResult}"></p>
+    <a th:href="@{/dashboard}" class="back-button">Back to Dashboard</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "fmt:check": "prettier --check \"**/*.{ts,tsx,md,json}\"",
+    "fmt": "prettier --write \"**/*.{ts,tsx,md,json}\""
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@hookform/resolvers": "^3.3.4",
+    "@tanstack/react-query": "^5.31.0",
+    "framer-motion": "^11.0.28",
+    "next": "14.2.0",
+    "next-auth": "^4.24.7",
+    "nextjs-progressbar": "^0.0.16",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.51.3",
+    "react-icons": "^5.1.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "prettier": "2.8.8",
+    "typescript": "^5"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "semi": false,
+    "arrowParens": "avoid"
+  }
+}

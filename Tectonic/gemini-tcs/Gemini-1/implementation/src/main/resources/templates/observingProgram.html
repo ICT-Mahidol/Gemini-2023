@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Observing Program</title>
+    <style>
+        .science-plan-list {
+            max-height: 200px;
+            overflow-y: scroll;
+        }
+
+        .pivot-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .pivot-table th, .pivot-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .pivot-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Create Observing Program</h1>
+
+<form id="observingProgramForm" th:action="@{/observingProgram/add}" method="post">
+
+    <div>
+        <input type="hidden" id="sciencePlanData" name="sciencePlanData">
+    </div>
+
+    <div>
+        <label>Select Science Plan:</label>
+        <div class="science-plan-list">
+            <table id="sciencePlanTable" class="pivot-table">
+                <thead>
+                <tr id="topicRow"></tr>
+                </thead>
+                <tbody id="dataRows"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <label for="opticsPrimary">Optics Primary:</label>
+        <select id="opticsPrimary" name="opticsPrimary" required>
+            <option value="GNZ">GNZ</option>
+            <option value="GSZ">GSZ</option>
+        </select>
+    </div>
+    <div>
+        <label for="fStop">F-Stop:</label>
+        <input type="number" step="0.1" id="fStop" name="fStop" required>
+    </div>
+    <div>
+        <label for="opticsSecondaryRMS">Optics Secondary RMS:</label>
+        <input type="number" step="0.1" id="opticsSecondaryRMS" name="opticsSecondaryRMS" required>
+    </div>
+    <div>
+        <label for="scienceFoldMirrorDegree">Science Fold Mirror Degree:</label>
+        <input type="number" step="0.1" id="scienceFoldMirrorDegree" name="scienceFoldMirrorDegree" required>
+    </div>
+    <div>
+        <label for="scienceFoldMirrorType">Fold Mirror Type:</label>
+        <select id="scienceFoldMirrorType" name="scienceFoldMirrorType" required>
+            <option th:each="scienceFoldMirrorType : ${T(edu.gemini.app.ocs.model.ObservingProgramConfigs).getFoldMirrorType()}"
+                    th:value="${scienceFoldMirrorType}" th:text="${scienceFoldMirrorType}">
+            </option>
+        </select>
+    </div>
+    <div>
+        <label for="moduleContent">Module Content:</label>
+        <select id="moduleContent" name="moduleContent" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+    <div>
+        <label for="calibrationUnit">Calibration Unit:</label>
+        <select id="calibrationUnit" name="calibrationUnit" required>
+            <option th:each="calibrationUnit : ${T(edu.gemini.app.ocs.model.ObservingProgramConfigs).getCalibrationUnit()}"
+                    th:value="${calibrationUnit}" th:text="${calibrationUnit}">
+            </option>
+        </select>
+    </div>
+    <div>
+        <label for="lightType">Light Type:</label>
+        <select id="lightType" name="lightType" required>
+            <option th:each="lightType : ${T(edu.gemini.app.ocs.model.ObservingProgramConfigs).getLightType()}"
+                    th:value="${lightType}" th:text="${lightType}">
+            </option>
+        </select>
+    </div>
+
+    <!-- Input fields for TelePositionPair -->
+    <div>
+        <div>
+            <label for="direction">Direction:</label>
+            <input type="number" step="0.1" id="direction" name="direction" required>
+        </div>
+        <div>
+            <label for="degree">Degree:</label>
+            <input type="number" step="0.1" id="degree" name="degree" required>
+        </div>
+    </div>
+
+    <button type="submit">Create Observing Program</button>
+</form>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Fetch science plans from the server
+        fetch('/sciencePlan/all')
+            .then(response => response.json())
+            .then(data => {
+                const sciencePlanTable = document.getElementById('sciencePlanTable');
+                const topics = ['Plan ID', 'Creator', 'Submitter', 'Funding in USD', 'Objectives', 'Star System', 'Start Date', 'End Date', 'Telescope Location'];
+
+                // Create topic row
+                const topicRow = document.getElementById('topicRow');
+                const selectCell = document.createElement('th');
+                selectCell.textContent = 'Select';
+                topicRow.appendChild(selectCell);
+                topics.forEach(topic => {
+                    const topicCell = document.createElement('th');
+                    topicCell.textContent = topic;
+                    topicRow.appendChild(topicCell);
+                });
+
+                // Populate data rows with checkboxes and science plan information
+                const dataRows = document.getElementById('dataRows');
+                data.forEach(sciencePlan => {
+                    const row = document.createElement('tr');
+                    const selectCheckbox = document.createElement('input');
+                    selectCheckbox.type = 'checkbox';
+                    selectCheckbox.name = 'selectedPlanId';
+                    selectCheckbox.value = sciencePlan.planNo;
+                    const selectCell = document.createElement('td');
+                    selectCell.appendChild(selectCheckbox);
+                    row.appendChild(selectCell);
+
+                    topics.forEach(topic => {
+                        const cell = document.createElement('td');
+                        cell.textContent = getTopicValue(sciencePlan, topic);
+                        row.appendChild(cell);
+                    });
+                    dataRows.appendChild(row);
+
+                    // Serialize and set the selected science plan data if checkbox is ticked
+                    selectCheckbox.addEventListener('change', () => {
+                        if (selectCheckbox.checked) {
+                            const selectedSciencePlan = data.find(plan => plan.planNo === sciencePlan.planNo);
+                            document.getElementById('sciencePlanData').value = JSON.stringify(selectedSciencePlan);
+                        } else {
+                            document.getElementById('sciencePlanData').value = ''; // Clear the value if the checkbox is unchecked
+                        }
+                    });
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching science plans:', error);
+            });
+    });
+
+    // Function to get the value of a topic from a science plan object
+    function getTopicValue(sciencePlan, topic) {
+        switch (topic) {
+            case 'Plan ID':
+                return sciencePlan.planNo;
+            case 'Creator':
+                return sciencePlan.creator;
+            case 'Submitter':
+                return sciencePlan.submitter;
+            case 'Funding in USD':
+                return sciencePlan.fundingInUSD;
+            case 'Objectives':
+                return sciencePlan.objectives;
+            case 'Star System':
+                return sciencePlan.starSystem;
+            case 'Start Date':
+                return sciencePlan.startDate;
+            case 'End Date':
+                return sciencePlan.endDate;
+            case 'Telescope Location':
+                return sciencePlan.telescopeLocation;
+            default:
+                return '';
+        }
+    }
+
+</script>
+</body>
+</html>

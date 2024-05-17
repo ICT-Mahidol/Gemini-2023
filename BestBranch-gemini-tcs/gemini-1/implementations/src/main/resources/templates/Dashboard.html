@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Gemini</title>
+    <link rel="icon" type="image/x-icon" th:src="@{images/Logo.ico}">
+    <link rel="stylesheet" th:href="@{assets/css/Dashboard.css}">
+    <!--    <link rel="stylesheet" href="..\resources\assets\css\Dashboard.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+<!-- Container for greeting message and menu -->
+<div class="container">
+    <!-- Greeting message -->
+    <div class="greeting-message">
+        <h1>Hello, <span th:text="${username}"></span>! 🌚🌝</h1>
+    </div>
+    <!-- Menu -->
+    <div class="menu">
+        <div class="logo-container">
+            <img th:src="@{images/Logo_circle.png}" alt="Logo" class="logo">
+            <span class="menu-text">Gemini</span>
+            <span class="menu-version">V0.1</span>
+        </div>
+        <ul>
+            <li><a th:href="@{/dashboard}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Dashboard</a></li>
+            <li><a th:href="@{/CreateSciPlan}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Create Plan</a></li>
+            <li><a th:href="@{/submission}"><img th:src="@{images/user-square%201.png}" alt="Logo" class="logo-menu">Submission</a></li>
+            <li><a th:href="@{/testing}"><img th:src="@{images/wallet-money%202.png}" alt="Logo" class="logo-menu">Testing</a></li>
+        </ul>
+        <div class="profile">
+            <a th:href="@{/login}" class="logout-link">
+                <img th:src="@{/images/user.png}" alt="Logo" class="logo-menu">
+                <span>Log out</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Container for dashboard content and plan list -->
+<div class="container">
+    <!-- dashboard -->
+    <div class="dashboard-content">
+        <div class="Plan-detail">
+            <div class="svg-container">
+                <img th:src="@{images/profile-2user.svg}" alt="profile-2user">
+            </div>
+            <div class="Plan-Content">
+                <h2>Total Plan</h2>
+                <p th:text="${totalPlans}"></p>
+            </div>
+        </div>
+        <div class="Plan-detail">
+            <div class="svg-container">
+                <img th:src="@{images/profile-2user.svg}" alt="profile-2user">
+            </div>
+            <div class="Plan-Content">
+                <h2>Saved Plan</h2>
+                <p th:text="${draftPlan}"></p>
+            </div>
+        </div>
+        <div class="Plan-detail">
+            <div class="svg-container">
+                <img th:src="@{images/profile-2user.svg}" alt="profile-2user">
+            </div>
+            <div class="Plan-Content">
+                <h2>Submitted Plan</h2>
+                <p th:text="${submittedPlan}"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Plan list -->
+    <div class="plan-list">
+        <div class="plan-list-header">
+            <div class="description-plan">
+                <h2>Plan Waiting for Submission</h2>
+                <span>List of Plan</span>
+            </div>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>Plan ID</th>
+                <th>Star System</th>
+                <th>Creator</th>
+                <th>Submitter</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Plan Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Loop through each plan and its details -->
+            <tr th:each="plan, rowStat : ${plans}" class="plan-detail">
+                <td th:text="${plan.planNo}"></td>
+                <td th:text="${plan.starSystem}"></td>
+                <td th:text="${plan.creator.getName()}"></td>
+                <td th:text="${plan.submitter.getName()}"></td>
+                <td th:text="${plan.startDate}"></td>
+                <td th:text="${plan.endDate}"></td>
+                <td th:text="${plan.telescopeLocation}"></td>
+                <td th:text="${plan.status}"></td>
+<!--                <td colspan="8">-->
+<!--                    &lt;!&ndash; Include here the details you want to show for each plan &ndash;&gt;-->
+<!--                    <p>objectives: <span th:text="${plan.objectives}"></span></p>-->
+<!--                    <p>DataProcRequirement: <span th:text="${plan.dataProcRequirements}"></span></p>-->
+<!--                    <p>Funding: <span th:text="${plan.getFundingInUSD()}"></span></p>-->
+<!--                    &lt;!&ndash; Add more details as needed &ndash;&gt;-->
+<!--                </td>-->
+                <td colspan="8">
+                    <!-- Include here the details you want to show for each plan -->
+                    <p>objectives: <span th:text="${plan.objectives}"></span></p>
+                    <p>Data Processing Requirements:</p>
+                    <ul>
+                        <li th:each="requirement : ${plan.dataProcRequirements}">
+                            <span th:text="'File type: ' + ${requirement.fileType}"></span><br>
+                            <span th:text="'File quality: ' + ${requirement.fileQuality}"></span><br>
+                            <span th:text="'Color type: ' + ${requirement.colorType}"></span><br>
+                            <span th:text="'Contrast: ' + ${requirement.contrast}"></span><br>
+                            <span th:text="'Brightness: ' + ${requirement.brightness}"></span><br>
+                            <span th:text="'Saturation: ' + ${requirement.saturation}"></span><br>
+                            <span th:text="'Highlights: ' + ${requirement.highlights}"></span><br>
+                            <span th:text="'Exposure: ' + ${requirement.exposure}"></span><br>
+                            <span th:text="'Shadows: ' + ${requirement.shadows}"></span><br>
+                            <span th:text="'Whites: ' + ${requirement.whites}"></span><br>
+                            <span th:text="'Blacks: ' + ${requirement.blacks}"></span><br>
+                            <span th:text="'Luminance: ' + ${requirement.luminance}"></span><br>
+                            <span th:text="'Hue: ' + ${requirement.hue}"></span><br>
+                        </li>
+                    </ul>
+                    <p>Funding: <span th:text="${plan.getFundingInUSD()}"></span></p>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

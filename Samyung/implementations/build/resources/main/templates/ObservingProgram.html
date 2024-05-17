@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observing Program Input Form</title>
+</head>
+<body>
+    <h1>Observing Program Input Form</h1>
+    <form id="inputForm">
+        <label for="planNo">Plan Number:</label>
+        <input type="number" id="planNo" name="planNo"><br><br>
+
+        <label for="opticsPrimary">Optics Primary:</label>
+        <input type="text" id="opticsPrimary" name="opticsPrimary"><br><br>
+
+        <label for="fStop">F-Stop:</label>
+        <input type="number" id="fStop" name="fStop" step="0.01"><br><br>
+
+        <label for="opticsSecondaryRMS">Optics Secondary RMS:</label>
+        <input type="number" id="opticsSecondaryRMS" name="opticsSecondaryRMS" step="0.01"><br><br>
+
+        <label for="scienceFoldMirrorDegree">Science Fold Mirror Degree:</label>
+        <input type="number" id="scienceFoldMirrorDegree" name="scienceFoldMirrorDegree" step="0.01"><br><br>
+
+        <label for="scienceFoldMirrorType">Science Fold Mirror Type:</label>
+        <select id="scienceFoldMirrorType" name="scienceFoldMirrorType">
+            <option value="REFLECTIVE_CONVERGING_BEAM">Reflective Converging Beam</option>
+            <option value="CASSEGRAIN_FOCUS">Cassegrain Focus</option>
+        </select><br><br>
+
+        <label for="moduleContent">Module Content:</label>
+        <input type="number" id="moduleContent" name="moduleContent"><br><br>
+
+        <label for="calibrationUnit">Calibration Unit:</label>
+        <select id="calibrationUnit" name="calibrationUnit">
+            <option value="Argon">Argon</option>
+            <option value="Xenon">Xenon</option>
+            <option value="ThAr">ThAr</option>
+            <option value="CuAr">CuAr</option>
+        </select><br><br>
+
+        <label for="lightType">Light Type:</label>
+        <select id="lightType" name="lightType">
+            <option value="MaunaKeaSkyEmission">Mauna Kea Sky Emission</option>
+            <option value="CerroPachonSkyEmission">Cerro Pachon Sky Emission</option>
+        </select><br><br>
+
+        <!-- Assuming TelePositionPair is an array of objects, you can input them dynamically with JavaScript if needed -->
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("inputForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // You can access form values here and process them as needed
+            let formData = new FormData(event.target);
+            for (let [key, value] of formData.entries()) {
+                console.log(key + ': ' + value);
+            }
+            // You can send this data to a server using AJAX or perform any other actions
+        });
+    </script>
+</body>
+</html>

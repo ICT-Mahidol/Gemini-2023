@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="../styles/css/TestSP2.css">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Science Plan Result</title>
+    <link rel="stylesheet" href="TestSP2.css">
+    <script src="../api.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Submit Science Plan</h2>
+        <div class="test-result">
+            <p>Science Plan ID: <span id="sciencePlanId"></span></p>
+            <p>Objective: <span id="objective"></span></p>
+            <p>Status: <span id="status"></span></p>
+        </div>
+        <div class="buttons">
+            <button onclick="submitSP()">Submit</button>
+            <button onclick="location.href='SubmitSP.html'">Back</button>
+        </div>
+    </div>
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href
+            name = name.replace(/[\[\]]/g, '\\$&')
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url)
+            if (!results) return null
+            if (!results[2]) return ''
+            return parseInt(decodeURIComponent(results[2].replace(/\+/g, ' ')))
+        }
+
+        async function displaySciencePlan() {
+            // Retrieve planId from URL
+            const planId = getParameterByName('planId')
+            // Find the selected plan based on planId
+            const spData = await getSciencePlans()
+            const selectedPlan = spData.find(plan => plan.planNo === planId)
+
+            // Display the selected plan
+            document.getElementById('sciencePlanId').textContent = selectedPlan.planNo
+            document.getElementById('objective').textContent = selectedPlan.objectives
+            document.getElementById('status').textContent = selectedPlan.status
+        }
+
+        async function submitSP() {
+            try {
+                const res = await submitSciencePlan(getParameterByName('planId'))
+                if (res.ok) {
+                    alert("Submit successfully.") 
+                } else {
+                    throw new Error('Failed to submit Science Plan.');
+                }
+            } catch (err) {
+                alert(err.message)
+            }
+            
+        }
+
+        window.onload = displaySciencePlan()
+    </script>
+</body>
+
+</html>

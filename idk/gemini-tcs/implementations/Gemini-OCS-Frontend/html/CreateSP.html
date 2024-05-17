@@ -1,0 +1,230 @@
+<link rel="stylesheet" href="../styles/css/CreateSP.css">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Science Plan</title>
+    <link rel="stylesheet" href="CreateSP.css">
+    <script src="../api.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Set Data Proc Requirements</h3>
+            <div class="form-group">
+                <label for="fileType">File Type:</label>
+                <select id="fileType" name="fileType" required>
+                    <option value="PNG">PNG</option>
+                    <option value="JPEG">JPEG</option>
+                    <option value="RAW" >RAW</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fileQuality">File Quality:</label>
+                <select id="fileQuality" name="fileQuality" required>
+                    <option value="Fine">Fine</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="colorType">Color Type:</label>
+                <select id="colorType" name="colorType" required>
+                    <option value="B&W mode">B&W mode</option>
+                    <option value="Color mode">Color mode</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="contrast">Contrast:</label>
+                <input type="number" id="contrast" name="contrast" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="brightness">Brightness:</label>
+                <input type="number" id="brightness" name="brightness" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="saturation">Saturation:</label>
+                <input type="number" id="saturation" name="saturation" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="highlights">Highlights:</label>
+                <input type="number" id="highlights" name="highlights" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="exposure">Exposure:</label>
+                <input type="number" id="exposure" name="exposure" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="shadows">Shadows:</label>
+                <input type="number" id="shadows" name="shadows" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="whites">Whites:</label>
+                <input type="number" id="whites" name="whites" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="black">Black:</label>
+                <input type="number" id="black" name="black" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="luminance">Luminance:</label>
+                <input type="number" id="luminance" name="luminance" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="hue">Hue:</label>
+                <input type="number" id="hue" name="hue" step="0.01" required>
+            </div>
+            <!-- Create Science Plan -->
+            <h3>Create Science Plan
+        </h2>
+        <form id="createSPForm" action="#" method="post">
+            <div class="form-group">
+                <label for="creatorName">Creator Name:</label>
+                <input type="text" id="creatorName" name="creatorName" required>
+            </div>
+            <div class="form-group">
+                <label for="submitter">Submitter:</label>
+                <input type="text" id="submitter" name="submitter" required>
+            </div>
+            <div class="form-group">
+                <label for="fundingInUSD">Funding (USD):</label>
+                <input type="number" id="fundingInUSD" name="fundingInUSD" step="1000" required>
+            </div>
+            <div class="form-group">
+                <label for="objectives">Objective:</label>
+                <textarea id="objectives" name="objectives" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="starSystem">Star System:</label>
+                <input type="text" id="starSystem" name="starSystem" required>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime" name="startTime" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endTime">End Time:</label>
+                <input type="time" id="endTime" name="endTime" required>
+            </div>
+            <div class="form-group">
+                <label for="telescopeLocation">Telescope Location:</label>
+                <select id="telescopeLocation" name="telescopeLocation" required>
+                    <option value="HAWAII">Hawaii (North)</option>
+                    <option value="CHILE">Chile (South)</option>
+                </select>
+            </div>
+
+            <button onclick="location.href='Home.html'" class="btn">Back</button>
+
+            <!-- ปุ่ม Save -->
+            <form id=" ## " action="../api.js" method="post">
+                <!-- Input fields here -->
+
+                <!-- Save button -->
+                <button type="submit" class="btn">Save</button>
+
+            </form>
+
+        </form>
+    </div>
+    <script>
+
+        document.getElementById('createSPForm').addEventListener('submit', async function (event) {
+            event.preventDefault() // Prevent default form submission behavior
+
+            // Function to convert date format from mm/dd/yyyy to dd/mm/yyyy for StartDate
+            function convertDateFormatStart(inputDate) {
+                // Split the date into parts based on the '/' delimiter
+                console.log(inputDate)
+                const parts = inputDate.split('-')
+                // Reformat the date parts to dd/mm/yyyy format
+                if (parts.length === 3) {
+                    const yyyy = parts[0] // Month (mm)
+                    const mm = parts[1] // Day (dd)
+                    const dd = parts[2] // Year (yyyy)
+
+                    // Return the date in dd/mm/yyyy format
+                    return `${dd}/${mm}/${yyyy} ${document.getElementById('startTime').value}:00`
+                }
+                // Return null if the date format is invalid
+                return null
+            }
+
+            // Function to convert date format from mm/dd/yyyy to dd/mm/yyyy for EndDate
+            function convertDateFormatEnd(inputDate) {
+                // Split the date into parts based on the '/' delimiter
+                console.log(inputDate)
+                const parts = inputDate.split('-')
+                // Reformat the date parts to dd/mm/yyyy format
+                if (parts.length === 3) {
+                    const yyyy = parts[0] // Month (mm)
+                    const mm = parts[1] // Day (dd)
+                    const dd = parts[2] // Year (yyyy)
+
+                    // Return the date in dd/mm/yyyy format
+                    return `${dd}/${mm}/${yyyy} ${document.getElementById('endTime').value}:00`
+                }
+                // Return null if the date format is invalid
+                return null
+            }
+
+
+            // Retrieve the date value from the input
+            const startDateValue = convertDateFormatStart(document.getElementById('startDate').value)
+            const endDateValue = convertDateFormatEnd(document.getElementById('endDate').value)
+
+            const sp = {
+                creator: document.getElementById('creatorName').value,
+                submitter: document.getElementById('submitter').value,
+                fundingInUSD: parseFloat(document.getElementById('fundingInUSD').value),
+                objectives: document.getElementById('objectives').value,
+                starSystem: document.getElementById('starSystem').value,
+                startDate: startDateValue,
+                endDate: endDateValue,
+                telescopeLocation: document.getElementById('telescopeLocation').value,
+                dataProcRequirements: {
+                    fileType: document.getElementById('fileType').value,
+                    fileQuality: document.getElementById('fileQuality').value,
+                    colorType: document.getElementById('colorType').value,
+                    contrast: parseFloat(document.getElementById('contrast').value),
+                    brightness: parseFloat(document.getElementById('brightness').value),
+                    saturation: parseFloat(document.getElementById('saturation').value),
+                    highlights: parseFloat(document.getElementById('highlights').value),
+                    exposure: parseFloat(document.getElementById('exposure').value),
+                    shadows: parseFloat(document.getElementById('shadows').value),
+                    whites: parseFloat(document.getElementById('whites').value),
+                    black: parseFloat(document.getElementById('black').value),
+                    luminance: parseFloat(document.getElementById('luminance').value),
+                    hue: parseFloat(document.getElementById('hue').value)
+                }
+            };
+
+
+            try {
+                const response = await createSciencePlan(sp); // Call your API function
+                console.log(response.body);
+                if (response.ok) {
+                    alert('Science plan created successfully!');
+                    // Optionally, redirect to another page after successful creation
+                } else {
+                    alert('Failed to create science plan.');
+                }
+            } catch (error) {
+                console.error('Error creating science plan:', error);
+                alert('An error occurred while creating the science plan.');
+            }
+        });
+    </script>
+</body>
+
+</html>

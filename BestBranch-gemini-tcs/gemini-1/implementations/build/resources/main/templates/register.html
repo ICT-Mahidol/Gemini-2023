@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register to Gemini</title>
+    <link rel="icon" type="image/x-icon" th:src="@{images/Logo.ico}">
+    <link rel="stylesheet" th:href="@{assets/css/accountManagement.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo-container">
+            <img th:src="@{images/Logo_circle.png}" alt="Logo" class="logo"> <!-- Replace with your logo path -->
+        </div>
+        <div class="left-column">
+            <h1>Oh, don't let's ask for the moon. We've already got the stars</h1>
+        </div>
+        <div class="right-column">
+            <div class="register-container">
+                <h2 style="color: #8b8b8b; text-align: left;">Register</h2>
+                
+                <form class="register-form" th:action="@{/register}" method="post">
+                    <!-- Role selection with icon -->
+                    <div class="input-container">
+                        <i class="fas fa-user-tag"></i>
+                        <select id="role" name="role">
+                            <option value="Default">Choose a Role</option>
+                            <option value="Astronomer">Astronomer</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Input fields with icons -->
+<!--                    <div class="input-container">-->
+<!--                        <i class="fas fa-user"></i>-->
+<!--                        <input type="text" id="full-name" name="full-name" placeholder="Enter Your Full Name">-->
+<!--                    </div>-->
+
+                    <div class="input-container">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="regisemail" name="regisemail" placeholder="Enter Email" required>
+                    </div>
+                    
+                    <div class="input-container">
+                        <i class="fas fa-user-circle"></i>
+                        <input type="name" id="regisname" name="regisname" placeholder="Enter Name" required>
+                    </div>
+                    
+                    <div class="input-container">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="regispassword" name="regispassword" placeholder="Enter Password" required>
+                    </div>
+                    
+<!--                    <div class="input-container">-->
+<!--                        <i class="fas fa-lock"></i>-->
+<!--                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">-->
+<!--                    </div>-->
+                    
+                    <!-- Sign Up button -->
+                    <br>
+                    <div class="form-footer">
+                        <button type="submit">Sign Up</button>
+                        <a th:href="@{/login}" class="signin-link">I Already Have An Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(30, 36, 50, 255);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#header {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.logo h1 a {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#navbar {
+    padding: 0;
+}
+
+#navbar ul {
+    margin: 10;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#navbar ul li {
+    margin-right: 50px;
+}
+
+#navbar ul li a {
+    color: #fffdfd;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#navbar ul li a:hover {
+    color: #ff6600;
+}
+
+main {
+    margin-top: 80px;
+}
+
+#pic {
+    width: 100%;
+    height: 70vh;
+    background-image: url("../img/observatory.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 60px 0;
+}
+
+#pic .col-lg-6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+#pic .container {
+    padding-top: 72px;
+}
+
+#pic h1 {
+    margin: 0 0 20px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}
+
+#pic h2 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    max-width: 90%;
+    margin-left: 0;
+    opacity: 0;
+
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        margin-left: -100%;
+        opacity: 0;
+    }
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+#plan {
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#plan .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    color: #ffffff;
+}
+
+.plan-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#plan .card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-custom th,
+.table-custom td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    color: #fff;
+    text-align: center;
+}
+
+.table-custom th {
+    background-color: rgb(176, 155, 138);
+    font-weight: bold;
+}
+
+.table-custom input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.table-custom th:first-child,
+.table-custom td:first-child {
+    text-align: center;
+}
+
+.button-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.button-area a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.other-buttons {
+    text-align: right;
+}
+
+
+.button-area button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#testLoadingMessage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+

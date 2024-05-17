@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Gemini</title>
+    <link rel="icon" type="image/x-icon" th:src="@{images/Logo.ico}">
+    <link rel="stylesheet" th:href="@{assets/css/CreateSciPlan.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+<!-- Container for greeting message and menu -->
+<div class="container">
+    <!-- Greeting message -->
+    <div class="greeting-message">
+        <h1>Creating A Science Plan</h1>
+    </div>
+    <!-- Menu -->
+    <div class="menu">
+        <div class="logo-container">
+            <img th:src="@{images/Logo_circle.png}" alt="Logo" class="logo">
+            <span class="menu-text">Gemini</span>
+            <span class="menu-version">V0.1</span>
+        </div>
+        <ul>
+            <li><a th:href="@{/dashboard}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Dashboard</a></li>
+            <li><a th:href="@{/CreateSciPlan}"><img th:src="@{images/3d-square%201.png}" alt="Logo" class="logo-menu">Create Plan</a></li>
+            <li><a th:href="@{/submission}"><img th:src="@{images/user-square%201.png}" alt="Logo" class="logo-menu">Submission</a></li>
+            <li><a th:href="@{/testing}"><img th:src="@{images/wallet-money%202.png}" alt="Logo" class="logo-menu">Testing</a></li>
+        </ul>
+        <div class="profile">
+            <a th:href="@{/login}" class="logout-link">
+                <img th:src="@{/images/user.png}" alt="Logo" class="logo-menu">
+                <span>Log out</span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="form-container">
+    <form id="CreateSciPlanForm" th:action="@{/CreateSciPlan}" method="post">
+<!--        <div class="form-group">-->
+<!--            <label for="PlanName">Plan Name:</label>-->
+<!--            <input type="text" id="PlanName" name="PlanName" required>-->
+<!--        </div>-->
+        <div class="form-group">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+        </div>
+        <div class="form-group">
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate" required>
+        </div>
+        <div class="form-group">
+            <label for="funding">funding:</label>
+            <input type="number" id="funding" name="funding" required>
+        </div>
+        <div class="form-group">
+            <label for="StarSystem">StarSystem:</label>
+            <select id="StarSystem" name="StarSystem">
+                <option value="">Select...</option>
+                <th:block th:each="constellation : ${CONSTELLATIONS}">
+                    <option th:value="${constellation}" th:text="${constellation}"></option>
+                </th:block>
+                <!-- Option values go here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="objectives">Objectives:</label>
+            <textarea id="objectives" name="objectives" rows="4" cols="50"></textarea>
+        </div>
+        <h2>SciencePlan telescope location</h2>
+        <div class="form-group">
+            <label for="Location">Location:</label>
+            <select id="Location" name="Location" required>
+                <option value="">Select...</option>
+                <th:block th:each="location : ${TELESCOPELOC}">
+                    <option th:value="${location}" th:text="${location}"></option>
+                </th:block>
+            </select>
+        </div>
+        <h2>Data Processing Requirement</h2>
+        <div class="DPR">
+            <div class="form-group">
+                <label for="fileType">File Type:</label>
+                <select id="fileType" name="fileType">
+                    <option value="PNG">PNG</option>
+                    <option value="JPEG">JPEG</option>
+                    <option value="RAW">RAW</option>
+                    <!-- Add more file types here if needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fileQuality">File Quality:</label>
+                <select id="fileQuality" name="fileQuality">
+                    <option value="Low">Low</option>
+                    <option value="Fine">Fine</option>
+                    <!-- Add more quality options here if needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="colorType">Color Type:</label>
+                <select id="colorType" name="colorType">
+                    <option value="B&W mode">B&W</option>
+                    <option value="Color mode">Color</option>
+                    <!-- Add more color type options here if needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="contrast">Contrast:</label>
+                <input type="number" id="contrast" name="contrast" step="any">
+            </div>
+            <div class="form-group">
+                <label for="brightness">Brightness:</label>
+                <input type="number" id="brightness" name="brightness" step="any">
+            </div>
+            <div class="form-group">
+                <label for="saturation">Saturation:</label>
+                <input type="number" id="saturation" name="saturation" step="any">
+            </div>
+            <div class="form-group">
+                <label for="highlights">Highlights:</label>
+                <input type="number" id="highlights" name="highlights" step="any">
+            </div>
+            <div class="form-group">
+                <label for="exposure">Exposure:</label>
+                <input type="number" id="exposure" name="exposure" step="any">
+            </div>
+            <div class="form-group">
+                <label for="shadows">Shadows:</label>
+                <input type="number" id="shadows" name="shadows" step="any">
+            </div>
+            <div class="form-group">
+                <label for="whites">Whites:</label>
+                <input type="number" id="whites" name="whites" step="any">
+            </div>
+            <div class="form-group">
+                <label for="blacks">Blacks:</label>
+                <input type="number" id="blacks" name="blacks" step="any">
+            </div>
+            <div class="form-group">
+                <label for="luminance">Luminance:</label>
+                <input type="number" id="luminance" name="luminance" step="any">
+            </div>
+            <div class="form-group">
+                <label for="hue">Hue:</label>
+                <input type="number" id="hue" name="hue" step="any">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit">Create</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

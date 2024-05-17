@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+<body class="bg-cover bg-world-bg">
+<nav class="p-[5%] flex justify-end items-end space-x-[4%]">
+    <a href="/signin">
+        <button class="py-2 px-4">
+            <span class="text-white font-bold">Sign in</span>
+        </button>
+    </a>
+    <a href="/signup">
+        <button class="bg-white rounded-3xl py-2 px-4">
+            <span class="text-black font-bold">Sign up</span>
+        </button>
+    </a>
+</nav>
+
+<div class="bg-white rounded-3xl mx-[30%] py-[2%] flex justify-center">
+    <form action="#" th:action="@{/users/add}" th:object="${user}" method="post">
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" class="w-full my-1 px-5 py-0.5 rounded-3xl bg-black text-white" id="firstName"
+                   th:field="*{firstName}" required><br>
+        </div>
+
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="w-full my-1 px-5 py-0.5 rounded-3xl bg-black text-white" id="lastName"
+                   th:field="*{lastName}" required><br>
+        </div>
+
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" class="w-full my-1 px-5 py-0.5 rounded-3xl bg-black text-white" id="username"
+                   th:field="*{username}" required><br>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" class="w-full my-1 px-5 py-0.5 rounded-3xl bg-black text-white" id="email"
+                   th:field="*{email}" required><br>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" class="w-full my-1 px-5 py-0.5 rounded-3xl bg-black text-white" id="password"
+                   th:field="*{password}" required><br>
+        </div>
+
+        <div>
+            <label for="confirmPass">Confirm Password:</label>
+            <input type="password" class="w-full my-1 px-5 py-0.5 rounded-3xl bg-black text-white" id="confirmPass"
+                   name="confirmPass" required><br>
+        </div>
+
+        <div>
+            <label for="role">Role:</label>
+            <select id="role" class="w-full my-1 px-5 py-0.5 rounded-3xl bg-black text-white" th:field="*{role}"
+                    required>
+                <option value="Astronomer" selected>Astronomer</option>
+                <option value="Science Observer">Science Observer</option>
+            </select>
+        </div>
+
+        <button class="w-full" type="submit">
+            <div class="bg-black text-white flex justify-center items-center rounded-3xl px-4 py-2 mt-5">
+                Sign Up
+            </div>
+        </button>
+    </form>
+</div>
+
+</body>
+</html>

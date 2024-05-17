@@ -1,0 +1,12 @@
+[
+    {
+        "username": "admin",
+        "password": "admin1234",
+        "role": "astronomer"
+    },
+    {
+        "username": "scob",
+        "password": "scob1234",
+        "role": "science-observer"
+    }
+]

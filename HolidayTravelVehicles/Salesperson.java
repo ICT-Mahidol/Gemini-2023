@@ -1,41 +1,51 @@
 package HolidayTravelVehicles;
 
 public class Salesperson {
-    private int id;
+
+    private String employeeId;
     private String name;
-    private String address;
-    private int phoneNumber;
 
-    public Salesperson(int id, String name, String address, int phoneNumber) {
-        this.id = id;
+   
+    public Salesperson(String employeeId, String name) {
+        this.employeeId = employeeId;
         this.name = name;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
     }
 
-    public int getsalespersonId() {
-        return this.id;
+    
+    public String getEmployeeId() {
+        return employeeId;
     }
 
-    public String getsalespersonName() {
-        return this.name;
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public String getsalespersonAddress() {
-        return this.address;
+  
+    public String getName() {
+        return name;
     }
 
-    public int getsalespersonPhoneNumber() {
-        return this.phoneNumber;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    // create invoice
-    public void createInvoice(Customer customer, int invoiceID, String tradeInVehicleInfo, int tradeInAllowance,
-            String purchaseVehicleInfo, double finalNegotiatedPrice, double applicableTaxes, double licensingFees,
-            boolean isCustomerSigned, boolean includesDealerOptions) {
-        Invoice invoice = new Invoice(customer, this, invoiceID, tradeInVehicleInfo, tradeInAllowance,
-                purchaseVehicleInfo, finalNegotiatedPrice, applicableTaxes, licensingFees, isCustomerSigned,
-                includesDealerOptions);
-        invoice.printInvoice();
+    
+
+    
+    public static void main(String[] args) {
+        
+        Salesperson salesPerson = new Salesperson("001", "Patchi");
+
+       
+        System.out.println("Employee ID: " + salesPerson.getEmployeeId());
+        System.out.println("Name: " + salesPerson.getName());
+
+        
+        salesPerson.setEmployeeId("002");
+        salesPerson.setName("tarti");
+
+        
+        System.out.println("Modified Employee ID: " + salesPerson.getEmployeeId());
+        System.out.println("Modified Name: " + salesPerson.getName());
     }
 }

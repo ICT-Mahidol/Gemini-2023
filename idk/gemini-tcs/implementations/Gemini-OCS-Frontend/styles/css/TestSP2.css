@@ -1,0 +1,47 @@
+/* TestSP2.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.test-result {
+    margin-bottom: 20px;
+}
+
+.test-result p {
+    margin: 5px 0;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: darkorange;
+}

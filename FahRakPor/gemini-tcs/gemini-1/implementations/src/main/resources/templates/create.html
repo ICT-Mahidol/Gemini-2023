@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+  <title>Gemini System</title>
+  <link rel="stylesheet" href="../static/css/createstyle.css">
+  <link href="../static/css/createstyle.css" th:href="@{/css/createstyle.css}" rel="stylesheet" />
+  <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex justify-content-between">
+    <div class="logo">
+      <h1><a href="/home">Gemini System</a></h1>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/home">Home</a></li>
+        <li><a class="nav-link scrollto" href="/create">Create</a></li>
+        <li><a class="nav-link scrollto" id="logout" href="#">Logout</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="plan" class="plan-result">
+    <div class="create-content" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Create Science Plan</h2>
+      </div>
+      <form id="plan-form" action="/createSciencePlan" method="post">
+        <div class="form">
+          <label for="fundingInUSD">Submitter</label>
+          <input type="text" class="form-control" id="submitter" name="submitter" required>
+        </div>
+        <div class="form">
+          <label for="fundingInUSD">Funding (USD)</label>
+          <input type="number" class="form-control" id="fundingInUSD" name="fundingInUSD" required>
+        </div>
+        <div class="form">
+          <label for="objectives">Objectives</label>
+          <textarea class="form-control" id="objectives" name="objectives" rows="4" required></textarea>
+        </div>
+        <div class="form">
+          <label for="starSystem">Star System</label>
+          <select class="form-control" id="starSystem" name="starSystem" required>
+            <option value="">Select Star System</option>
+            <option th:each="constellation : ${T(edu.gemini.app.ocs.model.StarSystem.CONSTELLATIONS).values()}"
+                    th:value="${constellation}" th:text="${constellation}">
+            </option>
+          </select>
+        </div>
+        <div class="form">
+          <label for="startDate">Start Date</label>
+          <input type="datetime-local" class="form-control" id="startDate" name="startDate" required>
+        </div>
+        <div class="form">
+          <label for="endDate">End Date</label>
+          <input type="datetime-local" class="form-control" id="endDate" name="endDate" required>
+        </div>
+        <div class="form">
+          <label for="telescopeLocation">Telescope Location</label>
+          <select class="form-control" id="telescopeLocation" name="telescopeLocation" required>
+            <option value="">Select Telescope Location</option>
+            <option th:each="location : ${T(edu.gemini.app.ocs.model.SciencePlan.TELESCOPELOC).values()}"
+                    th:value="${location}" th:text="${location}">
+            </option>
+          </select>
+        </div>
+        <div class="form">
+          <label for="fileType">File Type</label>
+          <select class="form-control" id="fileType" name="fileType" required>
+            <option value="">Select File Type</option>
+            <option value="JPEG">JPEG</option>
+            <option value="PNG">PNG</option>
+            <option value="RAW">RAW</option>
+          </select>
+        </div>
+        <div class="form">
+          <label for="fileQuality">File Quality</label>
+          <select class="form-control" id="fileQuality" name="fileQuality" required>
+            <option value="">Select File Quality</option>
+            <option value="Fine">Fine</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+        <div class="form">
+          <label for="colorType">Color Type</label>
+          <select class="form-control" id="colorType" name="colorType" required onchange="updateFieldAvailability()">
+            <option value="">Select Color Type</option>
+            <option value="Color mode">Color mode</option>
+            <option value="B&W mode">B&W mode</option>
+          </select>
+        </div>
+        <div class="form">
+          <label for="contrast" id="label-contrast">Contrast</label>
+          <input type="text" class="form-control" id="contrast" name="contrast" required>
+        </div>
+        <div class="form">
+          <label for="brightness" id="label-brightness">Brightness</label>
+          <input type="text" class="form-control" id="brightness" name="brightness" required>
+        </div>
+        <div class="form">
+          <label for="saturation" id="label-saturation">Saturation</label>
+          <input type="text" class="form-control" id="saturation" name="saturation" required>
+        </div>
+        <div class="form">
+          <label for="highlights" id="label-highlights">Highlights</label>
+          <input type="text" class="form-control" id="highlights" name="highlights" required>
+        </div>
+        <div class="form">
+          <label for="exposure" id="label-exposure">Exposure</label>
+          <input type="text" class="form-control" id="exposure" name="exposure" required>
+        </div>
+        <div class="form">
+          <label for="shadows" id="label-shadows">Shadows</label>
+          <input type="text" class="form-control" id="shadows" name="shadows" required>
+        </div>
+        <div class="form">
+          <label for="whites" id="label-whites">Whites</label>
+          <input type="text" class="form-control" id="whites" name="whites" required>
+        </div>
+        <div class="form">
+          <label for="blacks" id="label-blacks">Blacks</label>
+          <input type="text" class="form-control" id="blacks" name="blacks" required>
+        </div>
+        <div class="form">
+          <label for="luminance" id="label-luminance">Luminance</label>
+          <input type="text" class="form-control" id="luminance" name="luminance" required>
+        </div>
+        <div class="form">
+          <label for="hue" id="label-hue">Hue</label>
+          <input type="text" class="form-control" id="hue" name="hue" required>
+        </div>
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary mt-3">Create Science Plan</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<script>
+  function updateFieldAvailability() {
+    var colorType = document.getElementById("colorType").value;
+    var fieldsColorMode = ["brightness", "saturation", "luminance", "hue"];
+    var fieldsBWMode = ["highlights", "shadows", "whites", "blacks"];
+
+    fieldsColorMode.concat(fieldsBWMode).forEach(function(field) {
+      var input = document.getElementById(field);
+      var label = document.getElementById('label-' + field);
+      if (colorType === "Color mode") {
+        if (fieldsBWMode.includes(field)) {
+          input.type = 'hidden';
+          input.value = 0;
+          label.style.display = 'none';
+        } else {
+          input.type = 'text';
+          label.style.display = 'block';
+        }
+      } else if (colorType === "B&W mode") {
+        if (fieldsColorMode.includes(field)) {
+          input.type = 'hidden';
+          input.value = 0;
+          label.style.display = 'none';
+        } else {
+          input.type = 'text';
+          label.style.display = 'block';
+        }
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    updateFieldAvailability();
+  });
+</script>
+<script src="/js/create.js"></script>
+<script src="/js/logout.js"></script>
+</body>
+</html>
+  
